@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><GEMProject GEMstudioVersion="2.1.11.5" CompilerVersion="V2.1.B.5"><COMPLETE_MODULE><LCD_CONFIG><SIZE>480 x 272</SIZE><MFG>Amulet</MFG><NAME>STK-CY-043.tft</NAME></LCD_CONFIG><BOARD>MK-CY-043 (Capacitive 4.3 GEMstarter-kit).board</BOARD><OS_SPECIFIC><PROTOCOL>ASCII</PROTOCOL><ROTATION>No</ROTATION><COLOR_DEPTH>32</COLOR_DEPTH></OS_SPECIFIC></COMPLETE_MODULE><AMULET_ID>1</AMULET_ID><BAUD>115200</BAUD><BGCOLOR>#FFFFFF</BGCOLOR><BUFFER>Double</BUFFER><HOST_ID>2</HOST_ID><JPEG>Native</JPEG><NULL_TERMINATE>No</NULL_TERMINATE><SLAVE_RSP>Full Protocol</SLAVE_RSP><TIMEOUT>0.20</TIMEOUT><TOUCH_PRIORITY>From Top to Bottom</TOUCH_PRIORITY><PAGE_BUFFER_SIZE>0x10000</PAGE_BUFFER_SIZE><TRANSITIONS>Clear Screen With Background Color</TRANSITIONS><MACRO_FILE/><INTERNALRAM_INIT/><PAGE NAME="Page_1"><PROPERTIES><HEAD><FUNCTIONS charPos="314" foldedLines="">
+&lt;script&gt;
+
+	public test()
+	{
+		new float asdf = 0.0
+		new float interval = float(InternalRAM.byte(200))  //explicit conversion not needed here, but shown for clarity
+		for(new int index = 0;index&lt;200;index++)
+		{
+			InternalRAM.byte(index) = floatround(floatcos(asdf)*100.0) + 100
+			asdf += (3.14159/interval)
+		}
+		document.MyLineGraph_1.forceUpdate()
+		
+	}
+&lt;/script&gt;</FUNCTIONS></HEAD></PROPERTIES><BKGND/><BODY><LineGraph><Name Type="12">MyLineGraph_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><backgroundImage Type="16" Editable="True"/><fillColor Type="11" Editable="True">#FFFFFFFF</fillColor><href Type="30" Editable="True">Amulet:internalRAM.bytes(0).array(50)</href><lineColor Type="12" Editable="True">#000000FF</lineColor><lineWeight Type="12" Editable="True">1</lineWeight><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><xSamples Type="13" Editable="True">200</xSamples><yMax Type="13" Editable="True">200</yMax><yMin Type="13" Editable="True">0</yMin><MidX Type="13">236</MidX><MidY Type="13">75</MidY><Width Type="13">410</Width><Height Type="13">113</Height></LineGraph><Slider><Name Type="12">MySlider_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><channelColor Type="11" Editable="True">#000000FF</channelColor><handleColor Type="11" Editable="True">#61116AFF</handleColor><handleFrameColor Type="11" Editable="True">#000000FF</handleFrameColor><handleTrackingColor Type="11" Editable="True">#000000FF</handleTrackingColor><href Type="15" Editable="True">Amulet:internalRAM.byte(200).setValue(intrinsicValue),
+GEMscript.test()</href><hrefEvent Type="10" Editable="True">On Change	On Change	On Release</hrefEvent><initialCondition Type="12" Editable="True">25</initialCondition><max Type="13" Editable="True">250</max><min Type="13" Editable="True">1</min><minAt Type="10" Editable="True">Left	Bottom	Left	Right	Top</minAt><tickColor Type="11" Editable="True">#000000FF</tickColor><tickCount Type="13" Editable="True">0</tickCount><MidX Type="13">239</MidX><MidY Type="13">184</MidY><Width Type="13">406</Width><Height Type="13">50</Height></Slider></BODY></PAGE></GEMProject>

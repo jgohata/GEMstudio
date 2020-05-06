@@ -1,0 +1,25 @@
+//metaResetTimer can be found in the embedded file sleepCode.txt
+#define resetTimer() Amulet:document.metaResetTimer.forceHit()
+
+#define sleepTimer   Amulet:InternalRAM.word(10)
+#define sleepTimeOut Amulet:InternalRAM.word(11)
+#define tempTimeOut  Amulet:InternalRAM.word(12)
+
+#define brightness   Amulet:InternalRAM.word(0)
+
+#define dispenser    Amulet:InternalRAM.byte(1)
+#define WATER        1
+#define CRUSHED      2
+#define CUBED        3
+
+#define freezerTemp  Amulet:InternalRAM.word(2)
+#define fridgeTemp   Amulet:InternalRAM.word(3)
+
+#define dateString   Amulet:InternalRAM.String(0)
+
+#define tmpMonth      Amulet:InternalRAM.byte(10)
+#define tmpDayOfMonth Amulet:InternalRAM.byte(11)
+#define tmpDayOfWeek  Amulet:InternalRAM.byte(12)
+#define tmpMilHour    Amulet:InternalRAM.byte(13)
+#define tmpMinute     Amulet:InternalRAM.byte(14)
+#define blinkCnt      Amulet:InternalRAM.byte(15) 

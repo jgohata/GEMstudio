@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?><GEMProject GEMstudioVersion="3.6.0.11" CompilerVersion="V3.6.0.B"><COMPLETE_MODULE><LCD_CONFIG><SIZE>800 x 480</SIZE><MFG>Amulet</MFG><NAME>STK-070C-HP.tft</NAME></LCD_CONFIG><BOARD>MK-070C-HP (High Performance Capacitive 7 GEMstarter-kit).board</BOARD><OS_SPECIFIC><PROTOCOL>CRC</PROTOCOL><ROTATION>No</ROTATION><COLOR_DEPTH>32</COLOR_DEPTH><DISABLE_MSD>False</DISABLE_MSD></OS_SPECIFIC></COMPLETE_MODULE><AMULET_ID>1</AMULET_ID><BAUD/><BAUD0>115200</BAUD0><BAUD1>115200</BAUD1><BAUD2>115200</BAUD2><BGCOLOR>#FFFFFF</BGCOLOR><BUFFER>Double</BUFFER><GS_STRING_BUFFER_SIZE>100</GS_STRING_BUFFER_SIZE><GS_COMPRESS>False</GS_COMPRESS><HOST_ID>2</HOST_ID><JPEG>Native</JPEG><NULL_TERMINATE>No</NULL_TERMINATE><STRICT_MODBUS_TIMING>No</STRICT_MODBUS_TIMING><SLAVE_RSP>Full Protocol</SLAVE_RSP><TIMEOUT>0.20</TIMEOUT><TOUCH_PRIORITY>From Top to Bottom</TOUCH_PRIORITY><PAGE_BUFFER_SIZE>0x10000</PAGE_BUFFER_SIZE><TRANSITIONS>Clear Screen With Background Color</TRANSITIONS><UTF8_META_STRINGS>No</UTF8_META_STRINGS><MACRO_FILE/><INTERNALRAM_INIT/><PAGE NAME="Main_Menu"><PROPERTIES><HEAD><FUNCTIONS charPos="6427" foldedLines="">//x = e^(-t) * a * cos(10t)  
+//t is in 1/10th seconds
+
+&lt;script&gt;
+
+forward plot(float x, float y, float c)
+forward ipart(float x)
+forward float roundUp(float x)
+forward float fpart(float x)
+forward float rfpart(float x)
+forward drawLineAA(float x1,float y1,float x2,float y2)
+forward drawLineAAW(int x1, int y1, int x2, int y2)
+new float damping[355] = [1.0,0.9892578995,0.9770637101,0.9634667063,0.9485175479,0.9322681668,0.9147716548,0.8960821513,0.876254731,0.8553452934,0.8334104517,
+0.8105074239,0.7866939243,0.7620280565,0.7365682082,0.710372947,0.6835009182,0.6560107452,0.6279609303,0.5994097597,0.5704152088,0.5410348514,0.5113257704,
+0.4813444715,0.4511467999,0.4207878589,0.3903219321,0.3598024083,0.3292817093,0.2988112209,0.2684412269,0.2382208462,0.2081979734,0.1784192222,0.1489298728,
+0.1197738212,0.0909935339,0.0626300038,0.0347227108,0.0073095853,-0.0195730251,-0.0458903852,-0.071609399,-0.0966986325,-0.1211283342,-0.1448704517,
+-0.167898645,-0.1901882972,-0.2117165216,-0.2324621664,-0.2524058153,-0.2715297862,-0.2898181266,-0.3072566061,-0.3238327063,-0.339535608,-0.3543561756,
+-0.3682869395,-0.381322075,-0.3934573805,-0.4046902515,-0.4150196539,-0.4244460945,-0.4329715896,-0.4405996318,-0.4473351549,-0.4531844968,-0.4581553614,
+-0.4622567784,-0.4654990618,-0.4678937673,-0.469453648,-0.4701926095,-0.4701256635,-0.4692688808,-0.4676393429,-0.4652550937,-0.46213509,-0.4582991512,
+-0.4537679092,-0.4485627575,-0.4427057999,-0.4362197996,-0.4291281276,-0.4214547114,-0.4132239837,-0.4044608313,-0.3951905442,-0.385438765,-0.375231439,
+-0.3645947642,-0.3535551425,-0.3421391311,-0.3303733947,-0.3182846586,-0.3058996624,-0.2932451149,-0.2803476495,-0.2672337812,-0.253929864,-0.24046205,
+-0.2268562491,-0.2131380906,-0.1993328852,-0.1854655889,-0.1715607683,-0.1576425663,-0.1437346706,-0.1298602823,-0.1160420867,-0.1023022255,-0.08866227,
+-0.0751431962,-0.0617653615,-0.0485484823,-0.0355116138,-0.0226731311,-0.0100507113,0.0023386819,0.014478813,0.0263541874,0.0379500628,0.0492524593,
+0.0602481676,0.0709247563,0.0812705768,0.0912747683,0.1009272595,0.1102187706,0.1191408132,0.1276856885,0.1358464849,0.1436170742,0.1509921061,
+0.1579670017,0.1645379466,0.1707018813,0.1764564922,0.1818002,0.1867321484,0.191252191,0.1953608773,0.1990594384,0.202349771,0.2052344214,
+0.2077165682,0.2098000043,0.2114891186,0.2127888765,0.2137048006,0.2142429498,0.214409899,0.2142127175,0.2136589473,0.2127565814,0.2115140409,
+0.2099401528,0.2080441269,0.2058355327,0.2033242763,0.2005205768,0.1974349434,0.1940781514,0.1904612192,0.1865953848,0.1824920825,0.1781629197,
+0.1736196543,0.1688741715,0.1639384615,0.1588245973,0.1535447126,0.1481109802,0.1425355907,0.1368307318,0.1310085677,0.1250812193,0.1190607442,
+0.1129591183,0.1067882167,0.1005597959,0.0942854767,0.0879767267,0.0816448445,0.075300944,0.0689559391,0.0626205295,0.056305187,0.0500201421,
+0.0437753717,0.0375805877,0.0314452252,0.0253784327,0.019389062,0.0134856594,0.0076764574,0.0019693667,-0.0036280302,-0.0091084856,-0.0144650924,
+-0.0196912883,-0.0247808606,-0.0297279496,-0.0345270512,-0.0391730196,-0.0436610683,-0.0479867717,-0.0521460647,-0.0561352428,-0.0599509614,
+-0.0635902338,-0.0670504294,-0.0703292711,-0.073424832,-0.076335532,-0.0790601331,-0.0815977352,-0.0839477707,-0.0861099989,-0.0880844997,
+-0.0898716677,-0.0914722046,-0.0928871126,-0.0941176862,-0.0951655045,-0.0960324231,-0.096720565,-0.0972323122,-0.0975702965,-0.0977373896,
+-0.0977366943,-0.0975715342,-0.0972454439,-0.0967621587,-0.0961256046,-0.0953398879,-0.0944092843,-0.093338229,-0.0921313055,-0.0907932352,
+-0.0893288669,-0.0877431658,-0.0860412029,-0.0842281447,-0.082309242,-0.08028982,-0.0781752676,-0.0759710269,-0.0736825835,-0.0713154557,
+-0.0688751853,-0.0663673272,-0.0637974401,-0.0611710771,-0.0584937764,-0.0557710521,-0.0530083856,-0.0502112172,-0.0473849373,-0.0445348785,
+-0.0416663081,-0.0387844201,-0.0358943279,-0.0330010577,-0.0301095415,-0.0272246106,-0.0243509896,-0.0214932904,-0.0186560069,-0.0158435097,
+-0.013060041,-0.0103097103,-0.0075964898,-0.0049242108,-0.0022965596,0.0002829254,0.0028108571,0.005284002,0.0076992831,0.0100537815,0.0123447385,
+0.0145695568,0.016725802,0.0188112033,0.020823654,0.0227612119,0.0246220994,0.0264047029,0.0281075726,0.0297294218,0.0312691254,0.0327257187,
+0.0340983963,0.0353865098,0.0365895658,0.0377072241,0.0387392948,0.0396857357,0.0405466497,0.0413222816,0.0420130147,0.0426193678,0.0431419912,
+0.0435816635,0.0439392872,0.0442158852,0.0444125963,0.0445306716,0.0445714692,0.0445364508,0.0444271766,0.0442453008,0.0439925671,0.0436708039,
+0.0432819196,0.0428278977,0.042310792,0.0417327219,0.0410958675,0.0404024645,0.0396547995,0.0388552052,0.0380060555,0.0371097607,0.0361687626,
+0.0351855301,0.0341625541,0.033102343,0.0320074185,0.0308803104,0.0297235529,0.0285396797,0.0273312201,0.0261006946,0.024850611,0.0235834602,
+0.0223017126,0.0210078144,0.0197041836,0.0183932067,0.0170772355,0.0157585834,0.0144395226,0.0131222811,0.0118090396,0.0105019288,0.0092030272,
+0.007914358,0.0066378873,0.0053755216,0.0041291062,0.0029004227,0.0016911877,0.0005030511,0]
+static int time = 0;
+static int start_y = 0
+static int start_x = 0
+static int icon = 0
+static int offset_x = 0
+static int offset_y = 0
+#define INVALID_TOUCH 0xFFFF8000
+#define HVAC_Resting_Y 110
+#define HVAC_Resting_X 67
+#define ICON_HEIGHT_DIV2 73
+#define ICON_WIDTH 146
+#define ICON_HEIGHT 146
+#define MAX_SPRING_DISTANCE_Y 100
+#define MAX_SPRING_DISTANCE_X 100
+#define MAX_MAGNITUDE 100.0
+public boing()
+{
+	new float magnitude_x = float(start_x  - HVAC_Resting_X - ICON_HEIGHT_DIV2)
+	new float magnitude_y = float(start_y  - HVAC_Resting_Y - ICON_HEIGHT_DIV2)
+	
+	if(floatabs(magnitude_y) &gt; MAX_MAGNITUDE)
+		if(magnitude_y &gt; 0.0)
+			magnitude_y = MAX_MAGNITUDE
+		else
+			magnitude_y = -MAX_MAGNITUDE
+	if(floatabs(magnitude_x) &gt; MAX_MAGNITUDE)
+		if(magnitude_x &gt; 0.0)
+			magnitude_x = MAX_MAGNITUDE
+		else
+			magnitude_x = -MAX_MAGNITUDE
+		
+	if ((floatabs(magnitude_y) &lt; 5.0) &amp;&amp; (floatabs(magnitude_x) &lt; 5.0))
+		time = 354
+
+	new int y_offset = floatround(magnitude_y * damping[time]) + HVAC_Resting_Y
+	new int x_offset = floatround(magnitude_x * damping[time]) + HVAC_Resting_X
+	
+	disableDraw()
+	document.HVAC_Touch.disappear()
+	document.HVAC.setY(y_offset)
+	document.HVAC.setX(x_offset)
+	refreshRect(0,10,457,346)
+	enableDraw()
+	
+	
+	drawLineAAW(-20, 100+ICON_HEIGHT_DIV2, x_offset, y_offset+ICON_HEIGHT_DIV2) 
+    drawLineAAW(457, 166, x_offset+ICON_WIDTH, y_offset+ICON_HEIGHT_DIV2)
+	
+	time+=10
+	if(time &gt;= 355)
+	{
+		document.startBoing.setUpdateRate(0)
+		document.HVAC_Touch.setY(y_offset)
+		document.HVAC_Touch.setX(x_offset)
+		document.HVAC_Touch.reappear()
+	}
+}
+public reset()
+{
+	time= 0
+	boing
+	document.startBoing.setUpdateRate(0)
+}
+static int doBounce = 0
+public initTracking()
+{
+	start_x = PenX()
+	offset_x = PenX() - HVAC_Resting_X - ICON_HEIGHT_DIV2
+	start_y = PenY()
+	offset_y = PenY() - HVAC_Resting_Y - ICON_HEIGHT_DIV2
+	//document.MyNumField_1 = offset
+	doBounce = 0
+}
+public trackingDelay()
+{
+	//dont follow finger until several pixels have been swiped.
+	new int temp_x = PenX()
+	new int temp_y = PenY()
+	if(!((temp_y &lt; (start_y+10)) &amp;&amp; (temp_y &gt; (start_y -10))) || !((temp_x &lt; (start_x+10)) &amp;&amp; (temp_x &gt; (start_x -10))))
+	{
+		time= 0
+		doBounce = 1
+		start_y = 0xFFFF //force repaint at tracking position.
+		document.startTracking.setUpdateRate(4)
+		document.startTrackingDelay.setUpdateRate(0)
+	}
+	else
+		document.HVAC_Touch.reappear()
+}
+public checkForBounce()
+{
+	//document.MyNumField_1 = document.MyNumField_1 +1
+	if(doBounce == 1)
+	{
+		document.startBoing.setUpdateRate(4)
+	}
+	else
+	{
+		Thermostat.open()
+	}
+	document.startCheckForBounce.setUpdateRate(0)
+}
+public trackFinger()
+{
+	new int newPosition_x = PenX()
+	new int newPosition_y = PenY()
+	if(newPosition_y == INVALID_TOUCH || newPosition_x == INVALID_TOUCH)
+		return  //invalid touch.
+	new int origPosition_y = HVAC_Resting_Y
+	new int origPosition_x = HVAC_Resting_X
+	//no need to draw old data
+	if((start_y != newPosition_y) ||  (start_x != newPosition_x))
+	{
+		//make sure x or y is in bounds.
+		//if(((newPosition_y &lt; (origPosition_y+MAX_SPRING_DISTANCE_Y+ICON_HEIGHT_DIV2+offset_y)) &amp;&amp; (newPosition_y &gt; (origPosition_y-MAX_SPRING_DISTANCE_Y+ICON_HEIGHT_DIV2+offset_y))) || ((newPosition_x &lt; (origPosition_x+MAX_SPRING_DISTANCE_X+ICON_HEIGHT_DIV2+offset_x)) &amp;&amp; (newPosition_x &gt; (origPosition_x-MAX_SPRING_DISTANCE_X+ICON_HEIGHT_DIV2+offset_x))))
+		{
+			//calculate y coordinate
+			new int pos_y = newPosition_y-ICON_HEIGHT_DIV2-offset_y
+			//make sure y is within bounds
+			if(pos_y &lt; origPosition_y - MAX_SPRING_DISTANCE_Y)
+				pos_y = origPosition_y - MAX_SPRING_DISTANCE_Y 
+			else if(pos_y &gt; origPosition_y + MAX_SPRING_DISTANCE_Y)
+				pos_y = origPosition_y + MAX_SPRING_DISTANCE_Y
+			//calculate x coordinate
+			new int pos_x = newPosition_x-ICON_HEIGHT_DIV2-offset_x
+			//make sure x is within bounds
+			if(pos_x &lt; origPosition_x - MAX_SPRING_DISTANCE_X)
+				pos_x = origPosition_x - MAX_SPRING_DISTANCE_X 
+			else if(pos_x &gt; origPosition_x + MAX_SPRING_DISTANCE_X)
+				pos_x = origPosition_x + MAX_SPRING_DISTANCE_X
+
+
+			disableDraw()
+			document.HVAC.setY(pos_y)
+			document.HVAC_Touch.setY(newPosition_y-ICON_HEIGHT_DIV2-offset_y)
+			document.HVAC.setX(pos_x)
+			document.HVAC_Touch.setX(newPosition_x-ICON_HEIGHT_DIV2-offset_x)
+			refreshRect(0,10,457,346)
+
+			enableDraw()
+			start_y = newPosition_y//pos_y//
+			start_x = newPosition_x//pos_x//
+			
+			drawLineAAW(-20, 100+ICON_HEIGHT_DIV2, pos_x, pos_y+ICON_HEIGHT_DIV2)
+			drawLineAAW(457, 166, pos_x+ICON_WIDTH, pos_y+ICON_HEIGHT_DIV2)
+		}
+	}
+}
+	//Draw_Flags
+	#define DRAW_FIRST_PIXEL	1
+	#define DRAW_LAST_PIXEL	2
+#define WHITE 0xFFFFFFFF
+drawLineAAW(int x1, int y1, int x2, int y2)
+{
+	drawLine_AA(float(x1), float(y1)+0.5,float(x2),float(y2)+0.5, WHITE, 0)
+}
+drawPixel_f(float x, float y, int color)
+	{
+		color &amp;= 0x00FFFFFF  //mask off alpha
+		//4 draw pixels with relative alpha
+		new float x_fract = floatfract(x)
+		new float y_fract = floatfract(y)
+		new int x_int = floatround(x, floatround_method:floatround_floor)
+		new int y_int = floatround(y, floatround_method:floatround_floor)
+		
+		
+		new int pixel1_alpha = floatround((1.0 - x_fract) * (1.0 - y_fract) * 255.0) &lt;&lt; 24
+		new int pixel2_alpha = floatround((x_fract) * (1.0 - y_fract) * 255.0) &lt;&lt; 24
+		new int pixel3_alpha = floatround((1.0 - x_fract) * (y_fract) * 255.0) &lt;&lt; 24
+		new int pixel4_alpha = floatround((x_fract) * (y_fract) * 255.0) &lt;&lt; 24
+		
+		drawPixel(x_int, y_int, pixel1_alpha + color)
+		drawPixel(x_int+1, y_int, pixel2_alpha + color)
+		drawPixel(x_int, y_int+1, pixel3_alpha + color)
+		drawPixel(x_int+1, y_int+1, pixel4_alpha + color)
+	}
+
+	drawLine_AA(float x1, float y1, float x2, float y2, int color, int Draw_Flags)
+	{
+		if(x1 &gt; x2)
+		{
+			new float temp = x1
+			x1= x2
+			x2 = temp
+			temp = y1
+			y1 = y2
+			y2 = temp
+			//TODO: Swap Draw Flags
+		}
+		new float slopeY = (y2-y1)
+		new float slopeX = (x2-x1)
+		if(slopeX &gt; 0.0001)
+		{
+			new float slope = slopeY / slopeX
+			new float max_pixels = floatpower(floatpower(slopeY,2.0) + floatpower(slopeX,2.0), 0.5)  //calculate length of hypotenuse
+			new float deltaX = (x2 - x1) / max_pixels
+			if(Draw_Flags &amp; DRAW_FIRST_PIXEL)
+				drawPixel_f(x1, y1, color)
+			new float y = y1	
+			for(new float x = x1; x&lt;x2; x=x+deltaX)
+			{
+				y = y + slope * deltaX
+				drawPixel_f(x, y, color)
+			}
+			if(Draw_Flags &amp; DRAW_LAST_PIXEL)
+				drawPixel_f(x2, y2, color)
+		}
+		else //vertical line
+		{
+			//TODO: integrate draw flags
+			drawLine(floatround(x1),floatround(y2),floatround(x2),floatround(y2),color,1)
+		}
+	}
+
+@load()
+{
+	time = 354
+	boing()
+}
+
+public toAutomotive()
+{
+	static int lastPos
+	new int newPos = document.Automotive_scroller
+	if (newPos == lastPos)
+		Motor_coach_home.open()
+	else
+		lastPos = newPos
+}
+&lt;/SCRIPT&gt;
+
+&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;URL=GEMscript.checkForBounce();name=startCheckForBounce"&gt;
+&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;URL=GEMscript.boing();name=startBoing"&gt;
+&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;URL=GEMscript.trackingDelay();name=startTrackingDelay"&gt;
+&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;URL=GEMscript.trackFinger();name=startTracking"&gt;</FUNCTIONS><BGCOLOR>#FF80FF</BGCOLOR><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">BG</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Images\MainMenu\MainMenu_BG.png</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><MidX Type="13">400</MidX><MidY Type="13">240</MidY><Width Type="13">806</Width><Height Type="13">486</Height><layer Type="13" Editable="True">Base	Base	Overlay 1</layer></Image></BKGND><BODY><Image><Name Type="12">HVAC</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Images\MainMenu\HVAC.png</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><MidX Type="13">140</MidX><MidY Type="13">183</MidY><Width Type="13">152</Width><Height Type="13">152</Height><layer Type="13" Editable="True">Base	Base	Overlay 1</layer></Image><TouchArea><Name Type="12">HVAC_Touch</Name><onRelease Type="31" Editable="True">Amulet:document.startTracking.setUpdateRate(0),
+Amulet:document.startTrackingDelay.setUpdateRate(0),
+GEMscript.checkForBounce()</onRelease><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onTouch Type="31" Editable="True">GEMscript.initTracking(),
+//Amulet:document.HVAC_Touch.disappear(),
+Amulet:document.startBoing.setUpdateRate(0),
+Amulet:document.startTracking.setUpdateRate(0),
+Amulet:document.startTrackingDelay.setUpdateRate(0.04)</onTouch><alphaColor Type="11" Editable="True">#80808080</alphaColor><onSlideOff Type="31" Editable="True">Amulet:document.startTracking.setUpdateRate(0),
+Amulet:document.startTrackingDelay.setUpdateRate(0),
+GEMscript.checkForBounce()
+</onSlideOff><MidX Type="13">140</MidX><MidY Type="13">183</MidY><Width Type="13">152</Width><Height Type="13">153</Height></TouchArea><CustomButton><Name Type="12">toSlideshowScroller</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><cacheImage Type="2" Editable="True">False	True	False</cacheImage><downImage Type="16" Editable="True">.Images\MainMenu\IMAGES_DOWN.png</downImage><font Type="14" Editable="True">Bitstream Vera Sans,  12pt</font><fontColor Type="11" Editable="True">#000000</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><href Type="15" Editable="True">ImageScroller.open()</href><onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress><upImage Type="16" Editable="True">.Images\MainMenu\IMAGES_UP.png</upImage><MidX Type="13">466</MidX><MidY Type="13">387</MidY><Width Type="13">97</Width><Height Type="13">96</Height><layer Type="13" Editable="True">Base	Base	Overlay 1</layer></CustomButton><CustomButton><Name Type="12">toPresentationScroller</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><cacheImage Type="2" Editable="True">False	True	False</cacheImage><downImage Type="16" Editable="True">.Images\MainMenu\PPT_DOWN.png</downImage><font Type="14" Editable="True">Bitstream Vera Sans,  12pt</font><fontColor Type="11" Editable="True">#000000</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><href Type="15" Editable="True">ppt.open()</href><onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress><upImage Type="16" Editable="True">.Images\MainMenu\PPT_UP.png</upImage><MidX Type="13">267</MidX><MidY Type="13">322</MidY><Width Type="13">76</Width><Height Type="13">76</Height><layer Type="13" Editable="True">Base	Base	Overlay 1</layer></CustomButton><Image><Name Type="12">Automotive</Name><file Type="16" Editable="True">.Images\MainMenu\car_scroller_button.png</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><invisible Type="2" Editable="True">False	True	False</invisible><MidX Type="13">665</MidX><MidY Type="13">334</MidY><Width Type="13">152</Width><Height Type="13">152</Height></Image><TouchArea><Name Type="12">Automotive_touch</Name><onRelease Type="31" Editable="True">Motor_coach_home.open()</onRelease><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><MidX Type="13">665</MidX><MidY Type="13">334</MidY><Width Type="13">152</Width><Height Type="13">152</Height></TouchArea><ImageScroller><Name Type="12">Automotive_scroller</Name><invisible Type="2" Editable="True">False	True	False</invisible><allowWrap Type="10" Editable="True">Wrap	No Wrap	Toggle	Wrap</allowWrap><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="15" Editable="True">GEMscript.toAutomotive()</href><hrefEvent Type="10" Editable="True">On Release	On Change	On Release</hrefEvent><inertiaDuration Type="13" Editable="True">4</inertiaDuration><inertiaSpeed Type="13" Editable="True">7</inertiaSpeed><initialCondition Type="12" Editable="True">128</initialCondition><max Type="13" Editable="True">255</max><min Type="13" Editable="True">0</min><numberOfSelections Type="13" Editable="True">16</numberOfSelections><scrollerImage Type="16" Editable="True">.Images\MainMenu\car_scroller3.gif</scrollerImage><overlayImage Type="16" Editable="True">.Images\MainMenu\HomePageMask.png</overlayImage><hrefOnHitOnly Type="2" Editable="True">True	True	False</hrefOnHitOnly><MidX Type="13">665</MidX><MidY Type="13">322</MidY><Width Type="13">134</Width><Height Type="13">57</Height></ImageScroller></BODY></PAGE><PAGE NAME="Thermostat"><PROPERTIES><HEAD><FUNCTIONS charPos="77" foldedLines="">//center of circle at about -75,240
+//radius of circle is about 575
+
+&lt;script&gt;
+
+//575 radius
+// 0.90872685621 radians
+public arc()
+{
+	new float angle
+	new int x1 = 522
+	new int y1 = 0
+	new int x2
+	new int y2
+	for(angle = 0.90872685621; angle &gt; -0.90872685621; angle-=0.01)
+	{
+		x2 = -75 + floatround(575.0 * floatcos(angle))
+		y2 = 240 - floatround(575.0 * floatsin(angle))
+		drawLine(x1,  y1,  x2,  y2, 0xFFFFFF,1)
+		x1 = x2
+		y1 = y2
+	}
+}
+	#define BLACK	0x00000000
+	#define WHITE	0x00FFFFFF
+	#define BLUE	0x00FF0000
+	#define RED 	0x000000FF
+	#define GREEN_OVERLAY 0x3F3FC03F
+	
+	#define ICON_SIZE 83
+	#define SMALL_NUM_HEIGHT 23
+	#define SMALL_NUM_WIDTH 16
+	#define TENS_X_SPACING 73
+	#define ONES_X_SPACING 91
+	#define Y_SPACING 30
+	
+
+	static int HeatIcon_x;
+	static int CoolIcon_x;
+	static int touched = 0;
+	static int validTouchBottom;
+	static int validTouchTop;
+	new float angle
+	new float arcsin_lookup[480]
+	//populate an arcsin lookup table since we dont have arcsin math, but the Hypotenuse is fixed and we know the opposite side
+	arcsin()
+	{
+		new int i;
+		new int j = 0
+		for(i=240;i&gt;0;i--)
+		{
+			arcsin_lookup[j] = floatsin(float(i) / 575.0)
+			j++
+		}
+		for(i=0;i&lt;239;i++)
+		{
+			arcsin_lookup[j] = floatsin(float(i) / 575.0)
+			j++
+		}
+		
+	}
+	
+	@load()
+	{
+		arcsin()
+		document.HeatSlider.disappear()
+		document.HeatTens.disappear()
+		document.HeatOnes.disappear()
+		document.CoolSlider.disappear()
+		document.CoolTens.disappear()
+		document.CoolOnes.disappear()
+		HeatIcon_x = (65-50)*454/42//65 degrees
+		CoolIcon_x = (80-50)*454/42//80 degrees
+		document.HeatSlider.setY(480-HeatIcon_x)
+		document.HeatTens.setY(480-HeatIcon_x+Y_SPACING)
+		document.HeatOnes.setY(480-HeatIcon_x+Y_SPACING)
+		document.CoolSlider.setY(480-CoolIcon_x)
+		document.CoolTens.setY(480-CoolIcon_x+Y_SPACING)
+		document.CoolOnes.setY(480-CoolIcon_x+Y_SPACING)
+		
+		new int x
+		angle = arcsin_lookup[HeatIcon_x-ICON_SIZE/2]
+		x = -155 + floatround(575.0 * floatcos(angle))
+		document.HeatSlider.setX(x)
+		document.HeatTens.setX(x+TENS_X_SPACING)
+		document.HeatOnes.setX(x+ONES_X_SPACING)
+		
+		angle = arcsin_lookup[CoolIcon_x-ICON_SIZE/2]
+		x = -155 + floatround(575.0 * floatcos(angle))
+		document.CoolSlider.setX(x)
+		document.CoolTens.setX(x+TENS_X_SPACING)
+		document.CoolOnes.setX(x+ONES_X_SPACING)
+		
+		new int heatTemp = HeatIcon_x*42/454+50
+		new int coolTemp = CoolIcon_x*42/454+50
+
+		Internalram.Byte(1) = heatTemp
+		Internalram.Byte(2) = coolTemp
+		document.HeatOnes = heatTemp
+		document.HeatTens = heatTemp
+		document.CoolOnes = coolTemp
+		document.CoolTens = coolTemp
+		
+		document.HeatSlider.reappear()
+		document.HeatTens.reappear()
+		document.HeatOnes.reappear()
+		document.CoolSlider.reappear()
+		document.CoolTens.reappear()
+		document.CoolOnes.reappear()
+		
+		document.IndoorOnes = 73
+		document.IndoorTens = 73
+		
+	}
+	
+	public determineTouch()
+	{
+		new int X = 480-PenY();
+		//find out which icon the touch is closer to.
+		if(X &lt; (HeatIcon_x + CoolIcon_x)/2)
+		{
+			touched = 1
+			validTouchBottom = 480-ICON_SIZE
+			validTouchTop = ICON_SIZE
+		}
+		else
+		{
+			touched = 2
+			validTouchBottom = 480
+			validTouchTop = 2*ICON_SIZE
+		}
+		
+	}
+		
+	
+	public slider()
+	{
+		new int X = 480 - PenY();
+		//correct for touching center of object, but setX works on left side.
+		X += ICON_SIZE/2
+		//make sure new position is valid
+		if (validTouchTop &lt; X &lt; validTouchBottom)
+		{
+			
+			//clear redraw path.
+			//document.TemperatureChannel.reappear()
+			
+			//HeatSlider is touched
+			if(touched == 1)
+			{
+				HeatIcon_x = X
+				if(X + ICON_SIZE &gt; CoolIcon_x)
+				{
+					CoolIcon_x = X + ICON_SIZE		
+				}
+			}
+			//Cool Slider is touched
+			else
+			{
+				CoolIcon_x = X
+				if(X - ICON_SIZE &lt; HeatIcon_x)
+				{
+					HeatIcon_x = X - ICON_SIZE
+				}
+				
+			}
+			document.HeatSlider.disappear()
+			document.HeatTens.disappear()
+			document.HeatOnes.disappear()
+			document.CoolSlider.disappear()
+			document.CoolTens.disappear()
+			document.CoolOnes.disappear()
+			document.HeatSlider.setY(480-HeatIcon_x)
+		document.HeatTens.setY(480-HeatIcon_x+Y_SPACING)
+		document.HeatOnes.setY(480-HeatIcon_x+Y_SPACING)
+		document.CoolSlider.setY(480-CoolIcon_x)
+		document.CoolTens.setY(480-CoolIcon_x+Y_SPACING)
+		document.CoolOnes.setY(480-CoolIcon_x+Y_SPACING)
+			new int x
+		angle = arcsin_lookup[HeatIcon_x-ICON_SIZE/2]
+		x = -155 + floatround(575.0 * floatcos(angle))
+		document.HeatSlider.setX(x)
+		document.HeatTens.setX(x+TENS_X_SPACING)
+		document.HeatOnes.setX(x+ONES_X_SPACING)
+		
+		angle = arcsin_lookup[CoolIcon_x-ICON_SIZE/2]
+		x = -155 + floatround(575.0 * floatcos(angle))
+		document.CoolSlider.setX(x)
+		document.CoolTens.setX(x+TENS_X_SPACING)
+		document.CoolOnes.setX(x+ONES_X_SPACING)
+			new int heatTemp = HeatIcon_x*42/454+50
+			new int coolTemp = CoolIcon_x*42/454+50
+			Internalram.Byte(1) = heatTemp
+			Internalram.Byte(2) = coolTemp
+			document.HeatOnes = heatTemp
+		    document.HeatTens = heatTemp
+			document.CoolOnes = coolTemp
+		    document.CoolTens = coolTemp
+			document.HeatSlider.reappear()
+		document.HeatTens.reappear()
+		document.HeatOnes.reappear()
+		document.CoolSlider.reappear()
+		document.CoolTens.reappear()
+		document.CoolOnes.reappear()
+			InternalRAM.word(0) = HeatIcon_x
+			InternalRAM.word(1) = CoolIcon_x
+
+		}
+		
+	}
+	public incTemp()
+	{
+		new int temp = document.IndoorOnes + 1
+		if(temp &lt; 100)
+		{
+			document.IndoorOnes = temp
+			document.IndoorTens = temp
+		}
+	}
+	public decTemp()
+	{
+		new int temp = document.IndoorOnes - 1
+		if(temp &gt;9)
+		{
+			document.IndoorOnes = temp
+			document.IndoorTens = temp
+		}
+	}
+	
+&lt;/script&gt;
+&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;URL=GEMscript.slider();name=SliderTouched"&gt;
+&lt;META HTTP-EQUIV="REFRESH" CONTENT="0.14;
+IF=Amulet:InternalRAM.byte(100).value();
+EQ=5;
+THEN=Amulet:InternalRAM.byte(100).setValue(0);
+ELSE=Amulet:InternalRAM.byte(100).inc();
+;name=SliderTouched"&gt;</FUNCTIONS><BGCOLOR>#00FF00</BGCOLOR><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS></HEAD></PROPERTIES><BKGND/><BODY><Image><Name Type="12">rainloop01_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Images\Thermostat\BlueRain.gif</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><layer Type="13" Editable="True">Base	Base	Overlay 1</layer><MidX Type="13">601</MidX><MidY Type="13">240</MidY><Width Type="13">406</Width><Height Type="13">486</Height></Image><Image><Name Type="12">TextureColored_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Images\Thermostat\TextureColored_Arcs.png</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><MidX Type="13">400</MidX><MidY Type="13">240</MidY><Width Type="13">806</Width><Height Type="13">486</Height><layer Type="13" Editable="True">Base	Base	Overlay 1</layer></Image><TouchArea><Name Type="12">SliderTouch</Name><onRelease Type="31" Editable="True">Amulet:document.SliderTouched.setUpdateRate(0)</onRelease><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onTouch Type="31" Editable="True">Amulet:document.SliderTouched.setUpdateRate(0.02),
+GEMscript.determineTouch()</onTouch><MidX Type="13">468</MidX><MidY Type="13">239</MidY><Width Type="13">170</Width><Height Type="13">469</Height></TouchArea><Image><Name Type="12">HeatSlider</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Images\Thermostat\HEAT_UP.png</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><MidX Type="13">449</MidX><MidY Type="13">352</MidY><Width Type="13">89</Width><Height Type="13">88</Height><layer Type="13" Editable="True">Base	Base	Overlay 1</layer></Image><Image><Name Type="12">CoolSlider</Name><cacheImage Type="2" Editable="True">True	True	False</cacheImage><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Images\Thermostat\SNOW_UP.png</file><MidX Type="13">447</MidX><MidY Type="13">117</MidY><Width Type="13">89</Width><Height Type="13">88</Height><layer Type="13" Editable="True">Base	Base	Overlay 1</layer></Image><CustomButton><Name Type="12">CustomButton_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><cacheImage Type="2" Editable="True">True	True	False</cacheImage><downImage Type="16" Editable="True">.Images\Thermostat\Up_pressed.png</downImage><font Type="14" Editable="True">Bitstream Vera Sans,  12pt</font><fontColor Type="11" Editable="True">#000000</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><href Type="15" Editable="True">GEMscript.incTemp()</href><onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress><upImage Type="16" Editable="True">.Images\Thermostat\Up_unpressed.png</upImage><executeOn Type="10" Editable="True">Hit	Release	Hit	Both</executeOn><repeatDelay Type="20" Editable="True">1</repeatDelay><repeatRate Type="20" Editable="True">0.2</repeatRate><MidX Type="13">229</MidX><MidY Type="13">83</MidY><Width Type="13">235</Width><Height Type="13">141</Height><layer Type="13" Editable="True">Base	Base	Overlay 1</layer></CustomButton><CustomButton><Name Type="12">CustomButton_2</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><cacheImage Type="2" Editable="True">True	True	False</cacheImage><downImage Type="16" Editable="True">.Images\Thermostat\Down_pressed.png</downImage><font Type="14" Editable="True">Bitstream Vera Sans,  12pt</font><fontColor Type="11" Editable="True">#000000</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><href Type="15" Editable="True">GEMscript.decTemp()</href><onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress><upImage Type="16" Editable="True">.Images\Thermostat\Down_unpressed.png</upImage><executeOn Type="10" Editable="True">Hit	Release	Hit	Both</executeOn><repeatDelay Type="20" Editable="True">1</repeatDelay><repeatRate Type="20" Editable="True">0.2</repeatRate><MidX Type="13">229</MidX><MidY Type="13">397</MidY><Width Type="13">235</Width><Height Type="13">141</Height><layer Type="13" Editable="True">Base	Base	Overlay 1</layer></CustomButton><Image><Name Type="12">indoor_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Images\Thermostat\indoor.png</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><MidX Type="13">230</MidX><MidY Type="13">164</MidY><Width Type="13">175</Width><Height Type="13">32</Height><layer Type="13" Editable="True">Base	Base	Overlay 1</layer></Image><Image><Name Type="12">degree_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Images\Thermostat\degree.png</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><MidX Type="13">332</MidX><MidY Type="13">194</MidY><Width Type="13">26</Width><Height Type="13">25</Height><layer Type="13" Editable="True">Base	Base	Overlay 1</layer></Image><ImageSeq><Name Type="12">HeatTens</Name><waitForInit Type="2" Editable="True">False</waitForInit><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">99</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><layer Type="13" Editable="True">Base	Base	Overlay 1</layer><MidX Type="13">489</MidX><MidY Type="13">352</MidY><Width Type="13">22</Width><Height Type="13">29</Height></ImageSeq><ImageSeq><Name Type="12">HeatOnes</Name><waitForInit Type="2" Editable="True">False</waitForInit><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">99</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png;.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png;.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png;.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png;.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png;.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png;.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png;.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png;.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png;.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><layer Type="13" Editable="True">Base	Base	Overlay 1</layer><MidX Type="13">507</MidX><MidY Type="13">352</MidY><Width Type="13">22</Width><Height Type="13">29</Height></ImageSeq><ImageSeq><Name Type="12">CoolTens</Name><waitForInit Type="2" Editable="True">False</waitForInit><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">99</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><layer Type="13" Editable="True">Base	Base	Overlay 1</layer><MidX Type="13">487</MidX><MidY Type="13">117</MidY><Width Type="13">22</Width><Height Type="13">29</Height></ImageSeq><ImageSeq><Name Type="12">CoolOnes</Name><waitForInit Type="2" Editable="True">False</waitForInit><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">99</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png;.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png;.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png;.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png;.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png;.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png;.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png;.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png;.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png;.Images\Thermostat\numbers\small_0.png;.Images\Thermostat\numbers\small_1.png;.Images\Thermostat\numbers\small_2.png;.Images\Thermostat\numbers\small_3.png;.Images\Thermostat\numbers\small_4.png;.Images\Thermostat\numbers\small_5.png;.Images\Thermostat\numbers\small_6.png;.Images\Thermostat\numbers\small_7.png;.Images\Thermostat\numbers\small_8.png;.Images\Thermostat\numbers\small_9.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><layer Type="13" Editable="True">Base	Base	Overlay 1</layer><MidX Type="13">505</MidX><MidY Type="13">117</MidY><Width Type="13">22</Width><Height Type="13">29</Height></ImageSeq><ImageSeq><Name Type="12">IndoorTens</Name><waitForInit Type="2" Editable="True">False</waitForInit><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">99</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Thermostat\numbers\large_0.png;.Images\Thermostat\numbers\large_1.png;.Images\Thermostat\numbers\large_2.png;.Images\Thermostat\numbers\large_3.png;.Images\Thermostat\numbers\large_4.png;.Images\Thermostat\numbers\large_5.png;.Images\Thermostat\numbers\large_6.png;.Images\Thermostat\numbers\large_7.png;.Images\Thermostat\numbers\large_8.png;.Images\Thermostat\numbers\large_9.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><layer Type="13" Editable="True">Base	Base	Overlay 1</layer><MidX Type="13">177</MidX><MidY Type="13">250</MidY><Width Type="13">101</Width><Height Type="13">136</Height></ImageSeq><ImageSeq><Name Type="12">IndoorOnes</Name><waitForInit Type="2" Editable="True">False</waitForInit><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">99</max><min Type="13" Editable="True">00</min><sequence Type="21" Editable="True">.Images\Thermostat\numbers\large_0.png;.Images\Thermostat\numbers\large_1.png;.Images\Thermostat\numbers\large_2.png;.Images\Thermostat\numbers\large_3.png;.Images\Thermostat\numbers\large_4.png;.Images\Thermostat\numbers\large_5.png;.Images\Thermostat\numbers\large_6.png;.Images\Thermostat\numbers\large_7.png;.Images\Thermostat\numbers\large_8.png;.Images\Thermostat\numbers\large_9.png;.Images\Thermostat\numbers\large_0.png;.Images\Thermostat\numbers\large_1.png;.Images\Thermostat\numbers\large_2.png;.Images\Thermostat\numbers\large_3.png;.Images\Thermostat\numbers\large_4.png;.Images\Thermostat\numbers\large_5.png;.Images\Thermostat\numbers\large_6.png;.Images\Thermostat\numbers\large_7.png;.Images\Thermostat\numbers\large_8.png;.Images\Thermostat\numbers\large_9.png;.Images\Thermostat\numbers\large_0.png;.Images\Thermostat\numbers\large_1.png;.Images\Thermostat\numbers\large_2.png;.Images\Thermostat\numbers\large_3.png;.Images\Thermostat\numbers\large_4.png;.Images\Thermostat\numbers\large_5.png;.Images\Thermostat\numbers\large_6.png;.Images\Thermostat\numbers\large_7.png;.Images\Thermostat\numbers\large_8.png;.Images\Thermostat\numbers\large_9.png;.Images\Thermostat\numbers\large_0.png;.Images\Thermostat\numbers\large_1.png;.Images\Thermostat\numbers\large_2.png;.Images\Thermostat\numbers\large_3.png;.Images\Thermostat\numbers\large_4.png;.Images\Thermostat\numbers\large_5.png;.Images\Thermostat\numbers\large_6.png;.Images\Thermostat\numbers\large_7.png;.Images\Thermostat\numbers\large_8.png;.Images\Thermostat\numbers\large_9.png;.Images\Thermostat\numbers\large_0.png;.Images\Thermostat\numbers\large_1.png;.Images\Thermostat\numbers\large_2.png;.Images\Thermostat\numbers\large_3.png;.Images\Thermostat\numbers\large_4.png;.Images\Thermostat\numbers\large_5.png;.Images\Thermostat\numbers\large_6.png;.Images\Thermostat\numbers\large_7.png;.Images\Thermostat\numbers\large_8.png;.Images\Thermostat\numbers\large_9.png;.Images\Thermostat\numbers\large_0.png;.Images\Thermostat\numbers\large_1.png;.Images\Thermostat\numbers\large_2.png;.Images\Thermostat\numbers\large_3.png;.Images\Thermostat\numbers\large_4.png;.Images\Thermostat\numbers\large_5.png;.Images\Thermostat\numbers\large_6.png;.Images\Thermostat\numbers\large_7.png;.Images\Thermostat\numbers\large_8.png;.Images\Thermostat\numbers\large_9.png;.Images\Thermostat\numbers\large_0.png;.Images\Thermostat\numbers\large_1.png;.Images\Thermostat\numbers\large_2.png;.Images\Thermostat\numbers\large_3.png;.Images\Thermostat\numbers\large_4.png;.Images\Thermostat\numbers\large_5.png;.Images\Thermostat\numbers\large_6.png;.Images\Thermostat\numbers\large_7.png;.Images\Thermostat\numbers\large_8.png;.Images\Thermostat\numbers\large_9.png;.Images\Thermostat\numbers\large_0.png;.Images\Thermostat\numbers\large_1.png;.Images\Thermostat\numbers\large_2.png;.Images\Thermostat\numbers\large_3.png;.Images\Thermostat\numbers\large_4.png;.Images\Thermostat\numbers\large_5.png;.Images\Thermostat\numbers\large_6.png;.Images\Thermostat\numbers\large_7.png;.Images\Thermostat\numbers\large_8.png;.Images\Thermostat\numbers\large_9.png;.Images\Thermostat\numbers\large_0.png;.Images\Thermostat\numbers\large_1.png;.Images\Thermostat\numbers\large_2.png;.Images\Thermostat\numbers\large_3.png;.Images\Thermostat\numbers\large_4.png;.Images\Thermostat\numbers\large_5.png;.Images\Thermostat\numbers\large_6.png;.Images\Thermostat\numbers\large_7.png;.Images\Thermostat\numbers\large_8.png;.Images\Thermostat\numbers\large_9.png;.Images\Thermostat\numbers\large_0.png;.Images\Thermostat\numbers\large_1.png;.Images\Thermostat\numbers\large_2.png;.Images\Thermostat\numbers\large_3.png;.Images\Thermostat\numbers\large_4.png;.Images\Thermostat\numbers\large_5.png;.Images\Thermostat\numbers\large_6.png;.Images\Thermostat\numbers\large_7.png;.Images\Thermostat\numbers\large_8.png;.Images\Thermostat\numbers\large_9.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><layer Type="13" Editable="True">Base	Base	Overlay 1</layer><MidX Type="13">274</MidX><MidY Type="13">250</MidY><Width Type="13">101</Width><Height Type="13">136</Height></ImageSeq><Image><Name Type="12">foreCast_5day</Name><invisible Type="2" Editable="True">True	True	False</invisible><file Type="16" Editable="True">.Images\Thermostat\5day.png</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><MidX Type="13">688</MidX><MidY Type="13">306</MidY><Width Type="13">224</Width><Height Type="13">345</Height><layer Type="13" Editable="True">Base	Base	Overlay 1</layer></Image><TouchArea><Name Type="12">forecastCancel</Name><onRelease Type="31" Editable="True">Amulet:document.foreCast_5day.disappear(),
+Amulet:document.forecastCancel.disappear(),
+Amulet:document.forecastBtn.reappear(),
+Amulet:document.outdoor.reappear(),</onRelease><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><MidX Type="13">734</MidX><MidY Type="13">438</MidY><Width Type="13">140</Width><Height Type="13">92</Height></TouchArea><CustomButton><Name Type="12">forecastBtn</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><cacheImage Type="2" Editable="True">False	True	False</cacheImage><downImage Type="16" Editable="True">.Images\Thermostat\FORECAST_DOWN.png</downImage><font Type="14" Editable="True">Bitstream Vera Sans,  12pt</font><fontColor Type="11" Editable="True">#000000</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><href Type="15" Editable="True">Amulet:document.forecastBtn.disappear(),
+Amulet:document.outdoor.disappear(),
+Amulet:document.foreCast_5day.reappear(),
+Amulet:document.forecastCancel.reappear()</href><onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress><upImage Type="16" Editable="True">.Images\Thermostat\FORECAST_UP.png</upImage><MidX Type="13">734</MidX><MidY Type="13">438</MidY><Width Type="13">140</Width><Height Type="13">92</Height><layer Type="13" Editable="True">Base	Base	Overlay 1</layer></CustomButton><Image><Name Type="12">outdoor</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Images\Thermostat\outdoor.png</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><MidX Type="13">687</MidX><MidY Type="13">253</MidY><Width Type="13">140</Width><Height Type="13">166</Height><layer Type="13" Editable="True">Base	Base	Overlay 1</layer></Image><CustomButton><Name Type="12">backBtn</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><cacheImage Type="2" Editable="True">True	True	False</cacheImage><downImage Type="16" Editable="True">.Images\Thermostat\BACK_DOWN.png</downImage><font Type="14" Editable="True">Bitstream Vera Sans,  12pt</font><fontColor Type="11" Editable="True">#000000</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><href Type="15" Editable="True">Main_Menu.open()</href><onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress><upImage Type="16" Editable="True">.Images\Thermostat\BACK_UP.png</upImage><layer Type="13" Editable="True">Base	Base	Overlay 1</layer><MidX Type="13">57</MidX><MidY Type="13">47</MidY><Width Type="13">121</Width><Height Type="13">100</Height></CustomButton><Image><Name Type="12">clock_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Images\Thermostat\clock.png</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><MidX Type="13">708</MidX><MidY Type="13">51</MidY><Width Type="13">171</Width><Height Type="13">98</Height><layer Type="13" Editable="True">Base	Base	Overlay 1</layer></Image></BODY></PAGE><PAGE NAME="ppt"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS></HEAD></PROPERTIES><BKGND/><BODY><ImageScroller><Name Type="12">Bot_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><href Type="15" Editable="True"/><hrefEvent Type="10" Editable="True">On Release	On Change	On Release</hrefEvent><max Type="13" Editable="True">9</max><min Type="13" Editable="True">0</min><scrollerImage Type="16" Editable="True">.ppt\MK-070C Demo.png</scrollerImage><numberOfSelections Type="13" Editable="True">10</numberOfSelections><cacheImage Type="2" Editable="True">True	True	False</cacheImage><inertiaDuration Type="13" Editable="True">0</inertiaDuration><inertiaSpeed Type="13" Editable="True">7</inertiaSpeed><waitForInit Type="2" Editable="True">True False True	False	True</waitForInit><allowWrap Type="10" Editable="True">Wrap	No Wrap	Toggle	Wrap</allowWrap><orientation Type="10" Editable="True">Vertical	Horizontal	Vertical</orientation><initialCondition Type="12" Editable="True">0</initialCondition><hrefOnHitOnly Type="2" Editable="True">False True False	True	False</hrefOnHitOnly><overlayImage Type="16" Editable="True"/><MidX Type="13">400</MidX><MidY Type="13">240</MidY><Width Type="13">806</Width><Height Type="13">486</Height></ImageScroller><TouchArea><Name Type="12">MyTouchArea_1</Name><onRelease Type="31" Editable="True">Amulet:back()</onRelease><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><MidX Type="13">51</MidX><MidY Type="13">239</MidY><Width Type="13">100</Width><Height Type="13">483</Height></TouchArea></BODY></PAGE><PAGE NAME="ImageScroller"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS></HEAD></PROPERTIES><BKGND/><BODY><ImageScroller><Name Type="12">TempScroller_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><href Type="15" Editable="True"/><hrefEvent Type="10" Editable="True">On Change	On Change	On Release</hrefEvent><max Type="13" Editable="True">4</max><min Type="13" Editable="True">0</min><scrollerImage Type="16" Editable="True">.ppt\scrolling image4.jpg</scrollerImage><numberOfSelections Type="13" Editable="True">5</numberOfSelections><cacheImage Type="2" Editable="True">True	True	False</cacheImage><inertiaDuration Type="13" Editable="True">0</inertiaDuration><inertiaSpeed Type="13" Editable="True">7</inertiaSpeed><allowWrap Type="10" Editable="True">Wrap	No Wrap	Toggle	Wrap</allowWrap><MidX Type="13">400</MidX><MidY Type="13">240</MidY><Width Type="13">806</Width><Height Type="13">486</Height></ImageScroller><TouchArea><Name Type="12">MyTouchArea_1</Name><onRelease Type="31" Editable="True">Amulet:back()</onRelease><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onDoubleTap Type="31" Editable="True"/><MidX Type="13">739</MidX><MidY Type="13">423</MidY><Width Type="13">103</Width><Height Type="13">99</Height></TouchArea></BODY></PAGE><DISABLE_MSD>False</DISABLE_MSD><PAGE NAME="Motor_coach_home"><PROPERTIES><HEAD><FUNCTIONS charPos="822" foldedLines="">&lt;SCRIPT&gt;
+	@init()
+	{
+		internalRAM.byte(0) = 1
+		internalRAM.byte(2) = 1	
+		document.TouchBlock.disappear()
+		document.Leveling_touch.disappear()
+		
+	}
+	public drawChassis()
+	{
+		Amulet:document.Leveling_touch.reappear()
+		Amulet:document.TouchBlock.disappear()
+		Amulet:document.MyImageScroller_2 = 2
+		Amulet:document.MyImageScroller_2.reappear()
+	}
+&lt;/SCRIPT&gt;
+
+&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;
+if=Amulet:internalRAM.byte(0).value();
+eq=0;
+then=Amulet:document.Back_Seq.disappear(),Amulet:document.Back.disappear(),Amulet:internalRAM.byte(1).setValue(0),Amulet:document.cabin_menu.setx(84),Amulet:document.cabin_menu.reappear(),Amulet:document.cabin_menu.setalphavalue(0),Amulet:document.cabin_menu.paintalpha(),Amulet:document.cabin_menu_fadeIn.setUpdateRate(0.05);
+eq=2;
+THEN=Amulet:document.Back_Seq.disappear(),Amulet:document.Back.disappear(),Amulet:internalRAM.byte(1).setValue(0),Amulet:document.chasis_menu.setx(60),Amulet:document.chasis_menu.reappear(),Amulet:document.chasis_menu.setalphavalue(0),Amulet:document.chasis_menu.paintalpha(),Amulet:document.chasis_menu_fadeIn.setUpdateRate(0.05);
+name=Meta1"&gt;
+
+&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;
+if=Amulet:internalRAM.byte(0).value();
+eq=1;
+then=Amulet:document.TouchBlock.disappear(),Amulet:document.MyImageScroller_1.setValue(1),Amulet:document.MyImageScroller_2.disappear(),Amulet:document.Back.reappear(),Amulet:document.Back_Seq.reappear();
+name=Meta2"&gt;
+
+&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;
+	IF=Amulet:internalRAM.byte(1).value();
+	GT=0xDF;
+	THEN=Amulet:document.cabin_menu.disappear(),Amulet:document.TouchBlock.disappear(),Amulet:document.MyImageScroller_2.setValue(0),Amulet:document.MyImageScroller_2.reappear(),Amulet:document.cabin_menu_fadeIn.setUpdateRate(0);
+	ELSE=Amulet:document.cabin_menu.setalphavalue(InternalRAM.byte(1)),Amulet:document.cabin_menu.paintalpha(),Amulet:internalRAM.byte(1).add(0x20);
+name=cabin_menu_fadeIn"&gt;
+
+&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;
+	IF=Amulet:internalRAM.byte(1).value();
+	GT=0xDF;
+	THEN=Amulet:document.chasis_menu.disappear(),GEMscript.drawChassis(),Amulet:document.chasis_menu_fadeIn.setUpdateRate(0);
+	ELSE=Amulet:document.chasis_menu.setalphavalue(InternalRAM.byte(1)),Amulet:document.chasis_menu.paintalpha(),Amulet:internalRAM.byte(1).add(0x20);
+name=chasis_menu_fadeIn"&gt;
+
+&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;
+	IF=Amulet:document.MyImageScroller_1.value();
+	NEQ=1;
+	THEN=Amulet:document.TouchBlock.reappear();
+NAME=TouchBlock1"&gt;
+&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;
+	IF=Amulet:document.MyImageScroller_2.value();
+	EQ=1;
+	THEN=Amulet:document.TouchBlock.reappear(),Amulet:document.Leveling_touch.disappear();
+NAME=TouchBlock2"&gt;
+</FUNCTIONS></HEAD></PROPERTIES><BKGND/><BODY><ImageScroller><Name Type="12">MyImageScroller_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><allowWrap Type="10" Editable="True">No Wrap	No Wrap	Toggle	Wrap</allowWrap><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="15" Editable="True">Amulet:internalRAM.byte(0).setValue(),
+Amulet:document.Meta1.setDelayRate(0.02),
+Amulet:document.TouchBlock1.forceUpdate()</href><hrefEvent Type="10" Editable="True">On Release	On Change	On Release</hrefEvent><inertiaDuration Type="13" Editable="True">0</inertiaDuration><inertiaSpeed Type="13" Editable="True">1</inertiaSpeed><initialCondition Type="12" Editable="True">1</initialCondition><max Type="13" Editable="True">2</max><min Type="13" Editable="True">0</min><numberOfSelections Type="13" Editable="True">3</numberOfSelections><scrollerImage Type="16" Editable="True">.Images\MotorCoach\motorhome_scroller3.png</scrollerImage><hrefOnHitOnly Type="2" Editable="True">True	True	False</hrefOnHitOnly><MidX Type="13">400</MidX><MidY Type="13">240</MidY><Width Type="13">806</Width><Height Type="13">486</Height></ImageScroller><ImageScroller><Name Type="12">MyImageScroller_2</Name><invisible Type="2" Editable="True">True	True	False</invisible><allowWrap Type="10" Editable="True">No Wrap	No Wrap	Toggle	Wrap</allowWrap><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="15" Editable="True">Amulet:internalRAM.byte(0).setValue(),Amulet:document.Meta2.setDelayRate(0.04),Amulet:document.TouchBlock2.forceUpdate()</href><hrefEvent Type="10" Editable="True">On Release	On Change	On Release</hrefEvent><inertiaDuration Type="13" Editable="True">0</inertiaDuration><inertiaSpeed Type="13" Editable="True">1</inertiaSpeed><initialCondition Type="12" Editable="True">1</initialCondition><max Type="13" Editable="True">2</max><min Type="13" Editable="True">0</min><numberOfSelections Type="13" Editable="True">3</numberOfSelections><scrollerImage Type="16" Editable="True">.Images\MotorCoach\motorhome_scroller.png</scrollerImage><hrefOnHitOnly Type="2" Editable="True">True	True	False</hrefOnHitOnly><MidX Type="13">400</MidX><MidY Type="13">240</MidY><Width Type="13">806</Width><Height Type="13">486</Height></ImageScroller><Image><Name Type="12">cabin_menu</Name><file Type="16" Editable="True">.Images\MotorCoach\cabin_menu2.png</file><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">True	True	False</invisible><MidX Type="13">401</MidX><MidY Type="13">183</MidY><Width Type="13">641</Width><Height Type="13">233</Height></Image><TouchArea><Name Type="12">TouchBlock</Name><onRelease Type="31" Editable="True"/><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><MidX Type="13">400</MidX><MidY Type="13">240</MidY><Width Type="13">806</Width><Height Type="13">486</Height></TouchArea><Image><Name Type="12">chasis_menu</Name><file Type="16" Editable="True">.Images\MotorCoach\chasis_menu2.png</file><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">True	True	False</invisible><MidX Type="13">406</MidX><MidY Type="13">305</MidY><Width Type="13">699</Width><Height Type="13">224</Height></Image><Image><Name Type="12">leveling_down</Name><file Type="16" Editable="True">.Images\MotorCoach\leveling_down.png</file><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">True	True	False</invisible><MidX Type="13">497</MidX><MidY Type="13">215</MidY><Width Type="13">244</Width><Height Type="13">54</Height></Image><TouchArea><Name Type="12">Leveling_touch</Name><onRelease Type="31" Editable="True">Level.open()</onRelease><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onSlideOff Type="31" Editable="True">Amulet:document.leveling_down.disappear()</onSlideOff><onSlideOn Type="31" Editable="True">Amulet:document.leveling_down.reappear()</onSlideOn><onTouch Type="31" Editable="True">Amulet:document.leveling_down.setX(378),Amulet:document.leveling_down.reappear()</onTouch><MidX Type="13">497</MidX><MidY Type="13">215</MidY><Width Type="13">244</Width><Height Type="13">54</Height></TouchArea><ImageSeq><Name Type="12">Back_Seq</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">1</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Thermostat\BACK_UP.png;.Images\Thermostat\BACK_DOWN.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">47</MidX><MidY Type="13">47</MidY><Width Type="13">121</Width><Height Type="13">100</Height></ImageSeq><TouchArea><Name Type="12">Back</Name><onRelease Type="31" Editable="True">Main_Menu.open()</onRelease><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onSlideOff Type="31" Editable="True">Amulet:document.Back_Seq.setValue(0)</onSlideOff><onSlideOn Type="31" Editable="True">Amulet:document.Back_Seq.setValue(1)</onSlideOn><onTouch Type="31" Editable="True">Amulet:document.Back_Seq.setValue(1)</onTouch><MidX Type="13">57</MidX><MidY Type="13">47</MidY><Width Type="13">121</Width><Height Type="13">100</Height></TouchArea></BODY></PAGE><PAGE NAME="Level"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS><FUNCTIONS charPos="203" foldedLines="">&lt;SCRIPT&gt;
+	@load()
+	{
+		if (InternalRAM.byte(10) == 0)
+		{
+			document.Release.reappear()
+			showLevel()
+		}
+		else
+		{
+			document.ReadyToLevel.reappear()
+			showDegrees()
+		}
+	}
+	public Releaser()
+	{
+		new int F2R = internalRAM.byte(10)++
+		new int L2R = internalRAM.byte(11)++
+		updateOutputs()
+		if(L2R &gt; 60)
+		{
+			document.ReleaseTimer.setUpdateRate(0)
+			document.JumpTimer.setUpdateRate(200)
+		}
+	}
+	public Leveler(){
+		new int F2R = internalRAM.byte(10)--
+		new int L2R = internalRAM.byte(11)--
+		updateOutputs()
+		if(L2R == 0)
+		{
+			document.LevelerTimer.setUpdateRate(0)
+			showLevel()
+			document.JumpTimer.setUpdateRate(200)
+		}
+	}
+	updateOutputs()
+	{
+		document.F2R.forceUpdate()
+		document.F2R_ones.forceUpdate()
+		document.F2R_tens.forceUpdate()
+		document.L2R_ones.forceUpdate()
+		document.L2R_tens.forceUpdate()
+		document.L2R.forceUpdate()
+	}
+	public showDegrees()
+	{
+		document.Level.disappear()
+		document.F2R_ones.reappear()
+		document.F2R_tens.reappear()
+		document.decimal_point_1.reappear()
+		document.degrees_1.reappear()
+		
+		document.Level_2.disappear()
+		document.L2R_ones.reappear()
+		document.L2R_tens.reappear()
+		document.decimal_point_2.reappear()
+		document.degrees_2.reappear()
+	}
+	
+	showLevel()
+	{
+		document.F2R_ones.disappear()
+		document.F2R_tens.disappear()
+		document.decimal_point_1.disappear()
+		document.degrees_1.disappear()
+		document.Level.reappear()
+		
+		document.L2R_ones.disappear()
+		document.L2R_tens.disappear()
+		document.decimal_point_2.disappear()
+		document.degrees_2.disappear()
+		document.Level_2.reappear()
+	}
+	
+&lt;/SCRIPT&gt;
+
+&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;URL=GEMscript.Releaser();
+Name=ReleaseTimer;"&gt;
+&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;URL=GEMscript.Leveler();
+Name=LevelerTimer;"&gt;
+&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Motor_coach_home.open();
+Name=JumpTimer;"&gt;</FUNCTIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">Level_bg_1</Name><file Type="16" Editable="True">.Images\MotorCoach\Leveling\Level_bg2.png</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><invisible Type="2" Editable="True">False	True	False</invisible><MidX Type="13">400</MidX><MidY Type="13">240</MidY><Width Type="13">806</Width><Height Type="13">486</Height></Image></BKGND><BODY><Image><Name Type="12">Front_to_Rear_1</Name><file Type="16" Editable="True">.Images\MotorCoach\Leveling\Front_to_Rear.png</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><invisible Type="2" Editable="True">False	True	False</invisible><MidX Type="13">321</MidX><MidY Type="13">42</MidY><Width Type="13">148</Width><Height Type="13">21</Height></Image><Image><Name Type="12">Left_to_right_1</Name><file Type="16" Editable="True">.Images\MotorCoach\Leveling\Left_to_right.png</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><invisible Type="2" Editable="True">False	True	False</invisible><MidX Type="13">723</MidX><MidY Type="13">42</MidY><Width Type="13">135</Width><Height Type="13">21</Height></Image><CustomButton><Name Type="12">ReadyToLevel</Name><invisible Type="2" Editable="True">True	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><cacheImage Type="2" Editable="True">True	True	False</cacheImage><downImage Type="16" Editable="True">.Images\MotorCoach\Leveling\Ready_to_level_down.png</downImage><font Type="14" Editable="True">Bitstream Vera Sans,  12pt</font><fontColor Type="11" Editable="True">#000000</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><href Type="15" Editable="True">Amulet:document.LevelerTimer.setUpdateRate(0.05),
+Amulet:document.ReadyToLevel.disappear(),
+Amulet:document.Leveling.reappear()</href><onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress><upImage Type="16" Editable="True">.Images\MotorCoach\Leveling\Ready_to_level_up.png</upImage><MidX Type="13">403</MidX><MidY Type="13">395</MidY><Width Type="13">364</Width><Height Type="13">31</Height></CustomButton><Image><Name Type="12">Leveling</Name><file Type="16" Editable="True">.Images\MotorCoach\Leveling\Leveling.png</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><invisible Type="2" Editable="True">True	True	False</invisible><MidX Type="13">403</MidX><MidY Type="13">399</MidY><Width Type="13">277</Width><Height Type="13">30</Height></Image><CustomButton><Name Type="12">Release</Name><invisible Type="2" Editable="True">True	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><cacheImage Type="2" Editable="True">True	True	False</cacheImage><downImage Type="16" Editable="True">.Images\MotorCoach\Leveling\release_down.png</downImage><font Type="14" Editable="True">Bitstream Vera Sans,  12pt</font><fontColor Type="11" Editable="True">#000000</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><href Type="15" Editable="True">Amulet:document.ReleaseTimer.setUpdateRate(0.05),
+GEMscript.showDegrees(),
+Amulet:document.Release.disappear(),
+Amulet:document.releasing.reappear()</href><onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress><upImage Type="16" Editable="True">.Images\MotorCoach\Leveling\release_up.png</upImage><MidX Type="13">403</MidX><MidY Type="13">395</MidY><Width Type="13">213</Width><Height Type="13">32</Height></CustomButton><Image><Name Type="12">releasing</Name><file Type="16" Editable="True">.Images\MotorCoach\Leveling\releasing.png</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><invisible Type="2" Editable="True">True	True	False</invisible><MidX Type="13">458</MidX><MidY Type="13">399</MidY><Width Type="13">314</Width><Height Type="13">30</Height></Image><ImageSeq><Name Type="12">F2R</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:internalRAM.byte(10).value()</href><max Type="13" Editable="True">29</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\MotorCoach\Left Bus Sequence\bus_left_01.png;.Images\MotorCoach\Left Bus Sequence\bus_left_02.png;.Images\MotorCoach\Left Bus Sequence\bus_left_03.png;.Images\MotorCoach\Left Bus Sequence\bus_left_04.png;.Images\MotorCoach\Left Bus Sequence\bus_left_05.png;.Images\MotorCoach\Left Bus Sequence\bus_left_06.png;.Images\MotorCoach\Left Bus Sequence\bus_left_07.png;.Images\MotorCoach\Left Bus Sequence\bus_left_08.png;.Images\MotorCoach\Left Bus Sequence\bus_left_09.png;.Images\MotorCoach\Left Bus Sequence\bus_left_10.png;.Images\MotorCoach\Left Bus Sequence\bus_left_11.png;.Images\MotorCoach\Left Bus Sequence\bus_left_12.png;.Images\MotorCoach\Left Bus Sequence\bus_left_13.png;.Images\MotorCoach\Left Bus Sequence\bus_left_14.png;.Images\MotorCoach\Left Bus Sequence\bus_left_15.png;.Images\MotorCoach\Left Bus Sequence\bus_left_16.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">322</MidX><MidY Type="13">224</MidY><Width Type="13">651</Width><Height Type="13">198</Height></ImageSeq><Image><Name Type="12">Level</Name><file Type="16" Editable="True">.Images\MotorCoach\Leveling\Level.png</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><invisible Type="2" Editable="True">True	True	False</invisible><MidX Type="13">321</MidX><MidY Type="13">83</MidY><Width Type="13">120</Width><Height Type="13">37</Height></Image><ImageSeq><Name Type="12">F2R_tens</Name><invisible Type="2" Editable="True">True	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:internalRAM.byte(10).value()</href><max Type="13" Editable="True">29</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\MotorCoach\Leveling\numbers\0.png;.Images\MotorCoach\Leveling\numbers\1.png;.Images\MotorCoach\Leveling\numbers\2.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">304</MidX><MidY Type="13">83</MidY><Width Type="13">37</Width><Height Type="13">48</Height></ImageSeq><Image><Name Type="12">decimal_point_1</Name><file Type="16" Editable="True">.Images\MotorCoach\Leveling\numbers\decimal_point.png</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><invisible Type="2" Editable="True">True	True	False</invisible><MidX Type="13">321</MidX><MidY Type="13">101</MidY><Width Type="13">9</Width><Height Type="13">12</Height></Image><ImageSeq><Name Type="12">F2R_ones</Name><invisible Type="2" Editable="True">True	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:internalRAM.byte(10).value()</href><max Type="13" Editable="True">29</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\MotorCoach\Leveling\numbers\0.png;.Images\MotorCoach\Leveling\numbers\1.png;.Images\MotorCoach\Leveling\numbers\2.png;.Images\MotorCoach\Leveling\numbers\3.png;.Images\MotorCoach\Leveling\numbers\4.png;.Images\MotorCoach\Leveling\numbers\5.png;.Images\MotorCoach\Leveling\numbers\6.png;.Images\MotorCoach\Leveling\numbers\7.png;.Images\MotorCoach\Leveling\numbers\8.png;.Images\MotorCoach\Leveling\numbers\9.png;.Images\MotorCoach\Leveling\numbers\0.png;.Images\MotorCoach\Leveling\numbers\1.png;.Images\MotorCoach\Leveling\numbers\2.png;.Images\MotorCoach\Leveling\numbers\3.png;.Images\MotorCoach\Leveling\numbers\4.png;.Images\MotorCoach\Leveling\numbers\5.png;.Images\MotorCoach\Leveling\numbers\6.png;.Images\MotorCoach\Leveling\numbers\7.png;.Images\MotorCoach\Leveling\numbers\8.png;.Images\MotorCoach\Leveling\numbers\9.png;.Images\MotorCoach\Leveling\numbers\0.png;.Images\MotorCoach\Leveling\numbers\1.png;.Images\MotorCoach\Leveling\numbers\2.png;.Images\MotorCoach\Leveling\numbers\3.png;.Images\MotorCoach\Leveling\numbers\4.png;.Images\MotorCoach\Leveling\numbers\5.png;.Images\MotorCoach\Leveling\numbers\6.png;.Images\MotorCoach\Leveling\numbers\7.png;.Images\MotorCoach\Leveling\numbers\8.png;.Images\MotorCoach\Leveling\numbers\9.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">338</MidX><MidY Type="13">83</MidY><Width Type="13">37</Width><Height Type="13">48</Height></ImageSeq><Image><Name Type="12">degrees_1</Name><file Type="16" Editable="True">.Images\MotorCoach\Leveling\numbers\degrees.png</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><invisible Type="2" Editable="True">True	True	False</invisible><MidX Type="13">359</MidX><MidY Type="13">67</MidY><Width Type="13">16</Width><Height Type="13">17</Height></Image><ImageSeq><Name Type="12">L2R</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:internalRAM.byte(11).value()</href><max Type="13" Editable="True">61</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\MotorCoach\Right Bus Sequence\bus_right_01.png;.Images\MotorCoach\Right Bus Sequence\bus_right_02.png;.Images\MotorCoach\Right Bus Sequence\bus_right_03.png;.Images\MotorCoach\Right Bus Sequence\bus_right_04.png;.Images\MotorCoach\Right Bus Sequence\bus_right_05.png;.Images\MotorCoach\Right Bus Sequence\bus_right_06.png;.Images\MotorCoach\Right Bus Sequence\bus_right_07.png;.Images\MotorCoach\Right Bus Sequence\bus_right_08.png;.Images\MotorCoach\Right Bus Sequence\bus_right_09.png;.Images\MotorCoach\Right Bus Sequence\bus_right_10.png;.Images\MotorCoach\Right Bus Sequence\bus_right_11.png;.Images\MotorCoach\Right Bus Sequence\bus_right_12.png;.Images\MotorCoach\Right Bus Sequence\bus_right_13.png;.Images\MotorCoach\Right Bus Sequence\bus_right_14.png;.Images\MotorCoach\Right Bus Sequence\bus_right_15.png;.Images\MotorCoach\Right Bus Sequence\bus_right_16.png;.Images\MotorCoach\Right Bus Sequence\bus_right_17.png;.Images\MotorCoach\Right Bus Sequence\bus_right_18.png;.Images\MotorCoach\Right Bus Sequence\bus_right_19.png;.Images\MotorCoach\Right Bus Sequence\bus_right_20.png;.Images\MotorCoach\Right Bus Sequence\bus_right_21.png;.Images\MotorCoach\Right Bus Sequence\bus_right_22.png;.Images\MotorCoach\Right Bus Sequence\bus_right_23.png;.Images\MotorCoach\Right Bus Sequence\bus_right_24.png;.Images\MotorCoach\Right Bus Sequence\bus_right_25.png;.Images\MotorCoach\Right Bus Sequence\bus_right_26.png;.Images\MotorCoach\Right Bus Sequence\bus_right_27.png;.Images\MotorCoach\Right Bus Sequence\bus_right_28.png;.Images\MotorCoach\Right Bus Sequence\bus_right_29.png;.Images\MotorCoach\Right Bus Sequence\bus_right_30.png;.Images\MotorCoach\Right Bus Sequence\bus_right_31.png;.Images\MotorCoach\Right Bus Sequence\bus_right_32.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">722</MidX><MidY Type="13">232</MidY><Width Type="13">161</Width><Height Type="13">181</Height></ImageSeq><ImageSeq><Name Type="12">L2R_tens</Name><invisible Type="2" Editable="True">True	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:internalRAM.byte(11).value()</href><max Type="13" Editable="True">69</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\MotorCoach\Leveling\numbers\0.png;.Images\MotorCoach\Leveling\numbers\1.png;.Images\MotorCoach\Leveling\numbers\2.png;.Images\MotorCoach\Leveling\numbers\3.png;.Images\MotorCoach\Leveling\numbers\4.png;.Images\MotorCoach\Leveling\numbers\5.png;.Images\MotorCoach\Leveling\numbers\6.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">706</MidX><MidY Type="13">83</MidY><Width Type="13">37</Width><Height Type="13">48</Height></ImageSeq><Image><Name Type="12">decimal_point_2</Name><file Type="16" Editable="True">.Images\MotorCoach\Leveling\numbers\decimal_point.png</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><invisible Type="2" Editable="True">True	True	False</invisible><MidX Type="13">723</MidX><MidY Type="13">101</MidY><Width Type="13">9</Width><Height Type="13">12</Height></Image><ImageSeq><Name Type="12">L2R_ones</Name><invisible Type="2" Editable="True">True	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:internalRAM.byte(11).value()</href><max Type="13" Editable="True">61</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\MotorCoach\Leveling\numbers\0.png;.Images\MotorCoach\Leveling\numbers\1.png;.Images\MotorCoach\Leveling\numbers\2.png;.Images\MotorCoach\Leveling\numbers\3.png;.Images\MotorCoach\Leveling\numbers\4.png;.Images\MotorCoach\Leveling\numbers\5.png;.Images\MotorCoach\Leveling\numbers\6.png;.Images\MotorCoach\Leveling\numbers\7.png;.Images\MotorCoach\Leveling\numbers\8.png;.Images\MotorCoach\Leveling\numbers\9.png;.Images\MotorCoach\Leveling\numbers\0.png;.Images\MotorCoach\Leveling\numbers\1.png;.Images\MotorCoach\Leveling\numbers\2.png;.Images\MotorCoach\Leveling\numbers\3.png;.Images\MotorCoach\Leveling\numbers\4.png;.Images\MotorCoach\Leveling\numbers\5.png;.Images\MotorCoach\Leveling\numbers\6.png;.Images\MotorCoach\Leveling\numbers\7.png;.Images\MotorCoach\Leveling\numbers\8.png;.Images\MotorCoach\Leveling\numbers\9.png;.Images\MotorCoach\Leveling\numbers\0.png;.Images\MotorCoach\Leveling\numbers\1.png;.Images\MotorCoach\Leveling\numbers\2.png;.Images\MotorCoach\Leveling\numbers\3.png;.Images\MotorCoach\Leveling\numbers\4.png;.Images\MotorCoach\Leveling\numbers\5.png;.Images\MotorCoach\Leveling\numbers\6.png;.Images\MotorCoach\Leveling\numbers\7.png;.Images\MotorCoach\Leveling\numbers\8.png;.Images\MotorCoach\Leveling\numbers\9.png;.Images\MotorCoach\Leveling\numbers\0.png;.Images\MotorCoach\Leveling\numbers\1.png;.Images\MotorCoach\Leveling\numbers\2.png;.Images\MotorCoach\Leveling\numbers\3.png;.Images\MotorCoach\Leveling\numbers\4.png;.Images\MotorCoach\Leveling\numbers\5.png;.Images\MotorCoach\Leveling\numbers\6.png;.Images\MotorCoach\Leveling\numbers\7.png;.Images\MotorCoach\Leveling\numbers\8.png;.Images\MotorCoach\Leveling\numbers\9.png;.Images\MotorCoach\Leveling\numbers\0.png;.Images\MotorCoach\Leveling\numbers\1.png;.Images\MotorCoach\Leveling\numbers\2.png;.Images\MotorCoach\Leveling\numbers\3.png;.Images\MotorCoach\Leveling\numbers\4.png;.Images\MotorCoach\Leveling\numbers\5.png;.Images\MotorCoach\Leveling\numbers\6.png;.Images\MotorCoach\Leveling\numbers\7.png;.Images\MotorCoach\Leveling\numbers\8.png;.Images\MotorCoach\Leveling\numbers\9.png;.Images\MotorCoach\Leveling\numbers\0.png;.Images\MotorCoach\Leveling\numbers\1.png;.Images\MotorCoach\Leveling\numbers\2.png;.Images\MotorCoach\Leveling\numbers\3.png;.Images\MotorCoach\Leveling\numbers\4.png;.Images\MotorCoach\Leveling\numbers\5.png;.Images\MotorCoach\Leveling\numbers\6.png;.Images\MotorCoach\Leveling\numbers\7.png;.Images\MotorCoach\Leveling\numbers\8.png;.Images\MotorCoach\Leveling\numbers\9.png;.Images\MotorCoach\Leveling\numbers\0.png;.Images\MotorCoach\Leveling\numbers\1.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">740</MidX><MidY Type="13">83</MidY><Width Type="13">37</Width><Height Type="13">48</Height></ImageSeq><Image><Name Type="12">Level_2</Name><file Type="16" Editable="True">.Images\MotorCoach\Leveling\Level.png</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><invisible Type="2" Editable="True">True	True	False</invisible><MidX Type="13">723</MidX><MidY Type="13">83</MidY><Width Type="13">120</Width><Height Type="13">37</Height></Image><Image><Name Type="12">degrees_2</Name><file Type="16" Editable="True">.Images\MotorCoach\Leveling\numbers\degrees.png</file><cacheImage Type="2" Editable="True">True	True	False</cacheImage><invisible Type="2" Editable="True">True	True	False</invisible><MidX Type="13">761</MidX><MidY Type="13">67</MidY><Width Type="13">16</Width><Height Type="13">17</Height></Image></BODY></PAGE></GEMProject>

@@ -1,0 +1,18 @@
+<!-- InitMeta, reset sleepTimer -->
+<META HTTP-EQUIV="REFRESH" CONTENT="0,0.01; 
+      URL=sleepTimer.setValue(0);
+      NAME=metaResetTimer">
+
+<!-- TimerMeta, if sleepTimeOut is non-zero, increment sleepTimer then jump to CheckTimer Meta -->
+<META HTTP-EQUIV="REFRESH" CONTENT="1;
+      IF=sleepTimeOut.value(); 
+      NEQ=0;
+      THEN=sleepTimer.inc(), Amulet:document.CheckTimer.forceUpdate();
+      NAME=TimerMeta">
+
+<!-- CheckTimer Meta, if sleepTimer value is greater than sleepTimeOut, goto sleep  -->
+<META HTTP-EQUIV="REFRESH" CONTENT="0;
+      IF=sleepTimer.value(); 
+      GT=sleepTimeOut.value();
+      THEN=Amulet:lowPower.sleep(LCD_OFF/SLOW_CLK), sleepTimer.setValue(0); 
+      NAME=CheckTimer">

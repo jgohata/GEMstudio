@@ -1,0 +1,1299 @@
+LCD Size: 800 x 480
+LCD Manufacturer: Amulet
+LCD Part Number: STK-070R
+Touch Panel: 4-Wire Resistive
+Init File: Init None
+SDRAM Part Number: IS42S32800D (256 MBit)
+Size of SDRAM: 0x2000000
+Size of Serial Data Flash: 0x800000
+Serial Data Flash used by OS: 0x40c00
+Minimum Serial Data Flash Sector: 0x100
+Color Depth: 8
+
+Intro_preCache (GEM page)    Flash Index = 0x20
+==============
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x6c       (0x7bf390)                                                               
+      MultiHref0                Sequenced Functions    0x3c       (0x7bf354)     0x0        (0x1f0d77c)                                                     
+      No Name                   Meta Object            0x3c       (0x7bf318)     0x0        (0x1f0d77c)                                          
+      No Name                   Cached Image Dir       0xc        (0x7bf30c)     0x44       (0x1f0d738)                                               
+      LrgTotalBttnUP.gif        Cached Image           0xc        (0x7bf300)     0xb3b4     (0x1f02384)                                                        
+      LrgHeightBttnUP.gif       Cached Image           0xc        (0x7bf2f4)     0xb3b4     (0x1ef6fd0)                                                         
+      LRGBloodPressBPBut...gif  Cached Image           0xc        (0x7bf2e8)     0xb3b4     (0x1eebc1c)                                                              
+      LRGBloodSgrBttnUP.gif     Cached Image           0xc        (0x7bf2dc)     0xb3b4     (0x1ee0868)                                                           
+      SmllTotalBttnDOWN.gif     Cached Image           0xc        (0x7bf2d0)     0x2afc     (0x1eddd6c)                                                           
+      SmllTotalBttnUP.gif       Cached Image           0xc        (0x7bf2c4)     0x2afc     (0x1edb270)                                                         
+      SmllHeightBttnDOWN.gif    Cached Image           0xc        (0x7bf2b8)     0x2afc     (0x1ed8774)                                                            
+      SmllHeightBttnUP.gif      Cached Image           0xc        (0x7bf2ac)     0x2afc     (0x1ed5c78)                                                          
+      SmllBloodSgrBttnDOWN.gif  Cached Image           0xc        (0x7bf2a0)     0x2afc     (0x1ed317c)                                                              
+      SmllBloodSgrBttnUP.gif    Cached Image           0xc        (0x7bf294)     0x2afc     (0x1ed0680)                                                            
+      SmllBloodPressBttn...gif  Cached Image           0xc        (0x7bf288)     0x2afc     (0x1ecdb84)                                                              
+      SmllBloodPressBttnUP.gif  Cached Image           0xc        (0x7bf27c)     0x2afc     (0x1ecb088)                                                              
+      SmllCholestrlBttnD...gif  Cached Image           0xc        (0x7bf270)     0x2afc     (0x1ec858c)                                                              
+      SmllCholestrlBttnUP.gif   Cached Image           0xc        (0x7bf264)     0x2afc     (0x1ec5a90)                                                             
+      LRGCholestrolBttnUP.gif   Cached Image           0xc        (0x7bf258)     0xb3b4     (0x1eba6dc)                                                             
+      Bckgrnd.gif               Cached Image           0xc        (0x7bf24c)     0x5dc04    (0x1e5cad8)                                                  
+      PAGE FOOTER                                      0x2        (0x7bf24a)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0x1b2      (0x7bf24a)     0xb0ca4    (0x1e5cad8)                                 
+
+
+Intro (GEM page)    Flash Index = 0x21
+=====
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x5c       (0x7bf1a0)                                                               
+      No Name                   Meta Object            0x3c       (0x7bf164)     0x0        (0x1e5cad8)                                          
+      Bckgrnd                   Image                  0x20       (0x7bf144)     0x0        (0x1e5cad8)                                    
+      INTRO                     Image                  0x20       (0x7bf124)     0x204d8    (0x1e3c600)                                      
+      TimeHourTens              Image Sequence         0x28       (0x7bf0fc)     0x178      (0x1e3c488)                                                    
+        IWC of TimeHourTens     IWC Object             0x24       (0x7bf0d8)     0x0        (0x1e3c488)                                                       
+      TimeHourOnes              Image Sequence         0x78       (0x7bf060)     0x8d0      (0x1e3bbb8)                                                    
+        IWC of TimeHourOnes     IWC Object             0x24       (0x7bf03c)     0x0        (0x1e3bbb8)                                                       
+      Colon                     Image                  0x20       (0x7bf01c)     0x28       (0x1e3bb90)                                   
+      TimeMinTens               Image Sequence         0x48       (0x7befd4)     0x468      (0x1e3b728)                                                   
+        IWC of TimeMinTens      IWC Object             0x24       (0x7befb0)     0x0        (0x1e3b728)                                                      
+      TimeMinOnes               Image Sequence         0x1f8      (0x7bedb8)     0x2c10     (0x1e38b18)                                                     
+        IWC of TimeMinOnes      IWC Object             0x24       (0x7bed94)     0x0        (0x1e38b18)                                                      
+      AMPM                      Image Sequence         0x28       (0x7bed6c)     0x190      (0x1e38988)                                            
+        IWC of AMPM             IWC Object             0x24       (0x7bed48)     0x0        (0x1e38988)                                               
+      JumpNow                   Touch Area             0x3c       (0x7bed0c)     0x0        (0x1e38988)                                         
+      PAGE FOOTER                                      0x2        (0x7bed0a)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0x4f2      (0x7bed0a)     0x24150    (0x1e38988)                                 
+
+
+Cholesterol (GEM page)    Flash Index = 0x22
+===========
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0xb0       (0x7bec4c)                                                               
+      Random1                   Anchor                 0x3c       (0x7bec10)     0x0        (0x1e5cad8)                                     
+      random1                   No Type                0x4        (0x7bec0c)     0x0        (0x1e5cad8)                                     
+        IWC of Random1          IWC Object             0x24       (0x7bebe8)     0x0        (0x1e5cad8)                                                  
+      Random2                   Anchor                 0x3c       (0x7bebac)     0x0        (0x1e5cad8)                                     
+        IWC of Random2          IWC Object             0x24       (0x7beb88)     0x0        (0x1e5cad8)                                                  
+      Random3                   Anchor                 0x3c       (0x7beb4c)     0x0        (0x1e5cad8)                                     
+        IWC of Random3          IWC Object             0x24       (0x7beb28)     0x0        (0x1e5cad8)                                                  
+      Bckgrnd                   Image                  0x20       (0x7beb08)     0x0        (0x1e5cad8)                                    
+      CurrentScreen             Image                  0x20       (0x7beae8)     0x0        (0x1e5cad8)                                          
+      Cholesterol               Custom Button          0x64       (0x7bea84)     0x0        (0x1e5cad8)                                                
+      BloodPressure             Custom Button          0x64       (0x7bea20)     0x0        (0x1e5cad8)                                                  
+      BloodSugar                Custom Button          0x64       (0x7be9bc)     0x0        (0x1e5cad8)                                               
+      Height                    Custom Button          0x64       (0x7be958)     0x0        (0x1e5cad8)                                           
+      Totals                    Custom Button          0x64       (0x7be8f4)     0x0        (0x1e5cad8)                                           
+      TimeHourTens              Image Sequence         0x28       (0x7be8cc)     0x178      (0x1e5c960)                                                    
+        IWC of TimeHourTens     IWC Object             0x24       (0x7be8a8)     0x0        (0x1e5c960)                                                       
+      TimeHourOnes              Image Sequence         0x78       (0x7be830)     0x8d0      (0x1e5c090)                                                    
+        IWC of TimeHourOnes     IWC Object             0x24       (0x7be80c)     0x0        (0x1e5c090)                                                       
+      Colon                     Image                  0x20       (0x7be7ec)     0x28       (0x1e5c068)                                   
+      TimeMinTens               Image Sequence         0x48       (0x7be7a4)     0x468      (0x1e5bc00)                                                   
+        IWC of TimeMinTens      IWC Object             0x24       (0x7be780)     0x0        (0x1e5bc00)                                                      
+      TimeMinOnes               Image Sequence         0x1f8      (0x7be588)     0x2c10     (0x1e58ff0)                                                     
+        IWC of TimeMinOnes      IWC Object             0x24       (0x7be564)     0x0        (0x1e58ff0)                                                      
+      AMPM                      Image Sequence         0x28       (0x7be53c)     0x190      (0x1e58e60)                                            
+        IWC of AMPM             IWC Object             0x24       (0x7be518)     0x0        (0x1e58e60)                                               
+      CholestrolBox             Image                  0x20       (0x7be4f8)     0x956c     (0x1e4f8f4)                                             
+      Chol_hund                 Image Sequence         0x68       (0x7be490)     0x5dc0     (0x1e49b34)                                                  
+        IWC of Chol_hund        IWC Object             0x24       (0x7be46c)     0x0        (0x1e49b34)                                                    
+      Chol_tens                 Image Sequence         0x68       (0x7be404)     0x5dc0     (0x1e43d74)                                                  
+        IWC of Chol_tens        IWC Object             0x24       (0x7be3e0)     0x0        (0x1e43d74)                                                    
+      Chol_ones                 Image Sequence         0x68       (0x7be378)     0x5dc0     (0x1e3dfb4)                                                  
+        IWC of Chol_ones        IWC Object             0x24       (0x7be354)     0x0        (0x1e3dfb4)                                                    
+      Circle                    Image                  0x20       (0x7be334)     0x2e64     (0x1e3b150)                                      
+      mgdLtext                  Image                  0x20       (0x7be314)     0xe9c      (0x1e3a2b4)                                       
+      MultiHref34               Multiple Functions     0x24       (0x7be2f0)     0x0        (0x1e3a2b4)                                                     
+      Randomizer                Touch Area             0x3c       (0x7be2b4)     0x0        (0x1e3a2b4)                                            
+      PAGE FOOTER                                      0x2        (0x7be2b2)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0xa4a      (0x7be2b2)     0x22824    (0x1e3a2b4)                                 
+
+
+BloodSugar (GEM page)    Flash Index = 0x23
+==========
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0xb0       (0x7be14c)                                                               
+      Random1                   Anchor                 0x3c       (0x7be110)     0x0        (0x1e5cad8)                                     
+      random1                   No Type                0x4        (0x7be10c)     0x0        (0x1e5cad8)                                     
+        IWC of Random1          IWC Object             0x24       (0x7be0e8)     0x0        (0x1e5cad8)                                                  
+      Random2                   Anchor                 0x3c       (0x7be0ac)     0x0        (0x1e5cad8)                                     
+        IWC of Random2          IWC Object             0x24       (0x7be088)     0x0        (0x1e5cad8)                                                  
+      Random3                   Anchor                 0x3c       (0x7be04c)     0x0        (0x1e5cad8)                                     
+        IWC of Random3          IWC Object             0x24       (0x7be028)     0x0        (0x1e5cad8)                                                  
+      Bckgrnd                   Image                  0x20       (0x7be008)     0x0        (0x1e5cad8)                                    
+      CurrentScreen             Image                  0x20       (0x7bdfe8)     0x0        (0x1e5cad8)                                          
+      Cholesterol               Custom Button          0x64       (0x7bdf84)     0x0        (0x1e5cad8)                                                
+      BloodPressure             Custom Button          0x64       (0x7bdf20)     0x0        (0x1e5cad8)                                                  
+      BloodSugar                Custom Button          0x64       (0x7bdebc)     0x0        (0x1e5cad8)                                               
+      Height                    Custom Button          0x64       (0x7bde58)     0x0        (0x1e5cad8)                                           
+      Totals                    Custom Button          0x64       (0x7bddf4)     0x0        (0x1e5cad8)                                           
+      TimeHourTens              Image Sequence         0x28       (0x7bddcc)     0x178      (0x1e5c960)                                                    
+        IWC of TimeHourTens     IWC Object             0x24       (0x7bdda8)     0x0        (0x1e5c960)                                                       
+      TimeHourOnes              Image Sequence         0x78       (0x7bdd30)     0x8d0      (0x1e5c090)                                                    
+        IWC of TimeHourOnes     IWC Object             0x24       (0x7bdd0c)     0x0        (0x1e5c090)                                                       
+      Colon                     Image                  0x20       (0x7bdcec)     0x28       (0x1e5c068)                                   
+      TimeMinTens               Image Sequence         0x48       (0x7bdca4)     0x468      (0x1e5bc00)                                                   
+        IWC of TimeMinTens      IWC Object             0x24       (0x7bdc80)     0x0        (0x1e5bc00)                                                      
+      TimeMinOnes               Image Sequence         0x1f8      (0x7bda88)     0x2c10     (0x1e58ff0)                                                     
+        IWC of TimeMinOnes      IWC Object             0x24       (0x7bda64)     0x0        (0x1e58ff0)                                                      
+      AMPM                      Image Sequence         0x28       (0x7bda3c)     0x190      (0x1e58e60)                                            
+        IWC of AMPM             IWC Object             0x24       (0x7bda18)     0x0        (0x1e58e60)                                               
+      BloodSugarbox             Image                  0x20       (0x7bd9f8)     0x956c     (0x1e4f8f4)                                             
+      BS_hund                   Image Sequence         0x68       (0x7bd990)     0x5dc0     (0x1e49b34)                                                
+        IWC of BS_hund          IWC Object             0x24       (0x7bd96c)     0x0        (0x1e49b34)                                                  
+      BS_tens                   Image Sequence         0x68       (0x7bd904)     0x5dc0     (0x1e43d74)                                                
+        IWC of BS_tens          IWC Object             0x24       (0x7bd8e0)     0x0        (0x1e43d74)                                                  
+      BS_ones                   Image Sequence         0x68       (0x7bd878)     0x5dc0     (0x1e3dfb4)                                                
+        IWC of BS_ones          IWC Object             0x24       (0x7bd854)     0x0        (0x1e3dfb4)                                                  
+      Circle                    Image                  0x20       (0x7bd834)     0x2e64     (0x1e3b150)                                      
+      mgdLtext                  Image                  0x20       (0x7bd814)     0xe9c      (0x1e3a2b4)                                       
+      MultiHref34               Multiple Functions     0x24       (0x7bd7f0)     0x0        (0x1e3a2b4)                                                     
+      Randomizer                Touch Area             0x3c       (0x7bd7b4)     0x0        (0x1e3a2b4)                                            
+      PAGE FOOTER                                      0x2        (0x7bd7b2)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0xa4a      (0x7bd7b2)     0x22824    (0x1e3a2b4)                                 
+
+
+BloodPressure (GEM page)    Flash Index = 0x24
+=============
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x138      (0x7bd5c4)                                                                
+      Random1S                  Anchor                 0x3c       (0x7bd588)     0x0        (0x1e5cad8)                                      
+      random1                   No Type                0x4        (0x7bd584)     0x0        (0x1e5cad8)                                     
+        IWC of Random1S         IWC Object             0x24       (0x7bd560)     0x0        (0x1e5cad8)                                                   
+      Random2S                  Anchor                 0x3c       (0x7bd524)     0x0        (0x1e5cad8)                                      
+        IWC of Random2S         IWC Object             0x24       (0x7bd500)     0x0        (0x1e5cad8)                                                   
+      Random3S                  Anchor                 0x3c       (0x7bd4c4)     0x0        (0x1e5cad8)                                      
+        IWC of Random3S         IWC Object             0x24       (0x7bd4a0)     0x0        (0x1e5cad8)                                                   
+      Random1D                  Anchor                 0x3c       (0x7bd464)     0x0        (0x1e5cad8)                                      
+        IWC of Random1D         IWC Object             0x24       (0x7bd440)     0x0        (0x1e5cad8)                                                   
+      Random2D                  Anchor                 0x3c       (0x7bd404)     0x0        (0x1e5cad8)                                      
+        IWC of Random2D         IWC Object             0x24       (0x7bd3e0)     0x0        (0x1e5cad8)                                                   
+      Random3D                  Anchor                 0x3c       (0x7bd3a4)     0x0        (0x1e5cad8)                                      
+        IWC of Random3D         IWC Object             0x24       (0x7bd380)     0x0        (0x1e5cad8)                                                   
+      Random1P                  Anchor                 0x3c       (0x7bd344)     0x0        (0x1e5cad8)                                      
+        IWC of Random1P         IWC Object             0x24       (0x7bd320)     0x0        (0x1e5cad8)                                                   
+      Random2P                  Anchor                 0x3c       (0x7bd2e4)     0x0        (0x1e5cad8)                                      
+        IWC of Random2P         IWC Object             0x24       (0x7bd2c0)     0x0        (0x1e5cad8)                                                   
+      Random3P                  Anchor                 0x3c       (0x7bd284)     0x0        (0x1e5cad8)                                      
+        IWC of Random3P         IWC Object             0x24       (0x7bd260)     0x0        (0x1e5cad8)                                                   
+      Bckgrnd                   Image                  0x20       (0x7bd240)     0x0        (0x1e5cad8)                                    
+      CurrentScreen             Image                  0x20       (0x7bd220)     0x0        (0x1e5cad8)                                          
+      Cholesterol               Custom Button          0x64       (0x7bd1bc)     0x0        (0x1e5cad8)                                                
+      BloodPressure             Custom Button          0x64       (0x7bd158)     0x0        (0x1e5cad8)                                                  
+      BloodSugar                Custom Button          0x64       (0x7bd0f4)     0x0        (0x1e5cad8)                                               
+      Height                    Custom Button          0x64       (0x7bd090)     0x0        (0x1e5cad8)                                           
+      Totals                    Custom Button          0x64       (0x7bd02c)     0x0        (0x1e5cad8)                                           
+      TimeHourTens              Image Sequence         0x28       (0x7bd004)     0x178      (0x1e5c960)                                                    
+        IWC of TimeHourTens     IWC Object             0x24       (0x7bcfe0)     0x0        (0x1e5c960)                                                       
+      TimeHourOnes              Image Sequence         0x78       (0x7bcf68)     0x8d0      (0x1e5c090)                                                    
+        IWC of TimeHourOnes     IWC Object             0x24       (0x7bcf44)     0x0        (0x1e5c090)                                                       
+      Colon                     Image                  0x20       (0x7bcf24)     0x28       (0x1e5c068)                                   
+      TimeMinTens               Image Sequence         0x48       (0x7bcedc)     0x468      (0x1e5bc00)                                                   
+        IWC of TimeMinTens      IWC Object             0x24       (0x7bceb8)     0x0        (0x1e5bc00)                                                      
+      TimeMinOnes               Image Sequence         0x1f8      (0x7bccc0)     0x2c10     (0x1e58ff0)                                                     
+        IWC of TimeMinOnes      IWC Object             0x24       (0x7bcc9c)     0x0        (0x1e58ff0)                                                      
+      AMPM                      Image Sequence         0x28       (0x7bcc74)     0x190      (0x1e58e60)                                            
+        IWC of AMPM             IWC Object             0x24       (0x7bcc50)     0x0        (0x1e58e60)                                               
+      BloodPressPrpleBox_1      Image                  0x20       (0x7bcc30)     0x396c     (0x1e554f4)                                                    
+      Circle_1                  Image                  0x20       (0x7bcc10)     0x2e64     (0x1e52690)                                        
+      SYSmmHG                   Image                  0x20       (0x7bcbf0)     0xa8c      (0x1e51c04)                                      
+      BloodPressPrpleBox_2      Image                  0x20       (0x7bcbd0)     0x396c     (0x1e4e298)                                                    
+      Circle_2                  Image                  0x20       (0x7bcbb0)     0x2e64     (0x1e4b434)                                        
+      DIAmmHg                   Image                  0x20       (0x7bcb90)     0xa8c      (0x1e4a9a8)                                      
+      BloodPressPrpleBox_3      Image                  0x20       (0x7bcb70)     0x396c     (0x1e4703c)                                                    
+      Circle_3                  Image                  0x20       (0x7bcb50)     0x2e64     (0x1e441d8)                                        
+      PULmin                    Image                  0x20       (0x7bcb30)     0xa8c      (0x1e4374c)                                     
+      SYS_hund                  Image Sequence         0x68       (0x7bcac8)     0x4b50     (0x1e3ebfc)                                                 
+        IWC of SYS_hund         IWC Object             0x24       (0x7bcaa4)     0x0        (0x1e3ebfc)                                                   
+      SYS_tens                  Image Sequence         0x68       (0x7bca3c)     0x4b50     (0x1e3a0ac)                                                 
+        IWC of SYS_tens         IWC Object             0x24       (0x7bca18)     0x0        (0x1e3a0ac)                                                   
+      SYS_ones                  Image Sequence         0x68       (0x7bc9b0)     0x4b50     (0x1e3555c)                                                 
+        IWC of SYS_ones         IWC Object             0x24       (0x7bc98c)     0x0        (0x1e3555c)                                                   
+      DIA_hund                  Image Sequence         0x68       (0x7bc924)     0x4b50     (0x1e30a0c)                                                 
+        IWC of DIA_hund         IWC Object             0x24       (0x7bc900)     0x0        (0x1e30a0c)                                                   
+      DIA_tens                  Image Sequence         0x68       (0x7bc898)     0x4b50     (0x1e2bebc)                                                 
+        IWC of DIA_tens         IWC Object             0x24       (0x7bc874)     0x0        (0x1e2bebc)                                                   
+      DIA_ones                  Image Sequence         0x68       (0x7bc80c)     0x4b50     (0x1e2736c)                                                 
+        IWC of DIA_ones         IWC Object             0x24       (0x7bc7e8)     0x0        (0x1e2736c)                                                   
+      PUL_hund                  Image Sequence         0x68       (0x7bc780)     0x4b50     (0x1e2281c)                                                 
+        IWC of PUL_hund         IWC Object             0x24       (0x7bc75c)     0x0        (0x1e2281c)                                                   
+      PUL_tens                  Image Sequence         0x68       (0x7bc6f4)     0x4b50     (0x1e1dccc)                                                 
+        IWC of PUL_tens         IWC Object             0x24       (0x7bc6d0)     0x0        (0x1e1dccc)                                                   
+      PUL_ones                  Image Sequence         0x68       (0x7bc668)     0x4b50     (0x1e1917c)                                                 
+        IWC of PUL_ones         IWC Object             0x24       (0x7bc644)     0x0        (0x1e1917c)                                                   
+      MultiHref64               Multiple Functions     0x24       (0x7bc620)     0x0        (0x1e1917c)                                                     
+      Randomizer_1              Touch Area             0x3c       (0x7bc5e4)     0x0        (0x1e1917c)                                              
+      MultiHref66               Multiple Functions     0x24       (0x7bc5c0)     0x0        (0x1e1917c)                                                     
+      Randomizer_2              Touch Area             0x3c       (0x7bc584)     0x0        (0x1e1917c)                                              
+      MultiHref68               Multiple Functions     0x24       (0x7bc560)     0x0        (0x1e1917c)                                                     
+      Randomizer_3              Touch Area             0x3c       (0x7bc524)     0x0        (0x1e1917c)                                              
+      PAGE FOOTER                                      0x2        (0x7bc522)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0x11da     (0x7bc522)     0x4395c    (0x1e1917c)                                  
+
+
+Height (GEM page)    Flash Index = 0x25
+======
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0xf0       (0x7bc40c)                                                               
+      MultiHref0                Multiple Functions     0x7c       (0x7bc390)     0x0        (0x1e5cad8)                                                    
+      HeightCalc                Meta Object            0x3c       (0x7bc354)     0x0        (0x1e5cad8)                                             
+      Bckgrnd                   Image                  0x20       (0x7bc334)     0x0        (0x1e5cad8)                                    
+      CurrentScreen             Image                  0x20       (0x7bc314)     0x0        (0x1e5cad8)                                          
+      Cholesterol               Custom Button          0x64       (0x7bc2b0)     0x0        (0x1e5cad8)                                                
+      BloodPressure             Custom Button          0x64       (0x7bc24c)     0x0        (0x1e5cad8)                                                  
+      BloodSugar                Custom Button          0x64       (0x7bc1e8)     0x0        (0x1e5cad8)                                               
+      Height                    Custom Button          0x64       (0x7bc184)     0x0        (0x1e5cad8)                                           
+      Totals                    Custom Button          0x64       (0x7bc120)     0x0        (0x1e5cad8)                                           
+      TimeHourTens              Image Sequence         0x28       (0x7bc0f8)     0x178      (0x1e5c960)                                                    
+        IWC of TimeHourTens     IWC Object             0x24       (0x7bc0d4)     0x0        (0x1e5c960)                                                       
+      TimeHourOnes              Image Sequence         0x78       (0x7bc05c)     0x8d0      (0x1e5c090)                                                    
+        IWC of TimeHourOnes     IWC Object             0x24       (0x7bc038)     0x0        (0x1e5c090)                                                       
+      Colon                     Image                  0x20       (0x7bc018)     0x28       (0x1e5c068)                                   
+      TimeMinTens               Image Sequence         0x48       (0x7bbfd0)     0x468      (0x1e5bc00)                                                   
+        IWC of TimeMinTens      IWC Object             0x24       (0x7bbfac)     0x0        (0x1e5bc00)                                                      
+      TimeMinOnes               Image Sequence         0x1f8      (0x7bbdb4)     0x2c10     (0x1e58ff0)                                                     
+        IWC of TimeMinOnes      IWC Object             0x24       (0x7bbd90)     0x0        (0x1e58ff0)                                                      
+      AMPM                      Image Sequence         0x28       (0x7bbd68)     0x190      (0x1e58e60)                                            
+        IWC of AMPM             IWC Object             0x24       (0x7bbd44)     0x0        (0x1e58e60)                                               
+      WeightBox                 Image                  0x20       (0x7bbd24)     0x32c8     (0x1e55b98)                                         
+      Weight                    Numeric Field          0x6c       (0x7bbcb8)     0x0        (0x1e55b98)                                           
+        IWC of Weight           IWC Object             0x24       (0x7bbc94)     0x0        (0x1e55b98)                                                 
+      WeightSign                Image                  0x20       (0x7bbc74)     0x2184     (0x1e53a14)                                          
+      0                         Custom Button          0x64       (0x7bbc10)     0xfd8      (0x1e52a3c)                                        
+      MultiHref25               Multiple Functions     0x2c       (0x7bbbe4)     0x0        (0x1e52a3c)                                                     
+      1                         Custom Button          0x64       (0x7bbb80)     0xfd8      (0x1e51a64)                                        
+      MultiHref27               Multiple Functions     0x2c       (0x7bbb54)     0x0        (0x1e51a64)                                                     
+      2                         Custom Button          0x64       (0x7bbaf0)     0xfd8      (0x1e50a8c)                                        
+      MultiHref29               Multiple Functions     0x2c       (0x7bbac4)     0x0        (0x1e50a8c)                                                     
+      3                         Custom Button          0x64       (0x7bba60)     0xfd8      (0x1e4fab4)                                        
+      MultiHref31               Multiple Functions     0x2c       (0x7bba34)     0x0        (0x1e4fab4)                                                     
+      4                         Custom Button          0x64       (0x7bb9d0)     0xfd8      (0x1e4eadc)                                        
+      MultiHref33               Multiple Functions     0x2c       (0x7bb9a4)     0x0        (0x1e4eadc)                                                     
+      5                         Custom Button          0x64       (0x7bb940)     0xfd8      (0x1e4db04)                                        
+      MultiHref35               Multiple Functions     0x2c       (0x7bb914)     0x0        (0x1e4db04)                                                     
+      6                         Custom Button          0x64       (0x7bb8b0)     0xfd8      (0x1e4cb2c)                                        
+      MultiHref37               Multiple Functions     0x2c       (0x7bb884)     0x0        (0x1e4cb2c)                                                     
+      7                         Custom Button          0x64       (0x7bb820)     0xfd8      (0x1e4bb54)                                        
+      MultiHref39               Multiple Functions     0x2c       (0x7bb7f4)     0x0        (0x1e4bb54)                                                     
+      8                         Custom Button          0x64       (0x7bb790)     0xfd8      (0x1e4ab7c)                                        
+      MultiHref41               Multiple Functions     0x2c       (0x7bb764)     0x0        (0x1e4ab7c)                                                     
+      9                         Custom Button          0x64       (0x7bb700)     0xfd8      (0x1e49ba4)                                        
+      MultiHref43               Multiple Functions     0x1c       (0x7bb6e4)     0x0        (0x1e49ba4)                                                     
+      Ruler                     Slider                 0x74       (0x7bb670)     0x60d1     (0x1e43ad3)                                      
+      HeightBox                 Image                  0x20       (0x7bb650)     0x413c     (0x1e3f997)                                         
+      Feet                      Numeric Field          0x70       (0x7bb5e0)     0x0        (0x1e3f997)                                         
+        IWC of Feet             IWC Object             0x24       (0x7bb5bc)     0x0        (0x1e3f997)                                               
+      Inches                    Numeric Field          0x70       (0x7bb54c)     0x0        (0x1e3f997)                                           
+        IWC of Inches           IWC Object             0x24       (0x7bb528)     0x0        (0x1e3f997)                                                 
+      ClearBttn                 Custom Button          0x64       (0x7bb4c4)     0x30a8     (0x1e3c8ef)                                                 
+      HeightSign                Image                  0x20       (0x7bb4a4)     0x2184     (0x1e3a76b)                                          
+      PAGE FOOTER                                      0x2        (0x7bb4a2)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0x105a     (0x7bb4a2)     0x2236d    (0x1e3a76b)                                  
+
+
+Totals (GEM page)    Flash Index = 0x26
+======
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x140      (0x7bb2bc)                                                                
+      MultiHref0                Multiple Functions     0x24       (0x7bb298)     0x0        (0x1e5cad8)                                                    
+      No Name                   Meta Object            0x58       (0x7bb240)     0x0        (0x1e5cad8)                                          
+        IWC of No Name          IWC Object             0x24       (0x7bb21c)     0x0        (0x1e5cad8)                                                  
+      MultiHref3                Multiple Functions     0x24       (0x7bb1f8)     0x0        (0x1e5cad8)                                                    
+      MultiHref4                Multiple Functions     0x24       (0x7bb1d4)     0x0        (0x1e5cad8)                                                    
+      CholesterolCheck2         Meta Object            0x58       (0x7bb17c)     0x0        (0x1e5cad8)                                                    
+        IWC of Cholester...ck2  IWC Object             0x24       (0x7bb158)     0x0        (0x1e5cad8)                                                          
+      MultiHref7                Multiple Functions     0x24       (0x7bb134)     0x0        (0x1e5cad8)                                                    
+      No Name                   Meta Object            0x58       (0x7bb0dc)     0x0        (0x1e5cad8)                                          
+        IWC of No Name          IWC Object             0x24       (0x7bb0b8)     0x0        (0x1e5cad8)                                                  
+      MultiHref10               Multiple Functions     0x24       (0x7bb094)     0x0        (0x1e5cad8)                                                     
+      MultiHref11               Multiple Functions     0x24       (0x7bb070)     0x0        (0x1e5cad8)                                                     
+      BloodSugarCheck2          Meta Object            0x58       (0x7bb018)     0x0        (0x1e5cad8)                                                   
+        IWC of BloodSuga...ck2  IWC Object             0x24       (0x7baff4)     0x0        (0x1e5cad8)                                                          
+      MultiHref14               Multiple Functions     0x24       (0x7bafd0)     0x0        (0x1e5cad8)                                                     
+      No Name                   Meta Object            0x58       (0x7baf78)     0x0        (0x1e5cad8)                                          
+        IWC of No Name          IWC Object             0x24       (0x7baf54)     0x0        (0x1e5cad8)                                                  
+      MultiHref17               Multiple Functions     0x24       (0x7baf30)     0x0        (0x1e5cad8)                                                     
+      MultiHref18               Multiple Functions     0x24       (0x7baf0c)     0x0        (0x1e5cad8)                                                     
+      BloodPressureCheck2       Meta Object            0x58       (0x7baeb4)     0x0        (0x1e5cad8)                                                      
+        IWC of BloodPres...ck2  IWC Object             0x24       (0x7bae90)     0x0        (0x1e5cad8)                                                          
+      Bckgrnd                   Image                  0x20       (0x7bae70)     0x0        (0x1e5cad8)                                    
+      CurrentScreen             Image                  0x20       (0x7bae50)     0x0        (0x1e5cad8)                                          
+      Cholesterol               Custom Button          0x64       (0x7badec)     0x0        (0x1e5cad8)                                                
+      BloodPressure             Custom Button          0x64       (0x7bad88)     0x0        (0x1e5cad8)                                                  
+      BloodSugar                Custom Button          0x64       (0x7bad24)     0x0        (0x1e5cad8)                                               
+      Height                    Custom Button          0x64       (0x7bacc0)     0x0        (0x1e5cad8)                                           
+      Totals                    Custom Button          0x64       (0x7bac5c)     0x0        (0x1e5cad8)                                           
+      TimeHourTens              Image Sequence         0x28       (0x7bac34)     0x178      (0x1e5c960)                                                    
+        IWC of TimeHourTens     IWC Object             0x24       (0x7bac10)     0x0        (0x1e5c960)                                                       
+      TimeHourOnes              Image Sequence         0x78       (0x7bab98)     0x8d0      (0x1e5c090)                                                    
+        IWC of TimeHourOnes     IWC Object             0x24       (0x7bab74)     0x0        (0x1e5c090)                                                       
+      Colon                     Image                  0x20       (0x7bab54)     0x28       (0x1e5c068)                                   
+      TimeMinTens               Image Sequence         0x48       (0x7bab0c)     0x468      (0x1e5bc00)                                                   
+        IWC of TimeMinTens      IWC Object             0x24       (0x7baae8)     0x0        (0x1e5bc00)                                                      
+      TimeMinOnes               Image Sequence         0x1f8      (0x7ba8f0)     0x2c10     (0x1e58ff0)                                                     
+        IWC of TimeMinOnes      IWC Object             0x24       (0x7ba8cc)     0x0        (0x1e58ff0)                                                      
+      AMPM                      Image Sequence         0x28       (0x7ba8a4)     0x190      (0x1e58e60)                                            
+        IWC of AMPM             IWC Object             0x24       (0x7ba880)     0x0        (0x1e58e60)                                               
+      BP_State                  Image Sequence         0x30       (0x7ba850)     0x3d8c     (0x1e550d4)                                                 
+        IWC of BP_State         IWC Object             0x24       (0x7ba82c)     0x0        (0x1e550d4)                                                   
+      BS_State                  Image Sequence         0x30       (0x7ba7fc)     0x3d8c     (0x1e51348)                                                 
+        IWC of BS_State         IWC Object             0x24       (0x7ba7d8)     0x0        (0x1e51348)                                                   
+      Chol_State                Image Sequence         0x30       (0x7ba7a8)     0x3d8c     (0x1e4d5bc)                                                   
+        IWC of Chol_State       IWC Object             0x24       (0x7ba784)     0x0        (0x1e4d5bc)                                                     
+      Circle_1                  Image                  0x20       (0x7ba764)     0x3b60     (0x1e49a5c)                                        
+      Circle_2                  Image                  0x20       (0x7ba744)     0x3b60     (0x1e45efc)                                        
+      Circle_3                  Image                  0x20       (0x7ba724)     0x3b60     (0x1e4239c)                                        
+      BloodPressTOTALBox        Image                  0x20       (0x7ba704)     0x2718     (0x1e3fc84)                                                  
+      BloodSgrTOTALbox          Image                  0x20       (0x7ba6e4)     0x2718     (0x1e3d56c)                                                
+      ChlstrlTOTALBox           Image                  0x20       (0x7ba6c4)     0x2718     (0x1e3ae54)                                               
+      BloodPressTEXT            Image                  0x20       (0x7ba6a4)     0x9c4      (0x1e3a490)                                             
+      BloodSugarTEXT            Image                  0x20       (0x7ba684)     0x9c4      (0x1e39acc)                                             
+      ChlstrlTEXT               Image                  0x20       (0x7ba664)     0x834      (0x1e39298)                                          
+      BP_hund                   Image Sequence         0x68       (0x7ba5fc)     0x2ee0     (0x1e363b8)                                                
+        IWC of BP_hund          IWC Object             0x24       (0x7ba5d8)     0x0        (0x1e363b8)                                                  
+      BP_tens                   Image Sequence         0x68       (0x7ba570)     0x2ee0     (0x1e334d8)                                                
+        IWC of BP_tens          IWC Object             0x24       (0x7ba54c)     0x0        (0x1e334d8)                                                  
+      BP_ones                   Image Sequence         0x68       (0x7ba4e4)     0x2ee0     (0x1e305f8)                                                
+        IWC of BP_ones          IWC Object             0x24       (0x7ba4c0)     0x0        (0x1e305f8)                                                  
+      BS_hund                   Image Sequence         0x68       (0x7ba458)     0x2238     (0x1e2e3c0)                                                
+        IWC of BS_hund          IWC Object             0x24       (0x7ba434)     0x0        (0x1e2e3c0)                                                  
+      BP_tens                   Image Sequence         0x68       (0x7ba3cc)     0x2238     (0x1e2c188)                                                
+        IWC of BP_tens          IWC Object             0x24       (0x7ba3a8)     0x0        (0x1e2c188)                                                  
+      BP_ones                   Image Sequence         0x68       (0x7ba340)     0x2238     (0x1e29f50)                                                
+        IWC of BP_ones          IWC Object             0x24       (0x7ba31c)     0x0        (0x1e29f50)                                                  
+      Chol_hund                 Image Sequence         0x68       (0x7ba2b4)     0x2ee0     (0x1e27070)                                                  
+        IWC of Chol_hund        IWC Object             0x24       (0x7ba290)     0x0        (0x1e27070)                                                    
+      Chol_tens                 Image Sequence         0x68       (0x7ba228)     0x2ee0     (0x1e24190)                                                  
+        IWC of Chol_tens        IWC Object             0x24       (0x7ba204)     0x0        (0x1e24190)                                                    
+      Chol_ones                 Image Sequence         0x68       (0x7ba19c)     0x2ee0     (0x1e212b0)                                                  
+        IWC of Chol_ones        IWC Object             0x24       (0x7ba178)     0x0        (0x1e212b0)                                                    
+      PAGE FOOTER                                      0x2        (0x7ba176)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0x1286     (0x7ba176)     0x3b828    (0x1e212b0)                                  
+
+
+LrgTotalBttnUP.gif (Image File)    Flash Index = 0x27
+==================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x6616     (0x7b3aea)                                                
+
+
+LrgHeightBttnUP.gif (Image File)    Flash Index = 0x28
+===================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x6186     (0x7ad87a)                                                
+
+
+LRGBloodPressBPButtonUP.gif (Image File)    Flash Index = 0x29
+===========================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x6a0e     (0x7a6df2)                                                
+
+
+LRGBloodSgrBttnUP.gif (Image File)    Flash Index = 0x2a
+=====================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x7406     (0x79f8fa)                                                
+
+
+SmllTotalBttnDOWN.gif (Image File)    Flash Index = 0x2b
+=====================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1c42     (0x79dbbe)                                                
+
+
+SmllTotalBttnUP.gif (Image File)    Flash Index = 0x2c
+===================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x17ee     (0x79c312)                                                
+
+
+SmllHeightBttnDOWN.gif (Image File)    Flash Index = 0x2d
+======================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1b82     (0x79a77e)                                                
+
+
+SmllHeightBttnUP.gif (Image File)    Flash Index = 0x2e
+====================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x17a2     (0x798f5e)                                                
+
+
+SmllBloodSgrBttnDOWN.gif (Image File)    Flash Index = 0x2f
+========================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1ef6     (0x79700a)                                                
+
+
+SmllBloodSgrBttnUP.gif (Image File)    Flash Index = 0x30
+======================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1a52     (0x7955ae)                                                
+
+
+SmllBloodPressBttnDOWN.gif (Image File)    Flash Index = 0x31
+==========================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1dd6     (0x79372a)                                                
+
+
+SmllBloodPressBttnUP.gif (Image File)    Flash Index = 0x32
+========================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1a66     (0x791c9a)                                                
+
+
+SmllCholestrlBttnDOWN.gif (Image File)    Flash Index = 0x33
+=========================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2062     (0x78fb9e)                                                
+
+
+SmllCholestrlBttnUP.gif (Image File)    Flash Index = 0x34
+=======================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1b3a     (0x78dfc6)                                                
+
+
+LRGCholestrolBttnUP.gif (Image File)    Flash Index = 0x35
+=======================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x7932     (0x7865ce)                                                
+
+
+Bckgrnd.gif (Image File)    Flash Index = 0x36
+===========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x5269a    (0x733e66)                                                 
+
+
+Amulet.pal (Palette File)    Flash Index = 0x37
+==========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x40a      (0x7339f6)                                               
+
+
+INTRO.gif (Image File)    Flash Index = 0x38
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x4c2a     (0x72ecd6)                                                
+
+
+Time0.gif (Image File)    Flash Index = 0x39
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xb2       (0x72eb4e)                                              
+
+
+Time1.gif (Image File)    Flash Index = 0x3a
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x66       (0x72ea9a)                                              
+
+
+Time2.gif (Image File)    Flash Index = 0x3b
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xb6       (0x72e94a)                                              
+
+
+Time3.gif (Image File)    Flash Index = 0x3c
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xb2       (0x72e84e)                                              
+
+
+Time4.gif (Image File)    Flash Index = 0x3d
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x7a       (0x72e786)                                              
+
+
+Time5.gif (Image File)    Flash Index = 0x3e
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xae       (0x72e652)                                              
+
+
+Time6.gif (Image File)    Flash Index = 0x3f
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xc6       (0x72e53a)                                              
+
+
+Time7.gif (Image File)    Flash Index = 0x40
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x76       (0x72e48a)                                              
+
+
+Time8.gif (Image File)    Flash Index = 0x41
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xc2       (0x72e33e)                                              
+
+
+Time9.gif (Image File)    Flash Index = 0x42
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xc2       (0x72e23e)                                              
+
+
+Colon.gif (Image File)    Flash Index = 0x43
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2e       (0x72e1d2)                                              
+
+
+AM.gif (Image File)    Flash Index = 0x44
+======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xde       (0x72e022)                                              
+
+
+PM.gif (Image File)    Flash Index = 0x45
+======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xda       (0x72df26)                                              
+
+
+CholestrolBox.gif (Image File)    Flash Index = 0x46
+=================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x7062     (0x726e9e)                                                
+
+
+CH0.gif (Image File)    Flash Index = 0x47
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x79e      (0x726662)                                               
+
+
+CH1.gif (Image File)    Flash Index = 0x48
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x842      (0x725dbe)                                               
+
+
+CH2.gif (Image File)    Flash Index = 0x49
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x78a      (0x725576)                                               
+
+
+CH3.gif (Image File)    Flash Index = 0x4a
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x7e6      (0x724d1a)                                               
+
+
+CH4.gif (Image File)    Flash Index = 0x4b
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x79a      (0x724566)                                               
+
+
+CH5.gif (Image File)    Flash Index = 0x4c
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x79a      (0x723d66)                                               
+
+
+CH6.gif (Image File)    Flash Index = 0x4d
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x796      (0x72356a)                                               
+
+
+CH7.gif (Image File)    Flash Index = 0x4e
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x806      (0x722cfa)                                               
+
+
+CH8.gif (Image File)    Flash Index = 0x4f
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x766      (0x72249a)                                               
+
+
+CH9.gif (Image File)    Flash Index = 0x50
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x772      (0x721c8e)                                               
+
+
+Circle.gif (Image File)    Flash Index = 0x51
+==========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x28fa     (0x71f306)                                                
+
+
+mgdLtext.gif (Image File)    Flash Index = 0x52
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xa8e      (0x71e872)                                               
+
+
+BloodSugarbox.gif (Image File)    Flash Index = 0x53
+=================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x7ab2     (0x716d4e)                                                
+
+
+BS0.gif (Image File)    Flash Index = 0x54
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x64a      (0x7166b6)                                               
+
+
+BS1.gif (Image File)    Flash Index = 0x55
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x6d2      (0x715f2e)                                               
+
+
+BS2.gif (Image File)    Flash Index = 0x56
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x662      (0x71589e)                                               
+
+
+BS3.gif (Image File)    Flash Index = 0x57
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x6b6      (0x71514a)                                               
+
+
+BS4.gif (Image File)    Flash Index = 0x58
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x5da      (0x714b26)                                               
+
+
+BS5.gif (Image File)    Flash Index = 0x59
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x66e      (0x714492)                                               
+
+
+BS6.gif (Image File)    Flash Index = 0x5a
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x642      (0x713dbe)                                               
+
+
+BS7.gif (Image File)    Flash Index = 0x5b
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x712      (0x7135ee)                                               
+
+
+BS8.gif (Image File)    Flash Index = 0x5c
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x626      (0x712eda)                                               
+
+
+BS9.gif (Image File)    Flash Index = 0x5d
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x63a      (0x7127c6)                                               
+
+
+BloodPressPrpleBox.gif (Image File)    Flash Index = 0x5e
+======================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x273e     (0x70ffc2)                                                
+
+
+SYSmmHG.gif (Image File)    Flash Index = 0x5f
+===========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x8b2      (0x70f64e)                                               
+
+
+DIAmmHg.gif (Image File)    Flash Index = 0x60
+===========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x8c2      (0x70ed3e)                                               
+
+
+PULmin.gif (Image File)    Flash Index = 0x61
+==========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x84a      (0x70e4b6)                                               
+
+
+Clear.gif (Image File)    Flash Index = 0x62
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x4ca      (0x70df36)                                               
+
+
+BP1.gif (Image File)    Flash Index = 0x63
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x3f6      (0x70db0a)                                               
+
+
+BP2.gif (Image File)    Flash Index = 0x64
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x43e      (0x70d6c2)                                               
+
+
+BP3.gif (Image File)    Flash Index = 0x65
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x49a      (0x70d166)                                               
+
+
+BP4.gif (Image File)    Flash Index = 0x66
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x46e      (0x70cc92)                                               
+
+
+BP5.gif (Image File)    Flash Index = 0x67
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x45a      (0x70c7a6)                                               
+
+
+BP6.gif (Image File)    Flash Index = 0x68
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x45e      (0x70c2a2)                                               
+
+
+BP7.gif (Image File)    Flash Index = 0x69
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x47e      (0x70bd82)                                               
+
+
+BP8.gif (Image File)    Flash Index = 0x6a
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x44e      (0x70b8b2)                                               
+
+
+BP9.gif (Image File)    Flash Index = 0x6b
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x43a      (0x70b3c6)                                               
+
+
+BP0.gif (Image File)    Flash Index = 0x6c
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x47e      (0x70ae82)                                               
+
+
+WeightBox.gif (Image File)    Flash Index = 0x6d
+=============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xf3a      (0x709ec6)                                               
+
+
+Bitstream Vera Sans_36.auf (Font File)    Flash Index = 0x6e
+==========================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x3ea8     (0x705f58)                                                
+
+
+WeightNONBttn.gif (Image File)    Flash Index = 0x6f
+=================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1eae     (0x704052)                                                
+
+
+0Weight.gif (Image File)    Flash Index = 0x70
+===========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x6b2      (0x70394e)                                               
+
+
+1Weight.gif (Image File)    Flash Index = 0x71
+===========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x69a      (0x703266)                                               
+
+
+2Weight.gif (Image File)    Flash Index = 0x72
+===========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x6e6      (0x702b1a)                                               
+
+
+3Weight.gif (Image File)    Flash Index = 0x73
+===========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x6ba      (0x702446)                                               
+
+
+4Weight.gif (Image File)    Flash Index = 0x74
+===========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x67e      (0x701d82)                                               
+
+
+5Weight.gif (Image File)    Flash Index = 0x75
+===========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x6be      (0x701642)                                               
+
+
+6Weight.gif (Image File)    Flash Index = 0x76
+===========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x6da      (0x700f26)                                               
+
+
+7Weight.gif (Image File)    Flash Index = 0x77
+===========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x6ba      (0x700846)                                               
+
+
+8Weight.gif (Image File)    Flash Index = 0x78
+===========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x6ca      (0x700136)                                               
+
+
+9Weight.gif (Image File)    Flash Index = 0x79
+===========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x6ba      (0x6ffa46)                                               
+
+
+ARROW.gif (Image File)    Flash Index = 0x7a
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xca       (0x6ff936)                                              
+
+
+RULER2.gif (Image File)    Flash Index = 0x7b
+==========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xe0a      (0x6feaf6)                                               
+
+
+WeightBox2.gif (Image File)    Flash Index = 0x7c
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x12ba     (0x6fd746)                                                
+
+
+ClearBttn.gif (Image File)    Flash Index = 0x7d
+=============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x143a     (0x6fc2c6)                                                
+
+
+HeightNONBttn.gif (Image File)    Flash Index = 0x7e
+=================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1e96     (0x6fa36a)                                                
+
+
+GREENCircle.gif (Image File)    Flash Index = 0x7f
+===============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xc26      (0x6f96da)                                               
+
+
+OrangeCircle.gif (Image File)    Flash Index = 0x80
+================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xbea      (0x6f8a16)                                               
+
+
+REdCircle.gif (Image File)    Flash Index = 0x81
+=============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xf3a      (0x6f7ac6)                                               
+
+
+CircleWide.gif (Image File)    Flash Index = 0x82
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x31ce     (0x6f4832)                                                
+
+
+BloodPressTOTALBox.gif (Image File)    Flash Index = 0x83
+======================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1a76     (0x6f2d8a)                                                
+
+
+BloodSgrTOTALbox.gif (Image File)    Flash Index = 0x84
+====================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1f6e     (0x6f0d92)                                                
+
+
+ChlstrlTOTALBox.gif (Image File)    Flash Index = 0x85
+===================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1cde     (0x6ef022)                                                
+
+
+BloodPressTEXT.gif (Image File)    Flash Index = 0x86
+==================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x80e      (0x6ee7f2)                                               
+
+
+BloodSugarTEXT.gif (Image File)    Flash Index = 0x87
+==================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x7ce      (0x6edf32)                                               
+
+
+ChlstrlTEXT.gif (Image File)    Flash Index = 0x88
+===============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x6c2      (0x6ed83e)                                               
+
+
+BPTOTAL0.gif (Image File)    Flash Index = 0x89
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2e6      (0x6ed51a)                                               
+
+
+BPTOTAL1.gif (Image File)    Flash Index = 0x8a
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2d6      (0x6ed22a)                                               
+
+
+BPTOTAL2.gif (Image File)    Flash Index = 0x8b
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x302      (0x6ecefe)                                               
+
+
+BPTOTAL3.gif (Image File)    Flash Index = 0x8c
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x342      (0x6ecabe)                                               
+
+
+BPTOTAL4.gif (Image File)    Flash Index = 0x8d
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2f6      (0x6ec70a)                                               
+
+
+BPTOTAL5.gif (Image File)    Flash Index = 0x8e
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2fe      (0x6ec402)                                               
+
+
+BPTOTAL6.gif (Image File)    Flash Index = 0x8f
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2fa      (0x6ec106)                                               
+
+
+BPTOTAL7.gif (Image File)    Flash Index = 0x90
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2d6      (0x6ebe2a)                                               
+
+
+BPTOTAL8.gif (Image File)    Flash Index = 0x91
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2f6      (0x6ebb0a)                                               
+
+
+BPTOTAL9.gif (Image File)    Flash Index = 0x92
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x30e      (0x6eb7f2)                                               
+
+
+BloodSgrTOTAL0.gif (Image File)    Flash Index = 0x93
+==================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x292      (0x6eb46e)                                               
+
+
+BloodSgrTOTAL1.gif (Image File)    Flash Index = 0x94
+==================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2be      (0x6eb142)                                               
+
+
+BloodSgrTOTAL2.gif (Image File)    Flash Index = 0x95
+==================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2a2      (0x6eae5e)                                               
+
+
+BloodSgrTOTAL3.gif (Image File)    Flash Index = 0x96
+==================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2b2      (0x6eab4e)                                               
+
+
+BloodSgrTOTAL4.gif (Image File)    Flash Index = 0x97
+==================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x27e      (0x6ea882)                                               
+
+
+BloodSgrTOTAL5.gif (Image File)    Flash Index = 0x98
+==================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x28e      (0x6ea572)                                               
+
+
+BloodSgrTOTAL6.gif (Image File)    Flash Index = 0x99
+==================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x282      (0x6ea27e)                                               
+
+
+BloodSgrTOTAL7.gif (Image File)    Flash Index = 0x9a
+==================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2a6      (0x6e9f5a)                                               
+
+
+BloodSgrTOTAL8.gif (Image File)    Flash Index = 0x9b
+==================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x27e      (0x6e9c82)                                               
+
+
+BloodSgrTOTAL9.gif (Image File)    Flash Index = 0x9c
+==================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x28e      (0x6e9972)                                               
+
+
+ChlstrlTOTAL0.gif (Image File)    Flash Index = 0x9d
+=================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2fe      (0x6e9602)                                               
+
+
+ChlstrlTOTAL1.gif (Image File)    Flash Index = 0x9e
+=================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2ce      (0x6e9332)                                               
+
+
+ChlstrlTOTAL2.gif (Image File)    Flash Index = 0x9f
+=================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2fa      (0x6e9006)                                               
+
+
+ChlstrlTOTAL3.gif (Image File)    Flash Index = 0xa0
+=================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x322      (0x6e8cde)                                               
+
+
+ChlstrlTOTAL4.gif (Image File)    Flash Index = 0xa1
+=================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2e6      (0x6e891a)                                               
+
+
+ChlstrlTOTAL5.gif (Image File)    Flash Index = 0xa2
+=================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x31e      (0x6e85e2)                                               
+
+
+ChlstrlTOTAL6.gif (Image File)    Flash Index = 0xa3
+=================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x306      (0x6e81fa)                                               
+
+
+ChlstrlTOTAL7.gif (Image File)    Flash Index = 0xa4
+=================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x322      (0x6e7dde)                                               
+
+
+ChlstrlTOTAL8.gif (Image File)    Flash Index = 0xa5
+=================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x306      (0x6e79fa)                                               
+
+
+ChlstrlTOTAL9.gif (Image File)    Flash Index = 0xa6
+=================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x30a      (0x6e75f6)                                               
+
+
+fontHdr.auf (Font Header File)    Flash Index = 0xf
+===========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x42       (0x6e74be)                                              
+
+
+internalRAM.bin (InternalRAM File)    Flash Index = 0x6
+===============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x213c     (0x6e52c4)                                                
+
+
+lcdConfig.bin (LCD Configuration File)    Flash Index = 0x3
+=============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xba       (0x6e5146)                                              
+
+

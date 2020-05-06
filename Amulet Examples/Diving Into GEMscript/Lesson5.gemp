@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?><GEMProject GEMstudioVersion="3.6.0.11" CompilerVersion="V3.6.0.B"><COMPLETE_MODULE><LCD_CONFIG><SIZE>480 x 272</SIZE><MFG>Amulet</MFG><NAME>STK-CY-043.tft</NAME></LCD_CONFIG><BOARD>MK-CY-043 (Capacitive 4.3 GEMstarter-kit).board</BOARD><OS_SPECIFIC><PROTOCOL>CRC</PROTOCOL><ROTATION>90</ROTATION><COLOR_DEPTH>8</COLOR_DEPTH><PALETTE_FILE>.Images\tryingagain.pal</PALETTE_FILE></OS_SPECIFIC></COMPLETE_MODULE><AMULET_ID>1</AMULET_ID><BAUD>115200</BAUD><BGCOLOR>#FFFFFF</BGCOLOR><BUFFER>Double</BUFFER><GS_STRING_BUFFER_SIZE>100</GS_STRING_BUFFER_SIZE><HOST_ID>2</HOST_ID><JPEG>Native</JPEG><NULL_TERMINATE>No</NULL_TERMINATE><STRICT_MODBUS_TIMING>No</STRICT_MODBUS_TIMING><SLAVE_RSP>Full Protocol</SLAVE_RSP><TIMEOUT>0.20</TIMEOUT><TOUCH_PRIORITY>From Top to Bottom</TOUCH_PRIORITY><PAGE_BUFFER_SIZE>0x10000</PAGE_BUFFER_SIZE><TRANSITIONS>Clear Screen With Background Color</TRANSITIONS><MACRO_FILE/><INTERNALRAM_INIT/><PAGE NAME="Page_1"><PROPERTIES><HEAD><FUNCTIONS charPos="1853" foldedLines="">&lt;script&gt;
+// Global Macro Preprocessor definitions
+#define ROWS                                          9   //physical number of rows
+#define COLUMNS                                  5   //physical number of columns
+#define STARTING_LIVES                        3 
+
+#define BALL_WIDTH                            20
+#define BALL_HEIGHT                           20
+#define PADDLE_WIDTH                       64
+	
+#define BRICK_AREA_TOP                   150
+#define BRICK_AREA_LEFT                    11
+#define BRICK_AREA_BOTTOM          329
+#define BRICK_AREA_RIGHT               260
+	
+#define BRICK_WIDTH                           50
+#define BRICK_HEIGHT                          20
+
+#define PLAYABLE_AREA_TOP             86
+#define PLAYABLE_AREA_LEFT              0
+#define PLAYABLE_AREA_BOTTOM  430
+#define PLAYABLE_AREA_RIGHT       272
+
+//global variables now so multiple functions can access
+static int score = 0;
+static int maxScore;
+		
+static int currenty = 397;
+static int currentx = 126;
+static int yslope = -5;
+static int xslope = 5;
+	
+/************************************************************************************
+	level_array is a multi-dimensional array used to initialize the visual state of 
+	the grid of ImageSequence widgets named Brick_xy
+************************************************************************************/
+//new int level_array[ROWS][COLUMNS] = [[3, ...],[3,...],[3,...],[3, ...],[3, ...],[3, ...],[3, ...],[3, ...],[3, ...]]
+new int level_array[ROWS][COLUMNS] = 
+		[[0,0,3,0,0],[0,3,0,3,0],[3,0,2,0,3],[0,2,0,2,0],[2,0,3,0,2],
+		 [0,3,0,3,0],[3,0,2,0,3],[0,2,0,2,0],[2,0,0,0,2]];
+		 
+/************************************************************************************
+	Name:            ball
+	Arguments:   none
+	Returns:         none
+							
+	ball is a public function that is called by the timer move_ball
+	
+	ball is the main loop of the program, check for collisions and update ball
+	position 
+************************************************************************************/	
+public ball() 
+{
+	document.Ball.disappear();
+			
+	//handle collisions with objects the ball can bounce off of.
+	CheckBricks();
+	CheckBorder();
+		
+	//move the ball and reappear
+	currenty = currenty + yslope;
+	currentx = currentx + xslope;
+	document.Ball.setY(currenty);
+	document.Ball.setX(currentx);
+	document.Ball.reappear();
+}
+
+/************************************************************************************
+	Name:            CheckBorder
+	Arguments:   none
+	Returns:         none
+							
+	CheckBorder is a local function that can only be called by other GEMscript
+	functions located within this page.
+	
+	CheckBorder implements the collision algorithm for the ball hitting the border
+	of the playing field
+************************************************************************************/
+CheckBorder()
+{
+	if (currenty &lt;= PLAYABLE_AREA_TOP )
+	{ 
+		yslope = -yslope;
+	}
+	else if (currenty &gt;= PLAYABLE_AREA_BOTTOM ) 
+	{
+	    yslope = -yslope;
+	}
+	
+	if (currentx &gt; PLAYABLE_AREA_RIGHT - BALL_WIDTH) 
+	{
+			xslope = -xslope;
+	}
+	else if (currentx &lt;= PLAYABLE_AREA_LEFT) 
+	{
+		xslope = -xslope;
+	}
+}
+
+/************************************************************************************
+	Name:            CheckBricks 
+	Arguments:   none
+	Returns:         none
+							
+	CheckBricks is a local function that can only be called by other GEMscript
+	functions located within this page.
+	
+	CheckBricks implements the collision algorithm for the ball hitting the bricks
+************************************************************************************/
+CheckBricks()
+{
+	if ((BRICK_AREA_TOP &lt; currenty) || (currenty + BALL_HEIGHT  &lt; BRICK_AREA_BOTTOM))  
+	{ 
+		//collision checks for 4 corners of "ball" image
+		new int collision1 = 0;
+		new int collision2 = 0;
+		new int collision3 = 0;
+		new int collision4 = 0;
+		//rows for possible collisions
+		new int R1 = 9;
+		new int R2 = 9;
+		new int R3 = 9;
+		new int R4 = 9;
+		//columns for possible collisions
+		new int C1 = 5;
+		new int C2 = 5;
+		new int C3 = 5;
+		new int C4 = 5;
+		/* possible collision corners
+			1---2
+			|      |
+			3---4
+		*/
+			
+		//check each corner. Note that Rx and Cx are passed by "reference"
+		//returns 1 for y-direction bounce, 2 for x-direction bounce,
+		//and 3 for both
+		collision1 = detectCollision(currentx, currenty,R1,C1);
+		collision2 = detectCollision(currentx+BALL_WIDTH, currenty,R2,C2);
+		collision3 = detectCollision(currentx, currenty+BALL_HEIGHT,R3,C3);
+		collision4 = detectCollision(currentx+BALL_WIDTH, currenty+BALL_HEIGHT,R4,C4);
+		
+		if (collision1)
+		{
+			hitBrick(R1, C1);
+		}
+		if (collision2 &amp;&amp; ((R1 != R2) || (C1 != C2)))
+		{
+			hitBrick(R2, C2);
+		}
+		if (collision3 &amp;&amp; ((R1 != R3) || (C1 != C3)) &amp;&amp; ((R3 != R2) || (C3 != C2)))
+		{
+				hitBrick(R3, C3);
+		}
+		if (collision4 &amp;&amp; ((R1 != R4) || (C1 != C4)) &amp;&amp; ((R2 != R4) || (C2 != C4)) &amp;&amp; ((R3 != R4) || (C3 != C4)))
+		{
+			hitBrick(R4,C4);
+		}
+
+        //now determine which way to "bounce" off the brick(s) 
+        //(horizontal or vertical), the ball may hit 2 bricks at once
+        //It may also hit a corner and bounce in both x and y
+        //one corner may say bounce both, but another just x
+        //conflict is resolved using the direction the ball is traveling
+
+		new int collision; //the real bounce direction
+		if (xslope &gt; 0)
+		{
+			if (yslope &gt; 0) //pointing toward side 4
+			{
+				collision2 &amp;= 2;
+				collision3 &amp;= 1;
+				if (collision4 == 3 &amp;&amp; (collision2 &gt; 0 || collision3 &gt; 0))
+				{
+					collision = collision2 | collision3;
+				}
+				else
+				{
+					collision = collision2 | collision3 | collision4;
+				}
+			}
+			else  //pointing toward side 2
+			{
+				collision1 &amp;= 1;
+				collision4 &amp;= 2;
+				if (collision2 == 3 &amp;&amp; (collision1 &gt;0 || collision4 &gt;0))
+				{
+					collision = collision1 | collision4;
+				}
+				else
+				{	
+					collision = collision1 | collision2 | collision4;
+				}
+			}
+		}
+		else //xslope&lt;0
+		{
+			if (yslope &gt; 0) //pointing toward side 3
+			{
+				collision1 &amp;= 2;
+				collision4 &amp;= 1;
+				if (collision3 == 3 &amp;&amp; (collision1 &gt; 0 || collision4 &gt; 0))
+				{
+					collision = collision1 | collision4;
+				}
+				else	
+				{
+					collision = collision1 | collision3 | collision4;
+				}
+			}
+			else //pointing toward side 1
+			{
+				collision2 &amp;= 1;
+				collision3 &amp;= 2;
+				if (collision1 == 3 &amp;&amp; (collision2 &gt; 0 || collision3 &gt; 0))
+				{
+					collision = collision2 | collision3;
+				}
+				else
+				{	
+					collision = collision1 | collision2 | collision3;
+				}
+			}
+		}
+			
+		switch (collision)
+		{
+			case 1:
+				yslope = -yslope;
+			case 2:
+				xslope = -xslope;
+			case 3:
+			{
+				yslope = -yslope;
+				xslope = -xslope;
+			}
+		}
+	}
+}
+	
+/************************************************************************************
+	Name:            detectCollision 
+	Arguments:   int x					 //ball x position
+							int y					//ball y position
+							int &amp;Row		   //row of brick hit
+							int &amp;Column	//column of brick hit
+	Returns:         0 if no hit
+							1 if hit in Y
+							2 if hit in X
+							3 if both X and Y hit
+							
+	detectCollision is a local function that can only be called by other GEMscript
+	functions located within this page.
+	
+	detectCollision uses the pixel position and "Level" array to determine if a brick 
+	was hit
+************************************************************************************/
+int detectCollision(int x, int y, int &amp;Row, int &amp;Column)
+{
+	//x,y position must be inside the Blocks rectangle 
+	//to have a chance of being a hit.
+	new int column = (x - BRICK_AREA_LEFT) / BRICK_WIDTH;
+	new int row = (y - BRICK_AREA_TOP) / BRICK_HEIGHT;
+	
+	if (row &gt;= ROWS || row &lt; 0 || column &gt;= COLUMNS || column &lt; 0)
+		return 0;
+		
+	new int hit = level_array[row][column];
+	//we have a hit, now find out which side of the brick 
+	//so we know which direction to bounce
+	if (hit &gt; 0)
+	{
+		Row = row;
+		Column = column;
+		//start by finding the "brick" the Ball was in before.
+		new int columnB = (x-xslope-BRICK_AREA_LEFT) / BRICK_WIDTH;
+		new int rowB =  (y-yslope-BRICK_AREA_TOP) / BRICK_HEIGHT;
+		
+		if (columnB &lt; column)
+		{
+			if (rowB &lt; row)
+			{
+				return 3;
+			}
+			else if (rowB == row)
+			{
+				return 2;
+			}
+			else if (rowB &gt; row)
+			{
+				return 3;
+			}
+		}
+		else if (columnB == column)
+		{
+			if (rowB &lt; row)
+			{
+				return 1;
+			}
+			else if (rowB == row)
+			{
+				return 1;
+			}
+			else if (rowB &gt; row)
+			{
+				return 1;
+			}
+		}
+		else if (columnB &gt; column)
+		{
+			if (rowB &lt; row)
+			{
+				return 3;
+			}
+			else if (rowB == row)
+			{
+				return 2;
+			}
+			else if (rowB &gt; row)
+			{
+				return 3;
+			}
+		}
+	}			
+	//else, not a hit
+	return 0;
+}
+	
+/************************************************************************************
+	Name:            hitBrick 
+	Arguments:   int row			//row of brick hit
+							int column	//column of brick hit
+	Returns:        none
+							
+	hitBrick is a local function that can only be called by other GEMscript
+	functions located within this page.
+	
+	hitBrick affects the change of the hit brick on the screen, including 
+	incrementing the score, checking for a "win" state, and setting the new state 
+	of this brick that was hit.
+************************************************************************************/
+hitBrick(int row, int column)
+{
+	level_array[row][column]--;
+	score += 1;
+	if (score == maxScore) //are we done?
+	{
+		document.move_ball.setUpdateRate(0); //stop game
+	}
+	setBrick(row, column, level_array[row][column]);
+	document.scoreField = score;
+}
+	
+/************************************************************************************
+Name:            @load 
+Arguments:   none
+Returns:         none 
+	
+	@load is a public function that is called by the Amulet OS once each time a page
+	is entered, after all the objects on the page have been painted to the frame buffer.
+	
+	Use this function to initialize the number of lives, the score, the maxScore, and 
+	the starting grid of bricks.
+	
+************************************************************************************/
+@load()
+{
+	//reset lives (LivesOutput is an ImageSequence widget located on this page)
+	document.LivesOutput = STARTING_LIVES;
+		
+	//reset score (scoreField is a NumericField widget located on this page)
+	document.scoreField = 0;
+		
+	//calculate maxScore for win condition.
+	maxScore = 0;
+	for (new int i = 0; i &lt; ROWS; i++)
+	{
+		for (new int j = 0; j &lt; COLUMNS; j++)
+		{
+			maxScore += level_array[i][j];
+		}
+	}
+	document.maxScoreField = maxScore;
+		
+	//load starting grid of bricks
+	for (new int i = 0; i &lt; ROWS; i++)
+	{
+		for (new int j = 0; j &lt; COLUMNS; j++)
+		{
+			setBrick(i, j, level_array[i][j]);
+		}
+	}
+}
+	
+/************************************************************************************
+	Name:            setBrick 
+	Arguments:   int r                               // row of ImageSequence
+	                        int c                              // column of ImageSequence
+	                        int val                           // value to set ImageSequence
+	Returns:         none 
+	
+	setBrick is a local function that can only be called by other GEMscript functions
+	located within this page.
+	
+	setBrick sets the value of a single ImageSequence based upon the row and column
+	used in the arguments. The ImageSequences are placed in a 9x5 grid, for a total
+	of 45 different ImageSequences. Only one ImageSequence value is set per call
+	of setBrick.
+************************************************************************************/
+setBrick(int r, int c, int val)
+{
+	switch (r)
+	{
+		case 0:  // row 0
+		{
+			switch (c)
+			{
+				case 0: document.Brick_00 = val;  // row 0,col 0
+				case 1: document.Brick_01 = val;  // row 0,col 1
+				case 2: document.Brick_02 = val;  // row 0,col 2
+				case 3: document.Brick_03 = val;  // row 0,col 3
+				case 4: document.Brick_04 = val;  // row 0,col 4
+			}
+		}
+		case 1:  // row 1 
+		{
+			switch (c)
+			{
+				case 0: document.Brick_10 = val;  // row 1,col 0
+				case 1: document.Brick_11 = val;  // row 1,col 1
+				case 2: document.Brick_12 = val;  // row 1,col 2
+				case 3: document.Brick_13 = val;  // row 1,col 3
+				case 4: document.Brick_14 = val;  // row 1,col 4
+			}
+		}
+		case 2:  // row 2
+		{
+			switch (c)
+			{
+				case 0: document.Brick_20 = val;  // row 2,col 0
+				case 1: document.Brick_21 = val;  // row 2,col 1
+				case 2: document.Brick_22 = val;  // row 2,col 2
+				case 3: document.Brick_23 = val;  // row 2,col 3
+				case 4: document.Brick_24 = val;  // row 2,col 4
+			}
+		}
+		case 3:  // row 3
+		{
+			switch (c)
+			{
+				case 0: document.Brick_30 = val;  // row 3,col 0
+				case 1: document.Brick_31 = val;  // row 3,col 1
+				case 2: document.Brick_32 = val;  // row 3,col 2
+				case 3: document.Brick_33 = val;  // row 3,col 3
+				case 4: document.Brick_34 = val;  // row 3,col 4
+			}
+		}
+		case 4:  // row 4
+		{
+			switch (c)
+			{
+				case 0: document.Brick_40 = val;  // row 4,col 0
+				case 1: document.Brick_41 = val;  // row 4,col 1
+				case 2: document.Brick_42 = val;  // row 4,col 2
+				case 3: document.Brick_43 = val;  // row 4,col 3
+				case 4: document.Brick_44 = val;  // row 4,col 4
+			}
+		}
+		case 5:  // row 5
+		{
+			switch (c)
+			{
+				case 0: document.Brick_50 = val;  // row 5,col 0
+				case 1: document.Brick_51 = val;  // row 5,col 1
+				case 2: document.Brick_52 = val;  // row 5,col 2
+				case 3: document.Brick_53 = val;  // row 5,col 3
+				case 4: document.Brick_54 = val;  // row 5,col 4
+			}
+		}
+		case 6:  // row 6
+		{
+			switch (c)
+			{
+				case 0: document.Brick_60 = val;  // row 6,col 0
+				case 1: document.Brick_61 = val;  // row 6,col 1
+				case 2: document.Brick_62 = val;  // row 6,col 2
+				case 3: document.Brick_63 = val;  // row 6,col 3
+				case 4: document.Brick_64 = val;  // row 6,col 4
+			}
+		}
+		case 7:  // row 7
+		{
+			switch (c)
+			{
+				case 0: document.Brick_70 = val;  // row 7,col 0
+				case 1: document.Brick_71 = val;  // row 7,col 1
+				case 2: document.Brick_72 = val;  // row 7,col 2
+				case 3: document.Brick_73 = val;  // row 7,col 3
+				case 4: document.Brick_74 = val;  // row 7,col 4
+			}
+		}
+		case 8:  // row 8
+		{
+			switch (c)
+			{
+				case 0: document.Brick_80 = val;  // row 8,col 0
+				case 1: document.Brick_81 = val;  // row 8,col 1
+				case 2: document.Brick_82 = val;  // row 8,col 2
+				case 3: document.Brick_83 = val;  // row 8,col 3
+				case 4: document.Brick_84 = val;  // row 8,col 4
+			}
+		}
+	}
+}
+
+&lt;/script&gt;
+&lt;META HTTP-EQUIV="REFRESH" CONTENT="0.05;URL=GEMscript.ball();Name=move_ball;"&gt;</FUNCTIONS><BGCOLOR>#000000</BGCOLOR><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">PCBoardBack_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><file Type="16" Editable="True">.Images\PCBoardBack.png</file><MidX Type="13">136</MidX><MidY Type="13">240</MidY><Width Type="13">278</Width><Height Type="13">486</Height></Image></BKGND><BODY><ImageSeq><Name Type="12">LivesOutput</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\LEDE.png;.Images\LED1.png;.Images\LED2.png;.Images\LED3.png</sequence><updateFreq Type="20" Editable="True">0.1</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><noSDRAM Type="2" Editable="True">False</noSDRAM><MidX Type="13">246</MidX><MidY Type="13">41</MidY><Width Type="13">57</Width><Height Type="13">88</Height></ImageSeq><NumericField><Name Type="12">scoreField</Name><invisible Type="2" Editable="True">False	True	False</invisible><border Type="13" Editable="True">0</border><borderColor Type="11" Editable="True">#000000FF</borderColor><fillColor Type="11" Editable="True">#000000FF</fillColor><font Type="14" Editable="True">Bitstream Vera Sans,  12pt</font><fontColor Type="11" Editable="True">white</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><horizontalAlign Type="10" Editable="True">Left	Center	Left	Right</horizontalAlign><href Type="24" Editable="True"/><min Type="13" Editable="True">0</min><max Type="13" Editable="True">27000</max><maxFld Type="12" Editable="True">27000</maxFld><minFld Type="12" Editable="True">0</minFld><printf Type="12" Editable="True">Score: %6i</printf><updateFreq Type="20" Editable="True">0.05</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><verticalAlign Type="10" Editable="True">Middle	Bottom	Middle	Top</verticalAlign><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">112</MidX><MidY Type="13">33</MidY><Width Type="13">178</Width><Height Type="13">27</Height></NumericField><NumericField><Name Type="12">maxScoreField</Name><invisible Type="2" Editable="True">False	True	False</invisible><border Type="13" Editable="True">0</border><borderColor Type="11" Editable="True">#000000FF</borderColor><fillColor Type="11" Editable="True">#000000FF</fillColor><font Type="14" Editable="True">Bitstream Vera Sans,  12pt</font><fontColor Type="11" Editable="True">white</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><horizontalAlign Type="10" Editable="True">Left	Center	Left	Right</horizontalAlign><href Type="24" Editable="True"/><min Type="13" Editable="True">0</min><max Type="13" Editable="True">27000</max><maxFld Type="12" Editable="True">27000</maxFld><minFld Type="12" Editable="True">0</minFld><printf Type="12" Editable="True">out of: %6i</printf><updateFreq Type="20" Editable="True">0.05</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><verticalAlign Type="10" Editable="True">Middle	Bottom	Middle	Top</verticalAlign><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">110</MidX><MidY Type="13">55</MidY><Width Type="13">178</Width><Height Type="13">27</Height></NumericField><StaticText><Name Type="12">Divider</Name><hAlign Type="13">1</hAlign><text Type="25" Editable="True">_______________________________________________</text><fontColor Type="11" Editable="True">#FFFFFF</fontColor><font Type="14" Editable="True">Bitstream Vera Sans,  12pt</font><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><vAlign Type="13">32</vAlign><MidX Type="13">136</MidX><MidY Type="13">75</MidY><Width Type="13">278</Width><Height Type="13">28</Height></StaticText><ImageSeq><Name Type="12">Brick_00</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">36</MidX><MidY Type="13">160</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_01</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">86</MidX><MidY Type="13">160</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_02</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">136</MidX><MidY Type="13">160</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_03</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">186</MidX><MidY Type="13">160</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_04</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">236</MidX><MidY Type="13">160</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_10</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">36</MidX><MidY Type="13">180</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_11</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">86</MidX><MidY Type="13">180</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_12</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">136</MidX><MidY Type="13">180</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_13</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">186</MidX><MidY Type="13">180</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_14</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">236</MidX><MidY Type="13">180</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_20</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">36</MidX><MidY Type="13">200</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_21</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">86</MidX><MidY Type="13">200</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_22</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">136</MidX><MidY Type="13">200</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_23</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">186</MidX><MidY Type="13">200</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_24</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">236</MidX><MidY Type="13">200</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_30</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">36</MidX><MidY Type="13">220</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_31</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">86</MidX><MidY Type="13">220</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_32</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">136</MidX><MidY Type="13">220</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_33</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">186</MidX><MidY Type="13">220</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_34</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">236</MidX><MidY Type="13">220</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_40</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">36</MidX><MidY Type="13">240</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_41</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">86</MidX><MidY Type="13">240</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_42</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">136</MidX><MidY Type="13">240</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_43</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">186</MidX><MidY Type="13">240</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_44</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">236</MidX><MidY Type="13">240</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_50</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">36</MidX><MidY Type="13">260</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_51</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">86</MidX><MidY Type="13">260</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_52</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">136</MidX><MidY Type="13">260</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_53</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">186</MidX><MidY Type="13">260</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_54</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">236</MidX><MidY Type="13">260</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_60</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">36</MidX><MidY Type="13">280</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_61</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">86</MidX><MidY Type="13">280</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_62</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">136</MidX><MidY Type="13">280</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_63</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">186</MidX><MidY Type="13">280</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_64</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">236</MidX><MidY Type="13">280</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_70</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">36</MidX><MidY Type="13">300</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_71</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">86</MidX><MidY Type="13">300</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_72</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">136</MidX><MidY Type="13">300</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_73</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">186</MidX><MidY Type="13">300</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_74</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">236</MidX><MidY Type="13">300</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_80</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">36</MidX><MidY Type="13">320</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_81</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">86</MidX><MidY Type="13">320</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_82</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">136</MidX><MidY Type="13">320</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_83</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">186</MidX><MidY Type="13">320</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><ImageSeq><Name Type="12">Brick_84</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">3</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Images\Resistor0.png;.Images\Resistor1.png;.Images\Resistor2.png;.Images\Resistor3.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">236</MidX><MidY Type="13">320</MidY><Width Type="13">56</Width><Height Type="13">26</Height></ImageSeq><StaticText><Name Type="12">Divider_1</Name><hAlign Type="13">1</hAlign><text Type="25" Editable="True">_______________________________________________</text><fontColor Type="11" Editable="True">#FFFFFF</fontColor><font Type="14" Editable="True">Bitstream Vera Sans,  12pt</font><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><vAlign Type="13">32</vAlign><MidX Type="13">136</MidX><MidY Type="13">444</MidY><Width Type="13">278</Width><Height Type="13">28</Height></StaticText><Image><Name Type="12">Ball</Name><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Images\Ball2.gif</file><noSDRAM Type="2" Editable="True">False</noSDRAM><MidX Type="13">136</MidX><MidY Type="13">407</MidY><Width Type="13">26</Width><Height Type="13">26</Height></Image></BODY></PAGE></GEMProject>

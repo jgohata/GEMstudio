@@ -1,0 +1,24 @@
+#: label parameter for Widget ChangeToEnglish in Page_1
+msgid "English"
+msgstr ""
+
+#: label parameter for Widget ChangeToNotEnglish in Page_1
+msgid "Not English"
+msgstr ""
+
+#: printf parameter for Widget TranslatedTestString in Page_1
+msgid "Translated: %s"
+msgstr ""
+
+#: printf parameter for Widget UnTranslatedTestString in Page_1
+msgid "Untranslated: %s"
+msgstr ""
+
+#: text parameter for Widget StaticTitle in Page_1
+msgid "\"Hello World\"\nLocalization Demo"
+msgstr ""
+
+#: Line 2 in the Page Functions for Page_1
+msgid "Hello World"
+msgstr ""
+

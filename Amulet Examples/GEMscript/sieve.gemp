@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><GEMProject GEMstudioVersion="2.1.11.5" CompilerVersion="V2.1.B.5"><COMPLETE_MODULE><LCD_CONFIG><SIZE>480 x 272</SIZE><MFG>Amulet</MFG><NAME>STK-CY-043.tft</NAME></LCD_CONFIG><BOARD>MK-CY-043 (Capacitive 4.3 GEMstarter-kit).board</BOARD><OS_SPECIFIC><PROTOCOL>ASCII</PROTOCOL><ROTATION>No</ROTATION><COLOR_DEPTH>32</COLOR_DEPTH></OS_SPECIFIC></COMPLETE_MODULE><AMULET_ID>1</AMULET_ID><BAUD>115200</BAUD><BGCOLOR>#FFFFFF</BGCOLOR><BUFFER>Double</BUFFER><HOST_ID>2</HOST_ID><JPEG>Native</JPEG><NULL_TERMINATE>No</NULL_TERMINATE><SLAVE_RSP>Full Protocol</SLAVE_RSP><TIMEOUT>0.20</TIMEOUT><TOUCH_PRIORITY>From Top to Bottom</TOUCH_PRIORITY><PAGE_BUFFER_SIZE>0x10000</PAGE_BUFFER_SIZE><TRANSITIONS>Clear Screen With Background Color</TRANSITIONS><MACRO_FILE/><INTERNALRAM_INIT/><PAGE NAME="Page_1"><PROPERTIES><HEAD><FUNCTIONS charPos="18" foldedLines="">&lt;script&gt;
+	public @load()
+	{
+    	const max_primes = 100
+    	new int series[max_primes] = [true, ... ]
+    	InternalRAM.string(0) =  "1" //1 is the first prime
+    	for (new int i = 2; i &lt; max_primes; i++)
+    	{
+        	if (series[i])  //i is a prime
+        	{
+            	InternalRAM.string(0) += append(", ",itoa(i))
+   			 // filter all multiples of this "prime" from the list
+            	for (new int j = 2 * i; j &lt; max_primes; j += i)
+                	series[j] = false
+        	}
+    	}
+	}
+&lt;/script&gt;</FUNCTIONS></HEAD></PROPERTIES><BKGND/><BODY><StringField><Name Type="12">MyString_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><border Type="13" Editable="True">1</border><borderColor Type="11" Editable="True">#000000FF</borderColor><fillColor Type="11" Editable="True">#FFFFFFFF</fillColor><font Type="14" Editable="True">Bitstream Vera Sans,  12pt</font><fontColor Type="11" Editable="True">#000000</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><horizontalAlign Type="10" Editable="True">Left	Center	Left	Right</horizontalAlign><href Type="24" Editable="True">Amulet:internalRAM.string(0).value()</href><printf Type="12" Editable="True">%.500s</printf><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><verticalAlign Type="10" Editable="True">Top	Bottom	Middle	Top</verticalAlign><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">240</MidX><MidY Type="13">147</MidY><Width Type="13">459</Width><Height Type="13">235</Height></StringField><StaticText><Name Type="12">StaticText_1</Name><text Type="25" Editable="True">Output:</text><fontColor Type="11" Editable="True">#000000</fontColor><font Type="14" Editable="True">Bitstream Vera Sans,  12pt</font><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><hAlign Type="13">1</hAlign><vAlign Type="13">32</vAlign><MidX Type="13">146</MidX><MidY Type="13">22</MidY><Width Type="13">271</Width><Height Type="13">30</Height></StaticText></BODY></PAGE></GEMProject>

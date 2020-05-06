@@ -1,0 +1,319 @@
+LCD Size: 480 x 272
+LCD Manufacturer: Amulet
+LCD Part Number: STK-CY-043
+Touch Panel: STK-CY-043
+Init File: Init None
+SDRAM Part Number: IS42S32800D (256 MBit)
+Size of SDRAM: 0x2000000
+Size of Serial Data Flash: 0x400000
+Serial Data Flash used by OS: 0x3f000
+Minimum Serial Data Flash Sector: 0x80
+Color Depth: 8
+
+Start_preCache (GEM page)    Flash Index = 0x20
+==============
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x38       (0x3c0fc4)                                                               
+      MultiHref0                Sequenced Functions    0x24       (0x3c0fa0)     0x0        (0x1f6939c)                                                     
+      No Name                   Meta Object            0x3c       (0x3c0f64)     0x0        (0x1f6939c)                                          
+      No Name                   Cached Image Dir       0xc        (0x3c0f58)     0x10       (0x1f6938c)                                               
+      No Name                   Cached Image           0xc        (0x3c0f4c)     0x1fe04    (0x1f49588)                                              
+      No Name                   Cached Image           0xc        (0x3c0f40)     0x1fe04    (0x1f29784)                                              
+      No Name                   Cached Image           0xc        (0x3c0f34)     0x1fe04    (0x1f09980)                                              
+      PAGE FOOTER                                      0x2        (0x3c0f32)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0xca       (0x3c0f32)     0x5fa1c    (0x1f09980)                                
+
+
+Start (GEM page)    Flash Index = 0x21
+=====
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x28       (0x3c0ed4)                                                               
+      StartMenu                 Image                  0x20       (0x3c0eb4)     0x0        (0x1f09980)                                      
+      CustomButton              Custom Button          0x64       (0x3c0e50)     0x8058     (0x1f01928)                                                    
+      PAGE FOOTER                                      0x2        (0x3c0e4e)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0xae       (0x3c0e4e)     0x8058     (0x1f01928)                               
+
+
+Game (GEM page)    Flash Index = 0x22
+====
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x1cc      (0x3c0c30)                                                                
+      MultiHref0                Multiple Functions     0x24       (0x3c0c0c)     0x0        (0x1f09980)                                                    
+      move_ball                 Meta Object            0x3c       (0x3c0bd0)     0x0        (0x1f09980)                                            
+      GameOver                  Meta Object            0x3c       (0x3c0b94)     0x0        (0x1f09980)                                           
+      PCBoardBack               Image                  0x20       (0x3c0b74)     0x0        (0x1f09980)                                        
+      MultiHref4                Multiple Functions     0x24       (0x3c0b50)     0x0        (0x1f09980)                                                    
+      StartBall                 Touch Area             0x3c       (0x3c0b14)     0x0        (0x1f09980)                                           
+      Paddle                    Image                  0x20       (0x3c0af4)     0x340      (0x1f09640)                                     
+      LivesOutput               Image Sequence         0x38       (0x3c0abc)     0x4160     (0x1f054e0)                                                    
+        UART of LivesOutput     UART Object            0x24       (0x3c0a98)     0x0        (0x1f054e0)                                                        
+      Divider                   String Field           0xb0       (0x3c09e8)     0x1760     (0x1f03d80)                                              
+        UART of Divider         UART Object            0x24       (0x3c09c4)     0x0        (0x1f03d80)                                                    
+      scoreField                Numeric Field          0x74       (0x3c0950)     0x0        (0x1f03d80)                                               
+        UART of scoreField      UART Object            0x24       (0x3c092c)     0x0        (0x1f03d80)                                                       
+      maxScoreField             Numeric Field          0x74       (0x3c08b8)     0x0        (0x1f03d80)                                                  
+        UART of maxScoreField   UART Object            0x24       (0x3c0894)     0x0        (0x1f03d80)                                                          
+      Brick_00                  Image Sequence         0x38       (0x3c085c)     0xfa0      (0x1f02de0)                                                
+        UART of Brick_00        UART Object            0x24       (0x3c0838)     0x0        (0x1f02de0)                                                     
+      Brick_01                  Image Sequence         0x38       (0x3c0800)     0xfa0      (0x1f01e40)                                                
+        UART of Brick_01        UART Object            0x24       (0x3c07dc)     0x0        (0x1f01e40)                                                     
+      Brick_02                  Image Sequence         0x38       (0x3c07a4)     0xfa0      (0x1f00ea0)                                                
+        UART of Brick_02        UART Object            0x24       (0x3c0780)     0x0        (0x1f00ea0)                                                     
+      Brick_03                  Image Sequence         0x38       (0x3c0748)     0xfa0      (0x1efff00)                                                
+        UART of Brick_03        UART Object            0x24       (0x3c0724)     0x0        (0x1efff00)                                                     
+      Brick_04                  Image Sequence         0x38       (0x3c06ec)     0xfa0      (0x1efef60)                                                
+        UART of Brick_04        UART Object            0x24       (0x3c06c8)     0x0        (0x1efef60)                                                     
+      Brick_10                  Image Sequence         0x38       (0x3c0690)     0xfa0      (0x1efdfc0)                                                
+        UART of Brick_10        UART Object            0x24       (0x3c066c)     0x0        (0x1efdfc0)                                                     
+      Brick_11                  Image Sequence         0x38       (0x3c0634)     0xfa0      (0x1efd020)                                                
+        UART of Brick_11        UART Object            0x24       (0x3c0610)     0x0        (0x1efd020)                                                     
+      Brick_12                  Image Sequence         0x38       (0x3c05d8)     0xfa0      (0x1efc080)                                                
+        UART of Brick_12        UART Object            0x24       (0x3c05b4)     0x0        (0x1efc080)                                                     
+      Brick_13                  Image Sequence         0x38       (0x3c057c)     0xfa0      (0x1efb0e0)                                                
+        UART of Brick_13        UART Object            0x24       (0x3c0558)     0x0        (0x1efb0e0)                                                     
+      Brick_14                  Image Sequence         0x38       (0x3c0520)     0xfa0      (0x1efa140)                                                
+        UART of Brick_14        UART Object            0x24       (0x3c04fc)     0x0        (0x1efa140)                                                     
+      Brick_20                  Image Sequence         0x38       (0x3c04c4)     0xfa0      (0x1ef91a0)                                                
+        UART of Brick_20        UART Object            0x24       (0x3c04a0)     0x0        (0x1ef91a0)                                                     
+      Brick_21                  Image Sequence         0x38       (0x3c0468)     0xfa0      (0x1ef8200)                                                
+        UART of Brick_21        UART Object            0x24       (0x3c0444)     0x0        (0x1ef8200)                                                     
+      Brick_22                  Image Sequence         0x38       (0x3c040c)     0xfa0      (0x1ef7260)                                                
+        UART of Brick_22        UART Object            0x24       (0x3c03e8)     0x0        (0x1ef7260)                                                     
+      Brick_23                  Image Sequence         0x38       (0x3c03b0)     0xfa0      (0x1ef62c0)                                                
+        UART of Brick_23        UART Object            0x24       (0x3c038c)     0x0        (0x1ef62c0)                                                     
+      Brick_24                  Image Sequence         0x38       (0x3c0354)     0xfa0      (0x1ef5320)                                                
+        UART of Brick_24        UART Object            0x24       (0x3c0330)     0x0        (0x1ef5320)                                                     
+      Brick_30                  Image Sequence         0x38       (0x3c02f8)     0xfa0      (0x1ef4380)                                                
+        UART of Brick_30        UART Object            0x24       (0x3c02d4)     0x0        (0x1ef4380)                                                     
+      Brick_31                  Image Sequence         0x38       (0x3c029c)     0xfa0      (0x1ef33e0)                                                
+        UART of Brick_31        UART Object            0x24       (0x3c0278)     0x0        (0x1ef33e0)                                                     
+      Brick_32                  Image Sequence         0x38       (0x3c0240)     0xfa0      (0x1ef2440)                                                
+        UART of Brick_32        UART Object            0x24       (0x3c021c)     0x0        (0x1ef2440)                                                     
+      Brick_33                  Image Sequence         0x38       (0x3c01e4)     0xfa0      (0x1ef14a0)                                                
+        UART of Brick_33        UART Object            0x24       (0x3c01c0)     0x0        (0x1ef14a0)                                                     
+      Brick_34                  Image Sequence         0x38       (0x3c0188)     0xfa0      (0x1ef0500)                                                
+        UART of Brick_34        UART Object            0x24       (0x3c0164)     0x0        (0x1ef0500)                                                     
+      Brick_40                  Image Sequence         0x38       (0x3c012c)     0xfa0      (0x1eef560)                                                
+        UART of Brick_40        UART Object            0x24       (0x3c0108)     0x0        (0x1eef560)                                                     
+      Brick_41                  Image Sequence         0x38       (0x3c00d0)     0xfa0      (0x1eee5c0)                                                
+        UART of Brick_41        UART Object            0x24       (0x3c00ac)     0x0        (0x1eee5c0)                                                     
+      Brick_42                  Image Sequence         0x38       (0x3c0074)     0xfa0      (0x1eed620)                                                
+        UART of Brick_42        UART Object            0x24       (0x3c0050)     0x0        (0x1eed620)                                                     
+      Brick_43                  Image Sequence         0x38       (0x3c0018)     0xfa0      (0x1eec680)                                                
+        UART of Brick_43        UART Object            0x24       (0x3bfff4)     0x0        (0x1eec680)                                                     
+      Brick_44                  Image Sequence         0x38       (0x3bffbc)     0xfa0      (0x1eeb6e0)                                                
+        UART of Brick_44        UART Object            0x24       (0x3bff98)     0x0        (0x1eeb6e0)                                                     
+      Brick_50                  Image Sequence         0x38       (0x3bff60)     0xfa0      (0x1eea740)                                                
+        UART of Brick_50        UART Object            0x24       (0x3bff3c)     0x0        (0x1eea740)                                                     
+      Brick_51                  Image Sequence         0x38       (0x3bff04)     0xfa0      (0x1ee97a0)                                                
+        UART of Brick_51        UART Object            0x24       (0x3bfee0)     0x0        (0x1ee97a0)                                                     
+      Brick_52                  Image Sequence         0x38       (0x3bfea8)     0xfa0      (0x1ee8800)                                                
+        UART of Brick_52        UART Object            0x24       (0x3bfe84)     0x0        (0x1ee8800)                                                     
+      Brick_53                  Image Sequence         0x38       (0x3bfe4c)     0xfa0      (0x1ee7860)                                                
+        UART of Brick_53        UART Object            0x24       (0x3bfe28)     0x0        (0x1ee7860)                                                     
+      Brick_54                  Image Sequence         0x38       (0x3bfdf0)     0xfa0      (0x1ee68c0)                                                
+        UART of Brick_54        UART Object            0x24       (0x3bfdcc)     0x0        (0x1ee68c0)                                                     
+      Brick_60                  Image Sequence         0x38       (0x3bfd94)     0xfa0      (0x1ee5920)                                                
+        UART of Brick_60        UART Object            0x24       (0x3bfd70)     0x0        (0x1ee5920)                                                     
+      Brick_61                  Image Sequence         0x38       (0x3bfd38)     0xfa0      (0x1ee4980)                                                
+        UART of Brick_61        UART Object            0x24       (0x3bfd14)     0x0        (0x1ee4980)                                                     
+      Brick_62                  Image Sequence         0x38       (0x3bfcdc)     0xfa0      (0x1ee39e0)                                                
+        UART of Brick_62        UART Object            0x24       (0x3bfcb8)     0x0        (0x1ee39e0)                                                     
+      Brick_63                  Image Sequence         0x38       (0x3bfc80)     0xfa0      (0x1ee2a40)                                                
+        UART of Brick_63        UART Object            0x24       (0x3bfc5c)     0x0        (0x1ee2a40)                                                     
+      Brick_64                  Image Sequence         0x38       (0x3bfc24)     0xfa0      (0x1ee1aa0)                                                
+        UART of Brick_64        UART Object            0x24       (0x3bfc00)     0x0        (0x1ee1aa0)                                                     
+      Brick_70                  Image Sequence         0x38       (0x3bfbc8)     0xfa0      (0x1ee0b00)                                                
+        UART of Brick_70        UART Object            0x24       (0x3bfba4)     0x0        (0x1ee0b00)                                                     
+      Brick_71                  Image Sequence         0x38       (0x3bfb6c)     0xfa0      (0x1edfb60)                                                
+        UART of Brick_71        UART Object            0x24       (0x3bfb48)     0x0        (0x1edfb60)                                                     
+      Brick_72                  Image Sequence         0x38       (0x3bfb10)     0xfa0      (0x1edebc0)                                                
+        UART of Brick_72        UART Object            0x24       (0x3bfaec)     0x0        (0x1edebc0)                                                     
+      Brick_73                  Image Sequence         0x38       (0x3bfab4)     0xfa0      (0x1eddc20)                                                
+        UART of Brick_73        UART Object            0x24       (0x3bfa90)     0x0        (0x1eddc20)                                                     
+      Brick_74                  Image Sequence         0x38       (0x3bfa58)     0xfa0      (0x1edcc80)                                                
+        UART of Brick_74        UART Object            0x24       (0x3bfa34)     0x0        (0x1edcc80)                                                     
+      Brick_80                  Image Sequence         0x38       (0x3bf9fc)     0xfa0      (0x1edbce0)                                                
+        UART of Brick_80        UART Object            0x24       (0x3bf9d8)     0x0        (0x1edbce0)                                                     
+      Brick_81                  Image Sequence         0x38       (0x3bf9a0)     0xfa0      (0x1edad40)                                                
+        UART of Brick_81        UART Object            0x24       (0x3bf97c)     0x0        (0x1edad40)                                                     
+      Brick_82                  Image Sequence         0x38       (0x3bf944)     0xfa0      (0x1ed9da0)                                                
+        UART of Brick_82        UART Object            0x24       (0x3bf920)     0x0        (0x1ed9da0)                                                     
+      Brick_83                  Image Sequence         0x38       (0x3bf8e8)     0xfa0      (0x1ed8e00)                                                
+        UART of Brick_83        UART Object            0x24       (0x3bf8c4)     0x0        (0x1ed8e00)                                                     
+      Brick_84                  Image Sequence         0x38       (0x3bf88c)     0xfa0      (0x1ed7e60)                                                
+        UART of Brick_84        UART Object            0x24       (0x3bf868)     0x0        (0x1ed7e60)                                                     
+      Ball                      Image                  0x20       (0x3bf848)     0x190      (0x1ed7cd0)                                   
+      GEMscript                 GEMscript              0x4394     (0x3bb4b4)     0x0        (0x1ed7cd0)                                            
+      PAGE FOOTER                                      0x2        (0x3bb4b2)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0x594a     (0x3bb4b2)     0x31cb0    (0x1ed7cd0)                                  
+
+
+GameOver (GEM page)    Flash Index = 0x23
+========
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x34       (0x3bb448)                                                               
+      GameOver                  Image                  0x20       (0x3bb428)     0x0        (0x1f09980)                                     
+      YesImg                    Image                  0x20       (0x3bb408)     0xfb0      (0x1f089d0)                                     
+      NoImg                     Image                  0x20       (0x3bb3e8)     0xbb8      (0x1f07e18)                                    
+      YesBtn                    Touch Area             0x3c       (0x3bb3ac)     0x0        (0x1f07e18)                                        
+      NoBtn                     Touch Area             0x3c       (0x3bb370)     0x0        (0x1f07e18)                                       
+      PAGE FOOTER                                      0x2        (0x3bb36e)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0x10e      (0x3bb36e)     0x1b68     (0x1f07e18)                                
+
+
+GameOver_272x480.png (Image File)    Flash Index = 0x24
+====================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x8d52     (0x3b25ae)                                                
+
+
+PCBoardBack_272x480.png (Image File)    Flash Index = 0x25
+=======================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x83ae     (0x3aa1d2)                                                
+
+
+StartMenu_272x480.png (Image File)    Flash Index = 0x26
+=====================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x84a6     (0x3a1cda)                                                
+
+
+Amulet.pal (Palette File)    Flash Index = 0x27
+==========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x40a      (0x3a1876)                                               
+
+
+StartButton1_219x75.png (Image File)    Flash Index = 0x28
+=======================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1636     (0x3a01ca)                                                
+
+
+StartButton2_219x75.png (Image File)    Flash Index = 0x29
+=======================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x14a6     (0x39ecda)                                                
+
+
+Paddle_64x13.png (Image File)    Flash Index = 0x2a
+================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1fe      (0x39ea82)                                               
+
+
+LEDE_51x82.png (Image File)    Flash Index = 0x2b
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x8d6      (0x39e1aa)                                               
+
+
+LED1_51x82.png (Image File)    Flash Index = 0x2c
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x8c6      (0x39d8ba)                                               
+
+
+LED2_51x82.png (Image File)    Flash Index = 0x2d
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x88a      (0x39cff6)                                               
+
+
+LED3_51x82.png (Image File)    Flash Index = 0x2e
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x882      (0x39c6fe)                                               
+
+
+Resistor0_50x20.png (Image File)    Flash Index = 0x2f
+===================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1a6      (0x39c4da)                                               
+
+
+Resistor1_50x20.png (Image File)    Flash Index = 0x30
+===================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x252      (0x39c22e)                                               
+
+
+Resistor2_50x20.png (Image File)    Flash Index = 0x31
+===================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x26e      (0x39bf92)                                               
+
+
+Resistor3_50x20.png (Image File)    Flash Index = 0x32
+===================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x24a      (0x39bd36)                                               
+
+
+Ball2.gif (Image File)    Flash Index = 0x33
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x16e      (0x39bb92)                                               
+
+
+GOYes_73x55.png (Image File)    Flash Index = 0x34
+===============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x632      (0x39b54e)                                               
+
+
+GONo_60x50.png (Image File)    Flash Index = 0x35
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x4f2      (0x39b00e)                                               
+
+
+fontHdr.auf (Font Header File)    Flash Index = 0xf
+===========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x32       (0x39afce)                                              
+
+
+internalRAM.bin (InternalRAM File)    Flash Index = 0x6
+===============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x213c     (0x398e44)                                                
+
+
+lcdConfig.bin (LCD Configuration File)    Flash Index = 0x3
+=============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xba       (0x398d46)                                              
+
+

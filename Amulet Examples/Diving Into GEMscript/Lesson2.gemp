@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><GEMProject GEMstudioVersion="3.5.2.11" CompilerVersion="V3.5.2.B"><COMPLETE_MODULE><LCD_CONFIG><SIZE>480 x 272</SIZE><MFG>Amulet</MFG><NAME>STK-CY-043.tft</NAME></LCD_CONFIG><BOARD>MK-CY-043 (Capacitive 4.3 GEMstarter-kit).board</BOARD><OS_SPECIFIC><PROTOCOL>CRC</PROTOCOL><ROTATION>90</ROTATION><COLOR_DEPTH>8</COLOR_DEPTH></OS_SPECIFIC></COMPLETE_MODULE><AMULET_ID>1</AMULET_ID><BAUD>115200</BAUD><BGCOLOR>#FFFFFF</BGCOLOR><BUFFER>Double</BUFFER><GS_STRING_BUFFER_SIZE>100</GS_STRING_BUFFER_SIZE><HOST_ID>2</HOST_ID><JPEG>Native</JPEG><NULL_TERMINATE>No</NULL_TERMINATE><STRICT_MODBUS_TIMING>No</STRICT_MODBUS_TIMING><SLAVE_RSP>Full Protocol</SLAVE_RSP><TIMEOUT>0.20</TIMEOUT><TOUCH_PRIORITY>From Top to Bottom</TOUCH_PRIORITY><PAGE_BUFFER_SIZE>0x10000</PAGE_BUFFER_SIZE><TRANSITIONS>Clear Screen With Background Color</TRANSITIONS><MACRO_FILE/><INTERNALRAM_INIT/><PAGE NAME="Page_1"><PROPERTIES><HEAD><FUNCTIONS charPos="232" foldedLines="">&lt;script&gt;
+/************************************************************************************
+	Name:            ball
+	Arguments:   none
+	Returns:         none
+							
+	ball is a public function that is called by the timer move_ball
+	
+	ball is the main loop of the program, check for collisions and update ball
+	position 
+************************************************************************************/	
+public ball() 
+{
+	static int currenty = 0;
+	static int currentx = 0;
+	static int yslope    = 7;
+	static int xslope    = 4;
+
+	//Check for collision with vertical walls on the left and right
+	if (currentx &gt; 200 || currentx &lt; 0)
+	{
+		xslope = -xslope;  //bounce by reversing X direction
+	}
+			
+	//Check for collision with horizontal walls on the top and bottom
+	if (currenty &gt; 200 || currenty &lt; 0)
+	{
+		yslope = -yslope;  //bounce by reversing Y direction
+	}
+
+	//Move the ball to the next step along the current trajectory
+	//Clear the ball from it's current screen position
+	document.Ball.disappear();
+			
+	//Calculate the new position of the ball
+	currenty = currenty + yslope;
+	currentx = currentx + xslope;
+		
+	//Move the ball by updating its X and Y coordinates		
+	document.Ball.setY(currenty);
+	document.Ball.setX(currentx);
+		
+	//Schedule the ball to be redrawn and return to the OS
+	document.Ball.reappear();
+}
+&lt;/SCRIPT&gt;
+
+&lt;META HTTP-EQUIV="REFRESH" CONTENT="0.05;
+					URL=GEMscript.ball();Name=move_ball"&gt;
+</FUNCTIONS></HEAD></PROPERTIES><BKGND/><BODY><Image><Name Type="12">Ball</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Images\Ball2.gif</file><cacheImage Type="2" Editable="True">False	True	False</cacheImage><noSDRAM Type="2" Editable="True">False</noSDRAM><MidX Type="13">10</MidX><MidY Type="13">10</MidY><Width Type="13">26</Width><Height Type="13">26</Height></Image></BODY></PAGE></GEMProject>

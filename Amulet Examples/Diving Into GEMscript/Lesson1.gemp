@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><GEMProject GEMstudioVersion="3.5.2.11" CompilerVersion="V3.5.2.B"><COMPLETE_MODULE><LCD_CONFIG><SIZE>480 x 272</SIZE><MFG>Amulet</MFG><NAME>STK-CY-043.tft</NAME></LCD_CONFIG><BOARD>MK-CY-043 (Capacitive 4.3 GEMstarter-kit).board</BOARD><OS_SPECIFIC><PROTOCOL>CRC</PROTOCOL><ROTATION>90</ROTATION><COLOR_DEPTH>8</COLOR_DEPTH></OS_SPECIFIC></COMPLETE_MODULE><AMULET_ID>1</AMULET_ID><BAUD>115200</BAUD><BGCOLOR>#FFFFFF</BGCOLOR><BUFFER>Double</BUFFER><GS_STRING_BUFFER_SIZE>100</GS_STRING_BUFFER_SIZE><HOST_ID>2</HOST_ID><JPEG>Native</JPEG><NULL_TERMINATE>No</NULL_TERMINATE><STRICT_MODBUS_TIMING>No</STRICT_MODBUS_TIMING><SLAVE_RSP>Full Protocol</SLAVE_RSP><TIMEOUT>0.20</TIMEOUT><TOUCH_PRIORITY>From Top to Bottom</TOUCH_PRIORITY><PAGE_BUFFER_SIZE>0x10000</PAGE_BUFFER_SIZE><TRANSITIONS>Clear Screen With Background Color</TRANSITIONS><MACRO_FILE/><INTERNALRAM_INIT/><PAGE NAME="Page_1"><PROPERTIES><HEAD><FUNCTIONS charPos="832" foldedLines="">&lt;script&gt;
+/* GEMscript example to illustrate the concept of creating functions and variables, 
+	accessing document objects and executing Inter Widget Commands (IWC) 
+*/	
+
+/************************************************************************************
+	Name:            ball
+	Arguments:   none
+	Returns:         none
+							
+	ball is a public function that is called by the Amulet OS 
+	
+	ball is the main loop of the program, update ball position 
+************************************************************************************/
+public moveBall(int x, int y)
+{		
+	//erase the current image of Ball
+	document.Ball.disappear()
+		
+	//move the ball to its new X and Y coordinates
+	if (x &gt;= 0)
+		document.Ball.setx(x)
+	if (y &gt;= 0)
+		document.Ball.sety(y)
+		
+	//redraw the image Ball
+	document.Ball.reappear()
+}
+&lt;/SCRIPT&gt;
+
+
+
+
+
+
+
+</FUNCTIONS></HEAD></PROPERTIES><BKGND/><BODY><Slider><Name Type="12">MySlider_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><channelColor Type="11" Editable="True">#000000FF</channelColor><handleColor Type="11" Editable="True">#61116AFF</handleColor><handleFrameColor Type="11" Editable="True">#000000FF</handleFrameColor><handleTrackingColor Type="11" Editable="True">#000000FF</handleTrackingColor><href Type="15" Editable="True">GEMscript.moveBall(intrinsicValue,-1)</href><hrefEvent Type="10" Editable="True">On Change	On Change	On Release</hrefEvent><initialCondition Type="12" Editable="True">100</initialCondition><max Type="13" Editable="True">200</max><min Type="13" Editable="True">0</min><minAt Type="10" Editable="True">Left	Bottom	Left	Right	Top</minAt><tickColor Type="11" Editable="True">#000000FF</tickColor><tickCount Type="13" Editable="True">0</tickCount><MidX Type="13">105</MidX><MidY Type="13">242</MidY><Width Type="13">217</Width><Height Type="13">50</Height></Slider><Slider><Name Type="12">MySlider_2</Name><invisible Type="2" Editable="True">False	True	False</invisible><channelColor Type="11" Editable="True">#000000FF</channelColor><handleColor Type="11" Editable="True">#61116AFF</handleColor><handleFrameColor Type="11" Editable="True">#000000FF</handleFrameColor><handleTrackingColor Type="11" Editable="True">#000000FF</handleTrackingColor><href Type="15" Editable="True">GEMscript.moveBall(-1,intrinsicValue)</href><hrefEvent Type="10" Editable="True">On Change	On Change	On Release</hrefEvent><initialCondition Type="12" Editable="True">100</initialCondition><max Type="13" Editable="True">200</max><min Type="13" Editable="True">0</min><minAt Type="10" Editable="True">Left	Bottom	Left	Right	Top</minAt><tickColor Type="11" Editable="True">#000000FF</tickColor><tickCount Type="13" Editable="True">0</tickCount><MidX Type="13">242</MidX><MidY Type="13">105</MidY><Width Type="13">49</Width><Height Type="13">217</Height><disabled Type="12">False</disabled></Slider><Image><Name Type="12">Ball</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Images\Ball2.gif</file><cacheImage Type="2" Editable="True">False	True	False</cacheImage><noSDRAM Type="2" Editable="True">False</noSDRAM><MidX Type="13">110</MidX><MidY Type="13">110</MidY><Width Type="13">26</Width><Height Type="13">26</Height></Image></BODY></PAGE></GEMProject>

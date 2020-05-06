@@ -1,0 +1,1812 @@
+LCD Size: 480 x 272
+LCD Manufacturer: Amulet
+LCD Part Number: STK-CY-043
+Touch Panel: STK-CY-043
+Init File: Init None
+SDRAM Part Number: IS42S32800D (256 MBit)
+Size of SDRAM: 0x2000000
+Size of Serial Data Flash: 0x400000
+Serial Data Flash used by OS: 0x40000
+Minimum Serial Data Flash Sector: 0x80
+Color Depth: 32
+
+Menu_preCache (GEM page)    Flash Index = 0x20
+=============
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x64       (0x3bff98)                                                               
+      MultiHref0                Sequenced Functions    0xb4       (0x3bfee4)     0x0        (0x1ecac7c)                                                     
+      No Name                   Meta Object            0x3c       (0x3bfea8)     0x0        (0x1ecac7c)                                          
+      No Name                   Cached Image Dir       0xc        (0x3bfe9c)     0x3c       (0x1ecac40)                                               
+      Leather_480x272_jp...jpg  Cached Image           0xc        (0x3bfe90)     0x7f804    (0x1e4b43c)                                                               
+      LeatherOrange.png         Cached Image           0xc        (0x3bfe84)     0x7f804    (0x1dcbc38)                                                        
+      Background_480x272...jpg  Cached Image           0xc        (0x3bfe78)     0x7f804    (0x1d4c434)                                                               
+      bg_cool_480x272_jp...jpg  Cached Image           0xc        (0x3bfe6c)     0x7f804    (0x1cccc30)                                                               
+      btn_cubed_cool_1.png      Cached Image           0xc        (0x3bfe60)     0x203a4    (0x1cac88c)                                                           
+      btn_cubed_cool_2.png      Cached Image           0xc        (0x3bfe54)     0x203a4    (0x1c8c4e8)                                                           
+      btn_cubed_cool_0.png      Cached Image           0xc        (0x3bfe48)     0x203a4    (0x1c6c144)                                                           
+      btn_crushed_cool_1.png    Cached Image           0xc        (0x3bfe3c)     0x203a4    (0x1c4bda0)                                                             
+      btn_crushed_cool_2.png    Cached Image           0xc        (0x3bfe30)     0x203a4    (0x1c2b9fc)                                                             
+      btn_crushed_cool_0.png    Cached Image           0xc        (0x3bfe24)     0x203a4    (0x1c0b658)                                                             
+      btn_water_cool_1.png      Cached Image           0xc        (0x3bfe18)     0x203a4    (0x1beb2b4)                                                           
+      btn_water_cool_2.png      Cached Image           0xc        (0x3bfe0c)     0x203a4    (0x1bcaf10)                                                           
+      btn_water_cool_0.png      Cached Image           0xc        (0x3bfe00)     0x203a4    (0x1baab6c)                                                           
+      bg_footer_cool.png        Cached Image           0xc        (0x3bfdf4)     0x7f804    (0x1b2b368)                                                         
+      PAGE FOOTER                                      0x2        (0x3bfdf2)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0x20a      (0x3bfdf2)     0x39f914   (0x1b2b368)                                  
+
+
+Menu (GEM page)    Flash Index = 0x21
+====
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x9c       (0x3bfce0)                                                               
+      MultiHref0                Multiple Functions     0x2c       (0x3bfcb4)     0x0        (0x1b2b368)                                                    
+      MultiHref1                Multiple Functions     0x2c       (0x3bfc88)     0x0        (0x1b2b368)                                                    
+      MultiHref2                Multiple Functions     0x2c       (0x3bfc5c)     0x0        (0x1b2b368)                                                    
+      MultiHref3                Sequenced Functions    0xb4       (0x3bfba8)     0x0        (0x1b2b368)                                                     
+      pwmMeta                   Meta Object            0x3c       (0x3bfb6c)     0x0        (0x1b2b368)                                          
+      MultiHref5                Multiple Functions     0xec       (0x3bfa80)     0x0        (0x1b2b368)                                                    
+      No Name                   Meta Object            0x3c       (0x3bfa44)     0x0        (0x1b2b368)                                          
+      MultiHref7                Multiple Functions     0x34       (0x3bfa10)     0x0        (0x1b2b368)                                                    
+      MultiHref8                Sequenced Functions    0xd4       (0x3bf93c)     0x0        (0x1b2b368)                                                     
+      ToFridge                  Meta Object            0x3c       (0x3bf900)     0x0        (0x1b2b368)                                           
+      MultiHref10               Multiple Functions     0x34       (0x3bf8cc)     0x0        (0x1b2b368)                                                     
+      MultiHref11               Sequenced Functions    0xd4       (0x3bf7f8)     0x0        (0x1b2b368)                                                      
+      ToSlideshow               Meta Object            0x3c       (0x3bf7bc)     0x0        (0x1b2b368)                                              
+      MultiHref13               Multiple Functions     0x34       (0x3bf788)     0x0        (0x1b2b368)                                                     
+      MultiHref14               Sequenced Functions    0xd4       (0x3bf6b4)     0x0        (0x1b2b368)                                                      
+      ToOven                    Meta Object            0x3c       (0x3bf678)     0x0        (0x1b2b368)                                         
+      MultiHref16               Multiple Functions     0x34       (0x3bf644)     0x0        (0x1b2b368)                                                     
+      MultiHref17               Sequenced Functions    0xd4       (0x3bf570)     0x0        (0x1b2b368)                                                      
+      ToThermostat              Meta Object            0x3c       (0x3bf534)     0x0        (0x1b2b368)                                               
+      Leather                   Image                  0x20       (0x3bf514)     0x0        (0x1b2b368)                                    
+      FridgeIcon                Image                  0x20       (0x3bf4f4)     0x9000     (0x1b22368)                                          
+      MultiHref21               Multiple Functions     0x2c       (0x3bf4c8)     0x0        (0x1b22368)                                                     
+      FridgeButton              Touch Area             0x3c       (0x3bf48c)     0x0        (0x1b22368)                                              
+      ThermostatIcon            Image                  0x20       (0x3bf46c)     0x9000     (0x1b19368)                                              
+      ThermostatButton          Touch Area             0x3c       (0x3bf430)     0x0        (0x1b19368)                                                  
+      ClockIcon                 Image                  0x20       (0x3bf410)     0x9000     (0x1b10368)                                         
+      ClockButton               Touch Area             0x3c       (0x3bf3d4)     0x0        (0x1b10368)                                             
+      PPT_Icon                  Image                  0x20       (0x3bf3b4)     0x9000     (0x1b07368)                                        
+      MultiHref28               Multiple Functions     0x2c       (0x3bf388)     0x0        (0x1b07368)                                                     
+      PPT_Button                Touch Area             0x3c       (0x3bf34c)     0x0        (0x1b07368)                                            
+      pwm                       PWM Object             0xc        (0x3bf340)     0x0        (0x1b07368)                                    
+      PAGE FOOTER                                      0x2        (0x3bf33e)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0xa3e      (0x3bf33e)     0x24000    (0x1b07368)                                 
+
+
+Fridge_home (GEM page)    Flash Index = 0x22
+===========
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x9c       (0x3bf260)                                                               
+      metaResetTimer            Meta Object            0x3c       (0x3bf224)     0x0        (0x1b2b368)                                                 
+      MultiHref1                Multiple Functions     0x1c       (0x3bf208)     0x0        (0x1b2b368)                                                    
+      TimerMeta                 Meta Object            0x3c       (0x3bf1cc)     0x0        (0x1b2b368)                                            
+        IWC of TimerMeta        IWC Object             0x24       (0x3bf1a8)     0x0        (0x1b2b368)                                                    
+      MultiHref4                Multiple Functions     0x24       (0x3bf184)     0x0        (0x1b2b368)                                                    
+      CheckTimer                Meta Object            0x3c       (0x3bf148)     0x0        (0x1b2b368)                                             
+        IWC of CheckTimer       IWC Object             0x24       (0x3bf124)     0x0        (0x1b2b368)                                                     
+      MultiHref7                Multiple Functions     0x2c       (0x3bf0f8)     0x0        (0x1b2b368)                                                    
+      MultiHref8                Sequenced Functions    0x14       (0x3bf0e4)     0x0        (0x1b2b368)                                                     
+      No Name                   Meta Object            0x3c       (0x3bf0a8)     0x0        (0x1b2b368)                                          
+        IWC of No Name          IWC Object             0x24       (0x3bf084)     0x0        (0x1b2b368)                                                  
+      MultiHref11               Multiple Functions     0x2c       (0x3bf058)     0x0        (0x1b2b368)                                                     
+      MultiHref12               Multiple Functions     0x2c       (0x3bf02c)     0x0        (0x1b2b368)                                                     
+      MultiHref13               Multiple Functions     0x2c       (0x3bf000)     0x0        (0x1b2b368)                                                     
+      MultiHref14               Sequenced Functions    0xb4       (0x3bef4c)     0x0        (0x1b2b368)                                                      
+      pwmMeta                   Meta Object            0x3c       (0x3bef10)     0x0        (0x1b2b368)                                          
+      bg_footer_cool            Image                  0x20       (0x3beef0)     0x0        (0x1b2b368)                                           
+      WholeScreenButton_1       Touch Area             0x3c       (0x3beeb4)     0x0        (0x1b2b368)                                                     
+      MultiHref18               Multiple Functions     0x24       (0x3bee90)     0x0        (0x1b2b368)                                                     
+      WaterButton               Radio Button           0x70       (0x3bee20)     0x0        (0x1b2b368)                                               
+      Radios                    Radio Button Master    0x20       (0x3bee00)     0x0        (0x1b2b368)                                                 
+        IWC of Radios           IWC Object             0x24       (0x3beddc)     0x0        (0x1b2b368)                                                 
+      MultiHref22               Multiple Functions     0x24       (0x3bedb8)     0x0        (0x1b2b368)                                                     
+      CrushedButton             Radio Button           0x70       (0x3bed48)     0x0        (0x1b2b368)                                                 
+      MultiHref24               Multiple Functions     0x24       (0x3bed24)     0x0        (0x1b2b368)                                                     
+      CubedButton               Radio Button           0x70       (0x3becb4)     0x0        (0x1b2b368)                                               
+      Menu                      Custom Button          0x64       (0x3bec50)     0x7020     (0x1b24348)                                            
+      ClockButton               Custom Button          0x64       (0x3bebec)     0x6a40     (0x1b1d908)                                                   
+      Home_1                    Image                  0x20       (0x3bebcc)     0x2710     (0x1b1b1f8)                                      
+      MyTouchArea_1             Touch Area             0x3c       (0x3beb90)     0x0        (0x1b1b1f8)                                               
+      pwm                       PWM Object             0xc        (0x3beb84)     0x0        (0x1b1b1f8)                                    
+      PAGE FOOTER                                      0x2        (0x3beb82)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0x77a      (0x3beb82)     0x10170    (0x1b1b1f8)                                 
+
+
+Fridge_settings (GEM page)    Flash Index = 0x23
+===============
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x50       (0x3beb2c)                                                               
+      metaResetTimer            Meta Object            0x3c       (0x3beaf0)     0x0        (0x1b2b368)                                                 
+      MultiHref1                Multiple Functions     0x1c       (0x3bead4)     0x0        (0x1b2b368)                                                    
+      TimerMeta                 Meta Object            0x3c       (0x3bea98)     0x0        (0x1b2b368)                                            
+        IWC of TimerMeta        IWC Object             0x24       (0x3bea74)     0x0        (0x1b2b368)                                                    
+      MultiHref4                Multiple Functions     0x24       (0x3bea50)     0x0        (0x1b2b368)                                                    
+      CheckTimer                Meta Object            0x3c       (0x3bea14)     0x0        (0x1b2b368)                                             
+        IWC of CheckTimer       IWC Object             0x24       (0x3be9f0)     0x0        (0x1b2b368)                                                     
+      bg_header_cool            Image                  0x20       (0x3be9d0)     0x0        (0x1b2b368)                                           
+      WholeScreenButton_1       Touch Area             0x3c       (0x3be994)     0x0        (0x1b2b368)                                                     
+      CustomButton              Custom Button          0x64       (0x3be930)     0xa5c0     (0x1b20da8)                                                    
+      Temps                     Custom Button          0x64       (0x3be8cc)     0x1ea00    (0x1b023a8)                                              
+      Backlight                 Custom Button          0x64       (0x3be868)     0x1ed80    (0x1ae3628)                                                  
+      PAGE FOOTER                                      0x2        (0x3be866)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0x316      (0x3be866)     0x47d40    (0x1ae3628)                                 
+
+
+Fridge_set_temps (GEM page)    Flash Index = 0x24
+================
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0xa4       (0x3be758)                                                               
+      metaResetTimer            Meta Object            0x3c       (0x3be71c)     0x0        (0x1b2b368)                                                 
+      MultiHref1                Multiple Functions     0x1c       (0x3be700)     0x0        (0x1b2b368)                                                    
+      TimerMeta                 Meta Object            0x3c       (0x3be6c4)     0x0        (0x1b2b368)                                            
+        IWC of TimerMeta        IWC Object             0x24       (0x3be6a0)     0x0        (0x1b2b368)                                                    
+      MultiHref4                Multiple Functions     0x24       (0x3be67c)     0x0        (0x1b2b368)                                                    
+      CheckTimer                Meta Object            0x3c       (0x3be640)     0x0        (0x1b2b368)                                             
+        IWC of CheckTimer       IWC Object             0x24       (0x3be61c)     0x0        (0x1b2b368)                                                     
+      metaFreezerDec            Meta Object            0x3c       (0x3be5e0)     0x0        (0x1b2b368)                                                 
+        IWC of metaFreezerDec   IWC Object             0x24       (0x3be5bc)     0x0        (0x1b2b368)                                                         
+      metaFreezerInc            Meta Object            0x3c       (0x3be580)     0x0        (0x1b2b368)                                                 
+        IWC of metaFreezerInc   IWC Object             0x24       (0x3be55c)     0x0        (0x1b2b368)                                                         
+      metaFridgeDec             Meta Object            0x3c       (0x3be520)     0x0        (0x1b2b368)                                                
+        IWC of metaFridgeDec    IWC Object             0x24       (0x3be4fc)     0x0        (0x1b2b368)                                                        
+      metaFridgeInc             Meta Object            0x3c       (0x3be4c0)     0x0        (0x1b2b368)                                                
+        IWC of metaFridgeInc    IWC Object             0x24       (0x3be49c)     0x0        (0x1b2b368)                                                        
+      bg_header_cool            Image                  0x20       (0x3be47c)     0x0        (0x1b2b368)                                           
+      AnyTouch                  Function Button        0x64       (0x3be418)     0x0        (0x1b2b368)                                               
+      CloseButton               Custom Button          0x64       (0x3be3b4)     0xa5c0     (0x1b20da8)                                                   
+      MultiHref18               Multiple Functions     0x1c       (0x3be398)     0x0        (0x1b20da8)                                                     
+      FreezeUpButton            Custom Button          0x64       (0x3be334)     0xa5c0     (0x1b167e8)                                                      
+      MultiHref20               Multiple Functions     0x1c       (0x3be318)     0x0        (0x1b167e8)                                                     
+      FreezeDownButton          Custom Button          0x64       (0x3be2b4)     0xa5c0     (0x1b0c228)                                                        
+      MultiHref22               Multiple Functions     0x1c       (0x3be298)     0x0        (0x1b0c228)                                                     
+      FridgeUpButton            Custom Button          0x64       (0x3be234)     0xa5c0     (0x1b01c68)                                                      
+      MultiHref24               Multiple Functions     0x1c       (0x3be218)     0x0        (0x1b01c68)                                                     
+      FridgeDownButton          Custom Button          0x64       (0x3be1b4)     0xa5c0     (0x1af76a8)                                                        
+      img_recommended_f         Image                  0x20       (0x3be194)     0x690c     (0x1af0d9c)                                                 
+      img_temp_bg0              Image                  0x20       (0x3be174)     0x62d0     (0x1aeaacc)                                            
+      img_temp_bg1              Image                  0x20       (0x3be154)     0x62d0     (0x1ae47fc)                                            
+      FreezerTemp               Numeric Field          0x6c       (0x3be0e8)     0x0        (0x1ae47fc)                                                
+        IWC of FreezerTemp      IWC Object             0x24       (0x3be0c4)     0x0        (0x1ae47fc)                                                      
+      RefrigeratorTemp          Numeric Field          0x6c       (0x3be058)     0x0        (0x1ae47fc)                                                     
+        IWC of Refrigera...emp  IWC Object             0x24       (0x3be034)     0x0        (0x1ae47fc)                                                          
+      PAGE FOOTER                                      0x2        (0x3be032)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0x7ca      (0x3be032)     0x46b6c    (0x1ae47fc)                                 
+
+
+Fridge_set_backlight (GEM page)    Flash Index = 0x25
+====================
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x74       (0x3bdf88)                                                               
+      metaResetTimer            Meta Object            0x3c       (0x3bdf4c)     0x0        (0x1b2b368)                                                 
+      MultiHref1                Multiple Functions     0x1c       (0x3bdf30)     0x0        (0x1b2b368)                                                    
+      TimerMeta                 Meta Object            0x3c       (0x3bdef4)     0x0        (0x1b2b368)                                            
+        IWC of TimerMeta        IWC Object             0x24       (0x3bded0)     0x0        (0x1b2b368)                                                    
+      MultiHref4                Multiple Functions     0x24       (0x3bdeac)     0x0        (0x1b2b368)                                                    
+      CheckTimer                Meta Object            0x3c       (0x3bde70)     0x0        (0x1b2b368)                                             
+        IWC of CheckTimer       IWC Object             0x24       (0x3bde4c)     0x0        (0x1b2b368)                                                     
+      UpdateTimeout             Meta Object            0x3c       (0x3bde10)     0x0        (0x1b2b368)                                                
+      bg_header_cool            Image                  0x20       (0x3bddf0)     0x0        (0x1b2b368)                                           
+      AnyTouch                  Function Button        0x64       (0x3bdd8c)     0x0        (0x1b2b368)                                               
+      img_timeout               Image                  0x20       (0x3bdd6c)     0x1e93c    (0x1b0ca2c)                                            
+      img_brightness            Image                  0x20       (0x3bdd4c)     0x184fc    (0x1af4530)                                               
+      MultiHref12               Multiple Functions     0x1c       (0x3bdd30)     0x0        (0x1af4530)                                                     
+      CustomButton              Custom Button          0x64       (0x3bdccc)     0xa5c0     (0x1ae9f70)                                                    
+      MultiHref14               Multiple Functions     0x24       (0x3bdca8)     0x0        (0x1ae9f70)                                                     
+      Brightness                Slider                 0x74       (0x3bdc34)     0x1af40    (0x1acf030)                                            
+        IWC of Brightness       IWC Object             0x24       (0x3bdc10)     0x0        (0x1acf030)                                                     
+      MultiHref17               Multiple Functions     0x1c       (0x3bdbf4)     0x0        (0x1acf030)                                                     
+      Timeout                   Slider                 0x74       (0x3bdb80)     0x1af40    (0x1ab40f0)                                         
+        IWC of Timeout          IWC Object             0x24       (0x3bdb5c)     0x0        (0x1ab40f0)                                                  
+      MyPWM                     PWM Object             0xc        (0x3bdb50)     0x0        (0x1ab40f0)                                      
+      PAGE FOOTER                                      0x2        (0x3bdb4e)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0x4ae      (0x3bdb4e)     0x77278    (0x1ab40f0)                                 
+
+
+Fridge_clock (GEM page)    Flash Index = 0x26
+============
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0xd4       (0x3bda28)                                                               
+      metaResetTimer            Meta Object            0x3c       (0x3bd9ec)     0x0        (0x1b2b368)                                                 
+      MultiHref1                Multiple Functions     0x1c       (0x3bd9d0)     0x0        (0x1b2b368)                                                    
+      TimerMeta                 Meta Object            0x3c       (0x3bd994)     0x0        (0x1b2b368)                                            
+        IWC of TimerMeta        IWC Object             0x24       (0x3bd970)     0x0        (0x1b2b368)                                                    
+      MultiHref4                Multiple Functions     0x24       (0x3bd94c)     0x0        (0x1b2b368)                                                    
+      CheckTimer                Meta Object            0x3c       (0x3bd910)     0x0        (0x1b2b368)                                             
+        IWC of CheckTimer       IWC Object             0x24       (0x3bd8ec)     0x0        (0x1b2b368)                                                     
+      MultiHref7                Sequenced Functions    0x1c       (0x3bd8d0)     0x0        (0x1b2b368)                                                     
+      No Name                   Meta Object            0x3c       (0x3bd894)     0x0        (0x1b2b368)                                          
+      MultiHref9                Multiple Functions     0x2c       (0x3bd868)     0x0        (0x1b2b368)                                                    
+      MultiHref10               Multiple Functions     0x2c       (0x3bd83c)     0x0        (0x1b2b368)                                                     
+      MultiHref11               Multiple Functions     0x2c       (0x3bd810)     0x0        (0x1b2b368)                                                     
+      MultiHref12               Multiple Functions     0x2c       (0x3bd7e4)     0x0        (0x1b2b368)                                                     
+      MultiHref13               Multiple Functions     0x28       (0x3bd7bc)     0x0        (0x1b2b368)                                                     
+      MultiHref14               Multiple Functions     0x28       (0x3bd794)     0x0        (0x1b2b368)                                                     
+      MultiHref15               Multiple Functions     0x28       (0x3bd76c)     0x0        (0x1b2b368)                                                     
+      MultiHref16               Multiple Functions     0x2c       (0x3bd740)     0x0        (0x1b2b368)                                                     
+      MultiHref17               Multiple Functions     0x30       (0x3bd710)     0x0        (0x1b2b368)                                                     
+      MultiHref18               Multiple Functions     0x2c       (0x3bd6e4)     0x0        (0x1b2b368)                                                     
+      MultiHref19               Multiple Functions     0x2c       (0x3bd6b8)     0x0        (0x1b2b368)                                                     
+      MultiHref20               Multiple Functions     0x2c       (0x3bd68c)     0x0        (0x1b2b368)                                                     
+      No Name                   Meta Object            0x170      (0x3bd51c)     0x0        (0x1b2b368)                                           
+        IWC of No Name          IWC Object             0x24       (0x3bd4f8)     0x0        (0x1b2b368)                                                  
+      appendDate                Meta Object            0x420      (0x3bd0d8)     0x0        (0x1b2b368)                                              
+        IWC of appendDate       IWC Object             0x24       (0x3bd0b4)     0x0        (0x1b2b368)                                                     
+      bg_footer_cool_1          Image                  0x20       (0x3bd094)     0x0        (0x1b2b368)                                             
+      AnyTouch                  Function Button        0x64       (0x3bd030)     0x0        (0x1b2b368)                                               
+      Menu                      Custom Button          0x64       (0x3bcfcc)     0x7020     (0x1b24348)                                            
+      DispenserState            Image Sequence         0x30       (0x3bcf9c)     0x5eec     (0x1b1e45c)                                                       
+        IWC of DispenserState   IWC Object             0x24       (0x3bcf78)     0x0        (0x1b1e45c)                                                         
+      GotoDispenser             Function Button        0x64       (0x3bcf14)     0x0        (0x1b1e45c)                                                    
+      Hours10                   Image Sequence         0xd8       (0x3bce3c)     0xe1000    (0x1a3d45c)                                                 
+        IWC of Hours10          IWC Object             0x24       (0x3bce18)     0x0        (0x1a3d45c)                                                  
+      Hours1                    Image Sequence         0x80       (0x3bcd98)     0x79e00    (0x19c365c)                                                
+        IWC of Hours1           IWC Object             0x24       (0x3bcd74)     0x0        (0x19c365c)                                                 
+      Minutes10                 Image Sequence         0x48       (0x3bcd2c)     0x38400    (0x198b25c)                                                   
+        IWC of Minutes10        IWC Object             0x24       (0x3bcd08)     0x0        (0x198b25c)                                                    
+      Minutes1                  Image Sequence         0x1f8      (0x3bcb10)     0x232800   (0x1758a5c)                                                    
+        IWC of Minutes1         IWC Object             0x24       (0x3bcaec)     0x0        (0x1758a5c)                                                   
+      DayofWeek                 String Field           0xd8       (0x3bca14)     0x0        (0x1758a5c)                                             
+        IWC of DayofWeek        IWC Object             0x24       (0x3bc9f0)     0x0        (0x1758a5c)                                                    
+      MonthAndDay               String Field           0x10c      (0x3bc8e4)     0x0        (0x1758a5c)                                                
+        IWC of MonthAndDay      IWC Object             0x24       (0x3bc8c0)     0x0        (0x1758a5c)                                                      
+      SecondTick                Image                  0x20       (0x3bc8a0)     0x20d0     (0x175698c)                                          
+      SetTime                   Custom Button          0x64       (0x3bc83c)     0x6a40     (0x174ff4c)                                               
+      PAGE FOOTER                                      0x2        (0x3bc83a)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0x12c2     (0x3bc83a)     0x3db41c   (0x174ff4c)                                   
+
+
+Fridge_set_clock (GEM page)    Flash Index = 0x27
+================
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0xac       (0x3bc750)                                                               
+      metaResetTimer            Meta Object            0x3c       (0x3bc714)     0x0        (0x1b2b368)                                                 
+      MultiHref1                Multiple Functions     0x1c       (0x3bc6f8)     0x0        (0x1b2b368)                                                    
+      TimerMeta                 Meta Object            0x3c       (0x3bc6bc)     0x0        (0x1b2b368)                                            
+        IWC of TimerMeta        IWC Object             0x24       (0x3bc698)     0x0        (0x1b2b368)                                                    
+      MultiHref4                Multiple Functions     0x24       (0x3bc674)     0x0        (0x1b2b368)                                                    
+      CheckTimer                Meta Object            0x3c       (0x3bc638)     0x0        (0x1b2b368)                                             
+        IWC of CheckTimer       IWC Object             0x24       (0x3bc614)     0x0        (0x1b2b368)                                                     
+      bg_footer_cool_1          Image                  0x20       (0x3bc5f4)     0x0        (0x1b2b368)                                             
+      MultiHref8                Multiple Functions     0x24       (0x3bc5d0)     0x0        (0x1b2b368)                                                    
+      MultiHref9                Multiple Functions     0x24       (0x3bc5ac)     0x0        (0x1b2b368)                                                    
+      MyTouchArea_1             Touch Area             0x50       (0x3bc55c)     0x0        (0x1b2b368)                                               
+      MultiHref11               Multiple Functions     0x24       (0x3bc538)     0x0        (0x1b2b368)                                                     
+      MultiHref12               Multiple Functions     0x24       (0x3bc514)     0x0        (0x1b2b368)                                                     
+      MultiHref13               Multiple Functions     0x24       (0x3bc4f0)     0x0        (0x1b2b368)                                                     
+      MyTouchArea_3             Touch Area             0x64       (0x3bc48c)     0x0        (0x1b2b368)                                               
+      MultiHref15               Multiple Functions     0x24       (0x3bc468)     0x0        (0x1b2b368)                                                     
+      MultiHref16               Multiple Functions     0x24       (0x3bc444)     0x0        (0x1b2b368)                                                     
+      MultiHref17               Multiple Functions     0x24       (0x3bc420)     0x0        (0x1b2b368)                                                     
+      MyTouchArea_2             Touch Area             0x64       (0x3bc3bc)     0x0        (0x1b2b368)                                               
+      SecondTick                Image                  0x20       (0x3bc39c)     0x20d0     (0x1b29298)                                          
+      overhead_light_minutes    Image                  0x20       (0x3bc37c)     0x238c0    (0x1b059d8)                                                       
+      overhead_light_hours      Image                  0x20       (0x3bc35c)     0x238c0    (0x1ae2118)                                                     
+      Hours10                   Image Sequence         0xd8       (0x3bc284)     0x0        (0x1ae2118)                                             
+        UART of Hours10         UART Object            0x24       (0x3bc260)     0x0        (0x1ae2118)                                                    
+      Hours1                    Image Sequence         0xd8       (0x3bc188)     0x0        (0x1ae2118)                                            
+        UART of Hours1          UART Object            0x24       (0x3bc164)     0x0        (0x1ae2118)                                                   
+      Minutes10                 Image Sequence         0x48       (0x3bc11c)     0x0        (0x1ae2118)                                               
+        UART of Minutes10       UART Object            0x24       (0x3bc0f8)     0x0        (0x1ae2118)                                                      
+      Minutes1                  Image Sequence         0x1f8      (0x3bbf00)     0x0        (0x1ae2118)                                               
+        UART of Minutes1        UART Object            0x24       (0x3bbedc)     0x0        (0x1ae2118)                                                     
+      MultiHref30               Multiple Functions     0x24       (0x3bbeb8)     0x0        (0x1ae2118)                                                     
+      Ok                        Custom Button          0x64       (0x3bbe54)     0x6a40     (0x1adb6d8)                                          
+      MultiHref32               Multiple Functions     0x24       (0x3bbe30)     0x0        (0x1adb6d8)                                                     
+      CustomButton_1            Custom Button          0x64       (0x3bbdcc)     0x6a40     (0x1ad4c98)                                                      
+      GEMscript                 GEMscript              0x1320     (0x3baaac)     0x0        (0x1ad4c98)                                            
+      PAGE FOOTER                                      0x2        (0x3baaaa)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0x1d52     (0x3baaaa)     0x566d0    (0x1ad4c98)                                  
+
+
+Fridge_set_date (GEM page)    Flash Index = 0x28
+===============
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x110      (0x3ba96c)                                                                
+      metaResetTimer            Meta Object            0x3c       (0x3ba930)     0x0        (0x1b2b368)                                                 
+      MultiHref1                Multiple Functions     0x1c       (0x3ba914)     0x0        (0x1b2b368)                                                    
+      TimerMeta                 Meta Object            0x3c       (0x3ba8d8)     0x0        (0x1b2b368)                                            
+        IWC of TimerMeta        IWC Object             0x24       (0x3ba8b4)     0x0        (0x1b2b368)                                                    
+      MultiHref4                Multiple Functions     0x24       (0x3ba890)     0x0        (0x1b2b368)                                                    
+      CheckTimer                Meta Object            0x3c       (0x3ba854)     0x0        (0x1b2b368)                                             
+        IWC of CheckTimer       IWC Object             0x24       (0x3ba830)     0x0        (0x1b2b368)                                                     
+      No Name                   Meta Object            0x3c       (0x3ba7f4)     0x0        (0x1b2b368)                                          
+      No Name                   Meta Object            0x3c       (0x3ba7b8)     0x0        (0x1b2b368)                                          
+      No Name                   Meta Object            0x3c       (0x3ba77c)     0x0        (0x1b2b368)                                          
+      No Name                   Meta Object            0x3c       (0x3ba740)     0x0        (0x1b2b368)                                          
+      MultiHref11               Multiple Functions     0x44       (0x3ba6fc)     0x0        (0x1b2b368)                                                     
+      metaDisappearLights       Meta Object            0x3c       (0x3ba6c0)     0x0        (0x1b2b368)                                                      
+      MultiHref13               Multiple Functions     0x1c       (0x3ba6a4)     0x0        (0x1b2b368)                                                     
+      MultiHref14               Multiple Functions     0x1c       (0x3ba688)     0x0        (0x1b2b368)                                                     
+      MultiHref15               Multiple Functions     0x1c       (0x3ba66c)     0x0        (0x1b2b368)                                                     
+      metaSetAppropriateLights  Meta Object            0x74       (0x3ba5f8)     0x0        (0x1b2b368)                                                           
+        IWC of metaSetAp...hts  IWC Object             0x24       (0x3ba5d4)     0x0        (0x1b2b368)                                                          
+      MultiHref18               Multiple Functions     0x54       (0x3ba580)     0x0        (0x1b2b368)                                                     
+      ReappearAll               Meta Object            0x3c       (0x3ba544)     0x0        (0x1b2b368)                                              
+      metaInc                   Meta Object            0x74       (0x3ba4d0)     0x0        (0x1b2b368)                                          
+        IWC of metaInc          IWC Object             0x24       (0x3ba4ac)     0x0        (0x1b2b368)                                                  
+      IncDay                    Meta Object            0x58       (0x3ba454)     0x0        (0x1b2b368)                                         
+        IWC of IncDay           IWC Object             0x24       (0x3ba430)     0x0        (0x1b2b368)                                                 
+      IncMonth                  Meta Object            0x58       (0x3ba3d8)     0x0        (0x1b2b368)                                           
+        IWC of IncMonth         IWC Object             0x24       (0x3ba3b4)     0x0        (0x1b2b368)                                                   
+      IncDate                   Meta Object            0x58       (0x3ba35c)     0x0        (0x1b2b368)                                          
+        IWC of IncDate          IWC Object             0x24       (0x3ba338)     0x0        (0x1b2b368)                                                  
+      metaDec                   Meta Object            0x74       (0x3ba2c4)     0x0        (0x1b2b368)                                          
+        IWC of metaDec          IWC Object             0x24       (0x3ba2a0)     0x0        (0x1b2b368)                                                  
+      DecDay                    Meta Object            0x58       (0x3ba248)     0x0        (0x1b2b368)                                         
+        IWC of DecDay           IWC Object             0x24       (0x3ba224)     0x0        (0x1b2b368)                                                 
+      DecMonth                  Meta Object            0x58       (0x3ba1cc)     0x0        (0x1b2b368)                                           
+        IWC of DecMonth         IWC Object             0x24       (0x3ba1a8)     0x0        (0x1b2b368)                                                   
+      DecDate                   Meta Object            0x58       (0x3ba150)     0x0        (0x1b2b368)                                          
+        IWC of DecDate          IWC Object             0x24       (0x3ba12c)     0x0        (0x1b2b368)                                                  
+      MultiHref36               Multiple Functions     0x44       (0x3ba0e8)     0x0        (0x1b2b368)                                                     
+      SaveFields                Meta Object            0x3c       (0x3ba0ac)     0x0        (0x1b2b368)                                             
+      MultiHref38               Multiple Functions     0x44       (0x3ba068)     0x0        (0x1b2b368)                                                     
+      ToTime                    Meta Object            0x3c       (0x3ba02c)     0x0        (0x1b2b368)                                         
+      bg_footer_cool_1          Image                  0x20       (0x3ba00c)     0x0        (0x1b2b368)                                             
+      overhead_light_Day        Image                  0x20       (0x3b9fec)     0x1c080    (0x1b0f2e8)                                                   
+      overhead_light_Month      Image                  0x20       (0x3b9fcc)     0x1c080    (0x1af3268)                                                     
+      overhead_light_Date       Image                  0x20       (0x3b9fac)     0x1c080    (0x1ad71e8)                                                    
+      MyTouchArea_1             Touch Area             0x50       (0x3b9f5c)     0x0        (0x1ad71e8)                                               
+      DayofWeek                 String Field           0xd8       (0x3b9e84)     0x0        (0x1ad71e8)                                             
+        IWC of DayofWeek        IWC Object             0x24       (0x3b9e60)     0x0        (0x1ad71e8)                                                    
+      Month                     String Field           0x118      (0x3b9d48)     0x0        (0x1ad71e8)                                          
+        IWC of Month            IWC Object             0x24       (0x3b9d24)     0x0        (0x1ad71e8)                                                
+      Date                      Numeric Field          0x6c       (0x3b9cb8)     0x0        (0x1ad71e8)                                         
+        IWC of Date             IWC Object             0x24       (0x3b9c94)     0x0        (0x1ad71e8)                                               
+      MultiHref51               Multiple Functions     0x1c       (0x3b9c78)     0x0        (0x1ad71e8)                                                     
+      Ok                        Custom Button          0x64       (0x3b9c14)     0x6a40     (0x1ad07a8)                                          
+      MultiHref53               Multiple Functions     0x24       (0x3b9bf0)     0x0        (0x1ad07a8)                                                     
+      MyTouchArea_4             Touch Area             0x64       (0x3b9b8c)     0x0        (0x1ad07a8)                                               
+      MultiHref55               Multiple Functions     0x24       (0x3b9b68)     0x0        (0x1ad07a8)                                                     
+      MyTouchArea_5             Touch Area             0x64       (0x3b9b04)     0x0        (0x1ad07a8)                                               
+      MultiHref57               Multiple Functions     0x24       (0x3b9ae0)     0x0        (0x1ad07a8)                                                     
+      MyTouchArea_6             Touch Area             0x64       (0x3b9a7c)     0x0        (0x1ad07a8)                                               
+      CustomButton_1            Custom Button          0x64       (0x3b9a18)     0x6a40     (0x1ac9d68)                                                      
+      PAGE FOOTER                                      0x2        (0x3b9a16)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0x1066     (0x3b9a16)     0x61600    (0x1ac9d68)                                  
+
+
+Thermostat_home (GEM page)    Flash Index = 0x29
+===============
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x16c      (0x3b9890)                                                                
+      MultiHref0                Multiple Functions     0x34       (0x3b985c)     0x0        (0x1b2b368)                                                    
+      MultiHref1                Sequenced Functions    0xd4       (0x3b9788)     0x0        (0x1b2b368)                                                     
+      ToClockSet                Meta Object            0x3c       (0x3b974c)     0x0        (0x1b2b368)                                             
+      MultiHref3                Multiple Functions     0x2c       (0x3b9720)     0x0        (0x1b2b368)                                                    
+      MultiHref4                Multiple Functions     0x2c       (0x3b96f4)     0x0        (0x1b2b368)                                                    
+      MultiHref5                Multiple Functions     0x2c       (0x3b96c8)     0x0        (0x1b2b368)                                                    
+      MultiHref6                Sequenced Functions    0xb4       (0x3b9614)     0x0        (0x1b2b368)                                                     
+      pwmMeta                   Meta Object            0x3c       (0x3b95d8)     0x0        (0x1b2b368)                                          
+      Background                Image                  0x20       (0x3b95b8)     0x0        (0x1b2b368)                                       
+      HomepageLines_1           Image                  0x20       (0x3b9598)     0x7f800    (0x1aabb68)                                                
+      MultiHref10               Multiple Functions     0x24       (0x3b9574)     0x0        (0x1aabb68)                                                     
+      Up                        Custom Button          0x64       (0x3b9510)     0x19bc0    (0x1a91fa8)                                           
+      MultiHref12               Multiple Functions     0x24       (0x3b94ec)     0x0        (0x1a91fa8)                                                     
+      Down                      Custom Button          0x64       (0x3b9488)     0x19bc0    (0x1a783e8)                                             
+      Home                      Image                  0x20       (0x3b9468)     0x0        (0x1a783e8)                                 
+      DegreeBig_1               Image                  0x20       (0x3b9448)     0xcb0      (0x1a77738)                                          
+      HomeTouch                 Touch Area             0x3c       (0x3b940c)     0x0        (0x1a77738)                                           
+      random17                  No Type                0x4        (0x3b9408)     0x0        (0x1a77738)                                      
+      Day1_Weather              Image Sequence         0x38       (0x3b93d0)     0xa190     (0x1a6d5a8)                                                     
+        IWC of Day1_Weather     IWC Object             0x24       (0x3b93ac)     0x0        (0x1a6d5a8)                                                       
+      Day2_Weather              Image Sequence         0x38       (0x3b9374)     0xa190     (0x1a63418)                                                     
+        IWC of Day2_Weather     IWC Object             0x24       (0x3b9350)     0x0        (0x1a63418)                                                       
+      Day3_Weather              Image Sequence         0x38       (0x3b9318)     0xa190     (0x1a59288)                                                     
+        IWC of Day3_Weather     IWC Object             0x24       (0x3b92f4)     0x0        (0x1a59288)                                                       
+      Day4_Weather              Image Sequence         0x38       (0x3b92bc)     0xa190     (0x1a4f0f8)                                                     
+        IWC of Day4_Weather     IWC Object             0x24       (0x3b9298)     0x0        (0x1a4f0f8)                                                       
+      Day5_Weather              Image Sequence         0x38       (0x3b9260)     0xa190     (0x1a44f68)                                                     
+        IWC of Day5_Weather     IWC Object             0x24       (0x3b923c)     0x0        (0x1a44f68)                                                       
+      TempOnes                  Image Sequence         0x338      (0x3b8f04)     0x14c3a0   (0x18f8bc8)                                                    
+        IWC of TempOnes         IWC Object             0x24       (0x3b8ee0)     0x0        (0x18f8bc8)                                                   
+      TempTens                  Image Sequence         0x68       (0x3b8e78)     0x21390    (0x18d7838)                                                  
+        IWC of TempTens         IWC Object             0x24       (0x3b8e54)     0x0        (0x18d7838)                                                   
+      random32                  No Type                0x4        (0x3b8e50)     0x0        (0x18d7838)                                      
+      Day1_Ones                 Image Sequence         0x98       (0x3b8db8)     0x23c0     (0x18d5478)                                                  
+        IWC of Day1_Ones        IWC Object             0x24       (0x3b8d94)     0x0        (0x18d5478)                                                    
+      Day1_Tens                 Image Sequence         0x68       (0x3b8d2c)     0x1658     (0x18d3e20)                                                  
+        IWC of Day1_Tens        IWC Object             0x24       (0x3b8d08)     0x0        (0x18d3e20)                                                    
+      Day2_Ones                 Image Sequence         0x98       (0x3b8c70)     0x23c0     (0x18d1a60)                                                  
+        IWC of Day2_Ones        IWC Object             0x24       (0x3b8c4c)     0x0        (0x18d1a60)                                                    
+      Day2_Tens                 Image Sequence         0x68       (0x3b8be4)     0x1658     (0x18d0408)                                                  
+        IWC of Day2_Tens        IWC Object             0x24       (0x3b8bc0)     0x0        (0x18d0408)                                                    
+      Day3_Ones                 Image Sequence         0x98       (0x3b8b28)     0x23c0     (0x18ce048)                                                  
+        IWC of Day3_Ones        IWC Object             0x24       (0x3b8b04)     0x0        (0x18ce048)                                                    
+      Day3_Tens                 Image Sequence         0x68       (0x3b8a9c)     0x1658     (0x18cc9f0)                                                  
+        IWC of Day3_Tens        IWC Object             0x24       (0x3b8a78)     0x0        (0x18cc9f0)                                                    
+      Day4_Ones                 Image Sequence         0x98       (0x3b89e0)     0x23c0     (0x18ca630)                                                  
+        IWC of Day4_Ones        IWC Object             0x24       (0x3b89bc)     0x0        (0x18ca630)                                                    
+      Day4_Tens                 Image Sequence         0x68       (0x3b8954)     0x1658     (0x18c8fd8)                                                  
+        IWC of Day4_Tens        IWC Object             0x24       (0x3b8930)     0x0        (0x18c8fd8)                                                    
+      Day5_Ones                 Image Sequence         0x98       (0x3b8898)     0x23c0     (0x18c6c18)                                                  
+        IWC of Day5_Ones        IWC Object             0x24       (0x3b8874)     0x0        (0x18c6c18)                                                    
+      Day5_Tens                 Image Sequence         0x68       (0x3b880c)     0x1658     (0x18c55c0)                                                  
+        IWC of Day5_Tens        IWC Object             0x24       (0x3b87e8)     0x0        (0x18c55c0)                                                    
+      HourTens                  Image Sequence         0x78       (0x3b8770)     0xa200     (0x18bb3c0)                                                 
+        IWC of HourTens         IWC Object             0x24       (0x3b874c)     0x0        (0x18bb3c0)                                                   
+      HourOnes                  Image Sequence         0x78       (0x3b86d4)     0xa200     (0x18b11c0)                                                 
+        IWC of HourOnes         IWC Object             0x24       (0x3b86b0)     0x0        (0x18b11c0)                                                   
+      MinTens                   Image Sequence         0x48       (0x3b8668)     0x5100     (0x18ac0c0)                                                
+        IWC of MinTens          IWC Object             0x24       (0x3b8644)     0x0        (0x18ac0c0)                                                  
+      MinOnes                   Image Sequence         0x1f8      (0x3b844c)     0x32a00    (0x18796c0)                                                  
+        IWC of MinOnes          IWC Object             0x24       (0x3b8428)     0x0        (0x18796c0)                                                  
+      DayOfWeek1                Image Sequence         0x50       (0x3b83d8)     0x1ea0     (0x1877820)                                                   
+        IWC of DayOfWeek1       IWC Object             0x24       (0x3b83b4)     0x0        (0x1877820)                                                     
+      DayOfWeek2                Image Sequence         0x50       (0x3b8364)     0x1ea0     (0x1875980)                                                   
+        IWC of DayOfWeek2       IWC Object             0x24       (0x3b8340)     0x0        (0x1875980)                                                     
+      DayOfWeek3                Image Sequence         0x50       (0x3b82f0)     0x1ea0     (0x1873ae0)                                                   
+        IWC of DayOfWeek3       IWC Object             0x24       (0x3b82cc)     0x0        (0x1873ae0)                                                     
+      DayOfWeek4                Image Sequence         0x50       (0x3b827c)     0x1ea0     (0x1871c40)                                                   
+        IWC of DayOfWeek4       IWC Object             0x24       (0x3b8258)     0x0        (0x1871c40)                                                     
+      DayOfWeek5                Image Sequence         0x50       (0x3b8208)     0x1ea0     (0x186fda0)                                                   
+        IWC of DayOfWeek5       IWC Object             0x24       (0x3b81e4)     0x0        (0x186fda0)                                                     
+      DegreeSmall_1             Image                  0x20       (0x3b81c4)     0x60       (0x186fd40)                                           
+      DegreeSmall_2             Image                  0x20       (0x3b81a4)     0x60       (0x186fce0)                                           
+      DegreeSmall_3             Image                  0x20       (0x3b8184)     0x60       (0x186fc80)                                           
+      DegreeSmall_4             Image                  0x20       (0x3b8164)     0x60       (0x186fc20)                                           
+      DegreeSmall_5             Image                  0x20       (0x3b8144)     0x60       (0x186fbc0)                                           
+      Colon17_1                 Image                  0x20       (0x3b8124)     0x198      (0x186fa28)                                        
+      ampm                      Image Sequence         0x28       (0x3b80fc)     0x2af8     (0x186cf30)                                             
+        IWC of ampm             IWC Object             0x24       (0x3b80d8)     0x0        (0x186cf30)                                               
+      CurrentTempTime           Image                  0x20       (0x3b80b8)     0x4e60     (0x18680d0)                                               
+      MultiHref80               Sequenced Functions    0x24       (0x3b8094)     0x0        (0x18680d0)                                                      
+      ChangeTime                Touch Area             0x50       (0x3b8044)     0x0        (0x18680d0)                                            
+      pwm                       PWM Object             0xc        (0x3b8038)     0x0        (0x18680d0)                                    
+      PAGE FOOTER                                      0x2        (0x3b8036)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0x19c6     (0x3b8036)     0x2c3298   (0x18680d0)                                   
+
+
+Thermostat_settings (GEM page)    Flash Index = 0x2a
+===================
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0xa0       (0x3b7f5c)                                                               
+      MultiHref0                Multiple Functions     0x34       (0x3b7f28)     0x0        (0x1b2b368)                                                    
+      MultiHref1                Sequenced Functions    0xd4       (0x3b7e54)     0x0        (0x1b2b368)                                                     
+      ToHome                    Meta Object            0x3c       (0x3b7e18)     0x0        (0x1b2b368)                                         
+      MultiHref3                Multiple Functions     0x2c       (0x3b7dec)     0x0        (0x1b2b368)                                                    
+      MultiHref4                Multiple Functions     0x2c       (0x3b7dc0)     0x0        (0x1b2b368)                                                    
+      MultiHref5                Multiple Functions     0x2c       (0x3b7d94)     0x0        (0x1b2b368)                                                    
+      MultiHref6                Sequenced Functions    0xb4       (0x3b7ce0)     0x0        (0x1b2b368)                                                     
+      pwmMeta                   Meta Object            0x3c       (0x3b7ca4)     0x0        (0x1b2b368)                                          
+      bg                        Image                  0x20       (0x3b7c84)     0x0        (0x1b2b368)                               
+      MultiHref9                Multiple Functions     0x34       (0x3b7c50)     0x0        (0x1b2b368)                                                    
+      return                    Custom Button          0x64       (0x3b7bec)     0xad70     (0x1b205f8)                                              
+      SecondTick                Image                  0x20       (0x3b7bcc)     0x20d0     (0x1b1e528)                                          
+      overhead_light_minutes    Image                  0x20       (0x3b7bac)     0x238c0    (0x1afac68)                                                       
+      overhead_light_hours      Image                  0x20       (0x3b7b8c)     0x238c0    (0x1ad73a8)                                                     
+      Hours10                   Image Sequence         0xd8       (0x3b7ab4)     0x0        (0x1ad73a8)                                             
+        IWC of Hours10          IWC Object             0x24       (0x3b7a90)     0x0        (0x1ad73a8)                                                  
+      Hours1                    Image Sequence         0xd8       (0x3b79b8)     0x0        (0x1ad73a8)                                            
+        IWC of Hours1           IWC Object             0x24       (0x3b7994)     0x0        (0x1ad73a8)                                                 
+      Minutes10                 Image Sequence         0x48       (0x3b794c)     0x0        (0x1ad73a8)                                               
+        IWC of Minutes10        IWC Object             0x24       (0x3b7928)     0x0        (0x1ad73a8)                                                    
+      Minutes1                  Image Sequence         0x1f8      (0x3b7730)     0x0        (0x1ad73a8)                                               
+        IWC of Minutes1         IWC Object             0x24       (0x3b770c)     0x0        (0x1ad73a8)                                                   
+      MultiHref22               Multiple Functions     0x24       (0x3b76e8)     0x0        (0x1ad73a8)                                                     
+      MultiHref23               Multiple Functions     0x24       (0x3b76c4)     0x0        (0x1ad73a8)                                                     
+      MultiHref24               Multiple Functions     0x24       (0x3b76a0)     0x0        (0x1ad73a8)                                                     
+      ChangeHour                Touch Area             0x64       (0x3b763c)     0x0        (0x1ad73a8)                                            
+      MultiHref26               Multiple Functions     0x24       (0x3b7618)     0x0        (0x1ad73a8)                                                     
+      MultiHref27               Multiple Functions     0x24       (0x3b75f4)     0x0        (0x1ad73a8)                                                     
+      MultiHref28               Multiple Functions     0x24       (0x3b75d0)     0x0        (0x1ad73a8)                                                     
+      ChangeMin                 Touch Area             0x64       (0x3b756c)     0x0        (0x1ad73a8)                                           
+      pwm                       PWM Object             0xc        (0x3b7560)     0x0        (0x1ad73a8)                                    
+      GEMscript                 GEMscript              0x1228     (0x3b6338)     0x0        (0x1ad73a8)                                            
+      PAGE FOOTER                                      0x2        (0x3b6336)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0x1cc6     (0x3b6336)     0x53fc0    (0x1ad73a8)                                  
+
+
+Clock_home (GEM page)    Flash Index = 0x2b
+==========
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x78       (0x3b6284)                                                               
+      MultiHref0                Multiple Functions     0x34       (0x3b6250)     0x0        (0x1b2b368)                                                    
+      MultiHref1                Sequenced Functions    0xd4       (0x3b617c)     0x0        (0x1b2b368)                                                     
+      ToSettings                Meta Object            0x3c       (0x3b6140)     0x0        (0x1b2b368)                                             
+      MultiHref3                Multiple Functions     0x2c       (0x3b6114)     0x0        (0x1b2b368)                                                    
+      MultiHref4                Multiple Functions     0x2c       (0x3b60e8)     0x0        (0x1b2b368)                                                    
+      MultiHref5                Multiple Functions     0x2c       (0x3b60bc)     0x0        (0x1b2b368)                                                    
+      MultiHref6                Sequenced Functions    0xb4       (0x3b6008)     0x0        (0x1b2b368)                                                     
+      pwmMeta                   Meta Object            0x3c       (0x3b5fcc)     0x0        (0x1b2b368)                                          
+      LeatherOrange             Image                  0x20       (0x3b5fac)     0x0        (0x1b2b368)                                          
+      colon                     Image                  0x20       (0x3b5f8c)     0x3168     (0x1b28200)                                     
+      hours                     Image Sequence         0x78       (0x3b5f14)     0xc0720    (0x1a67ae0)                                               
+        IWC of hours            IWC Object             0x24       (0x3b5ef0)     0x0        (0x1a67ae0)                                                
+      MinuteTens                Image Sequence         0x48       (0x3b5ea8)     0x34980    (0x1a33160)                                                    
+        IWC of MinuteTens       IWC Object             0x24       (0x3b5e84)     0x0        (0x1a33160)                                                     
+      MinuteOnes                Image Sequence         0x1f8      (0x3b5c8c)     0x20df00   (0x1825260)                                                      
+        IWC of MinuteOnes       IWC Object             0x24       (0x3b5c68)     0x0        (0x1825260)                                                     
+      pwm                       PWM Object             0xc        (0x3b5c5c)     0x0        (0x1825260)                                    
+      HomeButton                Touch Area             0x50       (0x3b5c0c)     0x0        (0x1825260)                                            
+      HomeIcon                  Image                  0x20       (0x3b5bec)     0x2710     (0x1822b50)                                        
+      SettingsIcon              Image                  0x20       (0x3b5bcc)     0x2710     (0x1820440)                                            
+      MultiHref20               Multiple Functions     0x24       (0x3b5ba8)     0x0        (0x1820440)                                                     
+      SettingsButton            Touch Area             0x50       (0x3b5b58)     0x0        (0x1820440)                                                
+      PAGE FOOTER                                      0x2        (0x3b5b56)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0x7a6      (0x3b5b56)     0x30af28   (0x1820440)                                  
+
+
+Clock_settings (GEM page)    Flash Index = 0x2c
+==============
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0xa0       (0x3b5a5c)                                                               
+      MultiHref0                Multiple Functions     0x34       (0x3b5a28)     0x0        (0x1b2b368)                                                    
+      MultiHref1                Sequenced Functions    0xd4       (0x3b5954)     0x0        (0x1b2b368)                                                     
+      ToHome                    Meta Object            0x3c       (0x3b5918)     0x0        (0x1b2b368)                                         
+      MultiHref3                Multiple Functions     0x2c       (0x3b58ec)     0x0        (0x1b2b368)                                                    
+      MultiHref4                Multiple Functions     0x2c       (0x3b58c0)     0x0        (0x1b2b368)                                                    
+      MultiHref5                Multiple Functions     0x2c       (0x3b5894)     0x0        (0x1b2b368)                                                    
+      MultiHref6                Sequenced Functions    0xb4       (0x3b57e0)     0x0        (0x1b2b368)                                                     
+      pwmMeta                   Meta Object            0x3c       (0x3b57a4)     0x0        (0x1b2b368)                                          
+      Leather                   Image                  0x20       (0x3b5784)     0x0        (0x1b2b368)                                    
+      MultiHref9                Multiple Functions     0x2c       (0x3b5758)     0x0        (0x1b2b368)                                                    
+      Ok                        Custom Button          0x64       (0x3b56f4)     0xb6d0     (0x1b1fc98)                                          
+      colon                     Image                  0x20       (0x3b56d4)     0x3168     (0x1b1cb30)                                     
+      overhead_light_minutes    Image                  0x20       (0x3b56b4)     0x238c0    (0x1af9270)                                                       
+      overhead_light_hours      Image                  0x20       (0x3b5694)     0x238c0    (0x1ad59b0)                                                     
+      Hours1                    Image Sequence         0x78       (0x3b561c)     0x0        (0x1ad59b0)                                            
+        UART of Hours1          UART Object            0x24       (0x3b55f8)     0x0        (0x1ad59b0)                                                   
+      Minutes10                 Image Sequence         0x48       (0x3b55b0)     0x0        (0x1ad59b0)                                               
+        UART of Minutes10       UART Object            0x24       (0x3b558c)     0x0        (0x1ad59b0)                                                      
+      Minutes1                  Image Sequence         0x1f8      (0x3b5394)     0x0        (0x1ad59b0)                                               
+        UART of Minutes1        UART Object            0x24       (0x3b5370)     0x0        (0x1ad59b0)                                                     
+      MultiHref20               Multiple Functions     0x24       (0x3b534c)     0x0        (0x1ad59b0)                                                     
+      MultiHref21               Multiple Functions     0x24       (0x3b5328)     0x0        (0x1ad59b0)                                                     
+      MultiHref22               Multiple Functions     0x24       (0x3b5304)     0x0        (0x1ad59b0)                                                     
+      ChangeHour                Touch Area             0x64       (0x3b52a0)     0x0        (0x1ad59b0)                                            
+      MultiHref24               Multiple Functions     0x24       (0x3b527c)     0x0        (0x1ad59b0)                                                     
+      MultiHref25               Multiple Functions     0x24       (0x3b5258)     0x0        (0x1ad59b0)                                                     
+      MultiHref26               Multiple Functions     0x24       (0x3b5234)     0x0        (0x1ad59b0)                                                     
+      ChanceMin                 Touch Area             0x64       (0x3b51d0)     0x0        (0x1ad59b0)                                           
+      pwm                       PWM Object             0xc        (0x3b51c4)     0x0        (0x1ad59b0)                                    
+      StaticText_1              String Field           0x9c       (0x3b5128)     0x0        (0x1ad59b0)                                                
+        UART of StaticText_1    UART Object            0x24       (0x3b5104)     0x0        (0x1ad59b0)                                                         
+      GEMscript                 GEMscript              0x1068     (0x3b409c)     0x0        (0x1ad59b0)                                            
+      PAGE FOOTER                                      0x2        (0x3b409a)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0x1a62     (0x3b409a)     0x559b8    (0x1ad59b0)                                  
+
+
+Amulet_1 (GEM page)    Flash Index = 0x2d
+========
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x4c       (0x3b4030)                                                               
+      MultiHref0                Multiple Functions     0x2c       (0x3b4004)     0x0        (0x1b2b368)                                                    
+      No Name                   Meta Object            0x3c       (0x3b3fc8)     0x0        (0x1b2b368)                                          
+        IWC of No Name          IWC Object             0x24       (0x3b3fa4)     0x0        (0x1b2b368)                                                  
+      MultiHref3                Multiple Functions     0x2c       (0x3b3f78)     0x0        (0x1b2b368)                                                    
+      MultiHref4                Multiple Functions     0x2c       (0x3b3f4c)     0x0        (0x1b2b368)                                                    
+      MultiHref5                Multiple Functions     0x2c       (0x3b3f20)     0x0        (0x1b2b368)                                                    
+      MultiHref6                Sequenced Functions    0xb4       (0x3b3e6c)     0x0        (0x1b2b368)                                                     
+      pwmMeta                   Meta Object            0x3c       (0x3b3e30)     0x0        (0x1b2b368)                                          
+      Slide1_1                  Image                  0x20       (0x3b3e10)     0x0        (0x1b2b368)                                     
+      WholeScreenButton_1       Touch Area             0x64       (0x3b3dac)     0x0        (0x1b2b368)                                                     
+      pwm                       PWM Object             0xc        (0x3b3da0)     0x0        (0x1b2b368)                                    
+      PAGE FOOTER                                      0x2        (0x3b3d9e)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0x2de      (0x3b3d9e)     0x0        (0x1b2b368)                             
+
+
+Amulet_2 (GEM page)    Flash Index = 0x2e
+========
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x28       (0x3b3d54)                                                               
+      Slide1_1                  Image                  0x20       (0x3b3d34)     0x0        (0x1b2b368)                                     
+      WholeScreenButton_1       Touch Area             0x64       (0x3b3cd0)     0x0        (0x1b2b368)                                                     
+      PAGE FOOTER                                      0x2        (0x3b3cce)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0xae       (0x3b3cce)     0x0        (0x1b2b368)                            
+
+
+Amulet_3 (GEM page)    Flash Index = 0x2f
+========
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x28       (0x3b3c54)                                                               
+      Slide1_1                  Image                  0x20       (0x3b3c34)     0x0        (0x1b2b368)                                     
+      WholeScreenButton_1       Touch Area             0x64       (0x3b3bd0)     0x0        (0x1b2b368)                                                     
+      PAGE FOOTER                                      0x2        (0x3b3bce)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0xae       (0x3b3bce)     0x0        (0x1b2b368)                            
+
+
+Amulet_4 (GEM page)    Flash Index = 0x30
+========
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x28       (0x3b3b54)                                                               
+      Slide1_1                  Image                  0x20       (0x3b3b34)     0x0        (0x1b2b368)                                     
+      WholeScreenButton_1       Touch Area             0x64       (0x3b3ad0)     0x0        (0x1b2b368)                                                     
+      PAGE FOOTER                                      0x2        (0x3b3ace)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0xae       (0x3b3ace)     0x0        (0x1b2b368)                            
+
+
+Amulet_5 (GEM page)    Flash Index = 0x31
+========
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x28       (0x3b3a54)                                                               
+      Slide1_1                  Image                  0x20       (0x3b3a34)     0x0        (0x1b2b368)                                     
+      WholeScreenButton_1       Touch Area             0x64       (0x3b39d0)     0x0        (0x1b2b368)                                                     
+      PAGE FOOTER                                      0x2        (0x3b39ce)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0xae       (0x3b39ce)     0x0        (0x1b2b368)                            
+
+
+Amulet_6 (GEM page)    Flash Index = 0x32
+========
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x28       (0x3b3954)                                                               
+      Slide1_1                  Image                  0x20       (0x3b3934)     0x0        (0x1b2b368)                                     
+      WholeScreenButton_1       Touch Area             0x64       (0x3b38d0)     0x0        (0x1b2b368)                                                     
+      PAGE FOOTER                                      0x2        (0x3b38ce)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0xae       (0x3b38ce)     0x0        (0x1b2b368)                            
+
+
+Amulet_7 (GEM page)    Flash Index = 0x33
+========
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x28       (0x3b3854)                                                               
+      Slide7_1                  Image                  0x20       (0x3b3834)     0x0        (0x1b2b368)                                     
+      WholeScreenButton_1       Touch Area             0x64       (0x3b37d0)     0x0        (0x1b2b368)                                                     
+      PAGE FOOTER                                      0x2        (0x3b37ce)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0xae       (0x3b37ce)     0x0        (0x1b2b368)                            
+
+
+Amulet_8 (GEM page)    Flash Index = 0x34
+========
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x28       (0x3b3754)                                                               
+      Slide1_1                  Image                  0x20       (0x3b3734)     0x0        (0x1b2b368)                                     
+      WholeScreenButton_1       Touch Area             0x64       (0x3b36d0)     0x0        (0x1b2b368)                                                     
+      PAGE FOOTER                                      0x2        (0x3b36ce)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0xae       (0x3b36ce)     0x0        (0x1b2b368)                            
+
+
+Amulet_9 (GEM page)    Flash Index = 0x35
+========
+      Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
+      -----------               -----------            ----------------------    ----------------------
+      PAGE HEADER                                      0x28       (0x3b3654)                                                               
+      Slide1_1                  Image                  0x20       (0x3b3634)     0x0        (0x1b2b368)                                     
+      WholeScreenButton_1       Touch Area             0x64       (0x3b35d0)     0x0        (0x1b2b368)                                                     
+      PAGE FOOTER                                      0x2        (0x3b35ce)                                                              
+                                                       ----------------------    ----------------------
+                                               Totals  0xae       (0x3b35ce)     0x0        (0x1b2b368)                            
+
+
+Leather_480x272_jpegtran.jpg (Image File)    Flash Index = 0x36
+============================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xc362     (0x3a721e)                                                
+
+
+LeatherOrange.png (Image File)    Flash Index = 0x37
+=================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x37ac6    (0x36f73a)                                                 
+
+
+Background_480x272_jpegtran.jpg (Image File)    Flash Index = 0x38
+===============================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x75c6     (0x36813a)                                                
+
+
+bg_cool_480x272_jpegtran.jpg (Image File)    Flash Index = 0x39
+============================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x5db2     (0x36234e)                                                
+
+
+btn_cubed_cool_1.png (Image File)    Flash Index = 0x3a
+====================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x15116    (0x34d1ea)                                                 
+
+
+btn_cubed_cool_2.png (Image File)    Flash Index = 0x3b
+====================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x13af2    (0x33968e)                                                 
+
+
+btn_cubed_cool_0.png (Image File)    Flash Index = 0x3c
+====================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xf21e     (0x32a462)                                                
+
+
+btn_crushed_cool_1.png (Image File)    Flash Index = 0x3d
+======================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x12ffe    (0x317402)                                                 
+
+
+btn_crushed_cool_2.png (Image File)    Flash Index = 0x3e
+======================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x11f4e    (0x3054b2)                                                 
+
+
+btn_crushed_cool_0.png (Image File)    Flash Index = 0x3f
+======================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xb82e     (0x2f9c52)                                                
+
+
+btn_water_cool_1.png (Image File)    Flash Index = 0x40
+====================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1383a    (0x2e63c6)                                                 
+
+
+btn_water_cool_2.png (Image File)    Flash Index = 0x41
+====================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1236a    (0x2d4016)                                                 
+
+
+btn_water_cool_0.png (Image File)    Flash Index = 0x42
+====================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xc186     (0x2c7e7a)                                                
+
+
+bg_footer_cool.png (Image File)    Flash Index = 0x43
+==================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1175e    (0x2b66a2)                                                 
+
+
+FridgeIcon.png (Image File)    Flash Index = 0x44
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x4e46     (0x2b183a)                                                
+
+
+ThermostatIcon.png (Image File)    Flash Index = 0x45
+==================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x566e     (0x2ac192)                                                
+
+
+ClockIcon_96x96.png (Image File)    Flash Index = 0x46
+===================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x4476     (0x2a7d0a)                                                
+
+
+PPT_Icon.png (Image File)    Flash Index = 0x47
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x534a     (0x2a29b6)                                                
+
+
+btn_menu_0.png (Image File)    Flash Index = 0x48
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x4a2      (0x2a24de)                                               
+
+
+btn_menu_1.png (Image File)    Flash Index = 0x49
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x482      (0x2a1ffe)                                               
+
+
+clock_68x50.png (Image File)    Flash Index = 0x4a
+===============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xa5a      (0x2a1526)                                               
+
+
+Home_50x50.png (Image File)    Flash Index = 0x4b
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x7a6      (0x2a0d5a)                                               
+
+
+btn_close_0.png (Image File)    Flash Index = 0x4c
+===============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x191a     (0x29f3e6)                                                
+
+
+btn_close_1.png (Image File)    Flash Index = 0x4d
+===============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x191e     (0x29da62)                                                
+
+
+btn_temps_0.png (Image File)    Flash Index = 0x4e
+===============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x76fa     (0x296306)                                                
+
+
+btn_temps_1.png (Image File)    Flash Index = 0x4f
+===============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x754a     (0x28edb6)                                                
+
+
+btn_backlight_0.png (Image File)    Flash Index = 0x50
+===================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x745a     (0x287926)                                                
+
+
+btn_backlight_1.png (Image File)    Flash Index = 0x51
+===================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x71ae     (0x280752)                                                
+
+
+btn_up_0.png (Image File)    Flash Index = 0x52
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x16b2     (0x27f04e)                                                
+
+
+btn_up_1.png (Image File)    Flash Index = 0x53
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x16b6     (0x27d94a)                                                
+
+
+btn_dn_0.png (Image File)    Flash Index = 0x54
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x16b2     (0x27c24e)                                                
+
+
+btn_dn_1.png (Image File)    Flash Index = 0x55
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x16b6     (0x27ab4a)                                                
+
+
+img_recommended_f.png (Image File)    Flash Index = 0x56
+=====================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x10c2     (0x279a3e)                                                
+
+
+img_temp_bg.png (Image File)    Flash Index = 0x57
+===============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x3046     (0x2769ba)                                                
+
+
+img_timeout.png (Image File)    Flash Index = 0x58
+===============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x133a     (0x275646)                                                
+
+
+img_brightness.png (Image File)    Flash Index = 0x59
+==================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x14fe     (0x274102)                                                
+
+
+sld_handle.png (Image File)    Flash Index = 0x5a
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1062     (0x27309e)                                                
+
+
+sld_base.png (Image File)    Flash Index = 0x5b
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1f32     (0x27114e)                                                
+
+
+btn_water_small.png (Image File)    Flash Index = 0x5c
+===================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xf56      (0x2701aa)                                               
+
+
+btn_crushed_small.png (Image File)    Flash Index = 0x5d
+=====================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x15f2     (0x26eb8e)                                                
+
+
+btn_cubed_small.png (Image File)    Flash Index = 0x5e
+===================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x167a     (0x26d506)                                                
+
+
+1am.png (Image File)    Flash Index = 0x5f
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x55a      (0x26cfa6)                                               
+
+
+0am.png (Image File)    Flash Index = 0x60
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2e6      (0x26cc9a)                                               
+
+
+1pm.png (Image File)    Flash Index = 0x61
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x552      (0x26c72e)                                               
+
+
+0pm.png (Image File)    Flash Index = 0x62
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2e2      (0x26c41e)                                               
+
+
+0.png (Image File)    Flash Index = 0x63
+=====
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xf02      (0x26b4fe)                                               
+
+
+1.png (Image File)    Flash Index = 0x64
+=====
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x356      (0x26b12a)                                               
+
+
+2.png (Image File)    Flash Index = 0x65
+=====
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xa9a      (0x26a666)                                               
+
+
+3.png (Image File)    Flash Index = 0x66
+=====
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xcaa      (0x269956)                                               
+
+
+4.png (Image File)    Flash Index = 0x67
+=====
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x5fa      (0x269306)                                               
+
+
+5.png (Image File)    Flash Index = 0x68
+=====
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x906      (0x2689fa)                                               
+
+
+6.png (Image File)    Flash Index = 0x69
+=====
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xd92      (0x267bee)                                               
+
+
+7.png (Image File)    Flash Index = 0x6a
+=====
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x8ee      (0x267292)                                               
+
+
+8.png (Image File)    Flash Index = 0x6b
+=====
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xf4a      (0x266336)                                               
+
+
+9.png (Image File)    Flash Index = 0x6c
+=====
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xd5e      (0x2655a2)                                               
+
+
+colon.png (Image File)    Flash Index = 0x6d
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x3fe      (0x265182)                                               
+
+
+set_clock68x50.png (Image File)    Flash Index = 0x6e
+==================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xeda      (0x2642a6)                                               
+
+
+spotWide.png (Image File)    Flash Index = 0x6f
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xa9c6     (0x2598ba)                                                
+
+
+Ok68x50.png (Image File)    Flash Index = 0x70
+===========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x8ea      (0x258f96)                                               
+
+
+SetDate.png (Image File)    Flash Index = 0x71
+===========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x66e      (0x258912)                                               
+
+
+spot.png (Image File)    Flash Index = 0x72
+========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x4d6a     (0x253b96)                                                
+
+
+SetTime.png (Image File)    Flash Index = 0x73
+===========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x5a2      (0x2535de)                                               
+
+
+HomepageLines.png (Image File)    Flash Index = 0x74
+=================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1636     (0x251f4a)                                                
+
+
+arrow_up.png (Image File)    Flash Index = 0x75
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x246a     (0x24fa96)                                                
+
+
+arrow_up_glow.png (Image File)    Flash Index = 0x76
+=================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x5ee6     (0x249b9a)                                                
+
+
+arrow_down.png (Image File)    Flash Index = 0x77
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2016     (0x247b6a)                                                
+
+
+arrow_down_glow.png (Image File)    Flash Index = 0x78
+===================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x6352     (0x2417ae)                                                
+
+
+Home2_90x90.png (Image File)    Flash Index = 0x79
+===============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1586     (0x2401fa)                                                
+
+
+DegreeBig.png (Image File)    Flash Index = 0x7a
+=============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x5da      (0x23fba6)                                               
+
+
+Sun.png (Image File)    Flash Index = 0x7b
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xf1a      (0x23ec66)                                               
+
+
+Cloud.png (Image File)    Flash Index = 0x7c
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x102a     (0x23dbd6)                                                
+
+
+CloudSun.png (Image File)    Flash Index = 0x7d
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1736     (0x23c44a)                                                
+
+
+Rain.png (Image File)    Flash Index = 0x7e
+========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1352     (0x23b0ae)                                                
+
+
+zero.png (Image File)    Flash Index = 0x7f
+========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xc62      (0x23a41e)                                               
+
+
+one.png (Image File)    Flash Index = 0x80
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x59e      (0x239e62)                                               
+
+
+two.png (Image File)    Flash Index = 0x81
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xda6      (0x23905a)                                               
+
+
+three.png (Image File)    Flash Index = 0x82
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xf72      (0x23808e)                                               
+
+
+four.png (Image File)    Flash Index = 0x83
+========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xa46      (0x23763a)                                               
+
+
+five.png (Image File)    Flash Index = 0x84
+========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xe82      (0x23677e)                                               
+
+
+six.png (Image File)    Flash Index = 0x85
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xf52      (0x2357ae)                                               
+
+
+seven.png (Image File)    Flash Index = 0x86
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xaa6      (0x234cda)                                               
+
+
+eight.png (Image File)    Flash Index = 0x87
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xf8e      (0x233cf2)                                               
+
+
+nine.png (Image File)    Flash Index = 0x88
+========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xf0a      (0x232d76)                                               
+
+
+0_forecast.png (Image File)    Flash Index = 0x89
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x14e      (0x232bb2)                                               
+
+
+1_forecast.png (Image File)    Flash Index = 0x8a
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xa6       (0x232ada)                                              
+
+
+2_forecast.png (Image File)    Flash Index = 0x8b
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x17a      (0x232906)                                               
+
+
+3_forecast.png (Image File)    Flash Index = 0x8c
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x19a      (0x232766)                                               
+
+
+4_forecast.png (Image File)    Flash Index = 0x8d
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x112      (0x2325ee)                                               
+
+
+5_forecast.png (Image File)    Flash Index = 0x8e
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x142      (0x23243e)                                               
+
+
+6_forecast.png (Image File)    Flash Index = 0x8f
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x196      (0x23226a)                                               
+
+
+7_forecast.png (Image File)    Flash Index = 0x90
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x10a      (0x2320f6)                                               
+
+
+8_forecast.png (Image File)    Flash Index = 0x91
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x19e      (0x231ee2)                                               
+
+
+9_forecast.png (Image File)    Flash Index = 0x92
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x186      (0x231cfa)                                               
+
+
+EMPTY_time.png (Image File)    Flash Index = 0x93
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x236      (0x231a4a)                                               
+
+
+one_time.png (Image File)    Flash Index = 0x94
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x256      (0x2317aa)                                               
+
+
+two_time.png (Image File)    Flash Index = 0x95
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x50a      (0x231276)                                               
+
+
+three_time.png (Image File)    Flash Index = 0x96
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x59a      (0x230c66)                                               
+
+
+four_time.png (Image File)    Flash Index = 0x97
+=============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x41e      (0x2307e2)                                               
+
+
+five_time.png (Image File)    Flash Index = 0x98
+=============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x526      (0x23025a)                                               
+
+
+six_time.png (Image File)    Flash Index = 0x99
+============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x59e      (0x22fc62)                                               
+
+
+seven_time.png (Image File)    Flash Index = 0x9a
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x3fa      (0x22f806)                                               
+
+
+eight_time.png (Image File)    Flash Index = 0x9b
+==============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x5c2      (0x22f23e)                                               
+
+
+nine_time.png (Image File)    Flash Index = 0x9c
+=============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x5b6      (0x22ec4a)                                               
+
+
+zero_time.png (Image File)    Flash Index = 0x9d
+=============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x4a6      (0x22e75a)                                               
+
+
+Sun.png (Image File)    Flash Index = 0x9e
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1be      (0x22e542)                                               
+
+
+Mon.png (Image File)    Flash Index = 0x9f
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1a6      (0x22e35a)                                               
+
+
+Tues.png (Image File)    Flash Index = 0xa0
+========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x21a      (0x22e0e6)                                               
+
+
+Wed.png (Image File)    Flash Index = 0xa1
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x222      (0x22de5e)                                               
+
+
+Thurs.png (Image File)    Flash Index = 0xa2
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x25e      (0x22dba2)                                               
+
+
+Fri.png (Image File)    Flash Index = 0xa3
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x13a      (0x22da46)                                               
+
+
+Sat.png (Image File)    Flash Index = 0xa4
+=======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x1c6      (0x22d83a)                                               
+
+
+DegreeSmall.png (Image File)    Flash Index = 0xa5
+===============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x6a       (0x22d796)                                              
+
+
+Colon17.png (Image File)    Flash Index = 0xa6
+===========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x126      (0x22d65a)                                               
+
+
+am.png (Image File)    Flash Index = 0xa7
+======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x896      (0x22cd6a)                                               
+
+
+pm.png (Image File)    Flash Index = 0xa8
+======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x8a2      (0x22c45e)                                               
+
+
+CurrentTempTime.png (Image File)    Flash Index = 0xa9
+===================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2bd6     (0x22982a)                                                
+
+
+back.png (Image File)    Flash Index = 0xaa
+========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x21fe     (0x227602)                                                
+
+
+back_down.png (Image File)    Flash Index = 0xab
+=============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x3efa     (0x223706)                                                
+
+
+colon.png (Image File)    Flash Index = 0xac
+=========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xf76      (0x22278a)                                               
+
+
+1w.png (Image File)    Flash Index = 0xad
+======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x3462     (0x21f31e)                                                
+
+
+2w.png (Image File)    Flash Index = 0xae
+======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x489a     (0x21aa66)                                                
+
+
+3w.png (Image File)    Flash Index = 0xaf
+======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x51c6     (0x21583a)                                                
+
+
+4w.png (Image File)    Flash Index = 0xb0
+======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x44a6     (0x21135a)                                                
+
+
+5w.png (Image File)    Flash Index = 0xb1
+======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x4ca2     (0x20c65e)                                                
+
+
+6w.png (Image File)    Flash Index = 0xb2
+======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x55b2     (0x20704e)                                                
+
+
+7w.png (Image File)    Flash Index = 0xb3
+======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x367a     (0x203986)                                                
+
+
+8w.png (Image File)    Flash Index = 0xb4
+======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x564a     (0x1fe336)                                                
+
+
+9w.png (Image File)    Flash Index = 0xb5
+======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x5652     (0x1f8cae)                                                
+
+
+10.png (Image File)    Flash Index = 0xb6
+======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x7286     (0x1f19fa)                                                
+
+
+11.png (Image File)    Flash Index = 0xb7
+======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x527a     (0x1ec706)                                                
+
+
+12.png (Image File)    Flash Index = 0xb8
+======
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x6e8a     (0x1e5876)                                                
+
+
+0.png (Image File)    Flash Index = 0xb9
+=====
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x4796     (0x1e106a)                                                
+
+
+1.png (Image File)    Flash Index = 0xba
+=====
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2892     (0x1de76e)                                                
+
+
+2.png (Image File)    Flash Index = 0xbb
+=====
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x41d6     (0x1da52a)                                                
+
+
+3.png (Image File)    Flash Index = 0xbc
+=====
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x4826     (0x1d5cda)                                                
+
+
+4.png (Image File)    Flash Index = 0xbd
+=====
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x3b32     (0x1d214e)                                                
+
+
+5.png (Image File)    Flash Index = 0xbe
+=====
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x441e     (0x1cdce2)                                                
+
+
+6.png (Image File)    Flash Index = 0xbf
+=====
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x4c72     (0x1c900e)                                                
+
+
+7.png (Image File)    Flash Index = 0xc0
+=====
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2f1a     (0x1c60e6)                                                
+
+
+8.png (Image File)    Flash Index = 0xc1
+=====
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x4d32     (0x1c134e)                                                
+
+
+9.png (Image File)    Flash Index = 0xc2
+=====
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x4cbe     (0x1bc642)                                                
+
+
+Gear.png (Image File)    Flash Index = 0xc3
+========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x6d2      (0x1bbf2e)                                               
+
+
+check_mark_button_up.png (Image File)    Flash Index = 0xc4
+========================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x2c0e     (0x1b92f2)                                                
+
+
+check_mark_button_down.png (Image File)    Flash Index = 0xc5
+==========================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x27ea     (0x1b6a96)                                                
+
+
+Bitstream Vera Sans Mono_12.auf (Font File)    Flash Index = 0xc6
+===============================
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x94a      (0x1b6136)                                               
+
+
+Slide1.gif (Image File)    Flash Index = 0xc7
+==========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x12b0e    (0x1a35f2)                                                 
+
+
+Slide2.gif (Image File)    Flash Index = 0xc8
+==========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xacee     (0x198892)                                                
+
+
+Slide3.gif (Image File)    Flash Index = 0xc9
+==========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xae42     (0x18da3e)                                                
+
+
+Slide4.gif (Image File)    Flash Index = 0xca
+==========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xbad2     (0x181f2e)                                                
+
+
+Slide5.gif (Image File)    Flash Index = 0xcb
+==========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xc632     (0x1758ce)                                                
+
+
+Slide6.gif (Image File)    Flash Index = 0xcc
+==========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xbeda     (0x1699a6)                                                
+
+
+Slide7.gif (Image File)    Flash Index = 0xcd
+==========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xe5aa     (0x15b3d6)                                                
+
+
+Slide8.gif (Image File)    Flash Index = 0xce
+==========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xd0e6     (0x14e29a)                                                
+
+
+Slide9.gif (Image File)    Flash Index = 0xcf
+==========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xb4a2     (0x142dde)                                                
+
+
+fontHdr.auf (Font Header File)    Flash Index = 0xf
+===========
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x42       (0x142d3e)                                              
+
+
+internalRAM.bin (InternalRAM File)    Flash Index = 0x6
+===============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0x213c     (0x140bc4)                                                
+
+
+lcdConfig.bin (LCD Configuration File)    Flash Index = 0x3
+=============
+                                                       Flash Used (Remaining)
+                                                       ----------------------
+                                                       0xba       (0x140ac6)                                              
+
+
