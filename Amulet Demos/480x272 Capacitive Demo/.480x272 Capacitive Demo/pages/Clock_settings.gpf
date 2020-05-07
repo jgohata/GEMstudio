@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAGE NAME="Clock_settings">
+  <PROPERTIES>
+    <HEAD>
+      <TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS>
+      <FUNCTIONS charPos="2789" foldedLines="" SOURCE="Clock_settings.gsf"/>
+    </HEAD>
+  </PROPERTIES>
+  <BKGND>
+    <Image>
+      <Name Type="12">Leather</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <file Type="16" Editable="True">.Clock\Leather.jpg</file>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">486</Width>
+      <Height Type="13">278</Height>
+    </Image>
+  </BKGND>
+  <BODY>
+    <CustomButton>
+      <Name Type="12">Ok</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <downImage Type="16" Editable="True">.Clock\check_mark_button_down.png</downImage>
+      <font Type="14" Editable="True">Bitstream Vera Sans, 12pt</font>
+      <fontColor Type="11" Editable="True">#000000</fontColor>
+      <fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle>
+      <href Type="15" Editable="True">GEMscript.save(),
+Clock_home.open()</href>
+      <onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress>
+      <upImage Type="16" Editable="True">.Clock\check_mark_button_up.png</upImage>
+      <executeOn Type="10" Editable="True">Release	Release	Hit	Both</executeOn>
+      <MidX Type="13">443</MidX>
+      <MidY Type="13">39</MidY>
+      <Width Type="13">81</Width>
+      <Height Type="13">84</Height>
+    </CustomButton>
+    <Image>
+      <Name Type="12">colon</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">.Clock\ChromeNumbers\colon.png</file>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <MidX Type="13">216</MidX>
+      <MidY Type="13">134</MidY>
+      <Width Type="13">37</Width>
+      <Height Type="13">108</Height>
+    </Image>
+    <Image>
+      <Name Type="12">overhead_light_minutes</Name>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <invisible Type="2" Editable="True">True	True	False</invisible>
+      <file Type="16" Editable="True">.Spotlights\spotWide.png</file>
+      <MidX Type="13">320</MidX>
+      <MidY Type="13">104</MidY>
+      <Width Type="13">181</Width>
+      <Height Type="13">214</Height>
+    </Image>
+    <Image>
+      <Name Type="12">overhead_light_hours</Name>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <invisible Type="2" Editable="True">True	True	False</invisible>
+      <file Type="16" Editable="True">.Spotlights\spotWide.png</file>
+      <MidX Type="13">126</MidX>
+      <MidY Type="13">104</MidY>
+      <Width Type="13">181</Width>
+      <Height Type="13">214</Height>
+    </Image>
+    <ImageSeq>
+      <Name Type="12">Hours1</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True"/>
+      <max Type="13" Editable="True">12</max>
+      <min Type="13" Editable="True">1</min>
+      <sequence Type="21" Editable="True">.Clock\ChromeNumbers\1w.png;.Clock\ChromeNumbers\2w.png;.Clock\ChromeNumbers\3w.png;.Clock\ChromeNumbers\4w.png;.Clock\ChromeNumbers\5w.png;.Clock\ChromeNumbers\6w.png;.Clock\ChromeNumbers\7w.png;.Clock\ChromeNumbers\8w.png;.Clock\ChromeNumbers\9w.png;.Clock\ChromeNumbers\10.png;.Clock\ChromeNumbers\11.png;.Clock\ChromeNumbers\12.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0</updateDelay>
+      <waitForInit Type="2" Editable="True">True</waitForInit>
+      <MidX Type="13">120</MidX>
+      <MidY Type="13">134</MidY>
+      <Width Type="13">167</Width>
+      <Height Type="13">108</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">Minutes10</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True"/>
+      <max Type="13" Editable="True">59</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0</updateDelay>
+      <waitForInit Type="2" Editable="True">True</waitForInit>
+      <MidX Type="13">277</MidX>
+      <MidY Type="13">134</MidY>
+      <Width Type="13">94</Width>
+      <Height Type="13">108</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">Minutes1</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True"/>
+      <max Type="13" Editable="True">59</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png;.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png;.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png;.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png;.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png;.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0</updateDelay>
+      <waitForInit Type="2" Editable="True">True</waitForInit>
+      <MidX Type="13">364</MidX>
+      <MidY Type="13">134</MidY>
+      <Width Type="13">94</Width>
+      <Height Type="13">108</Height>
+    </ImageSeq>
+    <TouchArea>
+      <Name Type="12">ChangeHour</Name>
+      <onRelease Type="31" Editable="True"/>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <onJogForward Type="31" Editable="True">GEMscript.incHour()</onJogForward>
+      <onJogBackward Type="31" Editable="True">GEMscript.decHour()</onJogBackward>
+      <onTouch Type="31" Editable="True">GEMscript.selectHour()</onTouch>
+      <gestureDelay Type="20" Editable="True">0.05</gestureDelay>
+      <gestureRate Type="20" Editable="True">0.25</gestureRate>
+      <MidX Type="13">120</MidX>
+      <MidY Type="13">140</MidY>
+      <Width Type="13">166</Width>
+      <Height Type="13">204</Height>
+    </TouchArea>
+    <TouchArea>
+      <Name Type="12">ChanceMin</Name>
+      <onRelease Type="31" Editable="True"/>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <onJogForward Type="31" Editable="True">GEMscript.incMinute()</onJogForward>
+      <onJogBackward Type="31" Editable="True">GEMscript.decMinute()</onJogBackward>
+      <onTouch Type="31" Editable="True">GEMscript.selectMinute()</onTouch>
+      <gestureDelay Type="20" Editable="True">0.05</gestureDelay>
+      <gestureRate Type="20" Editable="True">0.25</gestureRate>
+      <MidX Type="13">320</MidX>
+      <MidY Type="13">149</MidY>
+      <Width Type="13">182</Width>
+      <Height Type="13">223</Height>
+    </TouchArea>
+    <PWM>
+      <Name Type="12">pwm</Name>
+      <invisible Type="2" Editable="True">True	True	False</invisible>
+      <channel Type="10" Editable="True">0	0	1	2</channel>
+      <initialCondition Type="10" Editable="True">No Change	On	Off	No Change</initialCondition>
+      <periodIn_ms Type="20" Editable="True">1</periodIn_ms>
+      <pulseWidthIn_ms Type="20" Editable="True">0.999</pulseWidthIn_ms>
+      <MidX Type="13">511</MidX>
+      <MidY Type="13">303</MidY>
+      <Width Type="13">31</Width>
+      <Height Type="13">31</Height>
+    </PWM>
+    <StaticText>
+      <Name Type="12">StaticText_1</Name>
+      <hAlign Type="13">2</hAlign>
+      <text Type="25" Editable="True">1-Finger Rotate to change time</text>
+      <fontColor Type="11" Editable="True">#FFFFFF</fontColor>
+      <font Type="14" Editable="True">Bitstream Vera Sans Mono,  12pt</font>
+      <fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle>
+      <vAlign Type="13">32</vAlign>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">258</MidY>
+      <Width Type="13">335</Width>
+      <Height Type="13">33</Height>
+    </StaticText>
+  </BODY>
+</PAGE>

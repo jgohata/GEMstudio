@@ -1,0 +1,77 @@
+<EMBED SRC="..\Calendar Demo\sleepCode.txt">
+
+//Reset field index to zero upon page load
+<META HTTP-EQUIV="REFRESH" CONTENT="0,0.01; URL=blinkCnt.setValue(2);>
+	
+//Copy the calendar values into RAM to manipulate
+<META HTTP-EQUIV="REFRESH" CONTENT="0,0.01; URL=tmpMonth.setValue(calendar.month)">
+<META HTTP-EQUIV="REFRESH" CONTENT="0,0.01; URL=tmpDayOfMonth.setValue(calendar.dayOfMonth)">
+<META HTTP-EQUIV="REFRESH" CONTENT="0,0.01; URL=tmpDayOfWeek.setValue(calendar.dayOfWeek)">
+
+<META HTTP-EQUIV="REFRESH" CONTENT="0;
+URL=Amulet:document.DayofWeek.disappear(),
+Amulet:document.Month.disappear(),
+Amulet:document.Date.disappear(),
+Amulet:document.overhead_light_Date.disappear(),
+Amulet:document.overhead_light_Month.disappear(),
+Amulet:document.overhead_light_Day.disappear(),
+Amulet:document.metaSetAppropriateLights.forceUpdate();
+NAME=metaDisappearLights"> 
+
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=blinkCnt.value();
+EQ=2;THEN=Amulet:document.overhead_light_Day.reappear(),Amulet:document.ReappearAll.forceUpdate();
+EQ=3;THEN=Amulet:document.overhead_light_Month.reappear(),Amulet:document.ReappearAll.forceUpdate();
+EQ=4;THEN=Amulet:document.overhead_light_Date.reappear(),Amulet:document.ReappearAll.forceUpdate();
+NAME=metaSetAppropriateLights"> 
+
+<META HTTP-EQUIV="REFRESH" CONTENT="0;
+	URL=Amulet:document.DayofWeek.setY(83),Amulet:document.DayofWeek.reappear(),
+	Amulet:document.Month.setY(83),Amulet:document.Month.reappear(),
+	Amulet:document.Date.setY(85),Amulet:document.Date.reappear();
+NAME=ReappearAll">
+
+
+
+//Increment current field 
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=blinkCnt.value();
+EQ=2; THEN=Amulet:document.IncDay.forceUpdate();
+EQ=3; THEN=Amulet:document.IncMonth.forceUpdate();
+EQ=4; THEN=Amulet:document.IncDate.forceUpdate();
+NAME=metaInc">
+
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=tmpDayOfWeek.value(); EQ=7; 
+THEN=tmpDayOfWeek.setValue(1); ELSE=tmpDayOfWeek.add(1);NAME=IncDay">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=tmpMonth.value(); EQ=12; 
+THEN=tmpMonth.setValue(1); ELSE=tmpMonth.add(1);NAME=IncMonth">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=tmpDayOfMonth.value(); EQ=31;
+THEN=tmpDayOfMonth.setValue(1); ELSE=tmpDayOfMonth.add(1);NAME=IncDate">
+
+//Decrement current field 
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=blinkCnt.value();
+EQ=2; THEN=Amulet:document.DecDay.forceUpdate();
+EQ=3; THEN=Amulet:document.DecMonth.forceUpdate();
+EQ=4; THEN=Amulet:document.DecDate.forceUpdate();
+NAME=metaDec">
+
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=tmpDayOfWeek.value(); EQ=1; 
+THEN=tmpDayOfWeek.setValue(7); ELSE=tmpDayOfWeek.sub(1);NAME=DecDay">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=tmpMonth.value(); EQ=1; 
+THEN=tmpMonth.setValue(12); ELSE=tmpMonth.sub(1);NAME=DecMonth">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=tmpDayOfMonth.value(); EQ=1;
+THEN=tmpDayOfMonth.setValue(31); ELSE=tmpDayOfMonth.sub(1);NAME=DecDate">
+
+//Save Fields then return
+<META HTTP-EQUIV="REFRESH" CONTENT="0;
+	URL=Amulet:calendar.month.setValue(tmpMonth),
+	Amulet:calendar.dayOfMonth.setValue(tmpDayOfMonth),
+	Amulet:calendar.dayOfWeek.setValue(tmpDayOfWeek),
+	Fridge_clock.open();
+NAME=SaveFields">
+
+//Save Fields then return
+<META HTTP-EQUIV="REFRESH" CONTENT="0;
+	URL=Amulet:calendar.month.setValue(tmpMonth),
+	Amulet:calendar.dayOfMonth.setValue(tmpDayOfMonth),
+	Amulet:calendar.dayOfWeek.setValue(tmpDayOfWeek),
+	Fridge_set_clock.open();
+NAME=ToTime">

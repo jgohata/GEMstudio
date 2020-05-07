@@ -1,0 +1,13 @@
+/* Legend of Variables used on this page
+Word 0: 	Backlight On PWM value
+          10:	sleepTimer
+          11:    sleepTimeOut
+          12:    tempTimeOut
+*/
+
+<EMBED SRC="..\Calendar Demo\sleepCode.txt">
+
+// Scale Timeout value to deciseconds 
+<META HTTP-EQUIV="REFRESH" CONTENT="0, 0; 
+	          URL=sleepTimeOut.setValue(tempTimeOut); 
+	          NAME=UpdateTimeout">

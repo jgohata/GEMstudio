@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAGE NAME="Fridge_set_temps">
+  <PROPERTIES>
+    <HEAD>
+      <TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS>
+      <FUNCTIONS charPos="26" foldedLines="" SOURCE="Fridge_set_temps.gsf"/>
+    </HEAD>
+  </PROPERTIES>
+  <BKGND>
+    <Image>
+      <Name Type="12">bg_header_cool</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <file Type="16" Editable="True">..\Calendar Demo\_ui\bg_cool.jpg</file>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">486</Width>
+      <Height Type="13">278</Height>
+    </Image>
+  </BKGND>
+  <BODY>
+    <TouchArea>
+      <Name Type="12">AnyTouch</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <onRelease Type="31" Editable="True"/>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <onTouch Type="31" Editable="True">resetTimer() // resetTimer() is defined in calendar.macro</onTouch>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">486</Width>
+      <Height Type="13">278</Height>
+    </TouchArea>
+    <CustomButton>
+      <Name Type="12">CloseButton</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <downImage Type="16" Editable="True">..\Calendar Demo\_ui\btn_close_1.png</downImage>
+      <href Type="15" Editable="True">Fridge_home.open()</href>
+      <upImage Type="16" Editable="True">..\Calendar Demo\_ui\btn_close_0.png</upImage>
+      <MidX Type="13">422</MidX>
+      <MidY Type="13">35</MidY>
+      <Width Type="13">108</Width>
+      <Height Type="13">58</Height>
+    </CustomButton>
+    <CustomButton>
+      <Name Type="12">FreezeUpButton</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <downImage Type="16" Editable="True">..\Calendar Demo\temps\btn_up_1.png</downImage>
+      <href Type="15" Editable="True">Amulet:document.metaFreezerInc.forceUpdate(), 
+resetTimer() // resetTimer() is defined in calendar.macro</href>
+      <upImage Type="16" Editable="True">..\Calendar Demo\temps\btn_up_0.png</upImage>
+      <repeatDelay Type="20" Editable="True">0.5</repeatDelay>
+      <repeatRate Type="20" Editable="True">0.2</repeatRate>
+      <executeOn Type="10" Editable="True">Hit	Release	Hit	Both</executeOn>
+      <MidX Type="13">163</MidX>
+      <MidY Type="13">186</MidY>
+      <Width Type="13">108</Width>
+      <Height Type="13">58</Height>
+    </CustomButton>
+    <CustomButton>
+      <Name Type="12">FreezeDownButton</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <downImage Type="16" Editable="True">..\Calendar Demo\temps\btn_dn_1.png</downImage>
+      <href Type="15" Editable="True">Amulet:document.metaFreezerDec.forceUpdate(), 
+resetTimer() // resetTimer() is defined in calendar.macro</href>
+      <upImage Type="16" Editable="True">..\Calendar Demo\temps\btn_dn_0.png</upImage>
+      <repeatDelay Type="20" Editable="True">0.5</repeatDelay>
+      <repeatRate Type="20" Editable="True">0.2</repeatRate>
+      <executeOn Type="10" Editable="True">Hit	Release	Hit	Both</executeOn>
+      <MidX Type="13">163</MidX>
+      <MidY Type="13">240</MidY>
+      <Width Type="13">108</Width>
+      <Height Type="13">58</Height>
+    </CustomButton>
+    <CustomButton>
+      <Name Type="12">FridgeUpButton</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <downImage Type="16" Editable="True">..\Calendar Demo\temps\btn_up_1.png</downImage>
+      <href Type="15" Editable="True">Amulet:document.metaFridgeInc.forceUpdate(), 
+resetTimer() // resetTimer() is defined in calendar.macro</href>
+      <upImage Type="16" Editable="True">..\Calendar Demo\temps\btn_up_0.png</upImage>
+      <repeatDelay Type="20" Editable="True">0.5</repeatDelay>
+      <repeatRate Type="20" Editable="True">0.2</repeatRate>
+      <executeOn Type="10" Editable="True">Hit	Release	Hit	Both</executeOn>
+      <MidX Type="13">314</MidX>
+      <MidY Type="13">186</MidY>
+      <Width Type="13">108</Width>
+      <Height Type="13">58</Height>
+    </CustomButton>
+    <CustomButton>
+      <Name Type="12">FridgeDownButton</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <downImage Type="16" Editable="True">..\Calendar Demo\temps\btn_dn_1.png</downImage>
+      <href Type="15" Editable="True">Amulet:document.metaFridgeDec.forceUpdate(), 
+resetTimer() // resetTimer() is defined in calendar.macro</href>
+      <upImage Type="16" Editable="True">..\Calendar Demo\temps\btn_dn_0.png</upImage>
+      <repeatDelay Type="20" Editable="True">0.5</repeatDelay>
+      <repeatRate Type="20" Editable="True">0.2</repeatRate>
+      <executeOn Type="10" Editable="True">Hit	Release	Hit	Both</executeOn>
+      <MidX Type="13">314</MidX>
+      <MidY Type="13">240</MidY>
+      <Width Type="13">108</Width>
+      <Height Type="13">58</Height>
+    </CustomButton>
+    <Image>
+      <Name Type="12">img_recommended_f</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">..\Calendar Demo\temps\img_recommended_f.png</file>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">78</MidY>
+      <Width Type="13">255</Width>
+      <Height Type="13">33</Height>
+    </Image>
+    <Image>
+      <Name Type="12">img_temp_bg0</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">..\Calendar Demo\temps\img_temp_bg.png</file>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <MidX Type="13">163</MidX>
+      <MidY Type="13">128</MidY>
+      <Width Type="13">108</Width>
+      <Height Type="13">68</Height>
+    </Image>
+    <Image>
+      <Name Type="12">img_temp_bg1</Name>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">..\Calendar Demo\temps\img_temp_bg.png</file>
+      <MidX Type="13">314</MidX>
+      <MidY Type="13">128</MidY>
+      <Width Type="13">108</Width>
+      <Height Type="13">68</Height>
+    </Image>
+    <NumericField>
+      <Name Type="12">FreezerTemp</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <border Type="13" Editable="True">0</border>
+      <borderColor Type="11" Editable="True">#00000000</borderColor>
+      <fillColor Type="11" Editable="True">#FFFFFF00</fillColor>
+      <font Type="14" Editable="True">Bitstream Vera Sans, 18pt</font>
+      <fontColor Type="11" Editable="True">#FFFFFF</fontColor>
+      <fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle>
+      <horizontalAlign Type="10" Editable="True">Right	Center	Left	Right</horizontalAlign>
+      <href Type="24" Editable="True">freezerTemp.value()</href>
+      <min Type="13" Editable="True">0</min>
+      <max Type="13" Editable="True">40</max>
+      <minFld Type="12" Editable="True">-20</minFld>
+      <maxFld Type="12" Editable="True">20</maxFld>
+      <printf Type="12" Editable="True">%3i</printf>
+      <updateFreq Type="20" Editable="True">0.2</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <verticalAlign Type="10" Editable="True">Middle	Bottom	Middle	Top</verticalAlign>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">141</MidX>
+      <MidY Type="13">124</MidY>
+      <Width Type="13">65</Width>
+      <Height Type="13">52</Height>
+    </NumericField>
+    <NumericField>
+      <Name Type="12">RefrigeratorTemp</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <border Type="13" Editable="True">0</border>
+      <borderColor Type="11" Editable="True">#00000000</borderColor>
+      <fillColor Type="11" Editable="True">#FFFFFF00</fillColor>
+      <font Type="14" Editable="True">Bitstream Vera Sans, 18pt</font>
+      <fontColor Type="11" Editable="True">#FFFFFF</fontColor>
+      <fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle>
+      <horizontalAlign Type="10" Editable="True">Right	Center	Left	Right</horizontalAlign>
+      <href Type="24" Editable="True">fridgeTemp.value()</href>
+      <min Type="13" Editable="True">0</min>
+      <max Type="13" Editable="True">40</max>
+      <minFld Type="12" Editable="True">10</minFld>
+      <maxFld Type="12" Editable="True">50</maxFld>
+      <printf Type="12" Editable="True">%2i</printf>
+      <updateFreq Type="20" Editable="True">0.2</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <verticalAlign Type="10" Editable="True">Middle	Bottom	Middle	Top</verticalAlign>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">299</MidX>
+      <MidY Type="13">124</MidY>
+      <Width Type="13">65</Width>
+      <Height Type="13">52</Height>
+    </NumericField>
+  </BODY>
+</PAGE>

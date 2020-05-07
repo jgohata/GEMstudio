@@ -1,854 +1,112 @@
-<?xml version="1.0" encoding="UTF-8"?><GEMProject GEMstudioVersion="3.6.0.11" CompilerVersion="V3.6.0.B"><COMPLETE_MODULE><LCD_CONFIG><SIZE>480 x 272</SIZE><MFG>Amulet</MFG><NAME>STK-CY-043.tft</NAME></LCD_CONFIG><BOARD>MK-CY-043 (Capacitive 4.3 GEMstarter-kit).board</BOARD><OS_SPECIFIC><PROTOCOL>ASCII</PROTOCOL><ROTATION>No</ROTATION><COLOR_DEPTH>32</COLOR_DEPTH><DISABLE_MSD>False</DISABLE_MSD><SECURITY_OVERRIDE>False</SECURITY_OVERRIDE></OS_SPECIFIC></COMPLETE_MODULE><AMULET_ID>1</AMULET_ID><BAUD></BAUD><BGCOLOR>#FFFFFF</BGCOLOR><BUFFER>Double</BUFFER><COLOR_DEPTH>32</COLOR_DEPTH><HOST_ID>2</HOST_ID><JPEG>Native</JPEG><NULL_TERMINATE>No</NULL_TERMINATE><PROTOCOL>ASCII</PROTOCOL><SLAVE_RSP>Full Protocol</SLAVE_RSP><TIMEOUT>0.20</TIMEOUT><TOUCH_PRIORITY>From Top to Bottom</TOUCH_PRIORITY><TRANSITIONS>Clear Screen With Background Color</TRANSITIONS><MACRO_FILE>.macro.macro</MACRO_FILE><PALETTE_FILE>.Use Default Palette</PALETTE_FILE><PAGE NAME="Menu"><PROPERTIES><HEAD><FUNCTIONS charPos="749" foldedLines="">&lt;meta http-equiv="Refresh" content="0.01;
-url=Amulet:document.pwm.setPeriod(1),
-Amulet:document.pwm.setPulseWidth(0.02);
-Amulet:document.pwm.setPulseWidth(0.04);
-Amulet:document.pwm.setPulseWidth(0.07);
-Amulet:document.pwm.setPulseWidth(0.1);
-Amulet:document.pwm.setPulseWidth(0.2);
-Amulet:document.pwm.setPulseWidth(0.3);
-Amulet:document.pwm.setPulseWidth(0.4);
-Amulet:document.pwm.setPulseWidth(0.5),
-Amulet:document.pwm.setPulseWidth(0.6);
-Amulet:document.pwm.setPulseWidth(0.7);
-Amulet:document.pwm.setPulseWidth(0.8);
-Amulet:document.pwm.setPulseWidth(0.9);
-Amulet:document.pwm.setPulseWidth(0.999),
-Amulet:document.pwmMeta.setUpdateRate(0);
-name=pwmMeta"&gt;
+<?xml version="1.0" encoding="UTF-8"?>
+<GEMProject GEMstudioVersion="3.6.1.0" CompilerVersion="V3.6.1.B" vcp="true">
+  <COMPLETE_MODULE>
+    <LCD_CONFIG>
+      <SIZE>480 x 272</SIZE>
+      <MFG>Amulet</MFG>
+      <NAME>STK-CY-043.tft</NAME>
+    </LCD_CONFIG>
+    <BOARD>MK-CY-043 (Capacitive 4.3 GEMstarter-kit).board</BOARD>
+    <OS_SPECIFIC>
+      <PROTOCOL>ASCII</PROTOCOL>
+      <ROTATION>No</ROTATION>
+      <COLOR_DEPTH>32</COLOR_DEPTH>
+      <DISABLE_MSD>False</DISABLE_MSD>
+      <SECURITY_OVERRIDE>False</SECURITY_OVERRIDE>
+    </OS_SPECIFIC>
+  </COMPLETE_MODULE>
+  <AMULET_ID>1</AMULET_ID>
+  <BAUD/>
+  <BGCOLOR>#FFFFFF</BGCOLOR>
+  <BUFFER>Double</BUFFER>
+  <COLOR_DEPTH>32</COLOR_DEPTH>
+  <HOST_ID>2</HOST_ID>
+  <JPEG>Native</JPEG>
+  <NULL_TERMINATE>No</NULL_TERMINATE>
+  <PROTOCOL>ASCII</PROTOCOL>
+  <SLAVE_RSP>Full Protocol</SLAVE_RSP>
+  <TIMEOUT>0.20</TIMEOUT>
+  <TOUCH_PRIORITY>From Top to Bottom</TOUCH_PRIORITY>
+  <TRANSITIONS>Clear Screen With Background Color</TRANSITIONS>
+  <MACRO_FILE>.macro.macro</MACRO_FILE>
+  <PALETTE_FILE>.Use Default Palette</PALETTE_FILE>
+  <PAGE_FILE NAME="Menu.gpf"/>
+  <PAGE_FILE NAME="Fridge_home.gpf"/>
+  <PAGE_FILE NAME="Fridge_settings.gpf"/>
+  <PAGE_FILE NAME="Fridge_set_temps.gpf"/>
+  <PAGE_FILE NAME="Fridge_set_backlight.gpf"/>
+  <PAGE_FILE NAME="Fridge_clock.gpf"/>
+  <PAGE_FILE NAME="Fridge_set_clock.gpf"/>
+  <INTERNALRAM_INIT>..\Calendar Demo\fridge.ini</INTERNALRAM_INIT>
+  <PAGE_FILE NAME="Fridge_set_date.gpf"/>
+  <PAGE_FILE NAME="Thermostat_home.gpf"/>
+  <PAGE_FILE NAME="Thermostat_settings.gpf"/>
+  <PAGE_FILE NAME="Clock_home.gpf"/>
+  <PAGE_FILE NAME="Clock_settings.gpf"/>
+  <PAGE_FILE NAME="Amulet_1.gpf"/>
+  <PAGE_FILE NAME="Amulet_2.gpf"/>
+  <PAGE_FILE NAME="Amulet_3.gpf"/>
+  <PAGE_FILE NAME="Amulet_4.gpf"/>
+  <PAGE_FILE NAME="Amulet_5.gpf"/>
+  <PAGE_FILE NAME="Amulet_6.gpf"/>
+  <PAGE_FILE NAME="Amulet_7.gpf"/>
+  <PAGE_FILE NAME="Amulet_8.gpf"/>
+  <PAGE_FILE NAME="Amulet_9.gpf"/>
+  <GS_STRING_BUFFER_SIZE>100</GS_STRING_BUFFER_SIZE>
+  <STRICT_MODBUS_TIMING>No</STRICT_MODBUS_TIMING>
+  <PAGE_BUFFER_SIZE>0x10000</PAGE_BUFFER_SIZE>
+  <BAUD0>115200</BAUD0>
+  <BAUD1>115200</BAUD1>
+  <BAUD2>115200</BAUD2>
+  <DISABLE_MSD>False</DISABLE_MSD>
+  <FRAME_BUFFER_HEIGHT>272</FRAME_BUFFER_HEIGHT>
+  <FRAME_BUFFER_WIDTH>480</FRAME_BUFFER_WIDTH>
+  <GS_COMPRESS>False</GS_COMPRESS>
+  <GS_DRAW>True</GS_DRAW>
+  <SECURITY_OVERRIDE>False</SECURITY_OVERRIDE>
+  <UTF8_META_STRINGS>No</UTF8_META_STRINGS>
+  <CACHE_AMX>FALSE</CACHE_AMX>
+  <CACHE_AMX_WARNING>FALSE</CACHE_AMX_WARNING>
+  <USER_THREAD_DEBUG>True</USER_THREAD_DEBUG>
+  <IR_BYTES>256</IR_BYTES>
+  <IR_WORDS>256</IR_WORDS>
+  <IR_COLORS>256</IR_COLORS>
+  <IR_STRINGS>256</IR_STRINGS>
+  <IR_STRING_LENGTH>26</IR_STRING_LENGTH>
+  <CACHE_FONTS>False</CACHE_FONTS>
+  <USER_THREAD_FILE/>
+  <LANG_FILE/>
+  <IR_INIT_Include_in_POT_File>FALSE</IR_INIT_Include_in_POT_File>
+  <EXTEND_COMM_ADDRESSING>FALSE</EXTEND_COMM_ADDRESSING>
+  <PAGE NAME="VCP_WARNING" PRE_VCP="true">
+    <PROPERTIES>
+      <HEAD>
+        <GS_DRAW>True</GS_DRAW>
+        <BGCOLOR>#0000FF</BGCOLOR>
+        <TRANSITIONS>Clear Screen With Background Color</TRANSITIONS>
+      </HEAD>
+    </PROPERTIES>
+    <BKGND/>
+    <BODY>
+      <StaticText>
+        <Name Type="12">StaticString_1</Name>
+        <invisible Type="2" Editable="True">False	True	False</invisible>
+        <verticalAlign Type="10">Top	Bottom	Middle	Top</verticalAlign>
+        <horizontalAlign Type="10">center	Center	Left	Right</horizontalAlign>
+        <fillColor Type="11" Editable="True">#00000000</fillColor>
+        <font Type="14" Editable="True">Bitstream Vera Sans,  12pt</font>
+        <fontColor Type="11" Editable="True">#FFFFFF</fontColor>
+        <fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle>
+        <text Type="25" Editable="True">\b_Warning!\b0_ 
 
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0,0.01;
-	URL=Amulet:internalRAM.byte(0).setValue(67),
-	Amulet:internalRAM.byte(124).setValue(106),
-	Amulet:internalRAM.byte(125).setValue(112),
-	Amulet:internalRAM.byte(126).setValue(118),
-	Amulet:internalRAM.byte(127).setValue(100),
-	Amulet:internalRAM.byte(224).setValue(21),
-	Amulet:internalRAM.byte(225).setValue(22),
-	Amulet:internalRAM.byte(226).setValue(23),
-	Amulet:internalRAM.byte(227).setValue(24),
-	Amulet:internalRAM.string(0).setValue("21° C"),
-	Amulet:internalRAM.string(1).setValue("22° C"),
-	Amulet:internalRAM.string(2).setValue("23° C"),
-Amulet:internalRAM.string(3).setValue("24° C");"&gt;
+This project was saved as a version control project. The version of GEMstudio Pro that you are currently using does not support version control projects.
 
-&lt;meta http-equiv="Refresh" content="0;
-url=Amulet:document.pwm.setPulseWidth(0.9);
-Amulet:document.pwm.setPulseWidth(0.8);
-Amulet:document.pwm.setPulseWidth(0.7);
-Amulet:document.pwm.setPulseWidth(0.6);
-Amulet:document.pwm.setPulseWidth(0.5);
-Amulet:document.pwm.setPulseWidth(0.4);
-Amulet:document.pwm.setPulseWidth(0.3);
-Amulet:document.pwm.setPulseWidth(0.2);
-Amulet:document.pwm.setPulseWidth(0.1);
-Amulet:document.pwm.setPulseWidth(0.07);
-Amulet:document.pwm.setPulseWidth(0.04);
-Amulet:document.pwm.setPulseWidth(0.02);
-Amulet:document.pwm.setPeriod(10),
-Amulet:document.pwm.setPulseWidth(0.01),
-Fridge_home.open();
-name=ToFridge"&gt;
-
-&lt;meta http-equiv="Refresh" content="0;
-url=Amulet:document.pwm.setPulseWidth(0.9);
-Amulet:document.pwm.setPulseWidth(0.8);
-Amulet:document.pwm.setPulseWidth(0.7);
-Amulet:document.pwm.setPulseWidth(0.6);
-Amulet:document.pwm.setPulseWidth(0.5);
-Amulet:document.pwm.setPulseWidth(0.4);
-Amulet:document.pwm.setPulseWidth(0.3);
-Amulet:document.pwm.setPulseWidth(0.2);
-Amulet:document.pwm.setPulseWidth(0.1);
-Amulet:document.pwm.setPulseWidth(0.07);
-Amulet:document.pwm.setPulseWidth(0.04);
-Amulet:document.pwm.setPulseWidth(0.02);
-Amulet:document.pwm.setPeriod(10),
-Amulet:document.pwm.setPulseWidth(0.01),
-Amulet_1.open();
-name=ToSlideshow"&gt;
-
-&lt;meta http-equiv="Refresh" content="0;
-url=Amulet:document.pwm.setPulseWidth(0.9);
-Amulet:document.pwm.setPulseWidth(0.8);
-Amulet:document.pwm.setPulseWidth(0.7);
-Amulet:document.pwm.setPulseWidth(0.6);
-Amulet:document.pwm.setPulseWidth(0.5);
-Amulet:document.pwm.setPulseWidth(0.4);
-Amulet:document.pwm.setPulseWidth(0.3);
-Amulet:document.pwm.setPulseWidth(0.2);
-Amulet:document.pwm.setPulseWidth(0.1);
-Amulet:document.pwm.setPulseWidth(0.07);
-Amulet:document.pwm.setPulseWidth(0.04);
-Amulet:document.pwm.setPulseWidth(0.02);
-Amulet:document.pwm.setPeriod(10),
-Amulet:document.pwm.setPulseWidth(0.01),
-Clock_home.open();
-name=ToOven"&gt;
-
-
-&lt;meta http-equiv="Refresh" content="0;
-url=Amulet:document.pwm.setPulseWidth(0.9);
-Amulet:document.pwm.setPulseWidth(0.8);
-Amulet:document.pwm.setPulseWidth(0.7);
-Amulet:document.pwm.setPulseWidth(0.6);
-Amulet:document.pwm.setPulseWidth(0.5);
-Amulet:document.pwm.setPulseWidth(0.4);
-Amulet:document.pwm.setPulseWidth(0.3);
-Amulet:document.pwm.setPulseWidth(0.2);
-Amulet:document.pwm.setPulseWidth(0.1);
-Amulet:document.pwm.setPulseWidth(0.07);
-Amulet:document.pwm.setPulseWidth(0.04);
-Amulet:document.pwm.setPulseWidth(0.02);
-Amulet:document.pwm.setPeriod(10),
-Amulet:document.pwm.setPulseWidth(0.01),
-Thermostat_home.open();
-name=ToThermostat"&gt;
-
-</FUNCTIONS><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">Leather</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><file Type="16" Editable="True">.Clock\Leather.jpg</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image></BKGND><BODY><Image><Name Type="12">FridgeIcon</Name><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Main\FridgeIcon.png</file><MidX Type="13">66</MidX><MidY Type="13">136</MidY><Width Type="13">102</Width><Height Type="13">102</Height></Image><TouchArea><Name Type="12">FridgeButton</Name><onRelease Type="31" Editable="True">Amulet:document.ToFridge.setUpdateRate(0.02),
-Amulet:internalRAM.byte(66).setValue(0)</onRelease><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><MidX Type="13">64</MidX><MidY Type="13">137</MidY><Width Type="13">112</Width><Height Type="13">112</Height></TouchArea><Image><Name Type="12">ThermostatIcon</Name><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Main\ThermostatIcon.png</file><MidX Type="13">182</MidX><MidY Type="13">136</MidY><Width Type="13">102</Width><Height Type="13">102</Height></Image><TouchArea><Name Type="12">ThermostatButton</Name><onRelease Type="31" Editable="True">Amulet:document.ToThermostat.setUpdateRate(0.02)</onRelease><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><MidX Type="13">181</MidX><MidY Type="13">137</MidY><Width Type="13">112</Width><Height Type="13">112</Height></TouchArea><Image><Name Type="12">ClockIcon</Name><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Main\ClockIcon.png</file><MidX Type="13">298</MidX><MidY Type="13">136</MidY><Width Type="13">102</Width><Height Type="13">102</Height></Image><TouchArea><Name Type="12">ClockButton</Name><onRelease Type="31" Editable="True">Amulet:document.ToOven.setUpdateRate(0.02)</onRelease><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><MidX Type="13">298</MidX><MidY Type="13">137</MidY><Width Type="13">112</Width><Height Type="13">112</Height></TouchArea><Image><Name Type="12">PPT_Icon</Name><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Main\PPT_Icon.png</file><MidX Type="13">414</MidX><MidY Type="13">138</MidY><Width Type="13">102</Width><Height Type="13">102</Height></Image><TouchArea><Name Type="12">PPT_Button</Name><onRelease Type="31" Editable="True">Amulet:document.ToSlideshow.setUpdateRate(0.02),Amulet:internalRAM.byte(66).setValue(0)</onRelease><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><MidX Type="13">415</MidX><MidY Type="13">137</MidY><Width Type="13">112</Width><Height Type="13">112</Height></TouchArea><PWM><Name Type="12">pwm</Name><invisible Type="2" Editable="True">True	True	False</invisible><channel Type="10" Editable="True">0	0	1	2</channel><initialCondition Type="10" Editable="True">No Change	On	Off	No Change</initialCondition><periodIn_ms Type="20" Editable="True">1</periodIn_ms><pulseWidthIn_ms Type="20" Editable="True">0.001</pulseWidthIn_ms><MidX Type="13">549</MidX><MidY Type="13">350</MidY><Width Type="13">31</Width><Height Type="13">31</Height></PWM></BODY></PAGE><PAGE NAME="Fridge_home"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS><FUNCTIONS charPos="465" foldedLines="">/* InternalRAM variables used in project
-Byte 1: Dispenser function select
-		15:
-Word 0: Backlight Brightness
-           2: Freezer temp
-           3: Fridge temp
-         10: sleepTimer
-         11: sleepTimeOut 
-String 0: Month and Day
-*/
-
-&lt;EMBED SRC="..\Calendar Demo\sleepCode.txt"&gt;
-
-&lt;meta http-equiv="Refresh" content="0,0.01;
-	IF=Amulet:internalRAM.byte(66).value();
-	EQ=0;
-	THEN=Amulet:document.pwmMeta.setUpdateRate(0.01),Amulet:internalRAM.byte(66).setvalue(1);
-"&gt;
-&lt;meta http-equiv="Refresh" content="0;	
-url=Amulet:document.pwm.setPeriod(1),
-Amulet:document.pwm.setPulseWidth(0.02);
-Amulet:document.pwm.setPulseWidth(0.04);
-Amulet:document.pwm.setPulseWidth(0.07);
-Amulet:document.pwm.setPulseWidth(0.1);
-Amulet:document.pwm.setPulseWidth(0.2);
-Amulet:document.pwm.setPulseWidth(0.3);
-Amulet:document.pwm.setPulseWidth(0.4);
-Amulet:document.pwm.setPulseWidth(0.5),
-Amulet:document.pwm.setPulseWidth(0.6);
-Amulet:document.pwm.setPulseWidth(0.7);
-Amulet:document.pwm.setPulseWidth(0.8);
-Amulet:document.pwm.setPulseWidth(0.9);
-Amulet:document.pwm.setPulseWidth(0.999),
-Amulet:document.pwmMeta.setUpdateRate(0);
-name=pwmMeta"&gt;</FUNCTIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">bg_footer_cool</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><file Type="16" Editable="True">..\Calendar Demo\_ui\bg_footer_cool.png</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image></BKGND><BODY><TouchArea><Name Type="12">AnyTouch</Name><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onPinch Type="31" Editable="True"/><onTouch Type="31" Editable="True">resetTimer() // resetTimer() is defined in calendar.macro</onTouch><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></TouchArea><RadioButton><Name Type="12">WaterButton</Name><invisible Type="2" Editable="True">False	True	False</invisible><groupName Type="12" Editable="True">Radios</groupName><href Type="15" Editable="True">dispenser.setValue(WATER), 
-resetTimer() // resetTimer() is defined in calendar.macro</href><initialCondition Type="10" Editable="True">FromInitHref	On	Off	FromInitHref</initialCondition><emptyImage Type="16" Editable="True">..\Calendar Demo\dispenser\btn_water_cool_0.png</emptyImage><fullImage Type="16" Editable="True">..\Calendar Demo\dispenser\btn_water_cool_1.png</fullImage><trackingImage Type="16" Editable="True">..\Calendar Demo\dispenser\btn_water_cool_2.png</trackingImage><initHref Type="24" Editable="True">dispenser.value()</initHref><cacheImage Type="2" Editable="True">True	True	False</cacheImage><internalNumber Type="13" Editable="True">1</internalNumber><MidX Type="13">90</MidX><MidY Type="13">110</MidY><Width Type="13">156</Width><Height Type="13">226</Height></RadioButton><RadioButton><Name Type="12">CrushedButton</Name><invisible Type="2" Editable="True">False	True	False</invisible><groupName Type="12" Editable="True">Radios</groupName><href Type="15" Editable="True">dispenser.setValue(CRUSHED), 
-resetTimer() // resetTimer() is defined in calendar.macro</href><initialCondition Type="10" Editable="True">FromInitHref	On	Off	FromInitHref</initialCondition><emptyImage Type="16" Editable="True">..\Calendar Demo\dispenser\btn_crushed_cool_0.png</emptyImage><fullImage Type="16" Editable="True">..\Calendar Demo\dispenser\btn_crushed_cool_1.png</fullImage><trackingImage Type="16" Editable="True">..\Calendar Demo\dispenser\btn_crushed_cool_2.png</trackingImage><initHref Type="24" Editable="True">dispenser.value()</initHref><cacheImage Type="2" Editable="True">True	True	False</cacheImage><internalNumber Type="13" Editable="True">2</internalNumber><MidX Type="13">240</MidX><MidY Type="13">110</MidY><Width Type="13">156</Width><Height Type="13">226</Height></RadioButton><RadioButton><Name Type="12">CubedButton</Name><invisible Type="2" Editable="True">False	True	False</invisible><groupName Type="12" Editable="True">Radios</groupName><href Type="15" Editable="True">dispenser.setValue(CUBED), 
-resetTimer() // resetTimer() is defined in calendar.macro</href><initialCondition Type="10" Editable="True">FromInitHref	On	Off	FromInitHref</initialCondition><emptyImage Type="16" Editable="True">..\Calendar Demo\dispenser\btn_cubed_cool_0.png</emptyImage><fullImage Type="16" Editable="True">..\Calendar Demo\dispenser\btn_cubed_cool_1.png</fullImage><trackingImage Type="16" Editable="True">..\Calendar Demo\dispenser\btn_cubed_cool_2.png</trackingImage><initHref Type="24" Editable="True">dispenser.value()</initHref><cacheImage Type="2" Editable="True">True	True	False</cacheImage><internalNumber Type="13" Editable="True">3</internalNumber><MidX Type="13">390</MidX><MidY Type="13">110</MidY><Width Type="13">157</Width><Height Type="13">227</Height></RadioButton><CustomButton><Name Type="12">Menu</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><downImage Type="16" Editable="True">..\Calendar Demo\_ui\btn_menu_1.png</downImage><href Type="15" Editable="True">Fridge_settings.open()</href><upImage Type="16" Editable="True">..\Calendar Demo\_ui\btn_menu_0.png</upImage><MidX Type="13">45</MidX><MidY Type="13">246</MidY><Width Type="13">75</Width><Height Type="13">58</Height></CustomButton><CustomButton><Name Type="12">ClockButton</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><downImage Type="16" Editable="True">..\Calendar Demo\clock\clock_68x50.png</downImage><font Type="14" Editable="True">Bitstream Vera Sans, 12pt</font><fontColor Type="11" Editable="True">#000000</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><href Type="15" Editable="True">Fridge_clock.open()</href><onButtonPress Type="10" Editable="True">Alpha	Alpha	Custom	Depress</onButtonPress><upImage Type="16" Editable="True">..\Calendar Demo\clock\clock_68x50.png</upImage><cacheImage Type="2" Editable="True">False	True	False</cacheImage><alphaColor Type="11" Editable="True">#00000040</alphaColor><MidX Type="13">365</MidX><MidY Type="13">245</MidY><Width Type="13">74</Width><Height Type="13">56</Height></CustomButton><Image><Name Type="12">Home_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Home\Home.png</file><cacheImage Type="2" Editable="True">False	True	False</cacheImage><MidX Type="13">434</MidX><MidY Type="13">244</MidY><Width Type="13">56</Width><Height Type="13">56</Height></Image><TouchArea><Name Type="12">MyTouchArea_1</Name><onRelease Type="31" Editable="True">Menu.open()</onRelease><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><MidX Type="13">439</MidX><MidY Type="13">245</MidY><Width Type="13">89</Width><Height Type="13">62</Height></TouchArea><PWM><Name Type="12">pwm</Name><invisible Type="2" Editable="True">True	True	False</invisible><channel Type="10" Editable="True">0	0	1	2</channel><initialCondition Type="10" Editable="True">No Change	On	Off	No Change</initialCondition><periodIn_ms Type="20" Editable="True">1</periodIn_ms><pulseWidthIn_ms Type="20" Editable="True">0.001</pulseWidthIn_ms><MidX Type="13">549</MidX><MidY Type="13">350</MidY><Width Type="13">31</Width><Height Type="13">31</Height></PWM></BODY></PAGE><PAGE NAME="Fridge_settings"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS><FUNCTIONS charPos="26" foldedLines="">&lt;EMBED SRC="..\Calendar Demo\sleepCode.txt"&gt;</FUNCTIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">bg_header_cool</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><file Type="16" Editable="True">..\Calendar Demo\_ui\bg_cool.jpg</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image></BKGND><BODY><TouchArea><Name Type="12">AnyTouch</Name><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onPinch Type="31" Editable="True"/><onTouch Type="31" Editable="True">resetTimer() // resetTimer() is defined in calendar.macro</onTouch><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></TouchArea><CustomButton><Name Type="12">CustomButton</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><downImage Type="16" Editable="True">..\Calendar Demo\_ui\btn_close_1.png</downImage><href Type="15" Editable="True">Fridge_home.open()</href><upImage Type="16" Editable="True">..\Calendar Demo\_ui\btn_close_0.png</upImage><MidX Type="13">422</MidX><MidY Type="13">35</MidY><Width Type="13">108</Width><Height Type="13">58</Height></CustomButton><CustomButton><Name Type="12">Temps</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><downImage Type="16" Editable="True">..\Calendar Demo\settings\btn_temps_1.png</downImage><href Type="15" Editable="True">Fridge_set_temps.open()</href><upImage Type="16" Editable="True">..\Calendar Demo\settings\btn_temps_0.png</upImage><MidX Type="13">184</MidX><MidY Type="13">136</MidY><Width Type="13">118</Width><Height Type="13">146</Height></CustomButton><CustomButton><Name Type="12">Backlight</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><downImage Type="16" Editable="True">..\Calendar Demo\settings\btn_backlight_1.png</downImage><href Type="15" Editable="True">Fridge_set_backlight.open()</href><upImage Type="16" Editable="True">..\Calendar Demo\settings\btn_backlight_0.png</upImage><MidX Type="13">296</MidX><MidY Type="13">136</MidY><Width Type="13">118</Width><Height Type="13">147</Height></CustomButton></BODY></PAGE><PAGE NAME="Fridge_set_temps"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS><FUNCTIONS charPos="26" foldedLines="">&lt;EMBED SRC="..\Calendar Demo\sleepCode.txt"&gt;
-
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;
-IF=freezerTemp.value();
-GT=0;
-THEN=freezerTemp.dec();
-NAME=metaFreezerDec"&gt;
-
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;
-IF=freezerTemp.value();
-LT=40;
-THEN=freezerTemp.inc();
-NAME=metaFreezerInc"&gt;
-
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;
-IF=fridgeTemp.value();
-GT=0;
-THEN=fridgeTemp.dec();
-NAME=metaFridgeDec"&gt;
-
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;
-IF=fridgeTemp.value();
-LT=40;
-THEN=fridgeTemp.inc();
-NAME=metaFridgeInc"&gt;
-
-</FUNCTIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">bg_header_cool</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><file Type="16" Editable="True">..\Calendar Demo\_ui\bg_cool.jpg</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image></BKGND><BODY><TouchArea><Name Type="12">AnyTouch</Name><invisible Type="2" Editable="True">False	True	False</invisible><onRelease Type="31" Editable="True"/><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onTouch Type="31" Editable="True">resetTimer() // resetTimer() is defined in calendar.macro</onTouch><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></TouchArea><CustomButton><Name Type="12">CloseButton</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><downImage Type="16" Editable="True">..\Calendar Demo\_ui\btn_close_1.png</downImage><href Type="15" Editable="True">Fridge_home.open()</href><upImage Type="16" Editable="True">..\Calendar Demo\_ui\btn_close_0.png</upImage><MidX Type="13">422</MidX><MidY Type="13">35</MidY><Width Type="13">108</Width><Height Type="13">58</Height></CustomButton><CustomButton><Name Type="12">FreezeUpButton</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><downImage Type="16" Editable="True">..\Calendar Demo\temps\btn_up_1.png</downImage><href Type="15" Editable="True">Amulet:document.metaFreezerInc.forceUpdate(), 
-resetTimer() // resetTimer() is defined in calendar.macro</href><upImage Type="16" Editable="True">..\Calendar Demo\temps\btn_up_0.png</upImage><repeatDelay Type="20" Editable="True">0.5</repeatDelay><repeatRate Type="20" Editable="True">0.2</repeatRate><executeOn Type="10" Editable="True">Hit	Release	Hit	Both</executeOn><MidX Type="13">163</MidX><MidY Type="13">186</MidY><Width Type="13">108</Width><Height Type="13">58</Height></CustomButton><CustomButton><Name Type="12">FreezeDownButton</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><downImage Type="16" Editable="True">..\Calendar Demo\temps\btn_dn_1.png</downImage><href Type="15" Editable="True">Amulet:document.metaFreezerDec.forceUpdate(), 
-resetTimer() // resetTimer() is defined in calendar.macro</href><upImage Type="16" Editable="True">..\Calendar Demo\temps\btn_dn_0.png</upImage><repeatDelay Type="20" Editable="True">0.5</repeatDelay><repeatRate Type="20" Editable="True">0.2</repeatRate><executeOn Type="10" Editable="True">Hit	Release	Hit	Both</executeOn><MidX Type="13">163</MidX><MidY Type="13">240</MidY><Width Type="13">108</Width><Height Type="13">58</Height></CustomButton><CustomButton><Name Type="12">FridgeUpButton</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><downImage Type="16" Editable="True">..\Calendar Demo\temps\btn_up_1.png</downImage><href Type="15" Editable="True">Amulet:document.metaFridgeInc.forceUpdate(), 
-resetTimer() // resetTimer() is defined in calendar.macro</href><upImage Type="16" Editable="True">..\Calendar Demo\temps\btn_up_0.png</upImage><repeatDelay Type="20" Editable="True">0.5</repeatDelay><repeatRate Type="20" Editable="True">0.2</repeatRate><executeOn Type="10" Editable="True">Hit	Release	Hit	Both</executeOn><MidX Type="13">314</MidX><MidY Type="13">186</MidY><Width Type="13">108</Width><Height Type="13">58</Height></CustomButton><CustomButton><Name Type="12">FridgeDownButton</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><downImage Type="16" Editable="True">..\Calendar Demo\temps\btn_dn_1.png</downImage><href Type="15" Editable="True">Amulet:document.metaFridgeDec.forceUpdate(), 
-resetTimer() // resetTimer() is defined in calendar.macro</href><upImage Type="16" Editable="True">..\Calendar Demo\temps\btn_dn_0.png</upImage><repeatDelay Type="20" Editable="True">0.5</repeatDelay><repeatRate Type="20" Editable="True">0.2</repeatRate><executeOn Type="10" Editable="True">Hit	Release	Hit	Both</executeOn><MidX Type="13">314</MidX><MidY Type="13">240</MidY><Width Type="13">108</Width><Height Type="13">58</Height></CustomButton><Image><Name Type="12">img_recommended_f</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">..\Calendar Demo\temps\img_recommended_f.png</file><cacheImage Type="2" Editable="True">False	True	False</cacheImage><MidX Type="13">240</MidX><MidY Type="13">78</MidY><Width Type="13">255</Width><Height Type="13">33</Height></Image><Image><Name Type="12">img_temp_bg0</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">..\Calendar Demo\temps\img_temp_bg.png</file><cacheImage Type="2" Editable="True">False	True	False</cacheImage><MidX Type="13">163</MidX><MidY Type="13">128</MidY><Width Type="13">108</Width><Height Type="13">68</Height></Image><Image><Name Type="12">img_temp_bg1</Name><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">..\Calendar Demo\temps\img_temp_bg.png</file><MidX Type="13">314</MidX><MidY Type="13">128</MidY><Width Type="13">108</Width><Height Type="13">68</Height></Image><NumericField><Name Type="12">FreezerTemp</Name><invisible Type="2" Editable="True">False	True	False</invisible><border Type="13" Editable="True">0</border><borderColor Type="11" Editable="True">#00000000</borderColor><fillColor Type="11" Editable="True">#FFFFFF00</fillColor><font Type="14" Editable="True">Bitstream Vera Sans, 18pt</font><fontColor Type="11" Editable="True">#FFFFFF</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><horizontalAlign Type="10" Editable="True">Right	Center	Left	Right</horizontalAlign><href Type="24" Editable="True">freezerTemp.value()</href><min Type="13" Editable="True">0</min><max Type="13" Editable="True">40</max><minFld Type="12" Editable="True">-20</minFld><maxFld Type="12" Editable="True">20</maxFld><printf Type="12" Editable="True">%3i</printf><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><verticalAlign Type="10" Editable="True">Middle	Bottom	Middle	Top</verticalAlign><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">141</MidX><MidY Type="13">124</MidY><Width Type="13">65</Width><Height Type="13">52</Height></NumericField><NumericField><Name Type="12">RefrigeratorTemp</Name><invisible Type="2" Editable="True">False	True	False</invisible><border Type="13" Editable="True">0</border><borderColor Type="11" Editable="True">#00000000</borderColor><fillColor Type="11" Editable="True">#FFFFFF00</fillColor><font Type="14" Editable="True">Bitstream Vera Sans, 18pt</font><fontColor Type="11" Editable="True">#FFFFFF</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><horizontalAlign Type="10" Editable="True">Right	Center	Left	Right</horizontalAlign><href Type="24" Editable="True">fridgeTemp.value()</href><min Type="13" Editable="True">0</min><max Type="13" Editable="True">40</max><minFld Type="12" Editable="True">10</minFld><maxFld Type="12" Editable="True">50</maxFld><printf Type="12" Editable="True">%2i</printf><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><verticalAlign Type="10" Editable="True">Middle	Bottom	Middle	Top</verticalAlign><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">299</MidX><MidY Type="13">124</MidY><Width Type="13">65</Width><Height Type="13">52</Height></NumericField></BODY></PAGE><PAGE NAME="Fridge_set_backlight"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS><FUNCTIONS charPos="187" foldedLines="">/* Legend of Variables used on this page
-Word 0: 	Backlight On PWM value
-          10:	sleepTimer
-          11:    sleepTimeOut
-          12:    tempTimeOut
-*/
-
-&lt;EMBED SRC="..\Calendar Demo\sleepCode.txt"&gt;
-
-// Scale Timeout value to deciseconds 
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0, 0; 
-	          URL=sleepTimeOut.setValue(tempTimeOut); 
-	          NAME=UpdateTimeout"&gt;
-</FUNCTIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">bg_header_cool</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><file Type="16" Editable="True">..\Calendar Demo\_ui\bg_cool.jpg</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image></BKGND><BODY><TouchArea><Name Type="12">AnyTouch</Name><invisible Type="2" Editable="True">False	True	False</invisible><onRelease Type="31" Editable="True"/><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onTouch Type="31" Editable="True">resetTimer() // resetTimer() is defined in calendar.macro</onTouch><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></TouchArea><Image><Name Type="12">img_timeout</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">..\Calendar Demo\backlight\img_timeout.png</file><cacheImage Type="2" Editable="True">False	True	False</cacheImage><MidX Type="13">232</MidX><MidY Type="13">192</MidY><Width Type="13">447</Width><Height Type="13">77</Height></Image><Image><Name Type="12">img_brightness</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">..\Calendar Demo\backlight\img_brightness.png</file><cacheImage Type="2" Editable="True">False	True	False</cacheImage><MidX Type="13">247</MidX><MidY Type="13">101</MidY><Width Type="13">389</Width><Height Type="13">71</Height></Image><CustomButton><Name Type="12">CustomButton</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><downImage Type="16" Editable="True">..\Calendar Demo\_ui\btn_close_1.png</downImage><href Type="15" Editable="True">Amulet:document.UpdateTimeout.forceUpdate(),
-Fridge_home.open()</href><upImage Type="16" Editable="True">..\Calendar Demo\_ui\btn_close_0.png</upImage><MidX Type="13">422</MidX><MidY Type="13">35</MidY><Width Type="13">108</Width><Height Type="13">58</Height></CustomButton><CustomSlider><Name Type="12">Brightness</Name><invisible Type="2" Editable="True">False	True	False</invisible><channelImage Type="16" Editable="True">..\Calendar Demo\backlight\sld_base.png</channelImage><handleImage Type="16" Editable="True">..\Calendar Demo\backlight\sld_handle.png</handleImage><handleTrackingImage Type="16" Editable="True">..\Calendar Demo\backlight\sld_handle.png</handleTrackingImage><href Type="15" Editable="True">resetTimer(), // resetTimer() is defined in calendar.macro
-Amulet:lcdBacklight.setValue(intrinsicValue),
-Amulet:internalRAM.Word(0).setValue(intrinsicValue) 
-</href><hrefEvent Type="10" Editable="True">On Change	On Change	On Release</hrefEvent><initialCondition Type="12" Editable="True">fromInitHref</initialCondition><max Type="13" Editable="True">255</max><min Type="13" Editable="True">1</min><minAt Type="10" Editable="True">Left	Left	Right</minAt><initHref Type="24" Editable="True">brightness.value()</initHref><hrefOnHitOnly Type="2" Editable="True">False	True	False</hrefOnHitOnly><MidX Type="13">240</MidX><MidY Type="13">122</MidY><Width Type="13">326</Width><Height Type="13">66</Height></CustomSlider><CustomSlider><Name Type="12">Timeout</Name><invisible Type="2" Editable="True">False	True	False</invisible><channelImage Type="16" Editable="True">..\Calendar Demo\backlight\sld_base.png</channelImage><handleImage Type="16" Editable="True">..\Calendar Demo\backlight\sld_handle.png</handleImage><handleTrackingImage Type="16" Editable="True">..\Calendar Demo\backlight\sld_handle.png</handleTrackingImage><href Type="15" Editable="True">resetTimer(), // resetTimer() is defined in calendar.macro
-tempTimeOut.setValue(intrinsicValue)</href><hrefEvent Type="10" Editable="True">On Change	On Change	On Release</hrefEvent><initialCondition Type="12" Editable="True">fromInitHref</initialCondition><max Type="13" Editable="True">300</max><min Type="13" Editable="True">0</min><minAt Type="10" Editable="True">Left	Left	Right</minAt><initHref Type="24" Editable="True">sleepTimeOut.value()</initHref><MidX Type="13">240</MidX><MidY Type="13">212</MidY><Width Type="13">326</Width><Height Type="13">66</Height></CustomSlider><PWM><Name Type="12">MyPWM</Name><invisible Type="2" Editable="True">True	True	False</invisible><channel Type="10" Editable="True">0	0	1	2</channel><initialCondition Type="10" Editable="True">No Change	On	Off	No Change</initialCondition><periodIn_ms Type="20" Editable="True">1</periodIn_ms><pulseWidthIn_ms Type="20" Editable="True">0.999</pulseWidthIn_ms><MidX Type="13">511</MidX><MidY Type="13">303</MidY><Width Type="13">31</Width><Height Type="13">31</Height></PWM></BODY></PAGE><PAGE NAME="Fridge_clock"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS><FUNCTIONS charPos="26" foldedLines="">&lt;EMBED SRC="..\Calendar Demo\sleepCode.txt"&gt;
-
-//Following Meta blinks the colon once per second
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0.5; URL=Amulet:document.SecondTick.disappear();Amulet:document.SecondTick.reappear()"&gt;
-
-//Populate string with current month
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="1,0.01; IF=Amulet:calendar.month.value();
-EQ=1; THEN=dateString.setValue(' January '), Amulet:document.appendDate.forceUpdate();
-EQ=2; THEN=dateString.setValue(' February '), Amulet:document.appendDate.forceUpdate();
-EQ=3; THEN=dateString.setValue(' March '), Amulet:document.appendDate.forceUpdate();
-EQ=4; THEN=dateString.setValue(' April '), Amulet:document.appendDate.forceUpdate();
-EQ=5; THEN=dateString.setValue(' May '), Amulet:document.appendDate.forceUpdate();
-EQ=6; THEN=dateString.setValue(' June '), Amulet:document.appendDate.forceUpdate();
-EQ=7; THEN=dateString.setValue(' July '), Amulet:document.appendDate.forceUpdate();
-EQ=8; THEN=dateString.setValue(' August '), Amulet:document.appendDate.forceUpdate();
-EQ=9; THEN=dateString.setValue(' September '), Amulet:document.appendDate.forceUpdate();
-EQ=10; THEN=dateString.setValue(' October '), Amulet:document.appendDate.forceUpdate();
-EQ=11; THEN=dateString.setValue(' November '), Amulet:document.appendDate.forceUpdate();
-EQ=12; THEN=dateString.setValue(' December '), Amulet:document.appendDate.forceUpdate();"&gt;
-
-//Append Day to end of string
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:calendar.dayOfMonth.value();
-EQ=1;THEN=dateString.appendString('1st'); 
-EQ=2;THEN=dateString.appendString('2nd');
-EQ=3;THEN=dateString.appendString('3rd');
-EQ=4;THEN=dateString.appendString('4th');
-EQ=5;THEN=dateString.appendString('5th');
-EQ=6;THEN=dateString.appendString('6th');
-EQ=7;THEN=dateString.appendString('7th');
-EQ=8;THEN=dateString.appendString('8th');
-EQ=9;THEN=dateString.appendString('9th');
-EQ=10;THEN=dateString.appendString('10th');
-EQ=11;THEN=dateString.appendString('11th');
-EQ=12;THEN=dateString.appendString('12th');
-EQ=13;THEN=dateString.appendString('13th');
-EQ=14;THEN=dateString.appendString('14th');
-EQ=15;THEN=dateString.appendString('15th');
-EQ=16;THEN=dateString.appendString('16th');
-EQ=17;THEN=dateString.appendString('17th');
-EQ=18;THEN=dateString.appendString('18th');
-EQ=19;THEN=dateString.appendString('19th');
-EQ=20;THEN=dateString.appendString('20th');
-EQ=21;THEN=dateString.appendString('21st');
-EQ=22;THEN=dateString.appendString('22nd');
-EQ=23;THEN=dateString.appendString('23rd');
-EQ=24;THEN=dateString.appendString('24th');
-EQ=25;THEN=dateString.appendString('25th');
-EQ=26;THEN=dateString.appendString('26th');
-EQ=27;THEN=dateString.appendString('27th');
-EQ=28;THEN=dateString.appendString('28th');
-EQ=29;THEN=dateString.appendString('29th');
-EQ=30;THEN=dateString.appendString('30th');
-EQ=31;THEN=dateString.appendString('31st');
-ELSE=dateString.appendString('1st');
-NAME=appendDate"&gt;</FUNCTIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">bg_footer_cool_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><file Type="16" Editable="True">..\Calendar Demo\_ui\bg_footer_cool.png</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image></BKGND><BODY><TouchArea><Name Type="12">AnyTouch</Name><invisible Type="2" Editable="True">False	True	False</invisible><onRelease Type="31" Editable="True">resetTimer() // resetTimer() is defined in calendar.macro</onRelease><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></TouchArea><CustomButton><Name Type="12">Menu</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><downImage Type="16" Editable="True">..\Calendar Demo\_ui\btn_menu_1.png</downImage><href Type="15" Editable="True">Fridge_settings.open()</href><upImage Type="16" Editable="True">..\Calendar Demo\_ui\btn_menu_0.png</upImage><MidX Type="13">45</MidX><MidY Type="13">246</MidY><Width Type="13">75</Width><Height Type="13">58</Height></CustomButton><ImageSeq><Name Type="12">DispenserState</Name><invisible Type="2" Editable="True">False	True	False</invisible><href Type="24" Editable="True">Amulet:internalRAM.Byte(1).value()</href><max Type="13" Editable="True">3</max><min Type="13" Editable="True">1</min><sequence Type="21" Editable="True">..\Calendar Demo\clock\btn_water_small.png;..\Calendar Demo\clock\btn_crushed_small.png;..\Calendar Demo\clock\btn_cubed_small.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><cacheImage Type="2" Editable="True">False	True	False</cacheImage><MidX Type="13">433</MidX><MidY Type="13">245</MidY><Width Type="13">51</Width><Height Type="13">51</Height></ImageSeq><FunctionButton><Name Type="12">GotoDispenser</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Spring-Loaded	Toggle</buttonType><onButtonPress Type="10" Editable="True">Alpha	Alpha	Depress</onButtonPress><href Type="15" Editable="True">Fridge_home.open()</href><label Type="12" Editable="True"/><fillColor Type="11" Editable="True">#FFFFFF00</fillColor><borderColor Type="11" Editable="True">#00000000</borderColor><alphaColor Type="11" Editable="True">#00000040</alphaColor><MidX Type="13">435</MidX><MidY Type="13">245</MidY><Width Type="13">74</Width><Height Type="13">56</Height></FunctionButton><ImageSeq><Name Type="12">Hours10</Name><invisible Type="2" Editable="True">False	True	False</invisible><href Type="24" Editable="True">Amulet:calendar.militaryHour.value()</href><max Type="13" Editable="True">23</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">..\Calendar Demo\clock\1am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\1am.png;..\Calendar Demo\clock\1am.png;..\Calendar Demo\clock\1pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\1pm.png;..\Calendar Demo\clock\1pm.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">True</waitForInit><cacheImage Type="2" Editable="True">True	True	False</cacheImage><MidX Type="13">118</MidX><MidY Type="13">76</MidY><Width Type="13">86</Width><Height Type="13">126</Height></ImageSeq><ImageSeq><Name Type="12">Hours1</Name><invisible Type="2" Editable="True">False	True	False</invisible><href Type="24" Editable="True">Amulet:calendar.hour.value()</href><max Type="13" Editable="True">12</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">True</waitForInit><cacheImage Type="2" Editable="True">True	True	False</cacheImage><MidX Type="13">191</MidX><MidY Type="13">75</MidY><Width Type="13">86</Width><Height Type="13">126</Height></ImageSeq><ImageSeq><Name Type="12">Minutes10</Name><invisible Type="2" Editable="True">False	True	False</invisible><href Type="24" Editable="True">Amulet:calendar.minute.value()</href><max Type="13" Editable="True">59</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">True</waitForInit><cacheImage Type="2" Editable="True">True	True	False</cacheImage><MidX Type="13">294</MidX><MidY Type="13">75</MidY><Width Type="13">86</Width><Height Type="13">126</Height></ImageSeq><ImageSeq><Name Type="12">Minutes1</Name><invisible Type="2" Editable="True">False	True	False</invisible><href Type="24" Editable="True">Amulet:calendar.minute.value()</href><max Type="13" Editable="True">59</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">True	False	True</waitForInit><cacheImage Type="2" Editable="True">True	True	False</cacheImage><MidX Type="13">368</MidX><MidY Type="13">75</MidY><Width Type="13">86</Width><Height Type="13">126</Height></ImageSeq><StringField><Name Type="12">DayofWeek</Name><invisible Type="2" Editable="True">False	True	False</invisible><border Type="13" Editable="True">0</border><borderColor Type="11" Editable="True">#000000FF</borderColor><fillColor Type="11" Editable="True">#FFFFFF00</fillColor><font Type="14" Editable="True">Bitstream Vera Sans, 18pt</font><fontColor Type="11" Editable="True">#FFFFFF</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><horizontalAlign Type="10" Editable="True">Right	Center	Left	Right</horizontalAlign><href Type="24" Editable="True">Amulet:calendar.dayOfWeek.value()</href><printf Type="12" Editable="True">%s,</printf><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><verticalAlign Type="10" Editable="True">Top	Bottom	Middle	Top</verticalAlign><waitForInit Type="2" Editable="True">True</waitForInit><options Type="22" Editable="True">Sunday@VAL_SEP@1@OPT_SEP@Monday@VAL_SEP@2@OPT_SEP@Tuesday@VAL_SEP@3@OPT_SEP@Wednesday@VAL_SEP@4@OPT_SEP@Thursday@VAL_SEP@5@OPT_SEP@Friday@VAL_SEP@6@OPT_SEP@Saturday@VAL_SEP@7</options><MidX Type="13">136</MidX><MidY Type="13">153</MidY><Width Type="13">153</Width><Height Type="13">47</Height></StringField><StringField><Name Type="12">MonthAndDay</Name><invisible Type="2" Editable="True">False	True	False</invisible><border Type="13" Editable="True">0</border><borderColor Type="11" Editable="True">#000000FF</borderColor><fillColor Type="11" Editable="True">#FFFFFF00</fillColor><font Type="14" Editable="True">Bitstream Vera Sans, 18pt</font><fontColor Type="11" Editable="True">#FFFFFF</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><horizontalAlign Type="10" Editable="True">Left	Center	Left	Right</horizontalAlign><href Type="24" Editable="True">Amulet:internalRAM.String(0).value()</href><printf Type="12" Editable="True">%s</printf><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.05</updateDelay><verticalAlign Type="10" Editable="True">Top	Bottom	Middle	Top</verticalAlign><waitForInit Type="2" Editable="True">True</waitForInit><options Type="22" Editable="True">January@VAL_SEP@1@OPT_SEP@February@VAL_SEP@2@OPT_SEP@March@VAL_SEP@3@OPT_SEP@April@VAL_SEP@4@OPT_SEP@May@VAL_SEP@5@OPT_SEP@June@VAL_SEP@6@OPT_SEP@July@VAL_SEP@7@OPT_SEP@August@VAL_SEP@8@OPT_SEP@September@VAL_SEP@9@OPT_SEP@October@VAL_SEP@10@OPT_SEP@November@VAL_SEP@11@OPT_SEP@December@VAL_SEP@12</options><MidX Type="13">313</MidX><MidY Type="13">153</MidY><Width Type="13">213</Width><Height Type="13">47</Height></StringField><Image><Name Type="12">SecondTick</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">..\Calendar Demo\clock\colon.png</file><cacheImage Type="2" Editable="True">False	True	False</cacheImage><MidX Type="13">242</MidX><MidY Type="13">77</MidY><Width Type="13">36</Width><Height Type="13">76</Height></Image><CustomButton><Name Type="12">SetTime</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><downImage Type="16" Editable="True">..\Calendar Demo\clock\set_clock68x50.png</downImage><font Type="14" Editable="True">Bitstream Vera Sans, 12pt</font><fontColor Type="11" Editable="True">#000000</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><href Type="15" Editable="True">Fridge_set_clock.open()</href><onButtonPress Type="10" Editable="True">Alpha	Alpha	Custom	Depress</onButtonPress><upImage Type="16" Editable="True">..\Calendar Demo\clock\set_clock68x50.png</upImage><cacheImage Type="2" Editable="True">False	True	False</cacheImage><alphaColor Type="11" Editable="True">#00000040</alphaColor><MidX Type="13">364</MidX><MidY Type="13">246</MidY><Width Type="13">74</Width><Height Type="13">56</Height></CustomButton></BODY></PAGE><PAGE NAME="Fridge_set_clock"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS><FUNCTIONS charPos="3424" foldedLines="">&lt;EMBED SRC="..\Calendar Demo\sleepCode.txt"&gt;
-&lt;SCRIPT&gt;
-	new int tempMilHour
-	new int tempMinute
-	new int selection
-	#define TIMEFRAME_MINUTES	1
-	#define TIMEFRAME_HOURS	0
-	@load()
-	{
-		blinkCnt.setValue(0);
-		tempMilHour = calendar.militaryHour
-		tempMinute= calendar.minute
-		Amulet:document.Hours1.disappear()
-		Amulet:document.Hours10.disappear()
-		Amulet:document.Minutes1.disappear()
-		Amulet:document.Minutes10.disappear()
-		document.overhead_light_hours.disappear()
-		document.overhead_light_minutes.disappear()
-		Amulet:document.Hours1.setValue(tempMilHour)
-		Amulet:document.Hours10.setValue(tempMilHour)
-		Amulet:document.Hours1.reappear()
-		Amulet:document.Hours10.reappear()
-		Amulet:document.Minutes1.setValue(tempMinute)
-		Amulet:document.Minutes10.setValue(tempMinute)
-		Amulet:document.Minutes1.reappear()
-		Amulet:document.Minutes10.reappear()
-	}
-	public incHour()
-	{
-		Amulet:document.Hours1.disappear()
-		Amulet:document.Hours10.disappear()
-		document.overhead_light_hours.reappear()
-		tempMilHour++
-		if(tempMilHour &gt; 23)
-			tempMilHour = 0
-		Amulet:document.Hours1.setValue(tempMilHour)
-		Amulet:document.Hours10.setValue(tempMilHour)
-		Amulet:document.Hours1.reappear()
-		Amulet:document.Hours10.reappear()
-	}
-	public decHour()
-	{
-		Amulet:document.Hours1.disappear()
-		Amulet:document.Hours10.disappear()
-		document.overhead_light_hours.reappear()
-		tempMilHour--
-		if(tempMilHour &lt; 0)
-			tempMilHour = 23
-		Amulet:document.Hours1.setValue(tempMilHour)
-		Amulet:document.Hours10.setValue(tempMilHour)
-		Amulet:document.Hours1.reappear()
-		Amulet:document.Hours10.reappear()
-	}
-	public incMinute()
-	{
-		Amulet:document.Minutes1.disappear()
-		Amulet:document.Minutes10.disappear()
-		document.overhead_light_minutes.reappear()
-		tempMinute++
-		if(tempMinute &gt; 59)
-			tempMinute = 0
-		Amulet:document.Minutes1.setValue(tempMinute)
-		Amulet:document.Minutes10.setValue(tempMinute)
-		Amulet:document.Minutes1.reappear()
-		Amulet:document.Minutes10.reappear()
-	}
-	public decMinute()
-	{
-		Amulet:document.Minutes1.disappear()
-		Amulet:document.Minutes10.disappear()
-		document.overhead_light_minutes.reappear()
-		tempMinute--
-		if(tempMinute &lt; 0)
-			tempMinute = 59
-		Amulet:document.Minutes1.setValue(tempMinute)
-		Amulet:document.Minutes10.setValue(tempMinute)
-		Amulet:document.Minutes1.reappear()
-		Amulet:document.Minutes10.reappear()
-	}
-	public selectMinute()
-	{
-		selection = TIMEFRAME_MINUTES
-		document.overhead_light_minutes.reappear()
-		Amulet:document.Minutes1.reappear()
-		Amulet:document.Minutes10.reappear()
-		document.overhead_light_hours.disappear()
-		Amulet:document.Hours1.reappear()
-		Amulet:document.Hours10.reappear()
-	}
-	public selectHour()
-	{
-		selection = TIMEFRAME_HOURS
-		document.overhead_light_minutes.disappear()
-		Amulet:document.Minutes1.reappear()
-		Amulet:document.Minutes10.reappear()
-		document.overhead_light_hours.reappear()
-		Amulet:document.Hours1.reappear()
-		Amulet:document.Hours10.reappear()
-	}
-	public genericInc()
-	{
-		if(selection == TIMEFRAME_HOURS)
-			incHour
-		else
-			incMinute
-	}
-	public genericDec()
-	{
-		if(selection == TIMEFRAME_HOURS)
-			decHour
-		else
-			decMinute
-	}
-	//Save Fields then return
-	public Save()
-	{
-		calendar.hour.setValue(tempMilHour)
-		calendar.minute.setValue(tempMinute)
-		Fridge_clock.open()
-	}
-	public toDate()
-	{
-		calendar.hour.setValue(tempMilHour)
-		calendar.minute.setValue(tempMinute)
-		Fridge_set_date.open()
-	}
-		
-&lt;/SCRIPT&gt;
-</FUNCTIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">bg_footer_cool_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><file Type="16" Editable="True">..\Calendar Demo\_ui\bg_footer_cool.png</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image></BKGND><BODY><TouchArea><Name Type="12">MyTouchArea_1</Name><onRelease Type="31" Editable="True"></onRelease><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onJogForward Type="31" Editable="True">GEMscript.genericInc()</onJogForward><onJogBackward Type="31" Editable="True">GEMscript.genericDec()</onJogBackward><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></TouchArea><TouchArea><Name Type="12">MyTouchArea_3</Name><onRelease Type="31" Editable="True"></onRelease><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onJogForward Type="31" Editable="True">GEMscript.incMinute()</onJogForward><onJogBackward Type="31" Editable="True">GEMscript.decMinute()</onJogBackward><onTouch Type="31" Editable="True">GEMscript.selectMinute()</onTouch><MidX Type="13">332</MidX><MidY Type="13">116</MidY><Width Type="13">159</Width><Height Type="13">111</Height></TouchArea><TouchArea><Name Type="12">MyTouchArea_2</Name><onRelease Type="31" Editable="True"></onRelease><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onJogForward Type="31" Editable="True">GEMscript.incHour()</onJogForward><onJogBackward Type="31" Editable="True">GEMscript.decHour()</onJogBackward><onTouch Type="31" Editable="True">GEMscript.selectHour()</onTouch><MidX Type="13">156</MidX><MidY Type="13">115</MidY><Width Type="13">159</Width><Height Type="13">111</Height></TouchArea><Image><Name Type="12">SecondTick</Name><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">..\Calendar Demo\clock\colon.png</file><MidX Type="13">241</MidX><MidY Type="13">117</MidY><Width Type="13">36</Width><Height Type="13">76</Height></Image><Image><Name Type="12">overhead_light_minutes</Name><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">True	True	False</invisible><file Type="16" Editable="True">.Spotlights\spotWide.png</file><MidX Type="13">332</MidX><MidY Type="13">104</MidY><Width Type="13">181</Width><Height Type="13">214</Height></Image><Image><Name Type="12">overhead_light_hours</Name><invisible Type="2" Editable="True">True	True	False</invisible><file Type="16" Editable="True">.Spotlights\spotWide.png</file><cacheImage Type="2" Editable="True">False	True	False</cacheImage><MidX Type="13">151</MidX><MidY Type="13">104</MidY><Width Type="13">181</Width><Height Type="13">214</Height></Image><ImageSeq><Name Type="12">Hours10</Name><invisible Type="2" Editable="True">False	True	False</invisible><href Type="24" Editable="True"/><max Type="13" Editable="True">23</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">..\Calendar Demo\clock\1am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\1am.png;..\Calendar Demo\clock\1am.png;..\Calendar Demo\clock\1pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\1pm.png;..\Calendar Demo\clock\1pm.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">True</waitForInit><cacheImage Type="2" Editable="True">True	True	False</cacheImage><loadImmediately Type="2" Editable="True">False</loadImmediately><MidX Type="13">106</MidX><MidY Type="13">115</MidY><Width Type="13">86</Width><Height Type="13">126</Height></ImageSeq><ImageSeq><Name Type="12">Hours1</Name><invisible Type="2" Editable="True">False	True	False</invisible><href Type="24" Editable="True"/><max Type="13" Editable="True">23</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0.02</updateDelay><waitForInit Type="2" Editable="True">True</waitForInit><cacheImage Type="2" Editable="True">True	True	False</cacheImage><loadImmediately Type="2" Editable="True">False</loadImmediately><MidX Type="13">186</MidX><MidY Type="13">115</MidY><Width Type="13">86</Width><Height Type="13">126</Height></ImageSeq><ImageSeq><Name Type="12">Minutes10</Name><invisible Type="2" Editable="True">False	True	False</invisible><href Type="24" Editable="True"/><max Type="13" Editable="True">59</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0.02</updateDelay><waitForInit Type="2" Editable="True">True</waitForInit><cacheImage Type="2" Editable="True">True	True	False</cacheImage><MidX Type="13">296</MidX><MidY Type="13">115</MidY><Width Type="13">86</Width><Height Type="13">126</Height></ImageSeq><ImageSeq><Name Type="12">Minutes1</Name><invisible Type="2" Editable="True">False	True	False</invisible><href Type="24" Editable="True"/><max Type="13" Editable="True">59</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0.02</updateDelay><waitForInit Type="2" Editable="True">True</waitForInit><cacheImage Type="2" Editable="True">True	True	False</cacheImage><MidX Type="13">376</MidX><MidY Type="13">115</MidY><Width Type="13">86</Width><Height Type="13">126</Height></ImageSeq><CustomButton><Name Type="12">Ok</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><downImage Type="16" Editable="True">..\Calendar Demo\clock\Ok68x50.png</downImage><font Type="14" Editable="True">Bitstream Vera Sans, 12pt</font><fontColor Type="11" Editable="True">#000000</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><href Type="15" Editable="True">GEMscript.save()</href><onButtonPress Type="10" Editable="True">Alpha	Alpha	Custom	Depress</onButtonPress><upImage Type="16" Editable="True">..\Calendar Demo\clock\Ok68x50.png</upImage><cacheImage Type="2" Editable="True">False	True	False</cacheImage><alphaColor Type="11" Editable="True">#00000040</alphaColor><MidX Type="13">434</MidX><MidY Type="13">247</MidY><Width Type="13">74</Width><Height Type="13">56</Height></CustomButton><CustomButton><Name Type="12">CustomButton_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><cacheImage Type="2" Editable="True">False	True	False</cacheImage><downImage Type="16" Editable="True">..\Calendar Demo\clock\SetDate.png</downImage><font Type="14" Editable="True">Bitstream Vera Sans,  12pt</font><fontColor Type="11" Editable="True">#000000</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><href Type="15" Editable="True">GEMscript.toDate()</href><onButtonPress Type="10" Editable="True">Alpha	Alpha	Custom	Depress</onButtonPress><upImage Type="16" Editable="True">..\Calendar Demo\clock\SetDate.png</upImage><alphaColor Type="11" Editable="True">#00000040</alphaColor><MidX Type="13">363</MidX><MidY Type="13">247</MidY><Width Type="13">74</Width><Height Type="13">56</Height></CustomButton></BODY></PAGE><INTERNALRAM_INIT>..\Calendar Demo\fridge.ini</INTERNALRAM_INIT><PAGE NAME="Fridge_set_date"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS><FUNCTIONS charPos="2151" foldedLines="">&lt;EMBED SRC="..\Calendar Demo\sleepCode.txt"&gt;
-
-//Reset field index to zero upon page load
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0,0.01; URL=blinkCnt.setValue(2);&gt;
-	
-//Copy the calendar values into RAM to manipulate
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0,0.01; URL=tmpMonth.setValue(calendar.month)"&gt;
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0,0.01; URL=tmpDayOfMonth.setValue(calendar.dayOfMonth)"&gt;
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0,0.01; URL=tmpDayOfWeek.setValue(calendar.dayOfWeek)"&gt;
-
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;
-URL=Amulet:document.DayofWeek.disappear(),
-Amulet:document.Month.disappear(),
-Amulet:document.Date.disappear(),
-Amulet:document.overhead_light_Date.disappear(),
-Amulet:document.overhead_light_Month.disappear(),
-Amulet:document.overhead_light_Day.disappear(),
-Amulet:document.metaSetAppropriateLights.forceUpdate();
-NAME=metaDisappearLights"&gt; 
-
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;IF=blinkCnt.value();
-EQ=2;THEN=Amulet:document.overhead_light_Day.reappear(),Amulet:document.ReappearAll.forceUpdate();
-EQ=3;THEN=Amulet:document.overhead_light_Month.reappear(),Amulet:document.ReappearAll.forceUpdate();
-EQ=4;THEN=Amulet:document.overhead_light_Date.reappear(),Amulet:document.ReappearAll.forceUpdate();
-NAME=metaSetAppropriateLights"&gt; 
-
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;
-	URL=Amulet:document.DayofWeek.setY(83),Amulet:document.DayofWeek.reappear(),
-	Amulet:document.Month.setY(83),Amulet:document.Month.reappear(),
-	Amulet:document.Date.setY(85),Amulet:document.Date.reappear();
-NAME=ReappearAll"&gt;
-
-
-
-//Increment current field 
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;IF=blinkCnt.value();
-EQ=2; THEN=Amulet:document.IncDay.forceUpdate();
-EQ=3; THEN=Amulet:document.IncMonth.forceUpdate();
-EQ=4; THEN=Amulet:document.IncDate.forceUpdate();
-NAME=metaInc"&gt;
-
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;IF=tmpDayOfWeek.value(); EQ=7; 
-THEN=tmpDayOfWeek.setValue(1); ELSE=tmpDayOfWeek.add(1);NAME=IncDay"&gt;
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;IF=tmpMonth.value(); EQ=12; 
-THEN=tmpMonth.setValue(1); ELSE=tmpMonth.add(1);NAME=IncMonth"&gt;
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;IF=tmpDayOfMonth.value(); EQ=31;
-THEN=tmpDayOfMonth.setValue(1); ELSE=tmpDayOfMonth.add(1);NAME=IncDate"&gt;
-
-//Decrement current field 
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;IF=blinkCnt.value();
-EQ=2; THEN=Amulet:document.DecDay.forceUpdate();
-EQ=3; THEN=Amulet:document.DecMonth.forceUpdate();
-EQ=4; THEN=Amulet:document.DecDate.forceUpdate();
-NAME=metaDec"&gt;
-
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;IF=tmpDayOfWeek.value(); EQ=1; 
-THEN=tmpDayOfWeek.setValue(7); ELSE=tmpDayOfWeek.sub(1);NAME=DecDay"&gt;
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;IF=tmpMonth.value(); EQ=1; 
-THEN=tmpMonth.setValue(12); ELSE=tmpMonth.sub(1);NAME=DecMonth"&gt;
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;IF=tmpDayOfMonth.value(); EQ=1;
-THEN=tmpDayOfMonth.setValue(31); ELSE=tmpDayOfMonth.sub(1);NAME=DecDate"&gt;
-
-//Save Fields then return
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;
-	URL=Amulet:calendar.month.setValue(tmpMonth),
-	Amulet:calendar.dayOfMonth.setValue(tmpDayOfMonth),
-	Amulet:calendar.dayOfWeek.setValue(tmpDayOfWeek),
-	Fridge_clock.open();
-NAME=SaveFields"&gt;
-
-//Save Fields then return
-&lt;META HTTP-EQUIV="REFRESH" CONTENT="0;
-	URL=Amulet:calendar.month.setValue(tmpMonth),
-	Amulet:calendar.dayOfMonth.setValue(tmpDayOfMonth),
-	Amulet:calendar.dayOfWeek.setValue(tmpDayOfWeek),
-	Fridge_set_clock.open();
-NAME=ToTime"&gt;</FUNCTIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">bg_footer_cool_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><file Type="16" Editable="True">..\Calendar Demo\_ui\bg_footer_cool.png</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image></BKGND><BODY><Image><Name Type="12">overhead_light_Day</Name><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">True	True	False</invisible><file Type="16" Editable="True">.Spotlights\spot.png</file><MidX Type="13">101</MidX><MidY Type="13">104</MidY><Width Type="13">144</Width><Height Type="13">214</Height></Image><Image><Name Type="12">overhead_light_Month</Name><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">True	True	False</invisible><file Type="16" Editable="True">.Spotlights\spot.png</file><MidX Type="13">251</MidX><MidY Type="13">104</MidY><Width Type="13">144</Width><Height Type="13">214</Height></Image><Image><Name Type="12">overhead_light_Date</Name><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">True	True	False</invisible><file Type="16" Editable="True">.Spotlights\spot.png</file><MidX Type="13">392</MidX><MidY Type="13">104</MidY><Width Type="13">144</Width><Height Type="13">214</Height></Image><TouchArea><Name Type="12">MyTouchArea_1</Name><onRelease Type="31" Editable="True"/><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onJogForward Type="31" Editable="True">Amulet:document.metaInc.forceUpdate()</onJogForward><onJogBackward Type="31" Editable="True">Amulet:document.metaDec.forceUpdate()</onJogBackward><MidX Type="13">238</MidX><MidY Type="13">134</MidY><Width Type="13">483</Width><Height Type="13">274</Height></TouchArea><StringField><Name Type="12">DayofWeek</Name><invisible Type="2" Editable="True">False	True	False</invisible><border Type="13" Editable="True">0</border><borderColor Type="11" Editable="True">#000000FF</borderColor><fillColor Type="11" Editable="True">#FFFFFF00</fillColor><font Type="14" Editable="True">Bitstream Vera Sans, 18pt</font><fontColor Type="11" Editable="True">#FFFFFF</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><horizontalAlign Type="10" Editable="True">Right	Center	Left	Right</horizontalAlign><href Type="24" Editable="True">tmpDayOfWeek.value()</href><printf Type="12" Editable="True">%s,</printf><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.02</updateDelay><verticalAlign Type="10" Editable="True">Top	Bottom	Middle	Top</verticalAlign><waitForInit Type="2" Editable="True">True</waitForInit><options Type="22" Editable="True">Sunday@VAL_SEP@1@OPT_SEP@Monday@VAL_SEP@2@OPT_SEP@Tuesday@VAL_SEP@3@OPT_SEP@Wednesday@VAL_SEP@4@OPT_SEP@Thursday@VAL_SEP@5@OPT_SEP@Friday@VAL_SEP@6@OPT_SEP@Saturday@VAL_SEP@7</options><MidX Type="13">86</MidX><MidY Type="13">100</MidY><Width Type="13">153</Width><Height Type="13">41</Height></StringField><StringField><Name Type="12">Month</Name><invisible Type="2" Editable="True">False	True	False</invisible><border Type="13" Editable="True">0</border><borderColor Type="11" Editable="True">#000000FF</borderColor><fillColor Type="11" Editable="True">#FFFFFF00</fillColor><font Type="14" Editable="True">Bitstream Vera Sans, 18pt</font><fontColor Type="11" Editable="True">#FFFFFF</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><horizontalAlign Type="10" Editable="True">Center	Center	Left	Right</horizontalAlign><href Type="24" Editable="True">tmpMonth.value()</href><printf Type="12" Editable="True">%s</printf><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.02</updateDelay><verticalAlign Type="10" Editable="True">Top	Bottom	Middle	Top</verticalAlign><waitForInit Type="2" Editable="True">True</waitForInit><options Type="22" Editable="True">January@VAL_SEP@1@OPT_SEP@February@VAL_SEP@2@OPT_SEP@March@VAL_SEP@3@OPT_SEP@April@VAL_SEP@4@OPT_SEP@May@VAL_SEP@5@OPT_SEP@June@VAL_SEP@6@OPT_SEP@July@VAL_SEP@7@OPT_SEP@August@VAL_SEP@8@OPT_SEP@September@VAL_SEP@9@OPT_SEP@October@VAL_SEP@10@OPT_SEP@November@VAL_SEP@11@OPT_SEP@December@VAL_SEP@12@OPT_SEP@January@VAL_SEP@0</options><MidX Type="13">248</MidX><MidY Type="13">100</MidY><Width Type="13">162</Width><Height Type="13">41</Height></StringField><NumericField><Name Type="12">Date</Name><invisible Type="2" Editable="True">False	True	False</invisible><border Type="13" Editable="True">0</border><borderColor Type="11" Editable="True">#000000FF</borderColor><fillColor Type="11" Editable="True">#FFFFFF00</fillColor><font Type="14" Editable="True">Bitstream Vera Sans, 18pt</font><fontColor Type="11" Editable="True">#FFFFFF</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><horizontalAlign Type="10" Editable="True">Left	Center	Left	Right</horizontalAlign><href Type="24" Editable="True">tmpDayOfMonth.value()</href><min Type="13" Editable="True">1</min><max Type="13" Editable="True">31</max><minFld Type="12" Editable="True">1</minFld><maxFld Type="12" Editable="True">31</maxFld><printf Type="12" Editable="True">%2i</printf><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><verticalAlign Type="10" Editable="True">Middle	Bottom	Middle	Top</verticalAlign><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">395</MidX><MidY Type="13">97</MidY><Width Type="13">70</Width><Height Type="13">30</Height></NumericField><CustomButton><Name Type="12">Ok</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><downImage Type="16" Editable="True">..\Calendar Demo\clock\Ok68x50.png</downImage><font Type="14" Editable="True">Bitstream Vera Sans, 12pt</font><fontColor Type="11" Editable="True">#000000</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><href Type="15" Editable="True">resetTimer(), // resetTimer() is defined in calendar.macro
-Amulet:document.SaveFields.forceUpdate()</href><onButtonPress Type="10" Editable="True">Alpha	Alpha	Custom	Depress</onButtonPress><upImage Type="16" Editable="True">..\Calendar Demo\clock\Ok68x50.png</upImage><cacheImage Type="2" Editable="True">False	True	False</cacheImage><alphaColor Type="11" Editable="True">#00000040</alphaColor><MidX Type="13">434</MidX><MidY Type="13">247</MidY><Width Type="13">74</Width><Height Type="13">56</Height></CustomButton><TouchArea><Name Type="12">MyTouchArea_4</Name><onRelease Type="31" Editable="True"/><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onJogForward Type="31" Editable="True">Amulet:document.metaInc.forceUpdate()</onJogForward><onJogBackward Type="31" Editable="True">Amulet:document.metaDec.forceUpdate()</onJogBackward><onTouch Type="31" Editable="True">blinkCnt.setValue(2),Amulet:document.metaDisappearLights.forceUpdate()</onTouch><MidX Type="13">98</MidX><MidY Type="13">101</MidY><Width Type="13">148</Width><Height Type="13">93</Height></TouchArea><TouchArea><Name Type="12">MyTouchArea_5</Name><onRelease Type="31" Editable="True"/><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onJogForward Type="31" Editable="True">Amulet:document.metaInc.forceUpdate()</onJogForward><onJogBackward Type="31" Editable="True">Amulet:document.metaDec.forceUpdate()</onJogBackward><onTouch Type="31" Editable="True">blinkCnt.setValue(3),Amulet:document.metaDisappearLights.forceUpdate()</onTouch><MidX Type="13">259</MidX><MidY Type="13">104</MidY><Width Type="13">146</Width><Height Type="13">98</Height></TouchArea><TouchArea><Name Type="12">MyTouchArea_6</Name><onRelease Type="31" Editable="True"/><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onJogForward Type="31" Editable="True">Amulet:document.metaInc.forceUpdate()</onJogForward><onJogBackward Type="31" Editable="True">Amulet:document.metaDec.forceUpdate()</onJogBackward><onTouch Type="31" Editable="True">blinkCnt.setValue(4),Amulet:document.metaDisappearLights.forceUpdate()</onTouch><MidX Type="13">400</MidX><MidY Type="13">102</MidY><Width Type="13">128</Width><Height Type="13">96</Height></TouchArea><CustomButton><Name Type="12">CustomButton_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><cacheImage Type="2" Editable="True">False	True	False</cacheImage><downImage Type="16" Editable="True">..\Calendar Demo\clock\SetTime.png</downImage><font Type="14" Editable="True">Bitstream Vera Sans, 12pt</font><fontColor Type="11" Editable="True">#000000</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><href Type="15" Editable="True">Amulet:document.ToTime.forceUpdate()</href><onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress><upImage Type="16" Editable="True">..\Calendar Demo\clock\SetTime.png</upImage><MidX Type="13">363</MidX><MidY Type="13">247</MidY><Width Type="13">74</Width><Height Type="13">56</Height></CustomButton></BODY></PAGE><PAGE NAME="Thermostat_home"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS><FUNCTIONS charPos="621" foldedLines="">&lt;meta http-equiv="Refresh" content="0;
-url=Amulet:document.pwm.setPulseWidth(0.9);
-Amulet:document.pwm.setPulseWidth(0.8);
-Amulet:document.pwm.setPulseWidth(0.7);
-Amulet:document.pwm.setPulseWidth(0.6);
-Amulet:document.pwm.setPulseWidth(0.5);
-Amulet:document.pwm.setPulseWidth(0.4);
-Amulet:document.pwm.setPulseWidth(0.3);
-Amulet:document.pwm.setPulseWidth(0.2);
-Amulet:document.pwm.setPulseWidth(0.1);
-Amulet:document.pwm.setPulseWidth(0.07);
-Amulet:document.pwm.setPulseWidth(0.04);
-Amulet:document.pwm.setPulseWidth(0.02);
-Amulet:document.pwm.setPeriod(10),
-Amulet:document.pwm.setPulseWidth(0.01),
-Thermostat_settings.open();
-name=ToClockSet"&gt;
-
-&lt;meta http-equiv="Refresh" content="0.02;
-url=Amulet:document.pwm.setPeriod(1),
-Amulet:document.pwm.setPulseWidth(0.02);
-Amulet:document.pwm.setPulseWidth(0.04);
-Amulet:document.pwm.setPulseWidth(0.07);
-Amulet:document.pwm.setPulseWidth(0.1);
-Amulet:document.pwm.setPulseWidth(0.2);
-Amulet:document.pwm.setPulseWidth(0.3);
-Amulet:document.pwm.setPulseWidth(0.4);
-Amulet:document.pwm.setPulseWidth(0.5),
-Amulet:document.pwm.setPulseWidth(0.6);
-Amulet:document.pwm.setPulseWidth(0.7);
-Amulet:document.pwm.setPulseWidth(0.8);
-Amulet:document.pwm.setPulseWidth(0.9);
-Amulet:document.pwm.setPulseWidth(0.999),
-Amulet:document.pwmMeta.setUpdateRate(0);
-name=pwmMeta"&gt;</FUNCTIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">Background</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><file Type="16" Editable="True">.Thermostat\Background.jpg</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image></BKGND><BODY><Image><Name Type="12">HomepageLines_1</Name><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Thermostat\HomepageLines.png</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image><CustomButton><Name Type="12">Up</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><upImage Type="16" Editable="True">.Thermostat\arrow_up.png</upImage><downImage Type="16" Editable="True">.Thermostat\arrow_up_glow.png</downImage><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="15" Editable="True">Amulet:internalRAM.byte(0).inc(),
-Amulet:document.TempTens.forceUpdate(),
-Amulet:document.TempOnes.forceUpdate()</href><onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress><repeatDelay Type="20" Editable="True">0.5</repeatDelay><repeatRate Type="20" Editable="True">0.5</repeatRate><executeOn Type="10" Editable="True">Hit	Release	Hit	Both</executeOn><MidX Type="13">228</MidX><MidY Type="13">196</MidY><Width Type="13">114</Width><Height Type="13">128</Height></CustomButton><CustomButton><Name Type="12">Down</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><upImage Type="16" Editable="True">.Thermostat\arrow_down.png</upImage><downImage Type="16" Editable="True">.Thermostat\arrow_down_glow.png</downImage><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="15" Editable="True">Amulet:internalRAM.byte(0).dec(),
-Amulet:document.TempTens.forceUpdate(),
-Amulet:document.TempOnes.forceUpdate()</href><onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress><repeatDelay Type="20" Editable="True">0.5</repeatDelay><repeatRate Type="20" Editable="True">0.5</repeatRate><executeOn Type="10" Editable="True">Hit	Release	Hit	Both</executeOn><MidX Type="13">323</MidX><MidY Type="13">196</MidY><Width Type="13">114</Width><Height Type="13">128</Height></CustomButton><Image><Name Type="12">Home</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><file Type="16" Editable="True">.Thermostat\Home2.png</file><MidX Type="13">427</MidX><MidY Type="13">194</MidY><Width Type="13">96</Width><Height Type="13">96</Height></Image><Image><Name Type="12">DegreeBig_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><file Type="16" Editable="True">.Thermostat\numerals_font_eurostile\DegreeBig.png</file><MidX Type="13">279</MidX><MidY Type="13">29</MidY><Width Type="13">34</Width><Height Type="13">35</Height></Image><TouchArea><Name Type="12">HomeTouch</Name><onRelease Type="31" Editable="True">Menu.open()</onRelease><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><MidX Type="13">430</MidX><MidY Type="13">201</MidY><Width Type="13">107</Width><Height Type="13">149</Height></TouchArea><ImageSeq><Name Type="12">Day1_Weather</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:math.randomByte.value()</href><max Type="13" Editable="True">255</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Thermostat\Weather\Sun.png;.Thermostat\Weather\Cloud.png;.Thermostat\Weather\CloudSun.png;.Thermostat\Weather\Rain.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">116</MidX><MidY Type="13">38</MidY><Width Type="13">61</Width><Height Type="13">53</Height></ImageSeq><ImageSeq><Name Type="12">Day2_Weather</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:math.randomByte.value()</href><max Type="13" Editable="True">255</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Thermostat\Weather\Sun.png;.Thermostat\Weather\Cloud.png;.Thermostat\Weather\CloudSun.png;.Thermostat\Weather\Rain.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">116</MidX><MidY Type="13">86</MidY><Width Type="13">61</Width><Height Type="13">53</Height></ImageSeq><ImageSeq><Name Type="12">Day3_Weather</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:math.randomByte.value()</href><max Type="13" Editable="True">255</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Thermostat\Weather\Sun.png;.Thermostat\Weather\Cloud.png;.Thermostat\Weather\CloudSun.png;.Thermostat\Weather\Rain.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">116</MidX><MidY Type="13">135</MidY><Width Type="13">61</Width><Height Type="13">53</Height></ImageSeq><ImageSeq><Name Type="12">Day4_Weather</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:math.randomByte.value()</href><max Type="13" Editable="True">255</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Thermostat\Weather\Sun.png;.Thermostat\Weather\Cloud.png;.Thermostat\Weather\CloudSun.png;.Thermostat\Weather\Rain.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">116</MidX><MidY Type="13">183</MidY><Width Type="13">61</Width><Height Type="13">53</Height></ImageSeq><ImageSeq><Name Type="12">Day5_Weather</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:math.randomByte.value()</href><max Type="13" Editable="True">255</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Thermostat\Weather\Sun.png;.Thermostat\Weather\Cloud.png;.Thermostat\Weather\CloudSun.png;.Thermostat\Weather\Rain.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">116</MidX><MidY Type="13">232</MidY><Width Type="13">61</Width><Height Type="13">53</Height></ImageSeq><ImageSeq><Name Type="12">TempOnes</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:internalRAM.byte(0).value()</href><max Type="13" Editable="True">99</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png;.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png;.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png;.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png;.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png;.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png;.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png;.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png;.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png;.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png;</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">244</MidX><MidY Type="13">46</MidY><Width Type="13">60</Width><Height Type="13">69</Height></ImageSeq><ImageSeq><Name Type="12">TempTens</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:internalRAM.byte(0).value()</href><max Type="13" Editable="True">99</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">194</MidX><MidY Type="13">46</MidY><Width Type="13">60</Width><Height Type="13">69</Height></ImageSeq><ImageSeq><Name Type="12">Day1_Ones</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:math.randomByte.maskedValue(0x07)</href><max Type="13" Editable="True">15</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png;.Thermostat\numerals_font_eurostile\6_forecast.png;.Thermostat\numerals_font_eurostile\7_forecast.png;.Thermostat\numerals_font_eurostile\8_forecast.png;.Thermostat\numerals_font_eurostile\9_forecast.png;.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">76</MidX><MidY Type="13">38</MidY><Width Type="13">17</Width><Height Type="13">19</Height></ImageSeq><ImageSeq><Name Type="12">Day1_Tens</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:math.randomByte.value()</href><max Type="13" Editable="True">255</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png;.Thermostat\numerals_font_eurostile\6_forecast.png;.Thermostat\numerals_font_eurostile\7_forecast.png;.Thermostat\numerals_font_eurostile\8_forecast.png;.Thermostat\numerals_font_eurostile\9_forecast.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">64</MidX><MidY Type="13">38</MidY><Width Type="13">17</Width><Height Type="13">19</Height></ImageSeq><ImageSeq><Name Type="12">Day2_Ones</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:math.randomByte.maskedValue(0x07)</href><max Type="13" Editable="True">15</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png;.Thermostat\numerals_font_eurostile\6_forecast.png;.Thermostat\numerals_font_eurostile\7_forecast.png;.Thermostat\numerals_font_eurostile\8_forecast.png;.Thermostat\numerals_font_eurostile\9_forecast.png;.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">76</MidX><MidY Type="13">86</MidY><Width Type="13">17</Width><Height Type="13">19</Height></ImageSeq><ImageSeq><Name Type="12">Day2_Tens</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:math.randomByte.value()</href><max Type="13" Editable="True">255</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png;.Thermostat\numerals_font_eurostile\6_forecast.png;.Thermostat\numerals_font_eurostile\7_forecast.png;.Thermostat\numerals_font_eurostile\8_forecast.png;.Thermostat\numerals_font_eurostile\9_forecast.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">64</MidX><MidY Type="13">86</MidY><Width Type="13">17</Width><Height Type="13">19</Height></ImageSeq><ImageSeq><Name Type="12">Day3_Ones</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:math.randomByte.maskedValue(0x07)</href><max Type="13" Editable="True">15</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png;.Thermostat\numerals_font_eurostile\6_forecast.png;.Thermostat\numerals_font_eurostile\7_forecast.png;.Thermostat\numerals_font_eurostile\8_forecast.png;.Thermostat\numerals_font_eurostile\9_forecast.png;.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">76</MidX><MidY Type="13">136</MidY><Width Type="13">17</Width><Height Type="13">19</Height></ImageSeq><ImageSeq><Name Type="12">Day3_Tens</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:math.randomByte.value()</href><max Type="13" Editable="True">255</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png;.Thermostat\numerals_font_eurostile\6_forecast.png;.Thermostat\numerals_font_eurostile\7_forecast.png;.Thermostat\numerals_font_eurostile\8_forecast.png;.Thermostat\numerals_font_eurostile\9_forecast.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">65</MidX><MidY Type="13">136</MidY><Width Type="13">17</Width><Height Type="13">19</Height></ImageSeq><ImageSeq><Name Type="12">Day4_Ones</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:math.randomByte.maskedValue(0x07)</href><max Type="13" Editable="True">15</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png;.Thermostat\numerals_font_eurostile\6_forecast.png;.Thermostat\numerals_font_eurostile\7_forecast.png;.Thermostat\numerals_font_eurostile\8_forecast.png;.Thermostat\numerals_font_eurostile\9_forecast.png;.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">76</MidX><MidY Type="13">185</MidY><Width Type="13">17</Width><Height Type="13">19</Height></ImageSeq><ImageSeq><Name Type="12">Day4_Tens</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:math.randomByte.value()</href><max Type="13" Editable="True">255</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png;.Thermostat\numerals_font_eurostile\6_forecast.png;.Thermostat\numerals_font_eurostile\7_forecast.png;.Thermostat\numerals_font_eurostile\8_forecast.png;.Thermostat\numerals_font_eurostile\9_forecast.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">65</MidX><MidY Type="13">185</MidY><Width Type="13">17</Width><Height Type="13">19</Height></ImageSeq><ImageSeq><Name Type="12">Day5_Ones</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:math.randomByte.maskedValue(0x07)</href><max Type="13" Editable="True">15</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png;.Thermostat\numerals_font_eurostile\6_forecast.png;.Thermostat\numerals_font_eurostile\7_forecast.png;.Thermostat\numerals_font_eurostile\8_forecast.png;.Thermostat\numerals_font_eurostile\9_forecast.png;.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">76</MidX><MidY Type="13">233</MidY><Width Type="13">17</Width><Height Type="13">19</Height></ImageSeq><ImageSeq><Name Type="12">Day5_Tens</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:math.randomByte.value()</href><max Type="13" Editable="True">255</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png;.Thermostat\numerals_font_eurostile\6_forecast.png;.Thermostat\numerals_font_eurostile\7_forecast.png;.Thermostat\numerals_font_eurostile\8_forecast.png;.Thermostat\numerals_font_eurostile\9_forecast.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">65</MidX><MidY Type="13">233</MidY><Width Type="13">17</Width><Height Type="13">19</Height></ImageSeq><ImageSeq><Name Type="12">HourTens</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:calendar.Hour.value()</href><max Type="13" Editable="True">12</max><min Type="13" Editable="True">1</min><sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\EMPTY_time.png;.Thermostat\numerals_font_eurostile\EMPTY_time.png;.Thermostat\numerals_font_eurostile\EMPTY_time.png;.Thermostat\numerals_font_eurostile\EMPTY_time.png;.Thermostat\numerals_font_eurostile\EMPTY_time.png;.Thermostat\numerals_font_eurostile\EMPTY_time.png;.Thermostat\numerals_font_eurostile\EMPTY_time.png;.Thermostat\numerals_font_eurostile\EMPTY_time.png;.Thermostat\numerals_font_eurostile\EMPTY_time.png;.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\one_time.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">313</MidX><MidY Type="13">37</MidY><Width Type="13">33</Width><Height Type="13">38</Height></ImageSeq><ImageSeq><Name Type="12">HourOnes</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:calendar.Hour.value()</href><max Type="13" Editable="True">12</max><min Type="13" Editable="True">1</min><sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\two_time.png;.Thermostat\numerals_font_eurostile\three_time.png;.Thermostat\numerals_font_eurostile\four_time.png;.Thermostat\numerals_font_eurostile\five_time.png;.Thermostat\numerals_font_eurostile\six_time.png;.Thermostat\numerals_font_eurostile\seven_time.png;.Thermostat\numerals_font_eurostile\eight_time.png;.Thermostat\numerals_font_eurostile\nine_time.png;.Thermostat\numerals_font_eurostile\zero_time.png;.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\two_time.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">337</MidX><MidY Type="13">37</MidY><Width Type="13">33</Width><Height Type="13">38</Height></ImageSeq><ImageSeq><Name Type="12">MinTens</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:calendar.minute.value()</href><max Type="13" Editable="True">59</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\zero_time.png;.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\two_time.png;.Thermostat\numerals_font_eurostile\three_time.png;.Thermostat\numerals_font_eurostile\four_time.png;.Thermostat\numerals_font_eurostile\five_time.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">371</MidX><MidY Type="13">37</MidY><Width Type="13">33</Width><Height Type="13">38</Height></ImageSeq><ImageSeq><Name Type="12">MinOnes</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:calendar.minute.value()</href><max Type="13" Editable="True">59</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\zero_time.png;.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\two_time.png;.Thermostat\numerals_font_eurostile\three_time.png;.Thermostat\numerals_font_eurostile\four_time.png;.Thermostat\numerals_font_eurostile\five_time.png;.Thermostat\numerals_font_eurostile\six_time.png;.Thermostat\numerals_font_eurostile\seven_time.png;.Thermostat\numerals_font_eurostile\eight_time.png;.Thermostat\numerals_font_eurostile\nine_time.png;.Thermostat\numerals_font_eurostile\zero_time.png;.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\two_time.png;.Thermostat\numerals_font_eurostile\three_time.png;.Thermostat\numerals_font_eurostile\four_time.png;.Thermostat\numerals_font_eurostile\five_time.png;.Thermostat\numerals_font_eurostile\six_time.png;.Thermostat\numerals_font_eurostile\seven_time.png;.Thermostat\numerals_font_eurostile\eight_time.png;.Thermostat\numerals_font_eurostile\nine_time.png;.Thermostat\numerals_font_eurostile\zero_time.png;.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\two_time.png;.Thermostat\numerals_font_eurostile\three_time.png;.Thermostat\numerals_font_eurostile\four_time.png;.Thermostat\numerals_font_eurostile\five_time.png;.Thermostat\numerals_font_eurostile\six_time.png;.Thermostat\numerals_font_eurostile\seven_time.png;.Thermostat\numerals_font_eurostile\eight_time.png;.Thermostat\numerals_font_eurostile\nine_time.png;.Thermostat\numerals_font_eurostile\zero_time.png;.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\two_time.png;.Thermostat\numerals_font_eurostile\three_time.png;.Thermostat\numerals_font_eurostile\four_time.png;.Thermostat\numerals_font_eurostile\five_time.png;.Thermostat\numerals_font_eurostile\six_time.png;.Thermostat\numerals_font_eurostile\seven_time.png;.Thermostat\numerals_font_eurostile\eight_time.png;.Thermostat\numerals_font_eurostile\nine_time.png;.Thermostat\numerals_font_eurostile\zero_time.png;.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\two_time.png;.Thermostat\numerals_font_eurostile\three_time.png;.Thermostat\numerals_font_eurostile\four_time.png;.Thermostat\numerals_font_eurostile\five_time.png;.Thermostat\numerals_font_eurostile\six_time.png;.Thermostat\numerals_font_eurostile\seven_time.png;.Thermostat\numerals_font_eurostile\eight_time.png;.Thermostat\numerals_font_eurostile\nine_time.png;.Thermostat\numerals_font_eurostile\zero_time.png;.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\two_time.png;.Thermostat\numerals_font_eurostile\three_time.png;.Thermostat\numerals_font_eurostile\four_time.png;.Thermostat\numerals_font_eurostile\five_time.png;.Thermostat\numerals_font_eurostile\six_time.png;.Thermostat\numerals_font_eurostile\seven_time.png;.Thermostat\numerals_font_eurostile\eight_time.png;.Thermostat\numerals_font_eurostile\nine_time.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False	False	True</waitForInit><MidX Type="13">398</MidX><MidY Type="13">37</MidY><Width Type="13">33</Width><Height Type="13">38</Height></ImageSeq><ImageSeq><Name Type="12">DayOfWeek1</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:calendar.dayOfWeek.value()</href><max Type="13" Editable="True">7</max><min Type="13" Editable="True">1</min><sequence Type="21" Editable="True">.Thermostat\Days\Sun.png;.Thermostat\Days\Mon.png;.Thermostat\Days\Tues.png;.Thermostat\Days\Wed.png;.Thermostat\Days\Thurs.png;.Thermostat\Days\Fri.png;.Thermostat\Days\Sat.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">39</MidX><MidY Type="13">41</MidY><Width Type="13">41</Width><Height Type="13">14</Height></ImageSeq><ImageSeq><Name Type="12">DayOfWeek2</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:calendar.dayOfWeek.value()</href><max Type="13" Editable="True">7</max><min Type="13" Editable="True">1</min><sequence Type="21" Editable="True">.Thermostat\Days\Mon.png;.Thermostat\Days\Tues.png;.Thermostat\Days\Wed.png;.Thermostat\Days\Thurs.png;.Thermostat\Days\Fri.png;.Thermostat\Days\Sat.png;.Thermostat\Days\Sun.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">39</MidX><MidY Type="13">89</MidY><Width Type="13">41</Width><Height Type="13">14</Height></ImageSeq><ImageSeq><Name Type="12">DayOfWeek3</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:calendar.dayOfWeek.value()</href><max Type="13" Editable="True">7</max><min Type="13" Editable="True">1</min><sequence Type="21" Editable="True">.Thermostat\Days\Tues.png;.Thermostat\Days\Wed.png;.Thermostat\Days\Thurs.png;.Thermostat\Days\Fri.png;.Thermostat\Days\Sat.png;.Thermostat\Days\Sun.png;.Thermostat\Days\Mon.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">39</MidX><MidY Type="13">139</MidY><Width Type="13">41</Width><Height Type="13">14</Height></ImageSeq><ImageSeq><Name Type="12">DayOfWeek4</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:calendar.dayOfWeek.value()</href><max Type="13" Editable="True">7</max><min Type="13" Editable="True">1</min><sequence Type="21" Editable="True">.Thermostat\Days\Wed.png;.Thermostat\Days\Thurs.png;.Thermostat\Days\Fri.png;.Thermostat\Days\Sat.png;.Thermostat\Days\Sun.png;.Thermostat\Days\Mon.png;.Thermostat\Days\Tues.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">39</MidX><MidY Type="13">188</MidY><Width Type="13">41</Width><Height Type="13">14</Height></ImageSeq><ImageSeq><Name Type="12">DayOfWeek5</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:calendar.dayOfWeek.value()</href><max Type="13" Editable="True">7</max><min Type="13" Editable="True">1</min><sequence Type="21" Editable="True">.Thermostat\Days\Thurs.png;.Thermostat\Days\Fri.png;.Thermostat\Days\Sat.png;.Thermostat\Days\Sun.png;.Thermostat\Days\Mon.png;.Thermostat\Days\Tues.png;.Thermostat\Days\Wed.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False</waitForInit><MidX Type="13">39</MidX><MidY Type="13">236</MidY><Width Type="13">41</Width><Height Type="13">14</Height></ImageSeq><Image><Name Type="12">DegreeSmall_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Thermostat\numerals_font_eurostile\DegreeSmall.png</file><cacheImage Type="2" Editable="True">False	True	False</cacheImage><MidX Type="13">86</MidX><MidY Type="13">34</MidY><Width Type="13">12</Width><Height Type="13">10</Height></Image><Image><Name Type="12">DegreeSmall_2</Name><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Thermostat\numerals_font_eurostile\DegreeSmall.png</file><MidX Type="13">86</MidX><MidY Type="13">82</MidY><Width Type="13">12</Width><Height Type="13">10</Height></Image><Image><Name Type="12">DegreeSmall_3</Name><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Thermostat\numerals_font_eurostile\DegreeSmall.png</file><MidX Type="13">86</MidX><MidY Type="13">132</MidY><Width Type="13">12</Width><Height Type="13">10</Height></Image><Image><Name Type="12">DegreeSmall_4</Name><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Thermostat\numerals_font_eurostile\DegreeSmall.png</file><MidX Type="13">86</MidX><MidY Type="13">181</MidY><Width Type="13">12</Width><Height Type="13">10</Height></Image><Image><Name Type="12">DegreeSmall_5</Name><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Thermostat\numerals_font_eurostile\DegreeSmall.png</file><MidX Type="13">86</MidX><MidY Type="13">229</MidY><Width Type="13">12</Width><Height Type="13">10</Height></Image><Image><Name Type="12">Colon17_1</Name><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Thermostat\numerals_font_eurostile\Colon17.png</file><MidX Type="13">355</MidX><MidY Type="13">40</MidY><Width Type="13">12</Width><Height Type="13">23</Height></Image><ImageSeq><Name Type="12">ampm</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><href Type="24" Editable="True">Amulet:calendar.militaryHour.value()</href><max Type="13" Editable="True">23</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\am.png;.Thermostat\numerals_font_eurostile\pm.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">False	False	True</waitForInit><MidX Type="13">445</MidX><MidY Type="13">47</MidY><Width Type="13">61</Width><Height Type="13">31</Height></ImageSeq><Image><Name Type="12">CurrentTempTime</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Thermostat\numerals_font_eurostile\CurrentTempTime.png</file><cacheImage Type="2" Editable="True">False	True	False</cacheImage><MidX Type="13">323</MidX><MidY Type="13">98</MidY><Width Type="13">270</Width><Height Type="13">25</Height></Image><TouchArea><Name Type="12">ChangeTime</Name><onRelease Type="31" Editable="True">Amulet:document.ToClockSet.setUpdateRate(0.02);Amulet:nop()</onRelease><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onPinch Type="31" Editable="True">Menu.open()</onPinch><MidX Type="13">393</MidX><MidY Type="13">41</MidY><Width Type="13">175</Width><Height Type="13">72</Height></TouchArea><PWM><Name Type="12">pwm</Name><invisible Type="2" Editable="True">True	True	False</invisible><channel Type="10" Editable="True">0	0	1	2</channel><initialCondition Type="10" Editable="True">No Change	On	Off	No Change</initialCondition><periodIn_ms Type="20" Editable="True">1</periodIn_ms><pulseWidthIn_ms Type="20" Editable="True">0.999</pulseWidthIn_ms><MidX Type="13">511</MidX><MidY Type="13">303</MidY><Width Type="13">31</Width><Height Type="13">31</Height></PWM></BODY></PAGE><PAGE NAME="Thermostat_settings"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS><FUNCTIONS charPos="3216" foldedLines="">
-&lt;SCRIPT&gt;
-	new int tempMilHour
-	new int tempMinute
-	new int selection
-	#define TIMEFRAME_MINUTES	1
-	#define TIMEFRAME_HOURS	0
-	@load()
-	{
-		blinkCnt.setValue(0);
-		tempMilHour = calendar.militaryHour
-		tempMinute= calendar.minute
-		Amulet:document.Hours1.disappear()
-		Amulet:document.Hours10.disappear()
-		Amulet:document.Minutes1.disappear()
-		Amulet:document.Minutes10.disappear()
-		document.overhead_light_hours.disappear()
-		document.overhead_light_minutes.disappear()
-		Amulet:document.Hours1.setValue(tempMilHour)
-		Amulet:document.Hours10.setValue(tempMilHour)
-		Amulet:document.Hours1.reappear()
-		Amulet:document.Hours10.reappear()
-		Amulet:document.Minutes1.setValue(tempMinute)
-		Amulet:document.Minutes10.setValue(tempMinute)
-		Amulet:document.Minutes1.reappear()
-		Amulet:document.Minutes10.reappear()
-	}
-	public incHour()
-	{
-		Amulet:document.Hours1.disappear()
-		Amulet:document.Hours10.disappear()
-		document.overhead_light_hours.reappear()
-		tempMilHour++
-		if(tempMilHour &gt; 23)
-			tempMilHour = 0
-		Amulet:document.Hours1.setValue(tempMilHour)
-		Amulet:document.Hours10.setValue(tempMilHour)
-		Amulet:document.Hours1.reappear()
-		Amulet:document.Hours10.reappear()
-	}
-	public decHour()
-	{
-		Amulet:document.Hours1.disappear()
-		Amulet:document.Hours10.disappear()
-		document.overhead_light_hours.reappear()
-		tempMilHour--
-		if(tempMilHour &lt; 0)
-			tempMilHour = 23
-		Amulet:document.Hours1.setValue(tempMilHour)
-		Amulet:document.Hours10.setValue(tempMilHour)
-		Amulet:document.Hours1.reappear()
-		Amulet:document.Hours10.reappear()
-	}
-	public incMinute()
-	{
-		Amulet:document.Minutes1.disappear()
-		Amulet:document.Minutes10.disappear()
-		document.overhead_light_minutes.reappear()
-		tempMinute++
-		if(tempMinute &gt; 59)
-			tempMinute = 0
-		Amulet:document.Minutes1.setValue(tempMinute)
-		Amulet:document.Minutes10.setValue(tempMinute)
-		Amulet:document.Minutes1.reappear()
-		Amulet:document.Minutes10.reappear()
-	}
-	public decMinute()
-	{
-		Amulet:document.Minutes1.disappear()
-		Amulet:document.Minutes10.disappear()
-		document.overhead_light_minutes.reappear()
-		tempMinute--
-		if(tempMinute &lt; 0)
-			tempMinute = 59
-		Amulet:document.Minutes1.setValue(tempMinute)
-		Amulet:document.Minutes10.setValue(tempMinute)
-		Amulet:document.Minutes1.reappear()
-		Amulet:document.Minutes10.reappear()
-	}
-	public selectMinute()
-	{
-		selection = TIMEFRAME_MINUTES
-		document.overhead_light_minutes.reappear()
-		Amulet:document.Minutes1.reappear()
-		Amulet:document.Minutes10.reappear()
-		document.overhead_light_hours.disappear()
-		Amulet:document.Hours1.reappear()
-		Amulet:document.Hours10.reappear()
-	}
-	public selectHour()
-	{
-		selection = TIMEFRAME_HOURS
-		document.overhead_light_minutes.disappear()
-		Amulet:document.Minutes1.reappear()
-		Amulet:document.Minutes10.reappear()
-		document.overhead_light_hours.reappear()
-		Amulet:document.Hours1.reappear()
-		Amulet:document.Hours10.reappear()
-	}
-	public genericInc()
-	{
-		if(selection == TIMEFRAME_HOURS)
-			incHour
-		else
-			incMinute
-	}
-	public genericDec()
-	{
-		if(selection == TIMEFRAME_HOURS)
-			decHour
-		else
-			decMinute
-	}
-	//Save Fields then return
-	public Save()
-	{
-		calendar.hour.setValue(tempMilHour)
-		calendar.minute.setValue(tempMinute)
-	}
-		
-&lt;/SCRIPT&gt;
-
-&lt;meta http-equiv="Refresh" content="0;
-url=Amulet:document.pwm.setPulseWidth(0.9);
-Amulet:document.pwm.setPulseWidth(0.8);
-Amulet:document.pwm.setPulseWidth(0.7);
-Amulet:document.pwm.setPulseWidth(0.6);
-Amulet:document.pwm.setPulseWidth(0.5);
-Amulet:document.pwm.setPulseWidth(0.4);
-Amulet:document.pwm.setPulseWidth(0.3);
-Amulet:document.pwm.setPulseWidth(0.2);
-Amulet:document.pwm.setPulseWidth(0.1);
-Amulet:document.pwm.setPulseWidth(0.07);
-Amulet:document.pwm.setPulseWidth(0.04);
-Amulet:document.pwm.setPulseWidth(0.02);
-Amulet:document.pwm.setPeriod(10),
-Amulet:document.pwm.setPulseWidth(0.01),
-Thermostat_home.open();
-name=ToHome"&gt;
-
-&lt;meta http-equiv="Refresh" content="0.02;
-url=Amulet:document.pwm.setPeriod(1),
-Amulet:document.pwm.setPulseWidth(0.02);
-Amulet:document.pwm.setPulseWidth(0.04);
-Amulet:document.pwm.setPulseWidth(0.07);
-Amulet:document.pwm.setPulseWidth(0.1);
-Amulet:document.pwm.setPulseWidth(0.2);
-Amulet:document.pwm.setPulseWidth(0.3);
-Amulet:document.pwm.setPulseWidth(0.4);
-Amulet:document.pwm.setPulseWidth(0.5),
-Amulet:document.pwm.setPulseWidth(0.6);
-Amulet:document.pwm.setPulseWidth(0.7);
-Amulet:document.pwm.setPulseWidth(0.8);
-Amulet:document.pwm.setPulseWidth(0.9);
-Amulet:document.pwm.setPulseWidth(0.999),
-Amulet:document.pwmMeta.setUpdateRate(0);
-name=pwmMeta"&gt;
-</FUNCTIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">bg</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><file Type="16" Editable="True">.Thermostat\Background.jpg</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image></BKGND><BODY><CustomButton><Name Type="12">return</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><cacheImage Type="2" Editable="True">False	True	False</cacheImage><downImage Type="16" Editable="True">.Thermostat\back_down.png</downImage><font Type="14" Editable="True">Bitstream Vera Sans,  12pt</font><fontColor Type="11" Editable="True">#000000</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><href Type="15" Editable="True">GEMscript.save(),Amulet:document.ToHome.setUpdateRate(0.02),</href><onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress><upImage Type="16" Editable="True">.Thermostat\back.png</upImage><executeOn Type="10" Editable="True">Hit	Release	Hit	Both</executeOn><MidX Type="13">240</MidX><MidY Type="13">232</MidY><Width Type="13">80</Width><Height Type="13">81</Height></CustomButton><Image><Name Type="12">SecondTick</Name><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">..\Calendar Demo\clock\colon.png</file><MidX Type="13">242</MidX><MidY Type="13">117</MidY><Width Type="13">36</Width><Height Type="13">76</Height></Image><Image><Name Type="12">overhead_light_minutes</Name><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">True	True	False</invisible><file Type="16" Editable="True">.Spotlights\spotWide.png</file><MidX Type="13">332</MidX><MidY Type="13">104</MidY><Width Type="13">181</Width><Height Type="13">214</Height></Image><Image><Name Type="12">overhead_light_hours</Name><invisible Type="2" Editable="True">True	True	False</invisible><file Type="16" Editable="True">.Spotlights\spotWide.png</file><cacheImage Type="2" Editable="True">False	True	False</cacheImage><MidX Type="13">151</MidX><MidY Type="13">104</MidY><Width Type="13">181</Width><Height Type="13">214</Height></Image><ImageSeq><Name Type="12">Hours10</Name><invisible Type="2" Editable="True">False	True	False</invisible><href Type="24" Editable="True">tmpMilHour.value()</href><max Type="13" Editable="True">23</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">..\Calendar Demo\clock\1am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\1am.png;..\Calendar Demo\clock\1am.png;..\Calendar Demo\clock\1pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\1pm.png;..\Calendar Demo\clock\1pm.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">True</waitForInit><cacheImage Type="2" Editable="True">True	True	False</cacheImage><MidX Type="13">118</MidX><MidY Type="13">115</MidY><Width Type="13">86</Width><Height Type="13">126</Height></ImageSeq><ImageSeq><Name Type="12">Hours1</Name><invisible Type="2" Editable="True">False	True	False</invisible><href Type="24" Editable="True">tmpMilHour.value()</href><max Type="13" Editable="True">23</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">True</waitForInit><cacheImage Type="2" Editable="True">True	True	False</cacheImage><MidX Type="13">191</MidX><MidY Type="13">115</MidY><Width Type="13">86</Width><Height Type="13">126</Height></ImageSeq><ImageSeq><Name Type="12">Minutes10</Name><invisible Type="2" Editable="True">False	True	False</invisible><href Type="24" Editable="True">tmpMinute.value()</href><max Type="13" Editable="True">59</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">True</waitForInit><cacheImage Type="2" Editable="True">True	True	False</cacheImage><MidX Type="13">294</MidX><MidY Type="13">115</MidY><Width Type="13">86</Width><Height Type="13">126</Height></ImageSeq><ImageSeq><Name Type="12">Minutes1</Name><invisible Type="2" Editable="True">False	True	False</invisible><href Type="24" Editable="True">tmpMinute.value()</href><max Type="13" Editable="True">59</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">True</waitForInit><cacheImage Type="2" Editable="True">True	True	False</cacheImage><MidX Type="13">368</MidX><MidY Type="13">115</MidY><Width Type="13">86</Width><Height Type="13">126</Height></ImageSeq><TouchArea><Name Type="12">ChangeHour</Name><onRelease Type="31" Editable="True"/><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onJogForward Type="31" Editable="True">GEMscript.incHour()</onJogForward><onJogBackward Type="31" Editable="True">GEMscript.decHour()</onJogBackward><onTouch Type="31" Editable="True">GEMscript.selectHour()</onTouch><MidX Type="13">124</MidX><MidY Type="13">103</MidY><Width Type="13">220</Width><Height Type="13">173</Height></TouchArea><TouchArea><Name Type="12">ChangeMin</Name><onRelease Type="31" Editable="True"/><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onJogForward Type="31" Editable="True">GEMscript.incMinute()</onJogForward><onJogBackward Type="31" Editable="True">GEMscript.decMinute()</onJogBackward><onTouch Type="31" Editable="True">GEMscript.selectMinute()</onTouch><MidX Type="13">366</MidX><MidY Type="13">103</MidY><Width Type="13">227</Width><Height Type="13">170</Height></TouchArea><PWM><Name Type="12">pwm</Name><invisible Type="2" Editable="True">True	True	False</invisible><channel Type="10" Editable="True">0	0	1	2</channel><initialCondition Type="10" Editable="True">No Change	On	Off	No Change</initialCondition><periodIn_ms Type="20" Editable="True">1</periodIn_ms><pulseWidthIn_ms Type="20" Editable="True">0.999</pulseWidthIn_ms><MidX Type="13">511</MidX><MidY Type="13">303</MidY><Width Type="13">31</Width><Height Type="13">31</Height></PWM></BODY></PAGE><PAGE NAME="Clock_home"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS><FUNCTIONS charPos="616" foldedLines="">&lt;meta http-equiv="Refresh" content="0;
-url=Amulet:document.pwm.setPulseWidth(0.9);
-Amulet:document.pwm.setPulseWidth(0.8);
-Amulet:document.pwm.setPulseWidth(0.7);
-Amulet:document.pwm.setPulseWidth(0.6);
-Amulet:document.pwm.setPulseWidth(0.5);
-Amulet:document.pwm.setPulseWidth(0.4);
-Amulet:document.pwm.setPulseWidth(0.3);
-Amulet:document.pwm.setPulseWidth(0.2);
-Amulet:document.pwm.setPulseWidth(0.1);
-Amulet:document.pwm.setPulseWidth(0.07);
-Amulet:document.pwm.setPulseWidth(0.04);
-Amulet:document.pwm.setPulseWidth(0.02);
-Amulet:document.pwm.setPeriod(10),
-Amulet:document.pwm.setPulseWidth(0.01),
-Clock_settings.open();
-name=ToSettings"&gt;
-
-
-&lt;meta http-equiv="Refresh" content="0.02;
-url=Amulet:document.pwm.setPeriod(1),
-Amulet:document.pwm.setPulseWidth(0.02);
-Amulet:document.pwm.setPulseWidth(0.04);
-Amulet:document.pwm.setPulseWidth(0.07);
-Amulet:document.pwm.setPulseWidth(0.1);
-Amulet:document.pwm.setPulseWidth(0.2);
-Amulet:document.pwm.setPulseWidth(0.3);
-Amulet:document.pwm.setPulseWidth(0.4);
-Amulet:document.pwm.setPulseWidth(0.5),
-Amulet:document.pwm.setPulseWidth(0.6);
-Amulet:document.pwm.setPulseWidth(0.7);
-Amulet:document.pwm.setPulseWidth(0.8);
-Amulet:document.pwm.setPulseWidth(0.9);
-Amulet:document.pwm.setPulseWidth(0.999),
-Amulet:document.pwmMeta.setUpdateRate(0);
-name=pwmMeta"&gt;</FUNCTIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">LeatherOrange</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><file Type="16" Editable="True">.Clock\LeatherOrange.png</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image></BKGND><BODY><Image><Name Type="12">colon</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Clock\ChromeNumbers\colon.png</file><cacheImage Type="2" Editable="True">False	True	False</cacheImage><MidX Type="13">216</MidX><MidY Type="13">134</MidY><Width Type="13">37</Width><Height Type="13">108</Height></Image><ImageSeq><Name Type="12">hours</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:calendar.hour.value()</href><max Type="13" Editable="True">12</max><min Type="13" Editable="True">1</min><sequence Type="21" Editable="True">.Clock\ChromeNumbers\1w.png;.Clock\ChromeNumbers\2w.png;.Clock\ChromeNumbers\3w.png;.Clock\ChromeNumbers\4w.png;.Clock\ChromeNumbers\5w.png;.Clock\ChromeNumbers\6w.png;.Clock\ChromeNumbers\7w.png;.Clock\ChromeNumbers\8w.png;.Clock\ChromeNumbers\9w.png;.Clock\ChromeNumbers\10.png;.Clock\ChromeNumbers\11.png;.Clock\ChromeNumbers\12.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">True</waitForInit><MidX Type="13">120</MidX><MidY Type="13">134</MidY><Width Type="13">167</Width><Height Type="13">108</Height></ImageSeq><ImageSeq><Name Type="12">MinuteTens</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:calendar.minute.value()</href><max Type="13" Editable="True">59</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">True</waitForInit><MidX Type="13">277</MidX><MidY Type="13">134</MidY><Width Type="13">94</Width><Height Type="13">108</Height></ImageSeq><ImageSeq><Name Type="12">MinuteOnes</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True">Amulet:calendar.minute.value()</href><max Type="13" Editable="True">59</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png;.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png;.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png;.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png;.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png;.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png</sequence><updateFreq Type="20" Editable="True">0.2</updateFreq><updateDelay Type="20" Editable="True">0.01</updateDelay><waitForInit Type="2" Editable="True">True</waitForInit><MidX Type="13">364</MidX><MidY Type="13">134</MidY><Width Type="13">94</Width><Height Type="13">108</Height></ImageSeq><PWM><Name Type="12">pwm</Name><invisible Type="2" Editable="True">True	True	False</invisible><channel Type="10" Editable="True">0	0	1	2</channel><initialCondition Type="10" Editable="True">No Change	On	Off	No Change</initialCondition><periodIn_ms Type="20" Editable="True">1</periodIn_ms><pulseWidthIn_ms Type="20" Editable="True">0.999</pulseWidthIn_ms><MidX Type="13">511</MidX><MidY Type="13">303</MidY><Width Type="13">31</Width><Height Type="13">31</Height></PWM><TouchArea><Name Type="12">HomeButton</Name><onRelease Type="31" Editable="True">Menu.open()</onRelease><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onPinch Type="31" Editable="True">Menu.open()</onPinch><MidX Type="13">433</MidX><MidY Type="13">43</MidY><Width Type="13">101</Width><Height Type="13">93</Height></TouchArea><Image><Name Type="12">HomeIcon</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Home\Home.png</file><cacheImage Type="2" Editable="True">False	True	False</cacheImage><MidX Type="13">446</MidX><MidY Type="13">35</MidY><Width Type="13">56</Width><Height Type="13">56</Height></Image><Image><Name Type="12">SettingsIcon</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Clock\Gear.png</file><cacheImage Type="2" Editable="True">False	True	False</cacheImage><MidX Type="13">35</MidX><MidY Type="13">35</MidY><Width Type="13">56</Width><Height Type="13">56</Height></Image><TouchArea><Name Type="12">SettingsButton</Name><onRelease Type="31" Editable="True">Amulet:document.ToSettings.setUpdateRate(0.02),Amulet:nop()</onRelease><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onPinch Type="31" Editable="True">Menu.open()</onPinch><MidX Type="13">47</MidX><MidY Type="13">43</MidY><Width Type="13">101</Width><Height Type="13">93</Height></TouchArea></BODY></PAGE><PAGE NAME="Clock_settings"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS><FUNCTIONS charPos="2789" foldedLines="">&lt;SCRIPT&gt;
-	new int tempHour
-	new int tempMinute
-	new int selection
-	#define TIMEFRAME_MINUTES	1
-	#define TIMEFRAME_HOURS	0
-	@load()
-	{
-		blinkCnt.setValue(0);
-		tempHour = calendar.hour
-		tempMinute= calendar.minute
-		Amulet:document.Hours1.disappear()
-		Amulet:document.Minutes1.disappear()
-		Amulet:document.Minutes10.disappear()
-		document.overhead_light_hours.disappear()
-		document.overhead_light_minutes.disappear()
-		Amulet:document.Hours1.setValue(tempHour)
-		Amulet:document.Hours1.reappear()
-		Amulet:document.Minutes1.setValue(tempMinute)
-		Amulet:document.Minutes10.setValue(tempMinute)
-		Amulet:document.Minutes1.reappear()
-		Amulet:document.Minutes10.reappear()
-	}
-	public incHour()
-	{
-		Amulet:document.Hours1.disappear()
-		document.overhead_light_hours.reappear()
-		tempHour++
-		if(tempHour &gt; 12)
-			tempHour = 1
-		Amulet:document.Hours1.setValue(tempHour)
-		Amulet:document.Hours1.reappear()
-	}
-	public decHour()
-	{
-		Amulet:document.Hours1.disappear()
-		document.overhead_light_hours.reappear()
-		tempHour--
-		if(tempHour &lt; 1)
-			tempHour = 12
-		Amulet:document.Hours1.setValue(tempHour)
-		Amulet:document.Hours1.reappear()
-	}
-	public incMinute()
-	{
-		Amulet:document.Minutes1.disappear()
-		Amulet:document.Minutes10.disappear()
-		document.overhead_light_minutes.reappear()
-		tempMinute++
-		if(tempMinute &gt; 59)
-			tempMinute = 0
-		Amulet:document.Minutes1.setValue(tempMinute)
-		Amulet:document.Minutes10.setValue(tempMinute)
-		Amulet:document.Minutes1.reappear()
-		Amulet:document.Minutes10.reappear()
-	}
-	public decMinute()
-	{
-		Amulet:document.Minutes1.disappear()
-		Amulet:document.Minutes10.disappear()
-		document.overhead_light_minutes.reappear()
-		tempMinute--
-		if(tempMinute &lt; 0)
-			tempMinute = 59
-		Amulet:document.Minutes1.setValue(tempMinute)
-		Amulet:document.Minutes10.setValue(tempMinute)
-		Amulet:document.Minutes1.reappear()
-		Amulet:document.Minutes10.reappear()
-	}
-	public selectMinute()
-	{
-		selection = TIMEFRAME_MINUTES
-		document.overhead_light_minutes.reappear()
-		Amulet:document.Minutes1.reappear()
-		Amulet:document.Minutes10.reappear()
-		document.overhead_light_hours.disappear()
-		Amulet:document.Hours1.reappear()
-	}
-	public selectHour()
-	{
-		selection = TIMEFRAME_HOURS
-		document.overhead_light_minutes.disappear()
-		Amulet:document.Minutes1.reappear()
-		Amulet:document.Minutes10.reappear()
-		document.overhead_light_hours.reappear()
-		Amulet:document.Hours1.reappear()
-	}
-	public genericInc()
-	{
-		if(selection == TIMEFRAME_HOURS)
-			incHour
-		else
-			incMinute
-	}
-	public genericDec()
-	{
-		if(selection == TIMEFRAME_HOURS)
-			decHour
-		else
-			decMinute
-	}
-	public Save()
-	{
-		calendar.hour.setValue(tempHour)
-		calendar.minute.setValue(tempMinute)
-	}
-	public toDate()
-	{
-		calendar.hour.setValue(tempHour)
-		calendar.minute.setValue(tempMinute)
-		Fridge_set_date.open()
-	}
-		
-&lt;/SCRIPT&gt;
-&lt;meta http-equiv="Refresh" content="0;
-url=Amulet:document.pwm.setPulseWidth(0.9);
-Amulet:document.pwm.setPulseWidth(0.8);
-Amulet:document.pwm.setPulseWidth(0.7);
-Amulet:document.pwm.setPulseWidth(0.6);
-Amulet:document.pwm.setPulseWidth(0.5);
-Amulet:document.pwm.setPulseWidth(0.4);
-Amulet:document.pwm.setPulseWidth(0.3);
-Amulet:document.pwm.setPulseWidth(0.2);
-Amulet:document.pwm.setPulseWidth(0.1);
-Amulet:document.pwm.setPulseWidth(0.07);
-Amulet:document.pwm.setPulseWidth(0.04);
-Amulet:document.pwm.setPulseWidth(0.02);
-Amulet:document.pwm.setPeriod(10),
-Amulet:document.pwm.setPulseWidth(0.01),
-Clock_home.open();
-name=ToHome"&gt;
-
-&lt;meta http-equiv="Refresh" content="0.02;
-url=Amulet:document.pwm.setPeriod(1),
-Amulet:document.pwm.setPulseWidth(0.02);
-Amulet:document.pwm.setPulseWidth(0.04);
-Amulet:document.pwm.setPulseWidth(0.07);
-Amulet:document.pwm.setPulseWidth(0.1);
-Amulet:document.pwm.setPulseWidth(0.2);
-Amulet:document.pwm.setPulseWidth(0.3);
-Amulet:document.pwm.setPulseWidth(0.4);
-Amulet:document.pwm.setPulseWidth(0.5),
-Amulet:document.pwm.setPulseWidth(0.6);
-Amulet:document.pwm.setPulseWidth(0.7);
-Amulet:document.pwm.setPulseWidth(0.8);
-Amulet:document.pwm.setPulseWidth(0.9);
-Amulet:document.pwm.setPulseWidth(0.999),
-Amulet:document.pwmMeta.setUpdateRate(0);
-name=pwmMeta"&gt;</FUNCTIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">Leather</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><file Type="16" Editable="True">.Clock\Leather.jpg</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image></BKGND><BODY><CustomButton><Name Type="12">Ok</Name><invisible Type="2" Editable="True">False	True	False</invisible><buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType><cacheImage Type="2" Editable="True">False	True	False</cacheImage><downImage Type="16" Editable="True">.Clock\check_mark_button_down.png</downImage><font Type="14" Editable="True">Bitstream Vera Sans, 12pt</font><fontColor Type="11" Editable="True">#000000</fontColor><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><href Type="15" Editable="True">GEMscript.save(),
-Clock_home.open()</href><onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress><upImage Type="16" Editable="True">.Clock\check_mark_button_up.png</upImage><executeOn Type="10" Editable="True">Release	Release	Hit	Both</executeOn><MidX Type="13">443</MidX><MidY Type="13">39</MidY><Width Type="13">81</Width><Height Type="13">84</Height></CustomButton><Image><Name Type="12">colon</Name><invisible Type="2" Editable="True">False	True	False</invisible><file Type="16" Editable="True">.Clock\ChromeNumbers\colon.png</file><cacheImage Type="2" Editable="True">False	True	False</cacheImage><MidX Type="13">216</MidX><MidY Type="13">134</MidY><Width Type="13">37</Width><Height Type="13">108</Height></Image><Image><Name Type="12">overhead_light_minutes</Name><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">True	True	False</invisible><file Type="16" Editable="True">.Spotlights\spotWide.png</file><MidX Type="13">320</MidX><MidY Type="13">104</MidY><Width Type="13">181</Width><Height Type="13">214</Height></Image><Image><Name Type="12">overhead_light_hours</Name><cacheImage Type="2" Editable="True">False	True	False</cacheImage><invisible Type="2" Editable="True">True	True	False</invisible><file Type="16" Editable="True">.Spotlights\spotWide.png</file><MidX Type="13">126</MidX><MidY Type="13">104</MidY><Width Type="13">181</Width><Height Type="13">214</Height></Image><ImageSeq><Name Type="12">Hours1</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">12</max><min Type="13" Editable="True">1</min><sequence Type="21" Editable="True">.Clock\ChromeNumbers\1w.png;.Clock\ChromeNumbers\2w.png;.Clock\ChromeNumbers\3w.png;.Clock\ChromeNumbers\4w.png;.Clock\ChromeNumbers\5w.png;.Clock\ChromeNumbers\6w.png;.Clock\ChromeNumbers\7w.png;.Clock\ChromeNumbers\8w.png;.Clock\ChromeNumbers\9w.png;.Clock\ChromeNumbers\10.png;.Clock\ChromeNumbers\11.png;.Clock\ChromeNumbers\12.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">True</waitForInit><MidX Type="13">120</MidX><MidY Type="13">134</MidY><Width Type="13">167</Width><Height Type="13">108</Height></ImageSeq><ImageSeq><Name Type="12">Minutes10</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">59</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">True</waitForInit><MidX Type="13">277</MidX><MidY Type="13">134</MidY><Width Type="13">94</Width><Height Type="13">108</Height></ImageSeq><ImageSeq><Name Type="12">Minutes1</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">True	True	False</cacheImage><href Type="24" Editable="True"/><max Type="13" Editable="True">59</max><min Type="13" Editable="True">0</min><sequence Type="21" Editable="True">.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png;.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png;.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png;.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png;.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png;.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png</sequence><updateFreq Type="20" Editable="True">0</updateFreq><updateDelay Type="20" Editable="True">0</updateDelay><waitForInit Type="2" Editable="True">True</waitForInit><MidX Type="13">364</MidX><MidY Type="13">134</MidY><Width Type="13">94</Width><Height Type="13">108</Height></ImageSeq><TouchArea><Name Type="12">ChangeHour</Name><onRelease Type="31" Editable="True"/><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onJogForward Type="31" Editable="True">GEMscript.incHour()</onJogForward><onJogBackward Type="31" Editable="True">GEMscript.decHour()</onJogBackward><onTouch Type="31" Editable="True">GEMscript.selectHour()</onTouch><gestureDelay Type="20" Editable="True">0.05</gestureDelay><gestureRate Type="20" Editable="True">0.25</gestureRate><MidX Type="13">120</MidX><MidY Type="13">140</MidY><Width Type="13">166</Width><Height Type="13">204</Height></TouchArea><TouchArea><Name Type="12">ChanceMin</Name><onRelease Type="31" Editable="True"/><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onJogForward Type="31" Editable="True">GEMscript.incMinute()</onJogForward><onJogBackward Type="31" Editable="True">GEMscript.decMinute()</onJogBackward><onTouch Type="31" Editable="True">GEMscript.selectMinute()</onTouch><gestureDelay Type="20" Editable="True">0.05</gestureDelay><gestureRate Type="20" Editable="True">0.25</gestureRate><MidX Type="13">320</MidX><MidY Type="13">149</MidY><Width Type="13">182</Width><Height Type="13">223</Height></TouchArea><PWM><Name Type="12">pwm</Name><invisible Type="2" Editable="True">True	True	False</invisible><channel Type="10" Editable="True">0	0	1	2</channel><initialCondition Type="10" Editable="True">No Change	On	Off	No Change</initialCondition><periodIn_ms Type="20" Editable="True">1</periodIn_ms><pulseWidthIn_ms Type="20" Editable="True">0.999</pulseWidthIn_ms><MidX Type="13">511</MidX><MidY Type="13">303</MidY><Width Type="13">31</Width><Height Type="13">31</Height></PWM><StaticText><Name Type="12">StaticText_1</Name><hAlign Type="13">2</hAlign><text Type="25" Editable="True">1-Finger Rotate to change time</text><fontColor Type="11" Editable="True">#FFFFFF</fontColor><font Type="14" Editable="True">Bitstream Vera Sans Mono,  12pt</font><fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle><vAlign Type="13">32</vAlign><MidX Type="13">240</MidX><MidY Type="13">258</MidY><Width Type="13">335</Width><Height Type="13">33</Height></StaticText></BODY></PAGE><PAGE NAME="Amulet_1"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS><FUNCTIONS charPos="166" foldedLines="">&lt;meta http-equiv="Refresh" content="0.01;
-	IF=Amulet:internalRAM.byte(66).value();
-	EQ=0;
-	THEN=Amulet:document.pwmMeta.setUpdateRate(0.02),Amulet:internalRAM.byte(66).setValue(1)
-"&gt;
-
-
-&lt;meta http-equiv="Refresh" content="0;
-url=Amulet:document.pwm.setPeriod(1),
-Amulet:document.pwm.setPulseWidth(0.02);
-Amulet:document.pwm.setPulseWidth(0.04);
-Amulet:document.pwm.setPulseWidth(0.07);
-Amulet:document.pwm.setPulseWidth(0.1);
-Amulet:document.pwm.setPulseWidth(0.2);
-Amulet:document.pwm.setPulseWidth(0.3);
-Amulet:document.pwm.setPulseWidth(0.4);
-Amulet:document.pwm.setPulseWidth(0.5),
-Amulet:document.pwm.setPulseWidth(0.6);
-Amulet:document.pwm.setPulseWidth(0.7);
-Amulet:document.pwm.setPulseWidth(0.8);
-Amulet:document.pwm.setPulseWidth(0.9);
-Amulet:document.pwm.setPulseWidth(0.999),
-Amulet:document.pwmMeta.setUpdateRate(0);
-name=pwmMeta"&gt;</FUNCTIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">Slide1_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><file Type="16" Editable="True">.PowerPoint\Slide1.gif</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image></BKGND><BODY><TouchArea><Name Type="12">WholeScreenButton_1</Name><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onPinch Type="31" Editable="True">Menu.open()</onPinch><onSwipeWest Type="31" Editable="True">Amulet_2.open()</onSwipeWest><onSwipeEast Type="31" Editable="True">Menu.open()</onSwipeEast><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></TouchArea><PWM><Name Type="12">pwm</Name><invisible Type="2" Editable="True">True	True	False</invisible><channel Type="10" Editable="True">0	0	1	2</channel><initialCondition Type="10" Editable="True">No Change	On	Off	No Change</initialCondition><periodIn_ms Type="20" Editable="True">1</periodIn_ms><pulseWidthIn_ms Type="20" Editable="True">0.999</pulseWidthIn_ms><MidX Type="13">549</MidX><MidY Type="13">350</MidY><Width Type="13">31</Width><Height Type="13">31</Height></PWM></BODY></PAGE><PAGE NAME="Amulet_2"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">Slide1_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><file Type="16" Editable="True">.PowerPoint\Slide2.gif</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image></BKGND><BODY><TouchArea><Name Type="12">WholeScreenButton_1</Name><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onPinch Type="31" Editable="True">Menu.open()</onPinch><onSwipeWest Type="31" Editable="True">Amulet_3.open()</onSwipeWest><onSwipeEast Type="31" Editable="True">Amulet_1.open()</onSwipeEast><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></TouchArea></BODY></PAGE><PAGE NAME="Amulet_3"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">Slide1_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><file Type="16" Editable="True">.PowerPoint\Slide3.gif</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image></BKGND><BODY><TouchArea><Name Type="12">WholeScreenButton_1</Name><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onPinch Type="31" Editable="True">Menu.open()</onPinch><onSwipeWest Type="31" Editable="True">Amulet_4.open()</onSwipeWest><onSwipeEast Type="31" Editable="True">Amulet_2.open()</onSwipeEast><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></TouchArea></BODY></PAGE><PAGE NAME="Amulet_4"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">Slide1_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><file Type="16" Editable="True">.PowerPoint\Slide4.gif</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image></BKGND><BODY><TouchArea><Name Type="12">WholeScreenButton_1</Name><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onPinch Type="31" Editable="True">Menu.open()</onPinch><onSwipeWest Type="31" Editable="True">Amulet_5.open()</onSwipeWest><onSwipeEast Type="31" Editable="True">Amulet_3.open()</onSwipeEast><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></TouchArea></BODY></PAGE><PAGE NAME="Amulet_5"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">Slide1_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><file Type="16" Editable="True">.PowerPoint\Slide5.gif</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image></BKGND><BODY><TouchArea><Name Type="12">WholeScreenButton_1</Name><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onPinch Type="31" Editable="True">Menu.open()</onPinch><onSwipeWest Type="31" Editable="True">Amulet_6.open()</onSwipeWest><onSwipeEast Type="31" Editable="True">Amulet_4.open()</onSwipeEast><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></TouchArea></BODY></PAGE><PAGE NAME="Amulet_6"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">Slide1_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><file Type="16" Editable="True">.PowerPoint\Slide6.gif</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image></BKGND><BODY><TouchArea><Name Type="12">WholeScreenButton_1</Name><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onPinch Type="31" Editable="True">Menu.open()</onPinch><onSwipeWest Type="31" Editable="True">Amulet_7.open()</onSwipeWest><onSwipeEast Type="31" Editable="True">Amulet_5.open()</onSwipeEast><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></TouchArea></BODY></PAGE><PAGE NAME="Amulet_7"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">Slide7_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><file Type="16" Editable="True">.PowerPoint\Slide7.gif</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image></BKGND><BODY><TouchArea><Name Type="12">WholeScreenButton_1</Name><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onPinch Type="31" Editable="True">Menu.open()</onPinch><onSwipeWest Type="31" Editable="True">Amulet_8.open()</onSwipeWest><onSwipeEast Type="31" Editable="True">Amulet_6.open()</onSwipeEast><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></TouchArea></BODY></PAGE><PAGE NAME="Amulet_8"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">Slide1_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><file Type="16" Editable="True">.PowerPoint\Slide8.gif</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image></BKGND><BODY><TouchArea><Name Type="12">WholeScreenButton_1</Name><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onPinch Type="31" Editable="True">Menu.open()</onPinch><onSwipeWest Type="31" Editable="True">Amulet_9.open()</onSwipeWest><onSwipeEast Type="31" Editable="True">Amulet_7.open()</onSwipeEast><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></TouchArea></BODY></PAGE><PAGE NAME="Amulet_9"><PROPERTIES><HEAD><TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS></HEAD></PROPERTIES><BKGND><Image><Name Type="12">Slide1_1</Name><invisible Type="2" Editable="True">False	True	False</invisible><cacheImage Type="2" Editable="True">False	True	False</cacheImage><file Type="16" Editable="True">.PowerPoint\Slide9.gif</file><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></Image></BKGND><BODY><TouchArea><Name Type="12">WholeScreenButton_1</Name><visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback><onPinch Type="31" Editable="True">Menu.open()</onPinch><onSwipeWest Type="31" Editable="True">Menu.open()</onSwipeWest><onSwipeEast Type="31" Editable="True">Amulet_8.open()</onSwipeEast><MidX Type="13">240</MidX><MidY Type="13">136</MidY><Width Type="13">486</Width><Height Type="13">278</Height></TouchArea></BODY></PAGE><GS_STRING_BUFFER_SIZE>100</GS_STRING_BUFFER_SIZE><STRICT_MODBUS_TIMING>No</STRICT_MODBUS_TIMING><PAGE_BUFFER_SIZE>0x10000</PAGE_BUFFER_SIZE><BAUD0>115200</BAUD0><BAUD1>115200</BAUD1><BAUD2>115200</BAUD2><DISABLE_MSD>False</DISABLE_MSD><FRAME_BUFFER_HEIGHT>272</FRAME_BUFFER_HEIGHT><FRAME_BUFFER_WIDTH>480</FRAME_BUFFER_WIDTH><GS_COMPRESS>False</GS_COMPRESS><GS_DRAW>True</GS_DRAW><SECURITY_OVERRIDE>False</SECURITY_OVERRIDE><UTF8_META_STRINGS>No</UTF8_META_STRINGS><CACHE_AMX>FALSE</CACHE_AMX><CACHE_AMX_WARNING>FALSE</CACHE_AMX_WARNING><USER_THREAD_DEBUG>True</USER_THREAD_DEBUG><IR_BYTES>256</IR_BYTES><IR_WORDS>256</IR_WORDS><IR_COLORS>256</IR_COLORS><IR_STRINGS>256</IR_STRINGS><IR_STRING_LENGTH>26</IR_STRING_LENGTH><CACHE_FONTS>False</CACHE_FONTS><USER_THREAD_FILE></USER_THREAD_FILE><LANG_FILE></LANG_FILE><IR_INIT_Include_in_POT_File>FALSE</IR_INIT_Include_in_POT_File><EXTEND_COMM_ADDRESSING>FALSE</EXTEND_COMM_ADDRESSING></GEMProject>
+To use this project in this version of GEMstudio Pro, open this project in a version of GEMstudio Pro that supports version control projects and Save As... a Non Version Control Project.</text>
+        <MidX Type="13">240</MidX>
+        <MidY Type="13">136</MidY>
+        <Width Type="13">406</Width>
+        <Height Type="13">246</Height>
+      </StaticText>
+    </BODY>
+  </PAGE>
+</GEMProject>

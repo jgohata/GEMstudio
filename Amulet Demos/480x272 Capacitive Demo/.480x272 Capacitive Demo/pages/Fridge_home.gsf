@@ -1,0 +1,35 @@
+/* InternalRAM variables used in project
+Byte 1: Dispenser function select
+		15:
+Word 0: Backlight Brightness
+           2: Freezer temp
+           3: Fridge temp
+         10: sleepTimer
+         11: sleepTimeOut 
+String 0: Month and Day
+*/
+
+<EMBED SRC="..\Calendar Demo\sleepCode.txt">
+
+<meta http-equiv="Refresh" content="0,0.01;
+	IF=Amulet:internalRAM.byte(66).value();
+	EQ=0;
+	THEN=Amulet:document.pwmMeta.setUpdateRate(0.01),Amulet:internalRAM.byte(66).setvalue(1);
+">
+<meta http-equiv="Refresh" content="0;	
+url=Amulet:document.pwm.setPeriod(1),
+Amulet:document.pwm.setPulseWidth(0.02);
+Amulet:document.pwm.setPulseWidth(0.04);
+Amulet:document.pwm.setPulseWidth(0.07);
+Amulet:document.pwm.setPulseWidth(0.1);
+Amulet:document.pwm.setPulseWidth(0.2);
+Amulet:document.pwm.setPulseWidth(0.3);
+Amulet:document.pwm.setPulseWidth(0.4);
+Amulet:document.pwm.setPulseWidth(0.5),
+Amulet:document.pwm.setPulseWidth(0.6);
+Amulet:document.pwm.setPulseWidth(0.7);
+Amulet:document.pwm.setPulseWidth(0.8);
+Amulet:document.pwm.setPulseWidth(0.9);
+Amulet:document.pwm.setPulseWidth(0.999),
+Amulet:document.pwmMeta.setUpdateRate(0);
+name=pwmMeta">

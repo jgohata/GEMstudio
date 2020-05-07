@@ -1,0 +1,36 @@
+<meta http-equiv="Refresh" content="0;
+url=Amulet:document.pwm.setPulseWidth(0.9);
+Amulet:document.pwm.setPulseWidth(0.8);
+Amulet:document.pwm.setPulseWidth(0.7);
+Amulet:document.pwm.setPulseWidth(0.6);
+Amulet:document.pwm.setPulseWidth(0.5);
+Amulet:document.pwm.setPulseWidth(0.4);
+Amulet:document.pwm.setPulseWidth(0.3);
+Amulet:document.pwm.setPulseWidth(0.2);
+Amulet:document.pwm.setPulseWidth(0.1);
+Amulet:document.pwm.setPulseWidth(0.07);
+Amulet:document.pwm.setPulseWidth(0.04);
+Amulet:document.pwm.setPulseWidth(0.02);
+Amulet:document.pwm.setPeriod(10),
+Amulet:document.pwm.setPulseWidth(0.01),
+Clock_settings.open();
+name=ToSettings">
+
+
+<meta http-equiv="Refresh" content="0.02;
+url=Amulet:document.pwm.setPeriod(1),
+Amulet:document.pwm.setPulseWidth(0.02);
+Amulet:document.pwm.setPulseWidth(0.04);
+Amulet:document.pwm.setPulseWidth(0.07);
+Amulet:document.pwm.setPulseWidth(0.1);
+Amulet:document.pwm.setPulseWidth(0.2);
+Amulet:document.pwm.setPulseWidth(0.3);
+Amulet:document.pwm.setPulseWidth(0.4);
+Amulet:document.pwm.setPulseWidth(0.5),
+Amulet:document.pwm.setPulseWidth(0.6);
+Amulet:document.pwm.setPulseWidth(0.7);
+Amulet:document.pwm.setPulseWidth(0.8);
+Amulet:document.pwm.setPulseWidth(0.9);
+Amulet:document.pwm.setPulseWidth(0.999),
+Amulet:document.pwmMeta.setUpdateRate(0);
+name=pwmMeta">

@@ -1,0 +1,106 @@
+<meta http-equiv="Refresh" content="0.01;
+url=Amulet:document.pwm.setPeriod(1),
+Amulet:document.pwm.setPulseWidth(0.02);
+Amulet:document.pwm.setPulseWidth(0.04);
+Amulet:document.pwm.setPulseWidth(0.07);
+Amulet:document.pwm.setPulseWidth(0.1);
+Amulet:document.pwm.setPulseWidth(0.2);
+Amulet:document.pwm.setPulseWidth(0.3);
+Amulet:document.pwm.setPulseWidth(0.4);
+Amulet:document.pwm.setPulseWidth(0.5),
+Amulet:document.pwm.setPulseWidth(0.6);
+Amulet:document.pwm.setPulseWidth(0.7);
+Amulet:document.pwm.setPulseWidth(0.8);
+Amulet:document.pwm.setPulseWidth(0.9);
+Amulet:document.pwm.setPulseWidth(0.999),
+Amulet:document.pwmMeta.setUpdateRate(0);
+name=pwmMeta">
+
+<META HTTP-EQUIV="REFRESH" CONTENT="0,0.01;
+	URL=Amulet:internalRAM.byte(0).setValue(67),
+	Amulet:internalRAM.byte(124).setValue(106),
+	Amulet:internalRAM.byte(125).setValue(112),
+	Amulet:internalRAM.byte(126).setValue(118),
+	Amulet:internalRAM.byte(127).setValue(100),
+	Amulet:internalRAM.byte(224).setValue(21),
+	Amulet:internalRAM.byte(225).setValue(22),
+	Amulet:internalRAM.byte(226).setValue(23),
+	Amulet:internalRAM.byte(227).setValue(24),
+	Amulet:internalRAM.string(0).setValue("21° C"),
+	Amulet:internalRAM.string(1).setValue("22° C"),
+	Amulet:internalRAM.string(2).setValue("23° C"),
+Amulet:internalRAM.string(3).setValue("24° C");">
+
+<meta http-equiv="Refresh" content="0;
+url=Amulet:document.pwm.setPulseWidth(0.9);
+Amulet:document.pwm.setPulseWidth(0.8);
+Amulet:document.pwm.setPulseWidth(0.7);
+Amulet:document.pwm.setPulseWidth(0.6);
+Amulet:document.pwm.setPulseWidth(0.5);
+Amulet:document.pwm.setPulseWidth(0.4);
+Amulet:document.pwm.setPulseWidth(0.3);
+Amulet:document.pwm.setPulseWidth(0.2);
+Amulet:document.pwm.setPulseWidth(0.1);
+Amulet:document.pwm.setPulseWidth(0.07);
+Amulet:document.pwm.setPulseWidth(0.04);
+Amulet:document.pwm.setPulseWidth(0.02);
+Amulet:document.pwm.setPeriod(10),
+Amulet:document.pwm.setPulseWidth(0.01),
+Fridge_home.open();
+name=ToFridge">
+
+<meta http-equiv="Refresh" content="0;
+url=Amulet:document.pwm.setPulseWidth(0.9);
+Amulet:document.pwm.setPulseWidth(0.8);
+Amulet:document.pwm.setPulseWidth(0.7);
+Amulet:document.pwm.setPulseWidth(0.6);
+Amulet:document.pwm.setPulseWidth(0.5);
+Amulet:document.pwm.setPulseWidth(0.4);
+Amulet:document.pwm.setPulseWidth(0.3);
+Amulet:document.pwm.setPulseWidth(0.2);
+Amulet:document.pwm.setPulseWidth(0.1);
+Amulet:document.pwm.setPulseWidth(0.07);
+Amulet:document.pwm.setPulseWidth(0.04);
+Amulet:document.pwm.setPulseWidth(0.02);
+Amulet:document.pwm.setPeriod(10),
+Amulet:document.pwm.setPulseWidth(0.01),
+Amulet_1.open();
+name=ToSlideshow">
+
+<meta http-equiv="Refresh" content="0;
+url=Amulet:document.pwm.setPulseWidth(0.9);
+Amulet:document.pwm.setPulseWidth(0.8);
+Amulet:document.pwm.setPulseWidth(0.7);
+Amulet:document.pwm.setPulseWidth(0.6);
+Amulet:document.pwm.setPulseWidth(0.5);
+Amulet:document.pwm.setPulseWidth(0.4);
+Amulet:document.pwm.setPulseWidth(0.3);
+Amulet:document.pwm.setPulseWidth(0.2);
+Amulet:document.pwm.setPulseWidth(0.1);
+Amulet:document.pwm.setPulseWidth(0.07);
+Amulet:document.pwm.setPulseWidth(0.04);
+Amulet:document.pwm.setPulseWidth(0.02);
+Amulet:document.pwm.setPeriod(10),
+Amulet:document.pwm.setPulseWidth(0.01),
+Clock_home.open();
+name=ToOven">
+
+
+<meta http-equiv="Refresh" content="0;
+url=Amulet:document.pwm.setPulseWidth(0.9);
+Amulet:document.pwm.setPulseWidth(0.8);
+Amulet:document.pwm.setPulseWidth(0.7);
+Amulet:document.pwm.setPulseWidth(0.6);
+Amulet:document.pwm.setPulseWidth(0.5);
+Amulet:document.pwm.setPulseWidth(0.4);
+Amulet:document.pwm.setPulseWidth(0.3);
+Amulet:document.pwm.setPulseWidth(0.2);
+Amulet:document.pwm.setPulseWidth(0.1);
+Amulet:document.pwm.setPulseWidth(0.07);
+Amulet:document.pwm.setPulseWidth(0.04);
+Amulet:document.pwm.setPulseWidth(0.02);
+Amulet:document.pwm.setPeriod(10),
+Amulet:document.pwm.setPulseWidth(0.01),
+Thermostat_home.open();
+name=ToThermostat">
+

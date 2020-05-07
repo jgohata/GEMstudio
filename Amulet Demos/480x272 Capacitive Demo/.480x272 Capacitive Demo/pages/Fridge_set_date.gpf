@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAGE NAME="Fridge_set_date">
+  <PROPERTIES>
+    <HEAD>
+      <TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS>
+      <FUNCTIONS charPos="2151" foldedLines="" SOURCE="Fridge_set_date.gsf"/>
+    </HEAD>
+  </PROPERTIES>
+  <BKGND>
+    <Image>
+      <Name Type="12">bg_footer_cool_1</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <file Type="16" Editable="True">..\Calendar Demo\_ui\bg_footer_cool.png</file>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">486</Width>
+      <Height Type="13">278</Height>
+    </Image>
+  </BKGND>
+  <BODY>
+    <Image>
+      <Name Type="12">overhead_light_Day</Name>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <invisible Type="2" Editable="True">True	True	False</invisible>
+      <file Type="16" Editable="True">.Spotlights\spot.png</file>
+      <MidX Type="13">101</MidX>
+      <MidY Type="13">104</MidY>
+      <Width Type="13">144</Width>
+      <Height Type="13">214</Height>
+    </Image>
+    <Image>
+      <Name Type="12">overhead_light_Month</Name>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <invisible Type="2" Editable="True">True	True	False</invisible>
+      <file Type="16" Editable="True">.Spotlights\spot.png</file>
+      <MidX Type="13">251</MidX>
+      <MidY Type="13">104</MidY>
+      <Width Type="13">144</Width>
+      <Height Type="13">214</Height>
+    </Image>
+    <Image>
+      <Name Type="12">overhead_light_Date</Name>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <invisible Type="2" Editable="True">True	True	False</invisible>
+      <file Type="16" Editable="True">.Spotlights\spot.png</file>
+      <MidX Type="13">392</MidX>
+      <MidY Type="13">104</MidY>
+      <Width Type="13">144</Width>
+      <Height Type="13">214</Height>
+    </Image>
+    <TouchArea>
+      <Name Type="12">MyTouchArea_1</Name>
+      <onRelease Type="31" Editable="True"/>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <onJogForward Type="31" Editable="True">Amulet:document.metaInc.forceUpdate()</onJogForward>
+      <onJogBackward Type="31" Editable="True">Amulet:document.metaDec.forceUpdate()</onJogBackward>
+      <MidX Type="13">238</MidX>
+      <MidY Type="13">134</MidY>
+      <Width Type="13">483</Width>
+      <Height Type="13">274</Height>
+    </TouchArea>
+    <StringField>
+      <Name Type="12">DayofWeek</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <border Type="13" Editable="True">0</border>
+      <borderColor Type="11" Editable="True">#000000FF</borderColor>
+      <fillColor Type="11" Editable="True">#FFFFFF00</fillColor>
+      <font Type="14" Editable="True">Bitstream Vera Sans, 18pt</font>
+      <fontColor Type="11" Editable="True">#FFFFFF</fontColor>
+      <fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle>
+      <horizontalAlign Type="10" Editable="True">Right	Center	Left	Right</horizontalAlign>
+      <href Type="24" Editable="True">tmpDayOfWeek.value()</href>
+      <printf Type="12" Editable="True">%s,</printf>
+      <updateFreq Type="20" Editable="True">0.2</updateFreq>
+      <updateDelay Type="20" Editable="True">0.02</updateDelay>
+      <verticalAlign Type="10" Editable="True">Top	Bottom	Middle	Top</verticalAlign>
+      <waitForInit Type="2" Editable="True">True</waitForInit>
+      <options Type="22" Editable="True">Sunday@VAL_SEP@1@OPT_SEP@Monday@VAL_SEP@2@OPT_SEP@Tuesday@VAL_SEP@3@OPT_SEP@Wednesday@VAL_SEP@4@OPT_SEP@Thursday@VAL_SEP@5@OPT_SEP@Friday@VAL_SEP@6@OPT_SEP@Saturday@VAL_SEP@7</options>
+      <MidX Type="13">86</MidX>
+      <MidY Type="13">100</MidY>
+      <Width Type="13">153</Width>
+      <Height Type="13">41</Height>
+    </StringField>
+    <StringField>
+      <Name Type="12">Month</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <border Type="13" Editable="True">0</border>
+      <borderColor Type="11" Editable="True">#000000FF</borderColor>
+      <fillColor Type="11" Editable="True">#FFFFFF00</fillColor>
+      <font Type="14" Editable="True">Bitstream Vera Sans, 18pt</font>
+      <fontColor Type="11" Editable="True">#FFFFFF</fontColor>
+      <fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle>
+      <horizontalAlign Type="10" Editable="True">Center	Center	Left	Right</horizontalAlign>
+      <href Type="24" Editable="True">tmpMonth.value()</href>
+      <printf Type="12" Editable="True">%s</printf>
+      <updateFreq Type="20" Editable="True">0.2</updateFreq>
+      <updateDelay Type="20" Editable="True">0.02</updateDelay>
+      <verticalAlign Type="10" Editable="True">Top	Bottom	Middle	Top</verticalAlign>
+      <waitForInit Type="2" Editable="True">True</waitForInit>
+      <options Type="22" Editable="True">January@VAL_SEP@1@OPT_SEP@February@VAL_SEP@2@OPT_SEP@March@VAL_SEP@3@OPT_SEP@April@VAL_SEP@4@OPT_SEP@May@VAL_SEP@5@OPT_SEP@June@VAL_SEP@6@OPT_SEP@July@VAL_SEP@7@OPT_SEP@August@VAL_SEP@8@OPT_SEP@September@VAL_SEP@9@OPT_SEP@October@VAL_SEP@10@OPT_SEP@November@VAL_SEP@11@OPT_SEP@December@VAL_SEP@12@OPT_SEP@January@VAL_SEP@0</options>
+      <MidX Type="13">248</MidX>
+      <MidY Type="13">100</MidY>
+      <Width Type="13">162</Width>
+      <Height Type="13">41</Height>
+    </StringField>
+    <NumericField>
+      <Name Type="12">Date</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <border Type="13" Editable="True">0</border>
+      <borderColor Type="11" Editable="True">#000000FF</borderColor>
+      <fillColor Type="11" Editable="True">#FFFFFF00</fillColor>
+      <font Type="14" Editable="True">Bitstream Vera Sans, 18pt</font>
+      <fontColor Type="11" Editable="True">#FFFFFF</fontColor>
+      <fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle>
+      <horizontalAlign Type="10" Editable="True">Left	Center	Left	Right</horizontalAlign>
+      <href Type="24" Editable="True">tmpDayOfMonth.value()</href>
+      <min Type="13" Editable="True">1</min>
+      <max Type="13" Editable="True">31</max>
+      <minFld Type="12" Editable="True">1</minFld>
+      <maxFld Type="12" Editable="True">31</maxFld>
+      <printf Type="12" Editable="True">%2i</printf>
+      <updateFreq Type="20" Editable="True">0.2</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <verticalAlign Type="10" Editable="True">Middle	Bottom	Middle	Top</verticalAlign>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">395</MidX>
+      <MidY Type="13">97</MidY>
+      <Width Type="13">70</Width>
+      <Height Type="13">30</Height>
+    </NumericField>
+    <CustomButton>
+      <Name Type="12">Ok</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <downImage Type="16" Editable="True">..\Calendar Demo\clock\Ok68x50.png</downImage>
+      <font Type="14" Editable="True">Bitstream Vera Sans, 12pt</font>
+      <fontColor Type="11" Editable="True">#000000</fontColor>
+      <fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle>
+      <href Type="15" Editable="True">resetTimer(), // resetTimer() is defined in calendar.macro
+Amulet:document.SaveFields.forceUpdate()</href>
+      <onButtonPress Type="10" Editable="True">Alpha	Alpha	Custom	Depress</onButtonPress>
+      <upImage Type="16" Editable="True">..\Calendar Demo\clock\Ok68x50.png</upImage>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <alphaColor Type="11" Editable="True">#00000040</alphaColor>
+      <MidX Type="13">434</MidX>
+      <MidY Type="13">247</MidY>
+      <Width Type="13">74</Width>
+      <Height Type="13">56</Height>
+    </CustomButton>
+    <TouchArea>
+      <Name Type="12">MyTouchArea_4</Name>
+      <onRelease Type="31" Editable="True"/>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <onJogForward Type="31" Editable="True">Amulet:document.metaInc.forceUpdate()</onJogForward>
+      <onJogBackward Type="31" Editable="True">Amulet:document.metaDec.forceUpdate()</onJogBackward>
+      <onTouch Type="31" Editable="True">blinkCnt.setValue(2),Amulet:document.metaDisappearLights.forceUpdate()</onTouch>
+      <MidX Type="13">98</MidX>
+      <MidY Type="13">101</MidY>
+      <Width Type="13">148</Width>
+      <Height Type="13">93</Height>
+    </TouchArea>
+    <TouchArea>
+      <Name Type="12">MyTouchArea_5</Name>
+      <onRelease Type="31" Editable="True"/>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <onJogForward Type="31" Editable="True">Amulet:document.metaInc.forceUpdate()</onJogForward>
+      <onJogBackward Type="31" Editable="True">Amulet:document.metaDec.forceUpdate()</onJogBackward>
+      <onTouch Type="31" Editable="True">blinkCnt.setValue(3),Amulet:document.metaDisappearLights.forceUpdate()</onTouch>
+      <MidX Type="13">259</MidX>
+      <MidY Type="13">104</MidY>
+      <Width Type="13">146</Width>
+      <Height Type="13">98</Height>
+    </TouchArea>
+    <TouchArea>
+      <Name Type="12">MyTouchArea_6</Name>
+      <onRelease Type="31" Editable="True"/>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <onJogForward Type="31" Editable="True">Amulet:document.metaInc.forceUpdate()</onJogForward>
+      <onJogBackward Type="31" Editable="True">Amulet:document.metaDec.forceUpdate()</onJogBackward>
+      <onTouch Type="31" Editable="True">blinkCnt.setValue(4),Amulet:document.metaDisappearLights.forceUpdate()</onTouch>
+      <MidX Type="13">400</MidX>
+      <MidY Type="13">102</MidY>
+      <Width Type="13">128</Width>
+      <Height Type="13">96</Height>
+    </TouchArea>
+    <CustomButton>
+      <Name Type="12">CustomButton_1</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <downImage Type="16" Editable="True">..\Calendar Demo\clock\SetTime.png</downImage>
+      <font Type="14" Editable="True">Bitstream Vera Sans, 12pt</font>
+      <fontColor Type="11" Editable="True">#000000</fontColor>
+      <fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle>
+      <href Type="15" Editable="True">Amulet:document.ToTime.forceUpdate()</href>
+      <onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress>
+      <upImage Type="16" Editable="True">..\Calendar Demo\clock\SetTime.png</upImage>
+      <MidX Type="13">363</MidX>
+      <MidY Type="13">247</MidY>
+      <Width Type="13">74</Width>
+      <Height Type="13">56</Height>
+    </CustomButton>
+  </BODY>
+</PAGE>

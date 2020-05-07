@@ -1,0 +1,149 @@
+<SCRIPT>
+	new int tempHour
+	new int tempMinute
+	new int selection
+	#define TIMEFRAME_MINUTES	1
+	#define TIMEFRAME_HOURS	0
+	@load()
+	{
+		blinkCnt.setValue(0);
+		tempHour = calendar.hour
+		tempMinute= calendar.minute
+		Amulet:document.Hours1.disappear()
+		Amulet:document.Minutes1.disappear()
+		Amulet:document.Minutes10.disappear()
+		document.overhead_light_hours.disappear()
+		document.overhead_light_minutes.disappear()
+		Amulet:document.Hours1.setValue(tempHour)
+		Amulet:document.Hours1.reappear()
+		Amulet:document.Minutes1.setValue(tempMinute)
+		Amulet:document.Minutes10.setValue(tempMinute)
+		Amulet:document.Minutes1.reappear()
+		Amulet:document.Minutes10.reappear()
+	}
+	public incHour()
+	{
+		Amulet:document.Hours1.disappear()
+		document.overhead_light_hours.reappear()
+		tempHour++
+		if(tempHour > 12)
+			tempHour = 1
+		Amulet:document.Hours1.setValue(tempHour)
+		Amulet:document.Hours1.reappear()
+	}
+	public decHour()
+	{
+		Amulet:document.Hours1.disappear()
+		document.overhead_light_hours.reappear()
+		tempHour--
+		if(tempHour < 1)
+			tempHour = 12
+		Amulet:document.Hours1.setValue(tempHour)
+		Amulet:document.Hours1.reappear()
+	}
+	public incMinute()
+	{
+		Amulet:document.Minutes1.disappear()
+		Amulet:document.Minutes10.disappear()
+		document.overhead_light_minutes.reappear()
+		tempMinute++
+		if(tempMinute > 59)
+			tempMinute = 0
+		Amulet:document.Minutes1.setValue(tempMinute)
+		Amulet:document.Minutes10.setValue(tempMinute)
+		Amulet:document.Minutes1.reappear()
+		Amulet:document.Minutes10.reappear()
+	}
+	public decMinute()
+	{
+		Amulet:document.Minutes1.disappear()
+		Amulet:document.Minutes10.disappear()
+		document.overhead_light_minutes.reappear()
+		tempMinute--
+		if(tempMinute < 0)
+			tempMinute = 59
+		Amulet:document.Minutes1.setValue(tempMinute)
+		Amulet:document.Minutes10.setValue(tempMinute)
+		Amulet:document.Minutes1.reappear()
+		Amulet:document.Minutes10.reappear()
+	}
+	public selectMinute()
+	{
+		selection = TIMEFRAME_MINUTES
+		document.overhead_light_minutes.reappear()
+		Amulet:document.Minutes1.reappear()
+		Amulet:document.Minutes10.reappear()
+		document.overhead_light_hours.disappear()
+		Amulet:document.Hours1.reappear()
+	}
+	public selectHour()
+	{
+		selection = TIMEFRAME_HOURS
+		document.overhead_light_minutes.disappear()
+		Amulet:document.Minutes1.reappear()
+		Amulet:document.Minutes10.reappear()
+		document.overhead_light_hours.reappear()
+		Amulet:document.Hours1.reappear()
+	}
+	public genericInc()
+	{
+		if(selection == TIMEFRAME_HOURS)
+			incHour
+		else
+			incMinute
+	}
+	public genericDec()
+	{
+		if(selection == TIMEFRAME_HOURS)
+			decHour
+		else
+			decMinute
+	}
+	public Save()
+	{
+		calendar.hour.setValue(tempHour)
+		calendar.minute.setValue(tempMinute)
+	}
+	public toDate()
+	{
+		calendar.hour.setValue(tempHour)
+		calendar.minute.setValue(tempMinute)
+		Fridge_set_date.open()
+	}
+		
+</SCRIPT>
+<meta http-equiv="Refresh" content="0;
+url=Amulet:document.pwm.setPulseWidth(0.9);
+Amulet:document.pwm.setPulseWidth(0.8);
+Amulet:document.pwm.setPulseWidth(0.7);
+Amulet:document.pwm.setPulseWidth(0.6);
+Amulet:document.pwm.setPulseWidth(0.5);
+Amulet:document.pwm.setPulseWidth(0.4);
+Amulet:document.pwm.setPulseWidth(0.3);
+Amulet:document.pwm.setPulseWidth(0.2);
+Amulet:document.pwm.setPulseWidth(0.1);
+Amulet:document.pwm.setPulseWidth(0.07);
+Amulet:document.pwm.setPulseWidth(0.04);
+Amulet:document.pwm.setPulseWidth(0.02);
+Amulet:document.pwm.setPeriod(10),
+Amulet:document.pwm.setPulseWidth(0.01),
+Clock_home.open();
+name=ToHome">
+
+<meta http-equiv="Refresh" content="0.02;
+url=Amulet:document.pwm.setPeriod(1),
+Amulet:document.pwm.setPulseWidth(0.02);
+Amulet:document.pwm.setPulseWidth(0.04);
+Amulet:document.pwm.setPulseWidth(0.07);
+Amulet:document.pwm.setPulseWidth(0.1);
+Amulet:document.pwm.setPulseWidth(0.2);
+Amulet:document.pwm.setPulseWidth(0.3);
+Amulet:document.pwm.setPulseWidth(0.4);
+Amulet:document.pwm.setPulseWidth(0.5),
+Amulet:document.pwm.setPulseWidth(0.6);
+Amulet:document.pwm.setPulseWidth(0.7);
+Amulet:document.pwm.setPulseWidth(0.8);
+Amulet:document.pwm.setPulseWidth(0.9);
+Amulet:document.pwm.setPulseWidth(0.999),
+Amulet:document.pwmMeta.setUpdateRate(0);
+name=pwmMeta">

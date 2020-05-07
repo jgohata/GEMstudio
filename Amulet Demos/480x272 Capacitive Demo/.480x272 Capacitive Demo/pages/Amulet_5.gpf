@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAGE NAME="Amulet_5">
+  <PROPERTIES>
+    <HEAD>
+      <TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS>
+    </HEAD>
+  </PROPERTIES>
+  <BKGND>
+    <Image>
+      <Name Type="12">Slide1_1</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <file Type="16" Editable="True">.PowerPoint\Slide5.gif</file>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">486</Width>
+      <Height Type="13">278</Height>
+    </Image>
+  </BKGND>
+  <BODY>
+    <TouchArea>
+      <Name Type="12">WholeScreenButton_1</Name>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <onPinch Type="31" Editable="True">Menu.open()</onPinch>
+      <onSwipeWest Type="31" Editable="True">Amulet_6.open()</onSwipeWest>
+      <onSwipeEast Type="31" Editable="True">Amulet_4.open()</onSwipeEast>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">486</Width>
+      <Height Type="13">278</Height>
+    </TouchArea>
+  </BODY>
+</PAGE>

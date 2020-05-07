@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAGE NAME="Amulet_1">
+  <PROPERTIES>
+    <HEAD>
+      <TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS>
+      <FUNCTIONS charPos="166" foldedLines="" SOURCE="Amulet_1.gsf"/>
+    </HEAD>
+  </PROPERTIES>
+  <BKGND>
+    <Image>
+      <Name Type="12">Slide1_1</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <file Type="16" Editable="True">.PowerPoint\Slide1.gif</file>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">486</Width>
+      <Height Type="13">278</Height>
+    </Image>
+  </BKGND>
+  <BODY>
+    <TouchArea>
+      <Name Type="12">WholeScreenButton_1</Name>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <onPinch Type="31" Editable="True">Menu.open()</onPinch>
+      <onSwipeWest Type="31" Editable="True">Amulet_2.open()</onSwipeWest>
+      <onSwipeEast Type="31" Editable="True">Menu.open()</onSwipeEast>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">486</Width>
+      <Height Type="13">278</Height>
+    </TouchArea>
+    <PWM>
+      <Name Type="12">pwm</Name>
+      <invisible Type="2" Editable="True">True	True	False</invisible>
+      <channel Type="10" Editable="True">0	0	1	2</channel>
+      <initialCondition Type="10" Editable="True">No Change	On	Off	No Change</initialCondition>
+      <periodIn_ms Type="20" Editable="True">1</periodIn_ms>
+      <pulseWidthIn_ms Type="20" Editable="True">0.999</pulseWidthIn_ms>
+      <MidX Type="13">549</MidX>
+      <MidY Type="13">350</MidY>
+      <Width Type="13">31</Width>
+      <Height Type="13">31</Height>
+    </PWM>
+  </BODY>
+</PAGE>

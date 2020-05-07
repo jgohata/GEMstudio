@@ -1,0 +1,128 @@
+<EMBED SRC="..\Calendar Demo\sleepCode.txt">
+<SCRIPT>
+	new int tempMilHour
+	new int tempMinute
+	new int selection
+	#define TIMEFRAME_MINUTES	1
+	#define TIMEFRAME_HOURS	0
+	@load()
+	{
+		blinkCnt.setValue(0);
+		tempMilHour = calendar.militaryHour
+		tempMinute= calendar.minute
+		Amulet:document.Hours1.disappear()
+		Amulet:document.Hours10.disappear()
+		Amulet:document.Minutes1.disappear()
+		Amulet:document.Minutes10.disappear()
+		document.overhead_light_hours.disappear()
+		document.overhead_light_minutes.disappear()
+		Amulet:document.Hours1.setValue(tempMilHour)
+		Amulet:document.Hours10.setValue(tempMilHour)
+		Amulet:document.Hours1.reappear()
+		Amulet:document.Hours10.reappear()
+		Amulet:document.Minutes1.setValue(tempMinute)
+		Amulet:document.Minutes10.setValue(tempMinute)
+		Amulet:document.Minutes1.reappear()
+		Amulet:document.Minutes10.reappear()
+	}
+	public incHour()
+	{
+		Amulet:document.Hours1.disappear()
+		Amulet:document.Hours10.disappear()
+		document.overhead_light_hours.reappear()
+		tempMilHour++
+		if(tempMilHour > 23)
+			tempMilHour = 0
+		Amulet:document.Hours1.setValue(tempMilHour)
+		Amulet:document.Hours10.setValue(tempMilHour)
+		Amulet:document.Hours1.reappear()
+		Amulet:document.Hours10.reappear()
+	}
+	public decHour()
+	{
+		Amulet:document.Hours1.disappear()
+		Amulet:document.Hours10.disappear()
+		document.overhead_light_hours.reappear()
+		tempMilHour--
+		if(tempMilHour < 0)
+			tempMilHour = 23
+		Amulet:document.Hours1.setValue(tempMilHour)
+		Amulet:document.Hours10.setValue(tempMilHour)
+		Amulet:document.Hours1.reappear()
+		Amulet:document.Hours10.reappear()
+	}
+	public incMinute()
+	{
+		Amulet:document.Minutes1.disappear()
+		Amulet:document.Minutes10.disappear()
+		document.overhead_light_minutes.reappear()
+		tempMinute++
+		if(tempMinute > 59)
+			tempMinute = 0
+		Amulet:document.Minutes1.setValue(tempMinute)
+		Amulet:document.Minutes10.setValue(tempMinute)
+		Amulet:document.Minutes1.reappear()
+		Amulet:document.Minutes10.reappear()
+	}
+	public decMinute()
+	{
+		Amulet:document.Minutes1.disappear()
+		Amulet:document.Minutes10.disappear()
+		document.overhead_light_minutes.reappear()
+		tempMinute--
+		if(tempMinute < 0)
+			tempMinute = 59
+		Amulet:document.Minutes1.setValue(tempMinute)
+		Amulet:document.Minutes10.setValue(tempMinute)
+		Amulet:document.Minutes1.reappear()
+		Amulet:document.Minutes10.reappear()
+	}
+	public selectMinute()
+	{
+		selection = TIMEFRAME_MINUTES
+		document.overhead_light_minutes.reappear()
+		Amulet:document.Minutes1.reappear()
+		Amulet:document.Minutes10.reappear()
+		document.overhead_light_hours.disappear()
+		Amulet:document.Hours1.reappear()
+		Amulet:document.Hours10.reappear()
+	}
+	public selectHour()
+	{
+		selection = TIMEFRAME_HOURS
+		document.overhead_light_minutes.disappear()
+		Amulet:document.Minutes1.reappear()
+		Amulet:document.Minutes10.reappear()
+		document.overhead_light_hours.reappear()
+		Amulet:document.Hours1.reappear()
+		Amulet:document.Hours10.reappear()
+	}
+	public genericInc()
+	{
+		if(selection == TIMEFRAME_HOURS)
+			incHour
+		else
+			incMinute
+	}
+	public genericDec()
+	{
+		if(selection == TIMEFRAME_HOURS)
+			decHour
+		else
+			decMinute
+	}
+	//Save Fields then return
+	public Save()
+	{
+		calendar.hour.setValue(tempMilHour)
+		calendar.minute.setValue(tempMinute)
+		Fridge_clock.open()
+	}
+	public toDate()
+	{
+		calendar.hour.setValue(tempMilHour)
+		calendar.minute.setValue(tempMinute)
+		Fridge_set_date.open()
+	}
+		
+</SCRIPT>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAGE NAME="Thermostat_settings">
+  <PROPERTIES>
+    <HEAD>
+      <TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS>
+      <FUNCTIONS charPos="3216" foldedLines="" SOURCE="Thermostat_settings.gsf"/>
+    </HEAD>
+  </PROPERTIES>
+  <BKGND>
+    <Image>
+      <Name Type="12">bg</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <file Type="16" Editable="True">.Thermostat\Background.jpg</file>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">486</Width>
+      <Height Type="13">278</Height>
+    </Image>
+  </BKGND>
+  <BODY>
+    <CustomButton>
+      <Name Type="12">return</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <downImage Type="16" Editable="True">.Thermostat\back_down.png</downImage>
+      <font Type="14" Editable="True">Bitstream Vera Sans,  12pt</font>
+      <fontColor Type="11" Editable="True">#000000</fontColor>
+      <fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle>
+      <href Type="15" Editable="True">GEMscript.save(),Amulet:document.ToHome.setUpdateRate(0.02),</href>
+      <onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress>
+      <upImage Type="16" Editable="True">.Thermostat\back.png</upImage>
+      <executeOn Type="10" Editable="True">Hit	Release	Hit	Both</executeOn>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">232</MidY>
+      <Width Type="13">80</Width>
+      <Height Type="13">81</Height>
+    </CustomButton>
+    <Image>
+      <Name Type="12">SecondTick</Name>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">..\Calendar Demo\clock\colon.png</file>
+      <MidX Type="13">242</MidX>
+      <MidY Type="13">117</MidY>
+      <Width Type="13">36</Width>
+      <Height Type="13">76</Height>
+    </Image>
+    <Image>
+      <Name Type="12">overhead_light_minutes</Name>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <invisible Type="2" Editable="True">True	True	False</invisible>
+      <file Type="16" Editable="True">.Spotlights\spotWide.png</file>
+      <MidX Type="13">332</MidX>
+      <MidY Type="13">104</MidY>
+      <Width Type="13">181</Width>
+      <Height Type="13">214</Height>
+    </Image>
+    <Image>
+      <Name Type="12">overhead_light_hours</Name>
+      <invisible Type="2" Editable="True">True	True	False</invisible>
+      <file Type="16" Editable="True">.Spotlights\spotWide.png</file>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <MidX Type="13">151</MidX>
+      <MidY Type="13">104</MidY>
+      <Width Type="13">181</Width>
+      <Height Type="13">214</Height>
+    </Image>
+    <ImageSeq>
+      <Name Type="12">Hours10</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <href Type="24" Editable="True">tmpMilHour.value()</href>
+      <max Type="13" Editable="True">23</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">..\Calendar Demo\clock\1am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\0am.png;..\Calendar Demo\clock\1am.png;..\Calendar Demo\clock\1am.png;..\Calendar Demo\clock\1pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\0pm.png;..\Calendar Demo\clock\1pm.png;..\Calendar Demo\clock\1pm.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0</updateDelay>
+      <waitForInit Type="2" Editable="True">True</waitForInit>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <MidX Type="13">118</MidX>
+      <MidY Type="13">115</MidY>
+      <Width Type="13">86</Width>
+      <Height Type="13">126</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">Hours1</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <href Type="24" Editable="True">tmpMilHour.value()</href>
+      <max Type="13" Editable="True">23</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0</updateDelay>
+      <waitForInit Type="2" Editable="True">True</waitForInit>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <MidX Type="13">191</MidX>
+      <MidY Type="13">115</MidY>
+      <Width Type="13">86</Width>
+      <Height Type="13">126</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">Minutes10</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <href Type="24" Editable="True">tmpMinute.value()</href>
+      <max Type="13" Editable="True">59</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0</updateDelay>
+      <waitForInit Type="2" Editable="True">True</waitForInit>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <MidX Type="13">294</MidX>
+      <MidY Type="13">115</MidY>
+      <Width Type="13">86</Width>
+      <Height Type="13">126</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">Minutes1</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <href Type="24" Editable="True">tmpMinute.value()</href>
+      <max Type="13" Editable="True">59</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png;..\Calendar Demo\clock\0.png;..\Calendar Demo\clock\1.png;..\Calendar Demo\clock\2.png;..\Calendar Demo\clock\3.png;..\Calendar Demo\clock\4.png;..\Calendar Demo\clock\5.png;..\Calendar Demo\clock\6.png;..\Calendar Demo\clock\7.png;..\Calendar Demo\clock\8.png;..\Calendar Demo\clock\9.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0</updateDelay>
+      <waitForInit Type="2" Editable="True">True</waitForInit>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <MidX Type="13">368</MidX>
+      <MidY Type="13">115</MidY>
+      <Width Type="13">86</Width>
+      <Height Type="13">126</Height>
+    </ImageSeq>
+    <TouchArea>
+      <Name Type="12">ChangeHour</Name>
+      <onRelease Type="31" Editable="True"/>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <onJogForward Type="31" Editable="True">GEMscript.incHour()</onJogForward>
+      <onJogBackward Type="31" Editable="True">GEMscript.decHour()</onJogBackward>
+      <onTouch Type="31" Editable="True">GEMscript.selectHour()</onTouch>
+      <MidX Type="13">124</MidX>
+      <MidY Type="13">103</MidY>
+      <Width Type="13">220</Width>
+      <Height Type="13">173</Height>
+    </TouchArea>
+    <TouchArea>
+      <Name Type="12">ChangeMin</Name>
+      <onRelease Type="31" Editable="True"/>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <onJogForward Type="31" Editable="True">GEMscript.incMinute()</onJogForward>
+      <onJogBackward Type="31" Editable="True">GEMscript.decMinute()</onJogBackward>
+      <onTouch Type="31" Editable="True">GEMscript.selectMinute()</onTouch>
+      <MidX Type="13">366</MidX>
+      <MidY Type="13">103</MidY>
+      <Width Type="13">227</Width>
+      <Height Type="13">170</Height>
+    </TouchArea>
+    <PWM>
+      <Name Type="12">pwm</Name>
+      <invisible Type="2" Editable="True">True	True	False</invisible>
+      <channel Type="10" Editable="True">0	0	1	2</channel>
+      <initialCondition Type="10" Editable="True">No Change	On	Off	No Change</initialCondition>
+      <periodIn_ms Type="20" Editable="True">1</periodIn_ms>
+      <pulseWidthIn_ms Type="20" Editable="True">0.999</pulseWidthIn_ms>
+      <MidX Type="13">511</MidX>
+      <MidY Type="13">303</MidY>
+      <Width Type="13">31</Width>
+      <Height Type="13">31</Height>
+    </PWM>
+  </BODY>
+</PAGE>

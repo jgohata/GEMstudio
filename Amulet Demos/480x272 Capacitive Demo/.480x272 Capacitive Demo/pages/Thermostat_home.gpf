@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAGE NAME="Thermostat_home">
+  <PROPERTIES>
+    <HEAD>
+      <TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS>
+      <FUNCTIONS charPos="621" foldedLines="" SOURCE="Thermostat_home.gsf"/>
+    </HEAD>
+  </PROPERTIES>
+  <BKGND>
+    <Image>
+      <Name Type="12">Background</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <file Type="16" Editable="True">.Thermostat\Background.jpg</file>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">486</Width>
+      <Height Type="13">278</Height>
+    </Image>
+  </BKGND>
+  <BODY>
+    <Image>
+      <Name Type="12">HomepageLines_1</Name>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">.Thermostat\HomepageLines.png</file>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">486</Width>
+      <Height Type="13">278</Height>
+    </Image>
+    <CustomButton>
+      <Name Type="12">Up</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <upImage Type="16" Editable="True">.Thermostat\arrow_up.png</upImage>
+      <downImage Type="16" Editable="True">.Thermostat\arrow_up_glow.png</downImage>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <href Type="15" Editable="True">Amulet:internalRAM.byte(0).inc(),
+Amulet:document.TempTens.forceUpdate(),
+Amulet:document.TempOnes.forceUpdate()</href>
+      <onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress>
+      <repeatDelay Type="20" Editable="True">0.5</repeatDelay>
+      <repeatRate Type="20" Editable="True">0.5</repeatRate>
+      <executeOn Type="10" Editable="True">Hit	Release	Hit	Both</executeOn>
+      <MidX Type="13">228</MidX>
+      <MidY Type="13">196</MidY>
+      <Width Type="13">114</Width>
+      <Height Type="13">128</Height>
+    </CustomButton>
+    <CustomButton>
+      <Name Type="12">Down</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <upImage Type="16" Editable="True">.Thermostat\arrow_down.png</upImage>
+      <downImage Type="16" Editable="True">.Thermostat\arrow_down_glow.png</downImage>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <href Type="15" Editable="True">Amulet:internalRAM.byte(0).dec(),
+Amulet:document.TempTens.forceUpdate(),
+Amulet:document.TempOnes.forceUpdate()</href>
+      <onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress>
+      <repeatDelay Type="20" Editable="True">0.5</repeatDelay>
+      <repeatRate Type="20" Editable="True">0.5</repeatRate>
+      <executeOn Type="10" Editable="True">Hit	Release	Hit	Both</executeOn>
+      <MidX Type="13">323</MidX>
+      <MidY Type="13">196</MidY>
+      <Width Type="13">114</Width>
+      <Height Type="13">128</Height>
+    </CustomButton>
+    <Image>
+      <Name Type="12">Home</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <file Type="16" Editable="True">.Thermostat\Home2.png</file>
+      <MidX Type="13">427</MidX>
+      <MidY Type="13">194</MidY>
+      <Width Type="13">96</Width>
+      <Height Type="13">96</Height>
+    </Image>
+    <Image>
+      <Name Type="12">DegreeBig_1</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <file Type="16" Editable="True">.Thermostat\numerals_font_eurostile\DegreeBig.png</file>
+      <MidX Type="13">279</MidX>
+      <MidY Type="13">29</MidY>
+      <Width Type="13">34</Width>
+      <Height Type="13">35</Height>
+    </Image>
+    <TouchArea>
+      <Name Type="12">HomeTouch</Name>
+      <onRelease Type="31" Editable="True">Menu.open()</onRelease>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <MidX Type="13">430</MidX>
+      <MidY Type="13">201</MidY>
+      <Width Type="13">107</Width>
+      <Height Type="13">149</Height>
+    </TouchArea>
+    <ImageSeq>
+      <Name Type="12">Day1_Weather</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:math.randomByte.value()</href>
+      <max Type="13" Editable="True">255</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Thermostat\Weather\Sun.png;.Thermostat\Weather\Cloud.png;.Thermostat\Weather\CloudSun.png;.Thermostat\Weather\Rain.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">116</MidX>
+      <MidY Type="13">38</MidY>
+      <Width Type="13">61</Width>
+      <Height Type="13">53</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">Day2_Weather</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:math.randomByte.value()</href>
+      <max Type="13" Editable="True">255</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Thermostat\Weather\Sun.png;.Thermostat\Weather\Cloud.png;.Thermostat\Weather\CloudSun.png;.Thermostat\Weather\Rain.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">116</MidX>
+      <MidY Type="13">86</MidY>
+      <Width Type="13">61</Width>
+      <Height Type="13">53</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">Day3_Weather</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:math.randomByte.value()</href>
+      <max Type="13" Editable="True">255</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Thermostat\Weather\Sun.png;.Thermostat\Weather\Cloud.png;.Thermostat\Weather\CloudSun.png;.Thermostat\Weather\Rain.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">116</MidX>
+      <MidY Type="13">135</MidY>
+      <Width Type="13">61</Width>
+      <Height Type="13">53</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">Day4_Weather</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:math.randomByte.value()</href>
+      <max Type="13" Editable="True">255</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Thermostat\Weather\Sun.png;.Thermostat\Weather\Cloud.png;.Thermostat\Weather\CloudSun.png;.Thermostat\Weather\Rain.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">116</MidX>
+      <MidY Type="13">183</MidY>
+      <Width Type="13">61</Width>
+      <Height Type="13">53</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">Day5_Weather</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:math.randomByte.value()</href>
+      <max Type="13" Editable="True">255</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Thermostat\Weather\Sun.png;.Thermostat\Weather\Cloud.png;.Thermostat\Weather\CloudSun.png;.Thermostat\Weather\Rain.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">116</MidX>
+      <MidY Type="13">232</MidY>
+      <Width Type="13">61</Width>
+      <Height Type="13">53</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">TempOnes</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:internalRAM.byte(0).value()</href>
+      <max Type="13" Editable="True">99</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png;.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png;.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png;.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png;.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png;.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png;.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png;.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png;.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png;.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png;</sequence>
+      <updateFreq Type="20" Editable="True">0.2</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">244</MidX>
+      <MidY Type="13">46</MidY>
+      <Width Type="13">60</Width>
+      <Height Type="13">69</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">TempTens</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:internalRAM.byte(0).value()</href>
+      <max Type="13" Editable="True">99</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\zero.png;.Thermostat\numerals_font_eurostile\one.png;.Thermostat\numerals_font_eurostile\two.png;.Thermostat\numerals_font_eurostile\three.png;.Thermostat\numerals_font_eurostile\four.png;.Thermostat\numerals_font_eurostile\five.png;.Thermostat\numerals_font_eurostile\six.png;.Thermostat\numerals_font_eurostile\seven.png;.Thermostat\numerals_font_eurostile\eight.png;.Thermostat\numerals_font_eurostile\nine.png</sequence>
+      <updateFreq Type="20" Editable="True">0.2</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">194</MidX>
+      <MidY Type="13">46</MidY>
+      <Width Type="13">60</Width>
+      <Height Type="13">69</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">Day1_Ones</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:math.randomByte.maskedValue(0x07)</href>
+      <max Type="13" Editable="True">15</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png;.Thermostat\numerals_font_eurostile\6_forecast.png;.Thermostat\numerals_font_eurostile\7_forecast.png;.Thermostat\numerals_font_eurostile\8_forecast.png;.Thermostat\numerals_font_eurostile\9_forecast.png;.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">76</MidX>
+      <MidY Type="13">38</MidY>
+      <Width Type="13">17</Width>
+      <Height Type="13">19</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">Day1_Tens</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:math.randomByte.value()</href>
+      <max Type="13" Editable="True">255</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png;.Thermostat\numerals_font_eurostile\6_forecast.png;.Thermostat\numerals_font_eurostile\7_forecast.png;.Thermostat\numerals_font_eurostile\8_forecast.png;.Thermostat\numerals_font_eurostile\9_forecast.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">64</MidX>
+      <MidY Type="13">38</MidY>
+      <Width Type="13">17</Width>
+      <Height Type="13">19</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">Day2_Ones</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:math.randomByte.maskedValue(0x07)</href>
+      <max Type="13" Editable="True">15</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png;.Thermostat\numerals_font_eurostile\6_forecast.png;.Thermostat\numerals_font_eurostile\7_forecast.png;.Thermostat\numerals_font_eurostile\8_forecast.png;.Thermostat\numerals_font_eurostile\9_forecast.png;.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">76</MidX>
+      <MidY Type="13">86</MidY>
+      <Width Type="13">17</Width>
+      <Height Type="13">19</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">Day2_Tens</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:math.randomByte.value()</href>
+      <max Type="13" Editable="True">255</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png;.Thermostat\numerals_font_eurostile\6_forecast.png;.Thermostat\numerals_font_eurostile\7_forecast.png;.Thermostat\numerals_font_eurostile\8_forecast.png;.Thermostat\numerals_font_eurostile\9_forecast.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">64</MidX>
+      <MidY Type="13">86</MidY>
+      <Width Type="13">17</Width>
+      <Height Type="13">19</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">Day3_Ones</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:math.randomByte.maskedValue(0x07)</href>
+      <max Type="13" Editable="True">15</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png;.Thermostat\numerals_font_eurostile\6_forecast.png;.Thermostat\numerals_font_eurostile\7_forecast.png;.Thermostat\numerals_font_eurostile\8_forecast.png;.Thermostat\numerals_font_eurostile\9_forecast.png;.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">76</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">17</Width>
+      <Height Type="13">19</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">Day3_Tens</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:math.randomByte.value()</href>
+      <max Type="13" Editable="True">255</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png;.Thermostat\numerals_font_eurostile\6_forecast.png;.Thermostat\numerals_font_eurostile\7_forecast.png;.Thermostat\numerals_font_eurostile\8_forecast.png;.Thermostat\numerals_font_eurostile\9_forecast.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">65</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">17</Width>
+      <Height Type="13">19</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">Day4_Ones</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:math.randomByte.maskedValue(0x07)</href>
+      <max Type="13" Editable="True">15</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png;.Thermostat\numerals_font_eurostile\6_forecast.png;.Thermostat\numerals_font_eurostile\7_forecast.png;.Thermostat\numerals_font_eurostile\8_forecast.png;.Thermostat\numerals_font_eurostile\9_forecast.png;.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">76</MidX>
+      <MidY Type="13">185</MidY>
+      <Width Type="13">17</Width>
+      <Height Type="13">19</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">Day4_Tens</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:math.randomByte.value()</href>
+      <max Type="13" Editable="True">255</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png;.Thermostat\numerals_font_eurostile\6_forecast.png;.Thermostat\numerals_font_eurostile\7_forecast.png;.Thermostat\numerals_font_eurostile\8_forecast.png;.Thermostat\numerals_font_eurostile\9_forecast.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">65</MidX>
+      <MidY Type="13">185</MidY>
+      <Width Type="13">17</Width>
+      <Height Type="13">19</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">Day5_Ones</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:math.randomByte.maskedValue(0x07)</href>
+      <max Type="13" Editable="True">15</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png;.Thermostat\numerals_font_eurostile\6_forecast.png;.Thermostat\numerals_font_eurostile\7_forecast.png;.Thermostat\numerals_font_eurostile\8_forecast.png;.Thermostat\numerals_font_eurostile\9_forecast.png;.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">76</MidX>
+      <MidY Type="13">233</MidY>
+      <Width Type="13">17</Width>
+      <Height Type="13">19</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">Day5_Tens</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:math.randomByte.value()</href>
+      <max Type="13" Editable="True">255</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\0_forecast.png;.Thermostat\numerals_font_eurostile\1_forecast.png;.Thermostat\numerals_font_eurostile\2_forecast.png;.Thermostat\numerals_font_eurostile\3_forecast.png;.Thermostat\numerals_font_eurostile\4_forecast.png;.Thermostat\numerals_font_eurostile\5_forecast.png;.Thermostat\numerals_font_eurostile\6_forecast.png;.Thermostat\numerals_font_eurostile\7_forecast.png;.Thermostat\numerals_font_eurostile\8_forecast.png;.Thermostat\numerals_font_eurostile\9_forecast.png</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">65</MidX>
+      <MidY Type="13">233</MidY>
+      <Width Type="13">17</Width>
+      <Height Type="13">19</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">HourTens</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:calendar.Hour.value()</href>
+      <max Type="13" Editable="True">12</max>
+      <min Type="13" Editable="True">1</min>
+      <sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\EMPTY_time.png;.Thermostat\numerals_font_eurostile\EMPTY_time.png;.Thermostat\numerals_font_eurostile\EMPTY_time.png;.Thermostat\numerals_font_eurostile\EMPTY_time.png;.Thermostat\numerals_font_eurostile\EMPTY_time.png;.Thermostat\numerals_font_eurostile\EMPTY_time.png;.Thermostat\numerals_font_eurostile\EMPTY_time.png;.Thermostat\numerals_font_eurostile\EMPTY_time.png;.Thermostat\numerals_font_eurostile\EMPTY_time.png;.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\one_time.png</sequence>
+      <updateFreq Type="20" Editable="True">0.2</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">313</MidX>
+      <MidY Type="13">37</MidY>
+      <Width Type="13">33</Width>
+      <Height Type="13">38</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">HourOnes</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:calendar.Hour.value()</href>
+      <max Type="13" Editable="True">12</max>
+      <min Type="13" Editable="True">1</min>
+      <sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\two_time.png;.Thermostat\numerals_font_eurostile\three_time.png;.Thermostat\numerals_font_eurostile\four_time.png;.Thermostat\numerals_font_eurostile\five_time.png;.Thermostat\numerals_font_eurostile\six_time.png;.Thermostat\numerals_font_eurostile\seven_time.png;.Thermostat\numerals_font_eurostile\eight_time.png;.Thermostat\numerals_font_eurostile\nine_time.png;.Thermostat\numerals_font_eurostile\zero_time.png;.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\two_time.png</sequence>
+      <updateFreq Type="20" Editable="True">0.2</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">337</MidX>
+      <MidY Type="13">37</MidY>
+      <Width Type="13">33</Width>
+      <Height Type="13">38</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">MinTens</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:calendar.minute.value()</href>
+      <max Type="13" Editable="True">59</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\zero_time.png;.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\two_time.png;.Thermostat\numerals_font_eurostile\three_time.png;.Thermostat\numerals_font_eurostile\four_time.png;.Thermostat\numerals_font_eurostile\five_time.png</sequence>
+      <updateFreq Type="20" Editable="True">0.2</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">371</MidX>
+      <MidY Type="13">37</MidY>
+      <Width Type="13">33</Width>
+      <Height Type="13">38</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">MinOnes</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:calendar.minute.value()</href>
+      <max Type="13" Editable="True">59</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\zero_time.png;.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\two_time.png;.Thermostat\numerals_font_eurostile\three_time.png;.Thermostat\numerals_font_eurostile\four_time.png;.Thermostat\numerals_font_eurostile\five_time.png;.Thermostat\numerals_font_eurostile\six_time.png;.Thermostat\numerals_font_eurostile\seven_time.png;.Thermostat\numerals_font_eurostile\eight_time.png;.Thermostat\numerals_font_eurostile\nine_time.png;.Thermostat\numerals_font_eurostile\zero_time.png;.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\two_time.png;.Thermostat\numerals_font_eurostile\three_time.png;.Thermostat\numerals_font_eurostile\four_time.png;.Thermostat\numerals_font_eurostile\five_time.png;.Thermostat\numerals_font_eurostile\six_time.png;.Thermostat\numerals_font_eurostile\seven_time.png;.Thermostat\numerals_font_eurostile\eight_time.png;.Thermostat\numerals_font_eurostile\nine_time.png;.Thermostat\numerals_font_eurostile\zero_time.png;.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\two_time.png;.Thermostat\numerals_font_eurostile\three_time.png;.Thermostat\numerals_font_eurostile\four_time.png;.Thermostat\numerals_font_eurostile\five_time.png;.Thermostat\numerals_font_eurostile\six_time.png;.Thermostat\numerals_font_eurostile\seven_time.png;.Thermostat\numerals_font_eurostile\eight_time.png;.Thermostat\numerals_font_eurostile\nine_time.png;.Thermostat\numerals_font_eurostile\zero_time.png;.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\two_time.png;.Thermostat\numerals_font_eurostile\three_time.png;.Thermostat\numerals_font_eurostile\four_time.png;.Thermostat\numerals_font_eurostile\five_time.png;.Thermostat\numerals_font_eurostile\six_time.png;.Thermostat\numerals_font_eurostile\seven_time.png;.Thermostat\numerals_font_eurostile\eight_time.png;.Thermostat\numerals_font_eurostile\nine_time.png;.Thermostat\numerals_font_eurostile\zero_time.png;.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\two_time.png;.Thermostat\numerals_font_eurostile\three_time.png;.Thermostat\numerals_font_eurostile\four_time.png;.Thermostat\numerals_font_eurostile\five_time.png;.Thermostat\numerals_font_eurostile\six_time.png;.Thermostat\numerals_font_eurostile\seven_time.png;.Thermostat\numerals_font_eurostile\eight_time.png;.Thermostat\numerals_font_eurostile\nine_time.png;.Thermostat\numerals_font_eurostile\zero_time.png;.Thermostat\numerals_font_eurostile\one_time.png;.Thermostat\numerals_font_eurostile\two_time.png;.Thermostat\numerals_font_eurostile\three_time.png;.Thermostat\numerals_font_eurostile\four_time.png;.Thermostat\numerals_font_eurostile\five_time.png;.Thermostat\numerals_font_eurostile\six_time.png;.Thermostat\numerals_font_eurostile\seven_time.png;.Thermostat\numerals_font_eurostile\eight_time.png;.Thermostat\numerals_font_eurostile\nine_time.png</sequence>
+      <updateFreq Type="20" Editable="True">0.2</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False	False	True</waitForInit>
+      <MidX Type="13">398</MidX>
+      <MidY Type="13">37</MidY>
+      <Width Type="13">33</Width>
+      <Height Type="13">38</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">DayOfWeek1</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:calendar.dayOfWeek.value()</href>
+      <max Type="13" Editable="True">7</max>
+      <min Type="13" Editable="True">1</min>
+      <sequence Type="21" Editable="True">.Thermostat\Days\Sun.png;.Thermostat\Days\Mon.png;.Thermostat\Days\Tues.png;.Thermostat\Days\Wed.png;.Thermostat\Days\Thurs.png;.Thermostat\Days\Fri.png;.Thermostat\Days\Sat.png</sequence>
+      <updateFreq Type="20" Editable="True">0.2</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">39</MidX>
+      <MidY Type="13">41</MidY>
+      <Width Type="13">41</Width>
+      <Height Type="13">14</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">DayOfWeek2</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:calendar.dayOfWeek.value()</href>
+      <max Type="13" Editable="True">7</max>
+      <min Type="13" Editable="True">1</min>
+      <sequence Type="21" Editable="True">.Thermostat\Days\Mon.png;.Thermostat\Days\Tues.png;.Thermostat\Days\Wed.png;.Thermostat\Days\Thurs.png;.Thermostat\Days\Fri.png;.Thermostat\Days\Sat.png;.Thermostat\Days\Sun.png</sequence>
+      <updateFreq Type="20" Editable="True">0.2</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">39</MidX>
+      <MidY Type="13">89</MidY>
+      <Width Type="13">41</Width>
+      <Height Type="13">14</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">DayOfWeek3</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:calendar.dayOfWeek.value()</href>
+      <max Type="13" Editable="True">7</max>
+      <min Type="13" Editable="True">1</min>
+      <sequence Type="21" Editable="True">.Thermostat\Days\Tues.png;.Thermostat\Days\Wed.png;.Thermostat\Days\Thurs.png;.Thermostat\Days\Fri.png;.Thermostat\Days\Sat.png;.Thermostat\Days\Sun.png;.Thermostat\Days\Mon.png</sequence>
+      <updateFreq Type="20" Editable="True">0.2</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">39</MidX>
+      <MidY Type="13">139</MidY>
+      <Width Type="13">41</Width>
+      <Height Type="13">14</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">DayOfWeek4</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:calendar.dayOfWeek.value()</href>
+      <max Type="13" Editable="True">7</max>
+      <min Type="13" Editable="True">1</min>
+      <sequence Type="21" Editable="True">.Thermostat\Days\Wed.png;.Thermostat\Days\Thurs.png;.Thermostat\Days\Fri.png;.Thermostat\Days\Sat.png;.Thermostat\Days\Sun.png;.Thermostat\Days\Mon.png;.Thermostat\Days\Tues.png</sequence>
+      <updateFreq Type="20" Editable="True">0.2</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">39</MidX>
+      <MidY Type="13">188</MidY>
+      <Width Type="13">41</Width>
+      <Height Type="13">14</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">DayOfWeek5</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:calendar.dayOfWeek.value()</href>
+      <max Type="13" Editable="True">7</max>
+      <min Type="13" Editable="True">1</min>
+      <sequence Type="21" Editable="True">.Thermostat\Days\Thurs.png;.Thermostat\Days\Fri.png;.Thermostat\Days\Sat.png;.Thermostat\Days\Sun.png;.Thermostat\Days\Mon.png;.Thermostat\Days\Tues.png;.Thermostat\Days\Wed.png</sequence>
+      <updateFreq Type="20" Editable="True">0.2</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False</waitForInit>
+      <MidX Type="13">39</MidX>
+      <MidY Type="13">236</MidY>
+      <Width Type="13">41</Width>
+      <Height Type="13">14</Height>
+    </ImageSeq>
+    <Image>
+      <Name Type="12">DegreeSmall_1</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">.Thermostat\numerals_font_eurostile\DegreeSmall.png</file>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <MidX Type="13">86</MidX>
+      <MidY Type="13">34</MidY>
+      <Width Type="13">12</Width>
+      <Height Type="13">10</Height>
+    </Image>
+    <Image>
+      <Name Type="12">DegreeSmall_2</Name>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">.Thermostat\numerals_font_eurostile\DegreeSmall.png</file>
+      <MidX Type="13">86</MidX>
+      <MidY Type="13">82</MidY>
+      <Width Type="13">12</Width>
+      <Height Type="13">10</Height>
+    </Image>
+    <Image>
+      <Name Type="12">DegreeSmall_3</Name>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">.Thermostat\numerals_font_eurostile\DegreeSmall.png</file>
+      <MidX Type="13">86</MidX>
+      <MidY Type="13">132</MidY>
+      <Width Type="13">12</Width>
+      <Height Type="13">10</Height>
+    </Image>
+    <Image>
+      <Name Type="12">DegreeSmall_4</Name>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">.Thermostat\numerals_font_eurostile\DegreeSmall.png</file>
+      <MidX Type="13">86</MidX>
+      <MidY Type="13">181</MidY>
+      <Width Type="13">12</Width>
+      <Height Type="13">10</Height>
+    </Image>
+    <Image>
+      <Name Type="12">DegreeSmall_5</Name>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">.Thermostat\numerals_font_eurostile\DegreeSmall.png</file>
+      <MidX Type="13">86</MidX>
+      <MidY Type="13">229</MidY>
+      <Width Type="13">12</Width>
+      <Height Type="13">10</Height>
+    </Image>
+    <Image>
+      <Name Type="12">Colon17_1</Name>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">.Thermostat\numerals_font_eurostile\Colon17.png</file>
+      <MidX Type="13">355</MidX>
+      <MidY Type="13">40</MidY>
+      <Width Type="13">12</Width>
+      <Height Type="13">23</Height>
+    </Image>
+    <ImageSeq>
+      <Name Type="12">ampm</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:calendar.militaryHour.value()</href>
+      <max Type="13" Editable="True">23</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Thermostat\numerals_font_eurostile\am.png;.Thermostat\numerals_font_eurostile\pm.png</sequence>
+      <updateFreq Type="20" Editable="True">0.2</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">False	False	True</waitForInit>
+      <MidX Type="13">445</MidX>
+      <MidY Type="13">47</MidY>
+      <Width Type="13">61</Width>
+      <Height Type="13">31</Height>
+    </ImageSeq>
+    <Image>
+      <Name Type="12">CurrentTempTime</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">.Thermostat\numerals_font_eurostile\CurrentTempTime.png</file>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <MidX Type="13">323</MidX>
+      <MidY Type="13">98</MidY>
+      <Width Type="13">270</Width>
+      <Height Type="13">25</Height>
+    </Image>
+    <TouchArea>
+      <Name Type="12">ChangeTime</Name>
+      <onRelease Type="31" Editable="True">Amulet:document.ToClockSet.setUpdateRate(0.02);Amulet:nop()</onRelease>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <onPinch Type="31" Editable="True">Menu.open()</onPinch>
+      <MidX Type="13">393</MidX>
+      <MidY Type="13">41</MidY>
+      <Width Type="13">175</Width>
+      <Height Type="13">72</Height>
+    </TouchArea>
+    <PWM>
+      <Name Type="12">pwm</Name>
+      <invisible Type="2" Editable="True">True	True	False</invisible>
+      <channel Type="10" Editable="True">0	0	1	2</channel>
+      <initialCondition Type="10" Editable="True">No Change	On	Off	No Change</initialCondition>
+      <periodIn_ms Type="20" Editable="True">1</periodIn_ms>
+      <pulseWidthIn_ms Type="20" Editable="True">0.999</pulseWidthIn_ms>
+      <MidX Type="13">511</MidX>
+      <MidY Type="13">303</MidY>
+      <Width Type="13">31</Width>
+      <Height Type="13">31</Height>
+    </PWM>
+  </BODY>
+</PAGE>

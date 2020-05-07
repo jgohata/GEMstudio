@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAGE NAME="Fridge_settings">
+  <PROPERTIES>
+    <HEAD>
+      <TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS>
+      <FUNCTIONS charPos="26" foldedLines="" SOURCE="Fridge_settings.gsf"/>
+    </HEAD>
+  </PROPERTIES>
+  <BKGND>
+    <Image>
+      <Name Type="12">bg_header_cool</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <file Type="16" Editable="True">..\Calendar Demo\_ui\bg_cool.jpg</file>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">486</Width>
+      <Height Type="13">278</Height>
+    </Image>
+  </BKGND>
+  <BODY>
+    <TouchArea>
+      <Name Type="12">AnyTouch</Name>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <onPinch Type="31" Editable="True"/>
+      <onTouch Type="31" Editable="True">resetTimer() // resetTimer() is defined in calendar.macro</onTouch>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">486</Width>
+      <Height Type="13">278</Height>
+    </TouchArea>
+    <CustomButton>
+      <Name Type="12">CustomButton</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <downImage Type="16" Editable="True">..\Calendar Demo\_ui\btn_close_1.png</downImage>
+      <href Type="15" Editable="True">Fridge_home.open()</href>
+      <upImage Type="16" Editable="True">..\Calendar Demo\_ui\btn_close_0.png</upImage>
+      <MidX Type="13">422</MidX>
+      <MidY Type="13">35</MidY>
+      <Width Type="13">108</Width>
+      <Height Type="13">58</Height>
+    </CustomButton>
+    <CustomButton>
+      <Name Type="12">Temps</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <downImage Type="16" Editable="True">..\Calendar Demo\settings\btn_temps_1.png</downImage>
+      <href Type="15" Editable="True">Fridge_set_temps.open()</href>
+      <upImage Type="16" Editable="True">..\Calendar Demo\settings\btn_temps_0.png</upImage>
+      <MidX Type="13">184</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">118</Width>
+      <Height Type="13">146</Height>
+    </CustomButton>
+    <CustomButton>
+      <Name Type="12">Backlight</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <downImage Type="16" Editable="True">..\Calendar Demo\settings\btn_backlight_1.png</downImage>
+      <href Type="15" Editable="True">Fridge_set_backlight.open()</href>
+      <upImage Type="16" Editable="True">..\Calendar Demo\settings\btn_backlight_0.png</upImage>
+      <MidX Type="13">296</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">118</Width>
+      <Height Type="13">147</Height>
+    </CustomButton>
+  </BODY>
+</PAGE>

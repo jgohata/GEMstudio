@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAGE NAME="Clock_home">
+  <PROPERTIES>
+    <HEAD>
+      <TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS>
+      <FUNCTIONS charPos="616" foldedLines="" SOURCE="Clock_home.gsf"/>
+    </HEAD>
+  </PROPERTIES>
+  <BKGND>
+    <Image>
+      <Name Type="12">LeatherOrange</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <file Type="16" Editable="True">.Clock\LeatherOrange.png</file>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">486</Width>
+      <Height Type="13">278</Height>
+    </Image>
+  </BKGND>
+  <BODY>
+    <Image>
+      <Name Type="12">colon</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">.Clock\ChromeNumbers\colon.png</file>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <MidX Type="13">216</MidX>
+      <MidY Type="13">134</MidY>
+      <Width Type="13">37</Width>
+      <Height Type="13">108</Height>
+    </Image>
+    <ImageSeq>
+      <Name Type="12">hours</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:calendar.hour.value()</href>
+      <max Type="13" Editable="True">12</max>
+      <min Type="13" Editable="True">1</min>
+      <sequence Type="21" Editable="True">.Clock\ChromeNumbers\1w.png;.Clock\ChromeNumbers\2w.png;.Clock\ChromeNumbers\3w.png;.Clock\ChromeNumbers\4w.png;.Clock\ChromeNumbers\5w.png;.Clock\ChromeNumbers\6w.png;.Clock\ChromeNumbers\7w.png;.Clock\ChromeNumbers\8w.png;.Clock\ChromeNumbers\9w.png;.Clock\ChromeNumbers\10.png;.Clock\ChromeNumbers\11.png;.Clock\ChromeNumbers\12.png</sequence>
+      <updateFreq Type="20" Editable="True">0.2</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">True</waitForInit>
+      <MidX Type="13">120</MidX>
+      <MidY Type="13">134</MidY>
+      <Width Type="13">167</Width>
+      <Height Type="13">108</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">MinuteTens</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:calendar.minute.value()</href>
+      <max Type="13" Editable="True">59</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png</sequence>
+      <updateFreq Type="20" Editable="True">0.2</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">True</waitForInit>
+      <MidX Type="13">277</MidX>
+      <MidY Type="13">134</MidY>
+      <Width Type="13">94</Width>
+      <Height Type="13">108</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">MinuteOnes</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <href Type="24" Editable="True">Amulet:calendar.minute.value()</href>
+      <max Type="13" Editable="True">59</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png;.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png;.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png;.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png;.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png;.Clock\ChromeNumbers\0.png;.Clock\ChromeNumbers\1.png;.Clock\ChromeNumbers\2.png;.Clock\ChromeNumbers\3.png;.Clock\ChromeNumbers\4.png;.Clock\ChromeNumbers\5.png;.Clock\ChromeNumbers\6.png;.Clock\ChromeNumbers\7.png;.Clock\ChromeNumbers\8.png;.Clock\ChromeNumbers\9.png</sequence>
+      <updateFreq Type="20" Editable="True">0.2</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <waitForInit Type="2" Editable="True">True</waitForInit>
+      <MidX Type="13">364</MidX>
+      <MidY Type="13">134</MidY>
+      <Width Type="13">94</Width>
+      <Height Type="13">108</Height>
+    </ImageSeq>
+    <PWM>
+      <Name Type="12">pwm</Name>
+      <invisible Type="2" Editable="True">True	True	False</invisible>
+      <channel Type="10" Editable="True">0	0	1	2</channel>
+      <initialCondition Type="10" Editable="True">No Change	On	Off	No Change</initialCondition>
+      <periodIn_ms Type="20" Editable="True">1</periodIn_ms>
+      <pulseWidthIn_ms Type="20" Editable="True">0.999</pulseWidthIn_ms>
+      <MidX Type="13">511</MidX>
+      <MidY Type="13">303</MidY>
+      <Width Type="13">31</Width>
+      <Height Type="13">31</Height>
+    </PWM>
+    <TouchArea>
+      <Name Type="12">HomeButton</Name>
+      <onRelease Type="31" Editable="True">Menu.open()</onRelease>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <onPinch Type="31" Editable="True">Menu.open()</onPinch>
+      <MidX Type="13">433</MidX>
+      <MidY Type="13">43</MidY>
+      <Width Type="13">101</Width>
+      <Height Type="13">93</Height>
+    </TouchArea>
+    <Image>
+      <Name Type="12">HomeIcon</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">.Home\Home.png</file>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <MidX Type="13">446</MidX>
+      <MidY Type="13">35</MidY>
+      <Width Type="13">56</Width>
+      <Height Type="13">56</Height>
+    </Image>
+    <Image>
+      <Name Type="12">SettingsIcon</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">.Clock\Gear.png</file>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <MidX Type="13">35</MidX>
+      <MidY Type="13">35</MidY>
+      <Width Type="13">56</Width>
+      <Height Type="13">56</Height>
+    </Image>
+    <TouchArea>
+      <Name Type="12">SettingsButton</Name>
+      <onRelease Type="31" Editable="True">Amulet:document.ToSettings.setUpdateRate(0.02),Amulet:nop()</onRelease>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <onPinch Type="31" Editable="True">Menu.open()</onPinch>
+      <MidX Type="13">47</MidX>
+      <MidY Type="13">43</MidY>
+      <Width Type="13">101</Width>
+      <Height Type="13">93</Height>
+    </TouchArea>
+  </BODY>
+</PAGE>

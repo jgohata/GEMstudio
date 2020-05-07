@@ -1,0 +1,26 @@
+<EMBED SRC="..\Calendar Demo\sleepCode.txt">
+
+<META HTTP-EQUIV="REFRESH" CONTENT="0;
+IF=freezerTemp.value();
+GT=0;
+THEN=freezerTemp.dec();
+NAME=metaFreezerDec">
+
+<META HTTP-EQUIV="REFRESH" CONTENT="0;
+IF=freezerTemp.value();
+LT=40;
+THEN=freezerTemp.inc();
+NAME=metaFreezerInc">
+
+<META HTTP-EQUIV="REFRESH" CONTENT="0;
+IF=fridgeTemp.value();
+GT=0;
+THEN=fridgeTemp.dec();
+NAME=metaFridgeDec">
+
+<META HTTP-EQUIV="REFRESH" CONTENT="0;
+IF=fridgeTemp.value();
+LT=40;
+THEN=fridgeTemp.inc();
+NAME=metaFridgeInc">
+

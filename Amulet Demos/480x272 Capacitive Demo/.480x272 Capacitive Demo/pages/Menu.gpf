@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAGE NAME="Menu">
+  <PROPERTIES>
+    <HEAD>
+      <FUNCTIONS charPos="749" foldedLines="" SOURCE="Menu.gsf"/>
+      <TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS>
+    </HEAD>
+  </PROPERTIES>
+  <BKGND>
+    <Image>
+      <Name Type="12">Leather</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <file Type="16" Editable="True">.Clock\Leather.jpg</file>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">486</Width>
+      <Height Type="13">278</Height>
+    </Image>
+  </BKGND>
+  <BODY>
+    <Image>
+      <Name Type="12">FridgeIcon</Name>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">.Main\FridgeIcon.png</file>
+      <MidX Type="13">66</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">102</Width>
+      <Height Type="13">102</Height>
+    </Image>
+    <TouchArea>
+      <Name Type="12">FridgeButton</Name>
+      <onRelease Type="31" Editable="True">Amulet:document.ToFridge.setUpdateRate(0.02),
+Amulet:internalRAM.byte(66).setValue(0)</onRelease>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <MidX Type="13">64</MidX>
+      <MidY Type="13">137</MidY>
+      <Width Type="13">112</Width>
+      <Height Type="13">112</Height>
+    </TouchArea>
+    <Image>
+      <Name Type="12">ThermostatIcon</Name>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">.Main\ThermostatIcon.png</file>
+      <MidX Type="13">182</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">102</Width>
+      <Height Type="13">102</Height>
+    </Image>
+    <TouchArea>
+      <Name Type="12">ThermostatButton</Name>
+      <onRelease Type="31" Editable="True">Amulet:document.ToThermostat.setUpdateRate(0.02)</onRelease>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <MidX Type="13">181</MidX>
+      <MidY Type="13">137</MidY>
+      <Width Type="13">112</Width>
+      <Height Type="13">112</Height>
+    </TouchArea>
+    <Image>
+      <Name Type="12">ClockIcon</Name>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">.Main\ClockIcon.png</file>
+      <MidX Type="13">298</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">102</Width>
+      <Height Type="13">102</Height>
+    </Image>
+    <TouchArea>
+      <Name Type="12">ClockButton</Name>
+      <onRelease Type="31" Editable="True">Amulet:document.ToOven.setUpdateRate(0.02)</onRelease>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <MidX Type="13">298</MidX>
+      <MidY Type="13">137</MidY>
+      <Width Type="13">112</Width>
+      <Height Type="13">112</Height>
+    </TouchArea>
+    <Image>
+      <Name Type="12">PPT_Icon</Name>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">.Main\PPT_Icon.png</file>
+      <MidX Type="13">414</MidX>
+      <MidY Type="13">138</MidY>
+      <Width Type="13">102</Width>
+      <Height Type="13">102</Height>
+    </Image>
+    <TouchArea>
+      <Name Type="12">PPT_Button</Name>
+      <onRelease Type="31" Editable="True">Amulet:document.ToSlideshow.setUpdateRate(0.02),Amulet:internalRAM.byte(66).setValue(0)</onRelease>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <MidX Type="13">415</MidX>
+      <MidY Type="13">137</MidY>
+      <Width Type="13">112</Width>
+      <Height Type="13">112</Height>
+    </TouchArea>
+    <PWM>
+      <Name Type="12">pwm</Name>
+      <invisible Type="2" Editable="True">True	True	False</invisible>
+      <channel Type="10" Editable="True">0	0	1	2</channel>
+      <initialCondition Type="10" Editable="True">No Change	On	Off	No Change</initialCondition>
+      <periodIn_ms Type="20" Editable="True">1</periodIn_ms>
+      <pulseWidthIn_ms Type="20" Editable="True">0.001</pulseWidthIn_ms>
+      <MidX Type="13">549</MidX>
+      <MidY Type="13">350</MidY>
+      <Width Type="13">31</Width>
+      <Height Type="13">31</Height>
+    </PWM>
+  </BODY>
+</PAGE>

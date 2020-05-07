@@ -1,0 +1,55 @@
+<EMBED SRC="..\Calendar Demo\sleepCode.txt">
+
+//Following Meta blinks the colon once per second
+<META HTTP-EQUIV="REFRESH" CONTENT="0.5; URL=Amulet:document.SecondTick.disappear();Amulet:document.SecondTick.reappear()">
+
+//Populate string with current month
+<META HTTP-EQUIV="REFRESH" CONTENT="1,0.01; IF=Amulet:calendar.month.value();
+EQ=1; THEN=dateString.setValue(' January '), Amulet:document.appendDate.forceUpdate();
+EQ=2; THEN=dateString.setValue(' February '), Amulet:document.appendDate.forceUpdate();
+EQ=3; THEN=dateString.setValue(' March '), Amulet:document.appendDate.forceUpdate();
+EQ=4; THEN=dateString.setValue(' April '), Amulet:document.appendDate.forceUpdate();
+EQ=5; THEN=dateString.setValue(' May '), Amulet:document.appendDate.forceUpdate();
+EQ=6; THEN=dateString.setValue(' June '), Amulet:document.appendDate.forceUpdate();
+EQ=7; THEN=dateString.setValue(' July '), Amulet:document.appendDate.forceUpdate();
+EQ=8; THEN=dateString.setValue(' August '), Amulet:document.appendDate.forceUpdate();
+EQ=9; THEN=dateString.setValue(' September '), Amulet:document.appendDate.forceUpdate();
+EQ=10; THEN=dateString.setValue(' October '), Amulet:document.appendDate.forceUpdate();
+EQ=11; THEN=dateString.setValue(' November '), Amulet:document.appendDate.forceUpdate();
+EQ=12; THEN=dateString.setValue(' December '), Amulet:document.appendDate.forceUpdate();">
+
+//Append Day to end of string
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:calendar.dayOfMonth.value();
+EQ=1;THEN=dateString.appendString('1st'); 
+EQ=2;THEN=dateString.appendString('2nd');
+EQ=3;THEN=dateString.appendString('3rd');
+EQ=4;THEN=dateString.appendString('4th');
+EQ=5;THEN=dateString.appendString('5th');
+EQ=6;THEN=dateString.appendString('6th');
+EQ=7;THEN=dateString.appendString('7th');
+EQ=8;THEN=dateString.appendString('8th');
+EQ=9;THEN=dateString.appendString('9th');
+EQ=10;THEN=dateString.appendString('10th');
+EQ=11;THEN=dateString.appendString('11th');
+EQ=12;THEN=dateString.appendString('12th');
+EQ=13;THEN=dateString.appendString('13th');
+EQ=14;THEN=dateString.appendString('14th');
+EQ=15;THEN=dateString.appendString('15th');
+EQ=16;THEN=dateString.appendString('16th');
+EQ=17;THEN=dateString.appendString('17th');
+EQ=18;THEN=dateString.appendString('18th');
+EQ=19;THEN=dateString.appendString('19th');
+EQ=20;THEN=dateString.appendString('20th');
+EQ=21;THEN=dateString.appendString('21st');
+EQ=22;THEN=dateString.appendString('22nd');
+EQ=23;THEN=dateString.appendString('23rd');
+EQ=24;THEN=dateString.appendString('24th');
+EQ=25;THEN=dateString.appendString('25th');
+EQ=26;THEN=dateString.appendString('26th');
+EQ=27;THEN=dateString.appendString('27th');
+EQ=28;THEN=dateString.appendString('28th');
+EQ=29;THEN=dateString.appendString('29th');
+EQ=30;THEN=dateString.appendString('30th');
+EQ=31;THEN=dateString.appendString('31st');
+ELSE=dateString.appendString('1st');
+NAME=appendDate">

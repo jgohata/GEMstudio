@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAGE NAME="Fridge_set_backlight">
+  <PROPERTIES>
+    <HEAD>
+      <TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS>
+      <FUNCTIONS charPos="187" foldedLines="" SOURCE="Fridge_set_backlight.gsf"/>
+    </HEAD>
+  </PROPERTIES>
+  <BKGND>
+    <Image>
+      <Name Type="12">bg_header_cool</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <file Type="16" Editable="True">..\Calendar Demo\_ui\bg_cool.jpg</file>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">486</Width>
+      <Height Type="13">278</Height>
+    </Image>
+  </BKGND>
+  <BODY>
+    <TouchArea>
+      <Name Type="12">AnyTouch</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <onRelease Type="31" Editable="True"/>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <onTouch Type="31" Editable="True">resetTimer() // resetTimer() is defined in calendar.macro</onTouch>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">136</MidY>
+      <Width Type="13">486</Width>
+      <Height Type="13">278</Height>
+    </TouchArea>
+    <Image>
+      <Name Type="12">img_timeout</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">..\Calendar Demo\backlight\img_timeout.png</file>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <MidX Type="13">232</MidX>
+      <MidY Type="13">192</MidY>
+      <Width Type="13">447</Width>
+      <Height Type="13">77</Height>
+    </Image>
+    <Image>
+      <Name Type="12">img_brightness</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">..\Calendar Demo\backlight\img_brightness.png</file>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <MidX Type="13">247</MidX>
+      <MidY Type="13">101</MidY>
+      <Width Type="13">389</Width>
+      <Height Type="13">71</Height>
+    </Image>
+    <CustomButton>
+      <Name Type="12">CustomButton</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <downImage Type="16" Editable="True">..\Calendar Demo\_ui\btn_close_1.png</downImage>
+      <href Type="15" Editable="True">Amulet:document.UpdateTimeout.forceUpdate(),
+Fridge_home.open()</href>
+      <upImage Type="16" Editable="True">..\Calendar Demo\_ui\btn_close_0.png</upImage>
+      <MidX Type="13">422</MidX>
+      <MidY Type="13">35</MidY>
+      <Width Type="13">108</Width>
+      <Height Type="13">58</Height>
+    </CustomButton>
+    <CustomSlider>
+      <Name Type="12">Brightness</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <channelImage Type="16" Editable="True">..\Calendar Demo\backlight\sld_base.png</channelImage>
+      <handleImage Type="16" Editable="True">..\Calendar Demo\backlight\sld_handle.png</handleImage>
+      <handleTrackingImage Type="16" Editable="True">..\Calendar Demo\backlight\sld_handle.png</handleTrackingImage>
+      <href Type="15" Editable="True">resetTimer(), // resetTimer() is defined in calendar.macro
+Amulet:lcdBacklight.setValue(intrinsicValue),
+Amulet:internalRAM.Word(0).setValue(intrinsicValue) 
+</href>
+      <hrefEvent Type="10" Editable="True">On Change	On Change	On Release</hrefEvent>
+      <initialCondition Type="12" Editable="True">fromInitHref</initialCondition>
+      <max Type="13" Editable="True">255</max>
+      <min Type="13" Editable="True">1</min>
+      <minAt Type="10" Editable="True">Left	Left	Right</minAt>
+      <initHref Type="24" Editable="True">brightness.value()</initHref>
+      <hrefOnHitOnly Type="2" Editable="True">False	True	False</hrefOnHitOnly>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">122</MidY>
+      <Width Type="13">326</Width>
+      <Height Type="13">66</Height>
+    </CustomSlider>
+    <CustomSlider>
+      <Name Type="12">Timeout</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <channelImage Type="16" Editable="True">..\Calendar Demo\backlight\sld_base.png</channelImage>
+      <handleImage Type="16" Editable="True">..\Calendar Demo\backlight\sld_handle.png</handleImage>
+      <handleTrackingImage Type="16" Editable="True">..\Calendar Demo\backlight\sld_handle.png</handleTrackingImage>
+      <href Type="15" Editable="True">resetTimer(), // resetTimer() is defined in calendar.macro
+tempTimeOut.setValue(intrinsicValue)</href>
+      <hrefEvent Type="10" Editable="True">On Change	On Change	On Release</hrefEvent>
+      <initialCondition Type="12" Editable="True">fromInitHref</initialCondition>
+      <max Type="13" Editable="True">300</max>
+      <min Type="13" Editable="True">0</min>
+      <minAt Type="10" Editable="True">Left	Left	Right</minAt>
+      <initHref Type="24" Editable="True">sleepTimeOut.value()</initHref>
+      <MidX Type="13">240</MidX>
+      <MidY Type="13">212</MidY>
+      <Width Type="13">326</Width>
+      <Height Type="13">66</Height>
+    </CustomSlider>
+    <PWM>
+      <Name Type="12">MyPWM</Name>
+      <invisible Type="2" Editable="True">True	True	False</invisible>
+      <channel Type="10" Editable="True">0	0	1	2</channel>
+      <initialCondition Type="10" Editable="True">No Change	On	Off	No Change</initialCondition>
+      <periodIn_ms Type="20" Editable="True">1</periodIn_ms>
+      <pulseWidthIn_ms Type="20" Editable="True">0.999</pulseWidthIn_ms>
+      <MidX Type="13">511</MidX>
+      <MidY Type="13">303</MidY>
+      <Width Type="13">31</Width>
+      <Height Type="13">31</Height>
+    </PWM>
+  </BODY>
+</PAGE>
