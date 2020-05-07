@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAGE NAME="Menu">
+  <PROPERTIES>
+    <HEAD>
+      <BUFFER>Double</BUFFER>
+      <JPEG>Native</JPEG>
+      <TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS>
+      <FUNCTIONS charPos="0" foldedLines=""/>
+    </HEAD>
+  </PROPERTIES>
+  <BKGND/>
+  <BODY>
+    <TouchArea>
+      <Name Type="12">backButton</Name>
+      <onRelease Type="31" Editable="True">Amulet:document.menuImage.disappear(),Amulet:back()</onRelease>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <MidX Type="13">160</MidX>
+      <MidY Type="13">120</MidY>
+      <Width Type="13">326</Width>
+      <Height Type="13">246</Height>
+    </TouchArea>
+    <Image>
+      <Name>menuImage</Name>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <FILE Type="16" Editable="True">.Menu\MenuWithHoles.png</FILE>
+      <MidX Type="13">160</MidX>
+      <MidY Type="13">120</MidY>
+      <Width Type="13">148</Width>
+      <Height Type="13">217</Height>
+    </Image>
+    <CustomButton>
+      <Name Type="12">About</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <downImage Type="16" Editable="True">.Menu\AboutDown.png</downImage>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <href Type="15" Editable="True">CompileMe.open()</href>
+      <onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <upImage Type="16" Editable="True">.Menu\AboutUp.png</upImage>
+      <MidX Type="13">160</MidX>
+      <MidY Type="13">59</MidY>
+      <Width Type="13">130</Width>
+      <Height Type="13">37</Height>
+    </CustomButton>
+    <CustomButton>
+      <Name Type="12">Serial</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <href Type="15" Editable="True">ioSim320x240.open()</href>
+      <onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <downImage Type="16" Editable="True">.Menu\SerialDown.png</downImage>
+      <upImage Type="16" Editable="True">.Menu\SerialUp.png</upImage>
+      <MidX Type="13">160</MidX>
+      <MidY Type="13">90</MidY>
+      <Width Type="13">130</Width>
+      <Height Type="13">33</Height>
+    </CustomButton>
+    <CustomButton>
+      <Name Type="12">Slots</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <href Type="15" Editable="True">Slots.open()</href>
+      <onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <downImage Type="16" Editable="True">.Menu\SlotsDown.png</downImage>
+      <upImage Type="16" Editable="True">.Menu\SlotsUp.png</upImage>
+      <MidX Type="13">160</MidX>
+      <MidY Type="13">120</MidY>
+      <Width Type="13">130</Width>
+      <Height Type="13">33</Height>
+    </CustomButton>
+    <CustomButton>
+      <Name Type="12">Fridge</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <href Type="15" Editable="True">Refrigerator.open()</href>
+      <onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <downImage Type="16" Editable="True">.Menu\FrigeDown.png</downImage>
+      <upImage Type="16" Editable="True">.Menu\FrigeUp.png</upImage>
+      <MidX Type="13">160</MidX>
+      <MidY Type="13">150</MidY>
+      <Width Type="13">130</Width>
+      <Height Type="13">33</Height>
+    </CustomButton>
+    <CustomButton>
+      <Name Type="12">Photo</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <href Type="15" Editable="True">1.open()</href>
+      <onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <downImage Type="16" Editable="True">.Menu\PhotoDown.png</downImage>
+      <upImage Type="16" Editable="True">.Menu\PhotoUp.png</upImage>
+      <MidX Type="13">160</MidX>
+      <MidY Type="13">180</MidY>
+      <Width Type="13">130</Width>
+      <Height Type="13">33</Height>
+    </CustomButton>
+  </BODY>
+</PAGE>

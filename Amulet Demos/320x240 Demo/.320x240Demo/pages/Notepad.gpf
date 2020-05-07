@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAGE NAME="Notepad">
+  <PROPERTIES>
+    <HEAD>
+      <FUNCTIONS charPos="0" foldedLines=""/>
+      <TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS>
+    </HEAD>
+  </PROPERTIES>
+  <BKGND/>
+  <BODY>
+    <Image>
+      <Name Type="12">Notepad_1</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <file Type="16" Editable="True">.Refrigerator\Notepad.png</file>
+      <MidX Type="13">160</MidX>
+      <MidY Type="13">120</MidY>
+      <Width Type="13">252</Width>
+      <Height Type="13">152</Height>
+    </Image>
+    <Scribble template=".Refrigerator\Scrib1.png">
+      <Name Type="12">Scrib1</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <href Type="15" Editable="True">Amulet:UART.xmodemUploadImage()</href>
+      <lineWeight Type="13" Editable="True">1</lineWeight>
+      <linePattern Type="13" Editable="True"/>
+      <initimage Type="10" Editable="True">FillColor	Background	Canvas	FillColor</initimage>
+      <fillColor Type="11" Editable="True">#FFFFFF00</fillColor>
+      <MidX Type="13">160</MidX>
+      <MidY Type="13">120</MidY>
+      <Width Type="13">252</Width>
+      <Height Type="13">152</Height>
+    </Scribble>
+    <Image>
+      <Name Type="12">SaveImg</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <FILE Type="16" Editable="True">.Refrigerator\NoteSave.png</FILE>
+      <MidX Type="13">160</MidX>
+      <MidY Type="13">208</MidY>
+      <Width Type="13">252</Width>
+      <Height Type="13">36</Height>
+    </Image>
+    <TouchArea>
+      <Name Type="12">Exit</Name>
+      <onRelease Type="31" Editable="True">Refrigerator.open()</onRelease>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <MidX Type="13">228</MidX>
+      <MidY Type="13">204</MidY>
+      <Width Type="13">57</Width>
+      <Height Type="13">29</Height>
+    </TouchArea>
+    <TouchArea>
+      <Name Type="12">Clear</Name>
+      <onRelease Type="31" Editable="True">Amulet:document.Notepad_1.refresh()</onRelease>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <MidX Type="13">90</MidX>
+      <MidY Type="13">204</MidY>
+      <Width Type="13">67</Width>
+      <Height Type="13">31</Height>
+    </TouchArea>
+  </BODY>
+</PAGE>

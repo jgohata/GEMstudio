@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAGE NAME="CompileMe">
+  <PROPERTIES>
+    <HEAD>
+      <FUNCTIONS charPos="0" foldedLines=""/>
+      <BUFFER>Double</BUFFER>
+      <TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS>
+      <TOUCH_PRIORITY>From Top to Bottom</TOUCH_PRIORITY>
+    </HEAD>
+  </PROPERTIES>
+  <BKGND>
+    <Image>
+      <Name Type="12">color_GUI2</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <file Type="16" Editable="True">.About\color_GUI2.png</file>
+      <MidX Type="13">160</MidX>
+      <MidY Type="13">120</MidY>
+      <Width Type="13">326</Width>
+      <Height Type="13">246</Height>
+    </Image>
+  </BKGND>
+  <BODY>
+    <StaticText>
+      <Name>StaticText</Name>
+      <text Type="25" Editable="True">Thanks for purchasing an LCD Evaluator Kit!</text>
+      <font Type="14" Editable="True">Bitstream Vera Sans,  10pt (anti-aliased)</font>
+      <fontColor Type="11" Editable="True">#000000</fontColor>
+      <fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle>
+      <vAlign Type="13">32</vAlign>
+      <MidX Type="13">162</MidX>
+      <MidY Type="13">43</MidY>
+      <Width Type="13">287</Width>
+      <Height Type="13">28</Height>
+      <horizontalAlign Type="12">left	Center	Left	Right</horizontalAlign>
+      <verticalAlign Type="12">top	Bottom	Middle	Top</verticalAlign>
+    </StaticText>
+    <StaticText>
+      <Name>StaticText</Name>
+      <text Type="25" Editable="True">Click the button below to run through a few pre-designed GUI demos.</text>
+      <font Type="14" Editable="True">Bitstream Vera Sans,  10pt (anti-aliased)</font>
+      <fontColor Type="11" Editable="True">#000000</fontColor>
+      <fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle>
+      <vAlign Type="13">32</vAlign>
+      <MidX Type="13">162</MidX>
+      <MidY Type="13">72</MidY>
+      <Width Type="13">286</Width>
+      <Height Type="13">39</Height>
+      <horizontalAlign Type="12">left	Center	Left	Right</horizontalAlign>
+      <verticalAlign Type="12">top	Bottom	Middle	Top</verticalAlign>
+    </StaticText>
+    <StaticText>
+      <Name>StaticText</Name>
+      <text Type="25" Editable="True">To design your own GUI, or to customize the pre-designed GUI, you can download
+GEMstudio Pro from amulettechnologies.com</text>
+      <font Type="14" Editable="True">Bitstream Vera Sans,  10pt (anti-aliased)</font>
+      <fontColor Type="11" Editable="True">#000000</fontColor>
+      <fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle>
+      <vAlign Type="13">32</vAlign>
+      <MidX Type="13">160</MidX>
+      <MidY Type="13">129</MidY>
+      <Width Type="13">282</Width>
+      <Height Type="13">68</Height>
+      <horizontalAlign Type="12">left	Center	Left	Right</horizontalAlign>
+      <verticalAlign Type="12">top	Bottom	Middle	Top</verticalAlign>
+    </StaticText>
+    <CustomButton>
+      <Name Type="12">CheckBox_Icon</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <href Type="15" Editable="True">Menu.open()</href>
+      <onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <downImage Type="16" Editable="True">.About\RightArrow2Down.png</downImage>
+      <upImage Type="16" Editable="True">.About\RightArrow2.png</upImage>
+      <MidX Type="13">280</MidX>
+      <MidY Type="13">204</MidY>
+      <Width Type="13">56</Width>
+      <Height Type="13">56</Height>
+    </CustomButton>
+    <StaticText>
+      <Name>StaticText</Name>
+      <text Type="25" Editable="True">Press to continue</text>
+      <font Type="14" Editable="True">Bitstream Vera Sans,  10pt (anti-aliased)</font>
+      <fontColor Type="11" Editable="True">#000000</fontColor>
+      <fontStyle Type="18" Editable="True">Plain	Bold	Italic</fontStyle>
+      <vAlign Type="13">32</vAlign>
+      <MidX Type="13">196</MidX>
+      <MidY Type="13">203</MidY>
+      <Width Type="13">124</Width>
+      <Height Type="13">24</Height>
+      <horizontalAlign Type="12">left	Center	Left	Right</horizontalAlign>
+      <verticalAlign Type="12">top	Bottom	Middle	Top</verticalAlign>
+    </StaticText>
+  </BODY>
+</PAGE>

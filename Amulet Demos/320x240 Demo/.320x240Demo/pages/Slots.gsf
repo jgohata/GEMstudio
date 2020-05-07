@@ -1,0 +1,95 @@
+<META HTTP-EQUIV="REFRESH" CONTENT="0;ONVAR=Amulet:math.randomByte.value(); VALUE=Amulet:InternalRAM.byte(50);name=Setup1">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;ONVAR=Amulet:math.randomByte.value(); VALUE=Amulet:InternalRAM.byte(51);name=Setup2">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;ONVAR=Amulet:math.randomByte.value(); VALUE=Amulet:InternalRAM.byte(52);name=Setup3">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:InternalRAM.byte(53).setValue(24),Amulet:document.Setup11.forceUpdate(),Amulet:document.Setup12.forceUpdate(),Amulet:document.Setup13.forceUpdate();name=Setup4">
+
+/* divide by 10 to get number from 0 to 25. 
+then divide by 4, then multiply by 4 to get a guarunteed multiple of 4, ensuring the reels always land on an image */
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:InternalRAM.byte(50).div(10),Amulet:InternalRAM.byte(50).div(4),Amulet:InternalRAM.byte(50).mul(4);Name=Setup11">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:InternalRAM.byte(51).div(10),Amulet:InternalRAM.byte(51).div(4),Amulet:InternalRAM.byte(51).mul(4);Name=Setup12">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:InternalRAM.byte(52).div(10),Amulet:InternalRAM.byte(52).div(4),Amulet:InternalRAM.byte(52).mul(4),Amulet:document.Setup5.forceUpdate();Name=Setup13">
+
+
+
+//call next set of functions to check for underflow
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:document.CheckUnderflow1.forceUpdate(),Amulet:document.CheckUnderflow2.forceUpdate(),Amulet:document.CheckUnderflow3.forceUpdate(),Amulet:document.CheckUnderflow4.forceUpdate();name=Setup5">
+
+//Offset random numbers (if (byte(50) < byte(40)) then byte(50) = byte(50)+24, etc.)
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(50).value(); LT=Amulet:InternalRAM.byte(40).value(); URL=Amulet:InternalRAM.byte(50).add(24);name=CheckUnderflow1">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(51).value(); LT=Amulet:InternalRAM.byte(41).value(); URL=Amulet:InternalRAM.byte(51).add(24);name=CheckUnderflow2">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(52).value(); LT=Amulet:InternalRAM.byte(42).value(); URL=Amulet:InternalRAM.byte(52).add(24);name=CheckUnderflow3">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:document.Subract1.forceUpdate(),Amulet:document.Subract2.forceUpdate(),Amulet:document.Subract3.forceUpdate(),Amulet:document.Subract4.forceUpdate();name=CheckUnderflow4">
+
+// Subtract current position from random, this is how many rotations are needed
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:InternalRAM.byte(50).sub(InternalRAM.byte(40));name=Subract1">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:InternalRAM.byte(51).sub(InternalRAM.byte(41));name=Subract2">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:InternalRAM.byte(52).sub(InternalRAM.byte(42));name=Subract3">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:document.StartLoop1.SetUpdateRate(0.05);name=Subract4">
+
+/* loop to set up random outcome - rotate slot1 by byte(50), slot2 by byte(51) and slot3 by byte(52) 
+In this loop, the slots can start spinning in any order since slot3 may have to travel further than slot2 or slot1, etc */
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(53).value(); LT=Amulet:InternalRAM.byte(50);THEN=Amulet:InternalRAM.byte(40).inc(),Amulet:document.slot1.forceUpdate(),Amulet:document.StartLoop2.forceUpdate(),Amulet:document.StartLoopOverflow1.forceUpdate();name=StartLoop1">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(40).value(); GT=23; THEN=Amulet:InternalRAM.byte(40).setValue(0),Amulet:document.slot1.forceUpdate();name=StartLoopOverflow1">
+
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(53).value(); GT=Amulet:InternalRAM.byte(50); THEN=Amulet:document.StartLoop2.forceUpdate();name=StartLoop1">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(53).value(); EQ=Amulet:InternalRAM.byte(50); THEN=Amulet:document.StartLoop2.forceUpdate();name=StartLoop1">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(53).value(); LT=Amulet:InternalRAM.byte(51); THEN=Amulet:InternalRAM.byte(41).inc(),Amulet:document.slot2.forceUpdate(),Amulet:document.StartLoop3.forceUpdate(),Amulet:document.StartLoopOverflow2.forceUpdate();name=StartLoop2">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(41).value(); GT=23; THEN=Amulet:InternalRAM.byte(41).setValue(0),Amulet:document.slot2.forceUpdate();name=StartLoopOverflow2">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(53).value(); GT=Amulet:InternalRAM.byte(51); THEN=Amulet:document.StartLoop3.forceUpdate();name=StartLoop2">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(53).value(); EQ=Amulet:InternalRAM.byte(51); THEN=Amulet:document.StartLoop3.forceUpdate();name=StartLoop2">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(53).value(); LT=Amulet:InternalRAM.byte(52); THEN=Amulet:InternalRAM.byte(42).inc(),Amulet:document.slot3.forceUpdate(),Amulet:document.DecIndex.forceUpdate(),Amulet:document.StartLoopOverflow3.forceUpdate();name=StartLoop3">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(42).value(); GT=23; THEN=Amulet:InternalRAM.byte(42).setValue(0),Amulet:document.slot3.forceUpdate();name=StartLoopOverflow3">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(53).value(); GT=Amulet:InternalRAM.byte(52); THEN=Amulet:document.DecIndex.forceUpdate();name=StartLoop3">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(53).value(); EQ=Amulet:InternalRAM.byte(52); THEN=Amulet:document.DecIndex.forceUpdate();name=StartLoop3">
+
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:InternalRAM.byte(53).dec(),Amulet:document.LoopEnd.forceUpdate();name=DecIndex">
+<!--continuous loop
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:InternalRAM.byte(53).setvalue(1),Amulet:document.LoopEnd.forceUpdate();name=DecIndex"> -->
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(53).value(); EQ=0; THEN=Amulet:document.StartLoop1.SetUpdateRate(0), Amulet:document.StartMusic.forceUpdate();name=LoopEnd">
+
+<!-- Start Music -->
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:UART.ByteOut(0x3A),Amulet:UART.Byteout(0xf6),Amulet:UART.byteOut(0xf8),Amulet:document.SpinReels.forceUpdate();name=StartMusic">
+
+<!-- This is the button push code before, so i called it SpinReels -->
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:document.oneshot1.setUpdateRate(1.61),Amulet:InternalRAM.byte(43).setValue(4),Amulet:document.timer1.setUpdateRate(0.1),Amulet:document.oneshot4.setUpdateRate(2.42),Amulet:InternalRAM.byte(44).setValue(4),Amulet:document.timer2.setUpdateRate(0.1),Amulet:document.timer2Ovrflw.setUpdateRate(0.1),Amulet:document.oneshot7.setUpdateRate(3.21),Amulet:InternalRAM.byte(45).setValue(4),Amulet:document.timer3.setUpdateRate(0.1);name=SpinReels">
+
+<!-- After Music Starts - spins to stop same number of turns every time to make sure and match the music -->
+<!-- slot1 -->
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:InternalRAM.byte(40).add(InternalRAM.byte(43)),Amulet:document.timer1Ovrflw.forceUpdate(),Amulet:document.slot1.forceUpdate();NAME=timer1">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(40).value();GT=23;THEN=Amulet:InternalRAM.byte(40).sub(24),Amulet:document.slot1.forceUpdate();NAME=timer1Ovrflw">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:InternalRAM.byte(43).setValue(0),Amulet:document.oneshot1.setUpdateRate(0);NAME=oneshot1">
+<!-- slot2 -->
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:InternalRAM.byte(41).add(InternalRAM.byte(44)),Amulet:document.timer2Ovrflw.forceUpdate(),Amulet:document.slot2.forceUpdate();NAME=timer2">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(41).value();GT=23;THEN=Amulet:InternalRAM.byte(41).sub(24),Amulet:document.slot2.forceUpdate();NAME=timer2Ovrflw">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:InternalRAM.byte(44).setValue(0),Amulet:document.oneshot4.setUpdateRate(0);NAME=oneshot4">
+
+<!-- slot3 -->
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:InternalRAM.byte(42).add(InternalRAM.byte(45)),Amulet:document.timer3Ovrflw.forceUpdate(),Amulet:document.slot3.forceUpdate();NAME=timer3">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(42).value();GT=23;THEN=Amulet:InternalRAM.byte(42).sub(24),Amulet:document.slot3.forceUpdate();NAME=timer3Ovrflw">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:InternalRAM.byte(45).setValue(0),Amulet:document.oneshot7.setUpdateRate(0),Amulet:document.checkWinner1.forceUpdate(),Amulet:document.reappearButton.forceUpdate();NAME=oneshot7">
+
+<!-- Turn Button back on, turn music off -->
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:UART.byteout(0xf9),Amulet:Document.BetOneOff.disappear(),Amulet:Document.Bet.reappear();name=reappearButton">
+
+<!-- Check for a win -->
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(40).value();EQ=Amulet:InternalRAM.byte(41).value();THEN=Amulet:document.checkWinner2.forceUpdate();name=checkWinner1">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(40).value();EQ=Amulet:InternalRAM.byte(42).value();THEN=Amulet:document.checkWinner3.forceUpdate();name=checkWinner2">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(40).value();EQ=3;THEN=Amulet:document.Winner1.forceUpdate();name=checkWinner3">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(40).value();EQ=7;THEN=Amulet:document.Winner1.forceUpdate();name=checkWinner3">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(40).value();EQ=11;THEN=Amulet:document.Winner1.forceUpdate();name=checkWinner3">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(40).value();EQ=15;THEN=Amulet:document.Winner1.forceUpdate();name=checkWinner3">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(40).value();EQ=19;THEN=Amulet:document.Winner1.forceUpdate();name=checkWinner3">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;IF=Amulet:InternalRAM.byte(40).value();EQ=23;THEN=Amulet:document.Winner1.forceUpdate();name=checkWinner3">
+
+<!-- TODO: Check for alternate win cases, i.e. 3 of any bar-->
+
+<!--Winner! startplaying song again for the winner sound, flash winner text on screen, and set up timers to dispense candy-->
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:UART.Byteout(0xf8),Amulet:document.WinnerFlash.setUpdateRate(0.5),Amulet:document.ServoDispense.setUpdateRate(0.5), Amulet:document.pwm1.start(), Amulet:document.pwm1.setPeriod(22),Amulet:document.pwm1.setPulseWidth(1.5),Amulet:document.WinnerFlashOFF.setUpdateRate(5),Amulet:document.WINNER.setx(83);NAME=Winner1">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:document.WINNER.reappear();Amulet:document.WINNER.disappear();name=WinnerFlash">
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:document.WINNER.disappear(),Amulet:document.WinnerFlash.SetUpdateRate(0),Amulet:document.WinnerFlashOFF.SetUpdateRate(0);name=WinnerFlashOFF">
+<!-- dispense candy -->
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:document.pwm1.setPulseWidth(1.5);Amulet:document.pwm1.setPulseWidth(0.5);Amulet:document.pwm1.stop();Amulet:document.ServoDispense.setUpdateRate(0);name=ServoDispense">
+
+<!-- Forced Win button-->
+<META HTTP-EQUIV="REFRESH" CONTENT="0;URL=Amulet:document.Winner1.forceUpdate();name=ForceWin">
+

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAGE NAME="Slots">
+  <PROPERTIES>
+    <HEAD>
+      <FUNCTIONS charPos="628" foldedLines="" SOURCE="Slots.gsf"/>
+    </HEAD>
+  </PROPERTIES>
+  <BKGND/>
+  <BODY>
+    <Image>
+      <Name>panelFinal</Name>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <FILE Type="16" Editable="True">.Slots\panelFinal.png</FILE>
+      <MidX Type="13">160</MidX>
+      <MidY Type="13">120</MidY>
+      <Width Type="13">326</Width>
+      <Height Type="13">246</Height>
+    </Image>
+    <ImageSeq>
+      <Name Type="12">slot1</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <href Type="24" Editable="True">Amulet:internalRAM.byte(40).value()</href>
+      <max Type="13" Editable="True">23</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Slots\r23.gif;.Slots\r0.gif;.Slots\r1.gif;.Slots\r2.gif;.Slots\r3.gif;.Slots\r4.gif;.Slots\r5.gif;.Slots\r6.gif;.Slots\r7.gif;.Slots\r8.gif;.Slots\r9.gif;.Slots\r10.gif;.Slots\r11.gif;.Slots\r12.gif;.Slots\r13.gif;.Slots\r14.gif;.Slots\r15.gif;.Slots\r16.gif;.Slots\r17.gif;.Slots\r18.gif;.Slots\r19.gif;.Slots\r20.gif;.Slots\r21.gif;.Slots\r22.gif</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <loadImmediately Type="2" Editable="True">True</loadImmediately>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <MidX Type="13">87</MidX>
+      <MidY Type="13">90</MidY>
+      <Width Type="13">82</Width>
+      <Height Type="13">104</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">slot2</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <href Type="24" Editable="True">Amulet:internalRAM.byte(41).value()</href>
+      <max Type="13" Editable="True">23</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Slots\r23.gif;.Slots\r0.gif;.Slots\r1.gif;.Slots\r2.gif;.Slots\r3.gif;.Slots\r4.gif;.Slots\r5.gif;.Slots\r6.gif;.Slots\r7.gif;.Slots\r8.gif;.Slots\r9.gif;.Slots\r10.gif;.Slots\r11.gif;.Slots\r12.gif;.Slots\r13.gif;.Slots\r14.gif;.Slots\r15.gif;.Slots\r16.gif;.Slots\r17.gif;.Slots\r18.gif;.Slots\r19.gif;.Slots\r20.gif;.Slots\r21.gif;.Slots\r22.gif</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <loadImmediately Type="2" Editable="True">True</loadImmediately>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <MidX Type="13">170</MidX>
+      <MidY Type="13">90</MidY>
+      <Width Type="13">82</Width>
+      <Height Type="13">104</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">slot3</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <href Type="24" Editable="True">Amulet:internalRAM.byte(42).value()</href>
+      <max Type="13" Editable="True">23</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.Slots\r23.gif;.Slots\r0.gif;.Slots\r1.gif;.Slots\r2.gif;.Slots\r3.gif;.Slots\r4.gif;.Slots\r5.gif;.Slots\r6.gif;.Slots\r7.gif;.Slots\r8.gif;.Slots\r9.gif;.Slots\r10.gif;.Slots\r11.gif;.Slots\r12.gif;.Slots\r13.gif;.Slots\r14.gif;.Slots\r15.gif;.Slots\r16.gif;.Slots\r17.gif;.Slots\r18.gif;.Slots\r19.gif;.Slots\r20.gif;.Slots\r21.gif;.Slots\r22.gif</sequence>
+      <updateFreq Type="20" Editable="True">0</updateFreq>
+      <updateDelay Type="20" Editable="True">0.01</updateDelay>
+      <loadImmediately Type="2" Editable="True">True</loadImmediately>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <MidX Type="13">253</MidX>
+      <MidY Type="13">90</MidY>
+      <Width Type="13">82</Width>
+      <Height Type="13">104</Height>
+    </ImageSeq>
+    <CustomButton>
+      <Name Type="12">Menu</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <href Type="15" Editable="True">Menu.open()</href>
+      <onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress>
+      <dualAction Type="2" Editable="True"/>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <downImage Type="16" Editable="True">.Slots\CashOut_Down.png</downImage>
+      <upImage Type="16" Editable="True">.Slots\CashOut_Up.png</upImage>
+      <MidX Type="13">60</MidX>
+      <MidY Type="13">210</MidY>
+      <Width Type="13">74</Width>
+      <Height Type="13">66</Height>
+    </CustomButton>
+    <CustomButton>
+      <Name Type="12">Bet</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <href Type="15" Editable="True">Amulet:document.Bet.disappear(),Amulet:document.BetOneOff.reappear(),Amulet:document.Setup1.forceUpdate(),Amulet:document.Setup2.forceUpdate(),Amulet:document.Setup3.forceUpdate(),Amulet:document.Setup4.forceUpdate()</href>
+      <onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <downImage Type="16" Editable="True">.Slots\betone_down.png</downImage>
+      <upImage Type="16" Editable="True">.Slots\betone_up.png</upImage>
+      <MidX Type="13">133</MidX>
+      <MidY Type="13">210</MidY>
+      <Width Type="13">74</Width>
+      <Height Type="13">65</Height>
+    </CustomButton>
+    <Image>
+      <Name>WINNER</Name>
+      <invisible Type="2" Editable="True">True	True	False</invisible>
+      <FILE Type="16" Editable="True">.Slots\WINNER.png</FILE>
+      <CACHED Type="10" Editable="True">No	Yes	No</CACHED>
+      <MidX Type="13">170</MidX>
+      <MidY Type="13">90</MidY>
+      <Width Type="13">180</Width>
+      <Height Type="13">43</Height>
+    </Image>
+    <PWM>
+      <Name>pwm1</Name>
+      <channel Type="10" Editable="True">1	0	1	2</channel>
+      <initialcondition Type="10" Editable="True">Off	ON	OFF</initialcondition>
+      <periodin_ms Type="20" Editable="True">20</periodin_ms>
+      <pulsewidthin_ms Type="20" Editable="True">1.5</pulsewidthin_ms>
+      <MidX Type="13">351</MidX>
+      <MidY Type="13">271</MidY>
+      <Width Type="13">31</Width>
+      <Height Type="13">31</Height>
+    </PWM>
+    <Image>
+      <Name>BetOneOff</Name>
+      <cacheImage Type="2" Editable="True">False	True	False</cacheImage>
+      <invisible Type="2" Editable="True">True	True	False</invisible>
+      <FILE Type="16" Editable="True">.Slots\betone_off.png</FILE>
+      <MidX Type="13">133</MidX>
+      <MidY Type="13">210</MidY>
+      <Width Type="13">74</Width>
+      <Height Type="13">66</Height>
+    </Image>
+  </BODY>
+</PAGE>

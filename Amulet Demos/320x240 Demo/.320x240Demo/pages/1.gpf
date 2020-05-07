@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAGE NAME="1">
+  <PROPERTIES>
+    <HEAD>
+      <FUNCTIONS charPos="0" foldedLines="" SOURCE="1.gsf"/>
+      <TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS>
+    </HEAD>
+  </PROPERTIES>
+  <BKGND>
+    <Image>
+      <Name Type="12">Picture 013_1</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <file Type="16" Editable="True">.Slideshow\Picture 013_320x240.jpg</file>
+      <MidX Type="13">160</MidX>
+      <MidY Type="13">120</MidY>
+      <Width Type="13">326</Width>
+      <Height Type="13">246</Height>
+    </Image>
+  </BKGND>
+  <BODY>
+    <TouchArea>
+      <Name Type="12">MenuButton</Name>
+      <onRelease Type="31" Editable="True">Menu.open()</onRelease>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <MidX Type="13">160</MidX>
+      <MidY Type="13">120</MidY>
+      <Width Type="13">326</Width>
+      <Height Type="13">246</Height>
+    </TouchArea>
+  </BODY>
+</PAGE>

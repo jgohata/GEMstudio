@@ -6,7 +6,7 @@ Init File: Init None
 SDRAM Part Number: IS42S32200E (64 MBit)
 Size of SDRAM: 0x800000
 Size of Serial Data Flash: 0x400000
-Serial Data Flash used by OS: 0x40000
+Serial Data Flash used by OS: 0x47a00
 Minimum Serial Data Flash Sector: 0x80
 Color Depth: 32
 
@@ -14,984 +14,984 @@ CompileMe_preCache (GEM page)    Flash Index = 0x20
 ==================
       Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
       -----------               -----------            ----------------------    ----------------------
-      PAGE HEADER                                      0x15c      (0x3bfea0)                                                                
-      MultiHref0                Sequenced Functions    0x5c       (0x3bfe44)     0x0        (0x733e7c)                                                     
-      No Name                   Meta Object            0x3c       (0x3bfe08)     0x0        (0x733e7c)                                          
-      No Name                   Cached Image Dir       0xc        (0x3bfdfc)     0x134      (0x733d48)                                                
-      Picture 013_320x24...jpg  Cached Image           0xc        (0x3bfdf0)     0x4b004    (0x6e8d44)                                                               
-      NoteSave.png              Cached Image           0xc        (0x3bfde4)     0x7354     (0x6e19f0)                                                  
-      Notepad.png               Cached Image           0xc        (0x3bfdd8)     0x23134    (0x6be8bc)                                                  
-      WaterOn.png               Cached Image           0xc        (0x3bfdcc)     0x95e4     (0x6b52d8)                                                 
-      WaterTrack.png            Cached Image           0xc        (0x3bfdc0)     0x95e4     (0x6abcf4)                                                    
-      WaterOff.png              Cached Image           0xc        (0x3bfdb4)     0x95e4     (0x6a2710)                                                  
-      CrushedOn.png             Cached Image           0xc        (0x3bfda8)     0x95e4     (0x69912c)                                                   
-      CrushedTrack.png          Cached Image           0xc        (0x3bfd9c)     0x95e4     (0x68fb48)                                                      
-      CrushedOff.png            Cached Image           0xc        (0x3bfd90)     0x95e4     (0x686564)                                                    
-      CubedOn.png               Cached Image           0xc        (0x3bfd84)     0x95e4     (0x67cf80)                                                 
-      CubedTrack.png            Cached Image           0xc        (0x3bfd78)     0x95e4     (0x67399c)                                                    
-      CubedOff.png              Cached Image           0xc        (0x3bfd6c)     0x95e4     (0x66a3b8)                                                  
-      Background_320x240...jpg  Cached Image           0xc        (0x3bfd60)     0x4b004    (0x61f3b4)                                                               
-      betone_down.png           Cached Image           0xc        (0x3bfd54)     0x3eb4     (0x61b500)                                                     
-      betone_up.png             Cached Image           0xc        (0x3bfd48)     0x3eb4     (0x61764c)                                                   
-      CashOut_Down.png          Cached Image           0xc        (0x3bfd3c)     0x3fc4     (0x613688)                                                      
-      CashOut_Up.png            Cached Image           0xc        (0x3bfd30)     0x3fc4     (0x60f6c4)                                                    
-      r22.gif                   Cached Image           0xc        (0x3bfd24)     0x7464     (0x608260)                                             
-      r21.gif                   Cached Image           0xc        (0x3bfd18)     0x7464     (0x600dfc)                                             
-      r20.gif                   Cached Image           0xc        (0x3bfd0c)     0x7464     (0x5f9998)                                             
-      r19.gif                   Cached Image           0xc        (0x3bfd00)     0x7464     (0x5f2534)                                             
-      r18.gif                   Cached Image           0xc        (0x3bfcf4)     0x7464     (0x5eb0d0)                                             
-      r17.gif                   Cached Image           0xc        (0x3bfce8)     0x7464     (0x5e3c6c)                                             
-      r16.gif                   Cached Image           0xc        (0x3bfcdc)     0x7464     (0x5dc808)                                             
-      r15.gif                   Cached Image           0xc        (0x3bfcd0)     0x7464     (0x5d53a4)                                             
-      r14.gif                   Cached Image           0xc        (0x3bfcc4)     0x7464     (0x5cdf40)                                             
-      r13.gif                   Cached Image           0xc        (0x3bfcb8)     0x7464     (0x5c6adc)                                             
-      r12.gif                   Cached Image           0xc        (0x3bfcac)     0x7464     (0x5bf678)                                             
-      r11.gif                   Cached Image           0xc        (0x3bfca0)     0x7464     (0x5b8214)                                             
-      r10.gif                   Cached Image           0xc        (0x3bfc94)     0x7464     (0x5b0db0)                                             
-      r9.gif                    Cached Image           0xc        (0x3bfc88)     0x7464     (0x5a994c)                                            
-      r8.gif                    Cached Image           0xc        (0x3bfc7c)     0x7464     (0x5a24e8)                                            
-      r7.gif                    Cached Image           0xc        (0x3bfc70)     0x7464     (0x59b084)                                            
-      r6.gif                    Cached Image           0xc        (0x3bfc64)     0x7464     (0x593c20)                                            
-      r5.gif                    Cached Image           0xc        (0x3bfc58)     0x7464     (0x58c7bc)                                            
-      r4.gif                    Cached Image           0xc        (0x3bfc4c)     0x7464     (0x585358)                                            
-      r3.gif                    Cached Image           0xc        (0x3bfc40)     0x7464     (0x57def4)                                            
-      r2.gif                    Cached Image           0xc        (0x3bfc34)     0x7464     (0x576a90)                                            
-      r1.gif                    Cached Image           0xc        (0x3bfc28)     0x7464     (0x56f62c)                                            
-      r0.gif                    Cached Image           0xc        (0x3bfc1c)     0x7464     (0x5681c8)                                            
-      r23.gif                   Cached Image           0xc        (0x3bfc10)     0x7464     (0x560d64)                                             
-      panelFinal.png            Cached Image           0xc        (0x3bfc04)     0x4b004    (0x515d60)                                                     
-      ledOff.png                Cached Image           0xc        (0x3bfbf8)     0xa54      (0x51530c)                                               
-      ledOn.png                 Cached Image           0xc        (0x3bfbec)     0xa54      (0x5148b8)                                              
-      ledOff2.png               Cached Image           0xc        (0x3bfbe0)     0xa54      (0x513e64)                                                
-      KnobLineSE.png            Cached Image           0xc        (0x3bfbd4)     0x1444     (0x512a20)                                                    
-      KnobLineESE.png           Cached Image           0xc        (0x3bfbc8)     0x1444     (0x5115dc)                                                     
-      KnobLineEast.png          Cached Image           0xc        (0x3bfbbc)     0x1444     (0x510198)                                                      
-      KnobLineENE.png           Cached Image           0xc        (0x3bfbb0)     0x1444     (0x50ed54)                                                     
-      KnobLineNE.png            Cached Image           0xc        (0x3bfba4)     0x1444     (0x50d910)                                                    
-      KnobLineNNE.png           Cached Image           0xc        (0x3bfb98)     0x1444     (0x50c4cc)                                                     
-      KnobLineNorth.png         Cached Image           0xc        (0x3bfb8c)     0x1444     (0x50b088)                                                       
-      KnobLineNNW.png           Cached Image           0xc        (0x3bfb80)     0x1444     (0x509c44)                                                     
-      KnobLineNW.png            Cached Image           0xc        (0x3bfb74)     0x1444     (0x508800)                                                    
-      KnobLineWNW.png           Cached Image           0xc        (0x3bfb68)     0x1444     (0x5073bc)                                                     
-      KnobLineWest.png          Cached Image           0xc        (0x3bfb5c)     0x1444     (0x505f78)                                                      
-      KnobLineWSW.png           Cached Image           0xc        (0x3bfb50)     0x1444     (0x504b34)                                                     
-      KnobLineSW.png            Cached Image           0xc        (0x3bfb44)     0x1444     (0x5036f0)                                                    
-      BackBtn_Down.png          Cached Image           0xc        (0x3bfb38)     0x3fe4     (0x4ff70c)                                                      
-      BackBtn.png               Cached Image           0xc        (0x3bfb2c)     0x3fe4     (0x4fb728)                                                 
-      buzzer.png                Cached Image           0xc        (0x3bfb20)     0x5104     (0x4f6624)                                                
-      transparentBuzzer.png     Cached Image           0xc        (0x3bfb14)     0x5104     (0x4f1520)                                                           
-      backLarge2_320x196...jpg  Cached Image           0xc        (0x3bfb08)     0x3d404    (0x4b411c)                                                               
-      PhotoDown.png             Cached Image           0xc        (0x3bfafc)     0x3454     (0x4b0cc8)                                                   
-      PhotoUp.png               Cached Image           0xc        (0x3bfaf0)     0x3454     (0x4ad874)                                                 
-      FrigeDown.png             Cached Image           0xc        (0x3bfae4)     0x3454     (0x4aa420)                                                   
-      FrigeUp.png               Cached Image           0xc        (0x3bfad8)     0x3454     (0x4a6fcc)                                                 
-      SlotsDown.png             Cached Image           0xc        (0x3bfacc)     0x3454     (0x4a3b78)                                                   
-      SlotsUp.png               Cached Image           0xc        (0x3bfac0)     0x3454     (0x4a0724)                                                 
-      SerialDown.png            Cached Image           0xc        (0x3bfab4)     0x3454     (0x49d2d0)                                                    
-      SerialUp.png              Cached Image           0xc        (0x3bfaa8)     0x3454     (0x499e7c)                                                  
-      AboutDown.png             Cached Image           0xc        (0x3bfa9c)     0x3c14     (0x496268)                                                   
-      AboutUp.png               Cached Image           0xc        (0x3bfa90)     0x3c14     (0x492654)                                                 
-      RightArrow2Down.png       Cached Image           0xc        (0x3bfa84)     0x2714     (0x48ff40)                                                         
-      RightArrow2.png           Cached Image           0xc        (0x3bfa78)     0x2714     (0x48d82c)                                                     
-      color_GUI2.png            Cached Image           0xc        (0x3bfa6c)     0x4b004    (0x442828)                                                     
-      PAGE FOOTER                                      0x2        (0x3bfa6a)                                                              
+      PAGE HEADER                                      0x15c      (0x3b84a0)                                                                
+      MultiHref0                Sequenced Functions    0x5c       (0x3b8444)     0x0        (0x72c398)                                                     
+      No Name                   Meta Object            0x4c       (0x3b83f8)     0x0        (0x72c398)                                          
+      No Name                   Cached Image Dir       0xc        (0x3b83ec)     0x134      (0x72c264)                                                
+      Picture 013_320x24...jpg  Cached Image           0x1c       (0x3b83d0)     0x4b004    (0x6e1260)                                                                
+      NoteSave.png              Cached Image           0x1c       (0x3b83b4)     0x7354     (0x6d9f0c)                                                   
+      Notepad.png               Cached Image           0x1c       (0x3b8398)     0x23134    (0x6b6dd8)                                                   
+      WaterOn.png               Cached Image           0x1c       (0x3b837c)     0x95e4     (0x6ad7f4)                                                  
+      WaterTrack.png            Cached Image           0x1c       (0x3b8360)     0x95e4     (0x6a4210)                                                     
+      WaterOff.png              Cached Image           0x1c       (0x3b8344)     0x95e4     (0x69ac2c)                                                   
+      CrushedOn.png             Cached Image           0x1c       (0x3b8328)     0x95e4     (0x691648)                                                    
+      CrushedTrack.png          Cached Image           0x1c       (0x3b830c)     0x95e4     (0x688064)                                                       
+      CrushedOff.png            Cached Image           0x1c       (0x3b82f0)     0x95e4     (0x67ea80)                                                     
+      CubedOn.png               Cached Image           0x1c       (0x3b82d4)     0x95e4     (0x67549c)                                                  
+      CubedTrack.png            Cached Image           0x1c       (0x3b82b8)     0x95e4     (0x66beb8)                                                     
+      CubedOff.png              Cached Image           0x1c       (0x3b829c)     0x95e4     (0x6628d4)                                                   
+      Background_320x240...jpg  Cached Image           0x1c       (0x3b8280)     0x4b004    (0x6178d0)                                                                
+      betone_down.png           Cached Image           0x1c       (0x3b8264)     0x3eb4     (0x613a1c)                                                      
+      betone_up.png             Cached Image           0x1c       (0x3b8248)     0x3eb4     (0x60fb68)                                                    
+      CashOut_Down.png          Cached Image           0x1c       (0x3b822c)     0x3fc4     (0x60bba4)                                                       
+      CashOut_Up.png            Cached Image           0x1c       (0x3b8210)     0x3fc4     (0x607be0)                                                     
+      r22.gif                   Cached Image           0x1c       (0x3b81f4)     0x7464     (0x60077c)                                              
+      r21.gif                   Cached Image           0x1c       (0x3b81d8)     0x7464     (0x5f9318)                                              
+      r20.gif                   Cached Image           0x1c       (0x3b81bc)     0x7464     (0x5f1eb4)                                              
+      r19.gif                   Cached Image           0x1c       (0x3b81a0)     0x7464     (0x5eaa50)                                              
+      r18.gif                   Cached Image           0x1c       (0x3b8184)     0x7464     (0x5e35ec)                                              
+      r17.gif                   Cached Image           0x1c       (0x3b8168)     0x7464     (0x5dc188)                                              
+      r16.gif                   Cached Image           0x1c       (0x3b814c)     0x7464     (0x5d4d24)                                              
+      r15.gif                   Cached Image           0x1c       (0x3b8130)     0x7464     (0x5cd8c0)                                              
+      r14.gif                   Cached Image           0x1c       (0x3b8114)     0x7464     (0x5c645c)                                              
+      r13.gif                   Cached Image           0x1c       (0x3b80f8)     0x7464     (0x5beff8)                                              
+      r12.gif                   Cached Image           0x1c       (0x3b80dc)     0x7464     (0x5b7b94)                                              
+      r11.gif                   Cached Image           0x1c       (0x3b80c0)     0x7464     (0x5b0730)                                              
+      r10.gif                   Cached Image           0x1c       (0x3b80a4)     0x7464     (0x5a92cc)                                              
+      r9.gif                    Cached Image           0x1c       (0x3b8088)     0x7464     (0x5a1e68)                                             
+      r8.gif                    Cached Image           0x1c       (0x3b806c)     0x7464     (0x59aa04)                                             
+      r7.gif                    Cached Image           0x1c       (0x3b8050)     0x7464     (0x5935a0)                                             
+      r6.gif                    Cached Image           0x1c       (0x3b8034)     0x7464     (0x58c13c)                                             
+      r5.gif                    Cached Image           0x1c       (0x3b8018)     0x7464     (0x584cd8)                                             
+      r4.gif                    Cached Image           0x1c       (0x3b7ffc)     0x7464     (0x57d874)                                             
+      r3.gif                    Cached Image           0x1c       (0x3b7fe0)     0x7464     (0x576410)                                             
+      r2.gif                    Cached Image           0x1c       (0x3b7fc4)     0x7464     (0x56efac)                                             
+      r1.gif                    Cached Image           0x1c       (0x3b7fa8)     0x7464     (0x567b48)                                             
+      r0.gif                    Cached Image           0x1c       (0x3b7f8c)     0x7464     (0x5606e4)                                             
+      r23.gif                   Cached Image           0x1c       (0x3b7f70)     0x7464     (0x559280)                                              
+      panelFinal.png            Cached Image           0x1c       (0x3b7f54)     0x4b004    (0x50e27c)                                                      
+      ledOff.png                Cached Image           0x1c       (0x3b7f38)     0xa54      (0x50d828)                                                
+      ledOn.png                 Cached Image           0x1c       (0x3b7f1c)     0xa54      (0x50cdd4)                                               
+      ledOff2.png               Cached Image           0x1c       (0x3b7f00)     0xa54      (0x50c380)                                                 
+      KnobLineSE.png            Cached Image           0x1c       (0x3b7ee4)     0x1444     (0x50af3c)                                                     
+      KnobLineESE.png           Cached Image           0x1c       (0x3b7ec8)     0x1444     (0x509af8)                                                      
+      KnobLineEast.png          Cached Image           0x1c       (0x3b7eac)     0x1444     (0x5086b4)                                                       
+      KnobLineENE.png           Cached Image           0x1c       (0x3b7e90)     0x1444     (0x507270)                                                      
+      KnobLineNE.png            Cached Image           0x1c       (0x3b7e74)     0x1444     (0x505e2c)                                                     
+      KnobLineNNE.png           Cached Image           0x1c       (0x3b7e58)     0x1444     (0x5049e8)                                                      
+      KnobLineNorth.png         Cached Image           0x1c       (0x3b7e3c)     0x1444     (0x5035a4)                                                        
+      KnobLineNNW.png           Cached Image           0x1c       (0x3b7e20)     0x1444     (0x502160)                                                      
+      KnobLineNW.png            Cached Image           0x1c       (0x3b7e04)     0x1444     (0x500d1c)                                                     
+      KnobLineWNW.png           Cached Image           0x1c       (0x3b7de8)     0x1444     (0x4ff8d8)                                                      
+      KnobLineWest.png          Cached Image           0x1c       (0x3b7dcc)     0x1444     (0x4fe494)                                                       
+      KnobLineWSW.png           Cached Image           0x1c       (0x3b7db0)     0x1444     (0x4fd050)                                                      
+      KnobLineSW.png            Cached Image           0x1c       (0x3b7d94)     0x1444     (0x4fbc0c)                                                     
+      BackBtn_Down.png          Cached Image           0x1c       (0x3b7d78)     0x3fe4     (0x4f7c28)                                                       
+      BackBtn.png               Cached Image           0x1c       (0x3b7d5c)     0x3fe4     (0x4f3c44)                                                  
+      buzzer.png                Cached Image           0x1c       (0x3b7d40)     0x5104     (0x4eeb40)                                                 
+      transparentBuzzer.png     Cached Image           0x1c       (0x3b7d24)     0x5104     (0x4e9a3c)                                                            
+      backLarge2_320x196...jpg  Cached Image           0x1c       (0x3b7d08)     0x3d404    (0x4ac638)                                                                
+      PhotoDown.png             Cached Image           0x1c       (0x3b7cec)     0x3454     (0x4a91e4)                                                    
+      PhotoUp.png               Cached Image           0x1c       (0x3b7cd0)     0x3454     (0x4a5d90)                                                  
+      FrigeDown.png             Cached Image           0x1c       (0x3b7cb4)     0x3454     (0x4a293c)                                                    
+      FrigeUp.png               Cached Image           0x1c       (0x3b7c98)     0x3454     (0x49f4e8)                                                  
+      SlotsDown.png             Cached Image           0x1c       (0x3b7c7c)     0x3454     (0x49c094)                                                    
+      SlotsUp.png               Cached Image           0x1c       (0x3b7c60)     0x3454     (0x498c40)                                                  
+      SerialDown.png            Cached Image           0x1c       (0x3b7c44)     0x3454     (0x4957ec)                                                     
+      SerialUp.png              Cached Image           0x1c       (0x3b7c28)     0x3454     (0x492398)                                                   
+      AboutDown.png             Cached Image           0x1c       (0x3b7c0c)     0x3c14     (0x48e784)                                                    
+      AboutUp.png               Cached Image           0x1c       (0x3b7bf0)     0x3c14     (0x48ab70)                                                  
+      RightArrow2Down.png       Cached Image           0x1c       (0x3b7bd4)     0x2714     (0x48845c)                                                          
+      RightArrow2.png           Cached Image           0x1c       (0x3b7bb8)     0x2714     (0x485d48)                                                      
+      color_GUI2.png            Cached Image           0x1c       (0x3b7b9c)     0x4b004    (0x43ad44)                                                      
+      PAGE FOOTER                                      0x2        (0x3b7b9a)                                                              
                                                        ----------------------    ----------------------
-                                               Totals  0x592      (0x3bfa6a)     0x2f1654   (0x442828)                                  
+                                               Totals  0xa62      (0x3b7b9a)     0x2f1654   (0x43ad44)                                  
 
 
 CompileMe (GEM page)    Flash Index = 0x21
 =========
       Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
       -----------               -----------            ----------------------    ----------------------
-      PAGE HEADER                                      0x3c       (0x3bf9c0)                                                               
-      color_GUI2                Image                  0x20       (0x3bf9a0)     0x0        (0x442828)                                       
-      StaticText                String Field           0xac       (0x3bf8f4)     0x0        (0x442828)                                              
-        UART of StaticText      UART Object            0x28       (0x3bf8cc)     0x0        (0x442828)                                                       
-      StaticText                String Field           0xc4       (0x3bf808)     0x0        (0x442828)                                              
-      StaticText                String Field           0xf8       (0x3bf710)     0x0        (0x442828)                                              
-      CheckBox_Icon             Custom Button          0x64       (0x3bf6ac)     0x0        (0x442828)                                                  
-      StaticText                String Field           0x90       (0x3bf61c)     0x0        (0x442828)                                              
-      PAGE FOOTER                                      0x2        (0x3bf61a)                                                              
+      PAGE HEADER                                      0x3c       (0x3b7b40)                                                               
+      color_GUI2                Image                  0xd0       (0x3b7a70)     0x0        (0x43ad44)                                       
+      StaticText                String Field           0xb8       (0x3b79b8)     0x0        (0x43ad44)                                              
+        UART of StaticText      UART Object            0x28       (0x3b7990)     0x0        (0x43ad44)                                                       
+      StaticText                String Field           0xd0       (0x3b78c0)     0x0        (0x43ad44)                                              
+      StaticText                String Field           0x104      (0x3b77bc)     0x0        (0x43ad44)                                               
+      CheckBox_Icon             Custom Button          0x74       (0x3b7748)     0x0        (0x43ad44)                                                  
+      StaticText                String Field           0x9c       (0x3b76ac)     0x0        (0x43ad44)                                              
+      PAGE FOOTER                                      0x2        (0x3b76aa)                                                              
                                                        ----------------------    ----------------------
-                                               Totals  0x3e2      (0x3bf61a)     0x0        (0x442828)                             
+                                               Totals  0x4d2      (0x3b76aa)     0x0        (0x43ad44)                             
 
 
 Menu (GEM page)    Flash Index = 0x22
 ====
       Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
       -----------               -----------            ----------------------    ----------------------
-      PAGE HEADER                                      0x40       (0x3bf5bc)                                                               
-      MultiHref0                Multiple Functions     0x1c       (0x3bf5a0)     0x0        (0x442828)                                                    
-      backButton                Touch Area             0x3c       (0x3bf564)     0x0        (0x442828)                                            
-      menuImage                 Image                  0x20       (0x3bf544)     0x1d428    (0x425400)                                          
-      About                     Custom Button          0x64       (0x3bf4e0)     0x0        (0x425400)                                          
-      Serial                    Custom Button          0x64       (0x3bf47c)     0x0        (0x425400)                                           
-      Slots                     Custom Button          0x64       (0x3bf418)     0x0        (0x425400)                                          
-      Fridge                    Custom Button          0x64       (0x3bf3b4)     0x0        (0x425400)                                           
-      Photo                     Custom Button          0x64       (0x3bf350)     0x0        (0x425400)                                          
-      PAGE FOOTER                                      0x2        (0x3bf34e)                                                              
+      PAGE HEADER                                      0x40       (0x3b763c)                                                               
+      MultiHref0                Multiple Functions     0x1c       (0x3b7620)     0x0        (0x43ad44)                                                    
+      backButton                Touch Area             0x48       (0x3b75d8)     0x0        (0x43ad44)                                            
+      menuImage                 Image                  0xd0       (0x3b7508)     0x1d428    (0x41d91c)                                          
+      About                     Custom Button          0x74       (0x3b7494)     0x0        (0x41d91c)                                          
+      Serial                    Custom Button          0x74       (0x3b7420)     0x0        (0x41d91c)                                           
+      Slots                     Custom Button          0x74       (0x3b73ac)     0x0        (0x41d91c)                                          
+      Fridge                    Custom Button          0x74       (0x3b7338)     0x0        (0x41d91c)                                           
+      Photo                     Custom Button          0x74       (0x3b72c4)     0x0        (0x41d91c)                                          
+      PAGE FOOTER                                      0x2        (0x3b72c2)                                                              
                                                        ----------------------    ----------------------
-                                               Totals  0x2ae      (0x3bf34e)     0x1d428    (0x425400)                                 
+                                               Totals  0x3ba      (0x3b72c2)     0x1d428    (0x41d91c)                                 
 
 
 ioSim320x240 (GEM page)    Flash Index = 0x23
 ============
       Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
       -----------               -----------            ----------------------    ----------------------
-      PAGE HEADER                                      0x5c       (0x3bf2a0)                                                               
-      backLarge2                Image                  0x20       (0x3bf280)     0x0        (0x442828)                                       
-      Buzzer                    Custom Button          0x64       (0x3bf21c)     0x0        (0x442828)                                           
-      backButton                Custom Button          0x64       (0x3bf1b8)     0x7fc0     (0x43a868)                                                  
-      ImageSequence             Image Sequence         0x80       (0x3bf138)     0x0        (0x43a868)                                                   
-        UART of ImageSequence   UART Object            0x24       (0x3bf114)     0x0        (0x43a868)                                                          
-      ImageSequence             Image Sequence         0x80       (0x3bf094)     0x0        (0x43a868)                                                   
-        UART of ImageSequence   UART Object            0x24       (0x3bf070)     0x0        (0x43a868)                                                          
-      ImageSequence_1           Image Sequence         0x80       (0x3beff0)     0x0        (0x43a868)                                                     
-        UART of ImageSeq...e_1  UART Object            0x24       (0x3befcc)     0x0        (0x43a868)                                                           
-      ImageSequence_2           Image Sequence         0x80       (0x3bef4c)     0x0        (0x43a868)                                                     
-        UART of ImageSeq...e_2  UART Object            0x24       (0x3bef28)     0x0        (0x43a868)                                                           
-      Led2                      Check Box              0x70       (0x3beeb8)     0x0        (0x43a868)                                     
-      LedGroup                  Check Box Master       0x20       (0x3bee98)     0x0        (0x43a868)                                                
-        UART of LedGroup        UART Object            0x24       (0x3bee74)     0x0        (0x43a868)                                                     
-      Led                       Check Box              0x70       (0x3bee04)     0x0        (0x43a868)                                    
-      PAGE FOOTER                                      0x2        (0x3bee02)                                                              
+      PAGE HEADER                                      0x5c       (0x3b7220)                                                               
+      backLarge2                Image                  0xd0       (0x3b7150)     0x0        (0x43ad44)                                       
+      Buzzer                    Custom Button          0x74       (0x3b70dc)     0x0        (0x43ad44)                                           
+      backButton                Custom Button          0x74       (0x3b7068)     0x7fc0     (0x432d84)                                                  
+      ImageSequence             Image Sequence         0x8c       (0x3b6fdc)     0x0        (0x432d84)                                                   
+        UART of ImageSequence   UART Object            0x24       (0x3b6fb8)     0x0        (0x432d84)                                                          
+      ImageSequence             Image Sequence         0x8c       (0x3b6f2c)     0x0        (0x432d84)                                                   
+        UART of ImageSequence   UART Object            0x24       (0x3b6f08)     0x0        (0x432d84)                                                          
+      ImageSequence_1           Image Sequence         0x8c       (0x3b6e7c)     0x0        (0x432d84)                                                     
+        UART of ImageSeq...e_1  UART Object            0x24       (0x3b6e58)     0x0        (0x432d84)                                                           
+      ImageSequence_2           Image Sequence         0x8c       (0x3b6dcc)     0x0        (0x432d84)                                                     
+        UART of ImageSeq...e_2  UART Object            0x24       (0x3b6da8)     0x0        (0x432d84)                                                           
+      Led2                      Check Box              0x7c       (0x3b6d2c)     0x0        (0x432d84)                                     
+      LedGroup                  Check Box Master       0x30       (0x3b6cfc)     0x0        (0x432d84)                                                
+        UART of LedGroup        UART Object            0x24       (0x3b6cd8)     0x0        (0x432d84)                                                     
+      Led                       Check Box              0x7c       (0x3b6c5c)     0x0        (0x432d84)                                    
+      PAGE FOOTER                                      0x2        (0x3b6c5a)                                                              
                                                        ----------------------    ----------------------
-                                               Totals  0x4fa      (0x3bee02)     0x7fc0     (0x43a868)                                
+                                               Totals  0x622      (0x3b6c5a)     0x7fc0     (0x432d84)                                
 
 
 Slots (GEM page)    Flash Index = 0x24
 =====
       Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
       -----------               -----------            ----------------------    ----------------------
-      PAGE HEADER                                      0x1f8      (0x3bec04)                                                                
-      Setup1                    Anchor                 0x3c       (0x3bebc8)     0x0        (0x442828)                                    
-      random1                   No Type                0x4        (0x3bebc4)     0x0        (0x442828)                                     
-        IWC of Setup1           IWC Object             0x24       (0x3beba0)     0x0        (0x442828)                                                 
-      Setup2                    Anchor                 0x3c       (0x3beb64)     0x0        (0x442828)                                    
-        IWC of Setup2           IWC Object             0x24       (0x3beb40)     0x0        (0x442828)                                                 
-      Setup3                    Anchor                 0x3c       (0x3beb04)     0x0        (0x442828)                                    
-        IWC of Setup3           IWC Object             0x24       (0x3beae0)     0x0        (0x442828)                                                 
-      MultiHref7                Multiple Functions     0x34       (0x3beaac)     0x0        (0x442828)                                                    
-      Setup4                    Meta Object            0x3c       (0x3bea70)     0x0        (0x442828)                                         
-      MultiHref9                Multiple Functions     0x3c       (0x3bea34)     0x0        (0x442828)                                                    
-      Setup11                   Meta Object            0x3c       (0x3be9f8)     0x0        (0x442828)                                          
-      MultiHref11               Multiple Functions     0x3c       (0x3be9bc)     0x0        (0x442828)                                                     
-      Setup12                   Meta Object            0x3c       (0x3be980)     0x0        (0x442828)                                          
-      MultiHref13               Multiple Functions     0x44       (0x3be93c)     0x0        (0x442828)                                                     
-      Setup13                   Meta Object            0x3c       (0x3be900)     0x0        (0x442828)                                          
-      MultiHref15               Multiple Functions     0x2c       (0x3be8d4)     0x0        (0x442828)                                                     
-      Setup5                    Meta Object            0x3c       (0x3be898)     0x0        (0x442828)                                         
-      CheckUnderflow1           Meta Object            0x3c       (0x3be85c)     0x0        (0x442828)                                                  
-        IWC of CheckUnderflow1  IWC Object             0x24       (0x3be838)     0x0        (0x442828)                                                          
-      CheckUnderflow2           Meta Object            0x3c       (0x3be7fc)     0x0        (0x442828)                                                  
-        IWC of CheckUnderflow2  IWC Object             0x24       (0x3be7d8)     0x0        (0x442828)                                                          
-      CheckUnderflow3           Meta Object            0x3c       (0x3be79c)     0x0        (0x442828)                                                  
-        IWC of CheckUnderflow3  IWC Object             0x24       (0x3be778)     0x0        (0x442828)                                                          
-      MultiHref23               Multiple Functions     0x2c       (0x3be74c)     0x0        (0x442828)                                                     
-      CheckUnderflow4           Meta Object            0x3c       (0x3be710)     0x0        (0x442828)                                                  
-      Subract1                  Meta Object            0x3c       (0x3be6d4)     0x0        (0x442828)                                           
-      Subract2                  Meta Object            0x3c       (0x3be698)     0x0        (0x442828)                                           
-      Subract3                  Meta Object            0x3c       (0x3be65c)     0x0        (0x442828)                                           
-      Subract4                  Meta Object            0x3c       (0x3be620)     0x0        (0x442828)                                           
-      MultiHref29               Multiple Functions     0x2c       (0x3be5f4)     0x0        (0x442828)                                                     
-      StartLoop1                Meta Object            0x3c       (0x3be5b8)     0x0        (0x442828)                                             
-        IWC of StartLoop1       IWC Object             0x28       (0x3be590)     0x0        (0x442828)                                                     
-      MultiHref32               Multiple Functions     0x24       (0x3be56c)     0x0        (0x442828)                                                     
-      StartLoopOverflow1        Meta Object            0x3c       (0x3be530)     0x0        (0x442828)                                                     
-        IWC of StartLoop...ow1  IWC Object             0x24       (0x3be50c)     0x0        (0x442828)                                                          
-      StartLoop1                Meta Object            0x3c       (0x3be4d0)     0x0        (0x442828)                                             
-      StartLoop1                Meta Object            0x3c       (0x3be494)     0x0        (0x442828)                                             
-      MultiHref37               Multiple Functions     0x2c       (0x3be468)     0x0        (0x442828)                                                     
-      StartLoop2                Meta Object            0x3c       (0x3be42c)     0x0        (0x442828)                                             
-        IWC of StartLoop2       IWC Object             0x28       (0x3be404)     0x0        (0x442828)                                                     
-      MultiHref40               Multiple Functions     0x24       (0x3be3e0)     0x0        (0x442828)                                                     
-      StartLoopOverflow2        Meta Object            0x3c       (0x3be3a4)     0x0        (0x442828)                                                     
-        IWC of StartLoop...ow2  IWC Object             0x24       (0x3be380)     0x0        (0x442828)                                                          
-      StartLoop2                Meta Object            0x3c       (0x3be344)     0x0        (0x442828)                                             
-      StartLoop2                Meta Object            0x3c       (0x3be308)     0x0        (0x442828)                                             
-      MultiHref45               Multiple Functions     0x2c       (0x3be2dc)     0x0        (0x442828)                                                     
-      StartLoop3                Meta Object            0x3c       (0x3be2a0)     0x0        (0x442828)                                             
-        IWC of StartLoop3       IWC Object             0x28       (0x3be278)     0x0        (0x442828)                                                     
-      MultiHref48               Multiple Functions     0x24       (0x3be254)     0x0        (0x442828)                                                     
-      StartLoopOverflow3        Meta Object            0x3c       (0x3be218)     0x0        (0x442828)                                                     
-        IWC of StartLoop...ow3  IWC Object             0x24       (0x3be1f4)     0x0        (0x442828)                                                          
-      StartLoop3                Meta Object            0x3c       (0x3be1b8)     0x0        (0x442828)                                             
-      StartLoop3                Meta Object            0x3c       (0x3be17c)     0x0        (0x442828)                                             
-      MultiHref53               Multiple Functions     0x1c       (0x3be160)     0x0        (0x442828)                                                     
-      DecIndex                  Meta Object            0x3c       (0x3be124)     0x0        (0x442828)                                           
-      MultiHref55               Multiple Functions     0x24       (0x3be100)     0x0        (0x442828)                                                     
-      LoopEnd                   Meta Object            0x3c       (0x3be0c4)     0x0        (0x442828)                                          
-        IWC of LoopEnd          IWC Object             0x24       (0x3be0a0)     0x0        (0x442828)                                                  
-      MultiHref58               Multiple Functions     0x44       (0x3be05c)     0x0        (0x442828)                                                     
-      StartMusic                Meta Object            0x3c       (0x3be020)     0x0        (0x442828)                                             
-      MultiHref60               Multiple Functions     0xac       (0x3bdf74)     0x0        (0x442828)                                                     
-      SpinReels                 Meta Object            0x3c       (0x3bdf38)     0x0        (0x442828)                                            
-      MultiHref62               Multiple Functions     0x2c       (0x3bdf0c)     0x0        (0x442828)                                                     
-      timer1                    Meta Object            0x3c       (0x3bded0)     0x0        (0x442828)                                         
-      MultiHref64               Multiple Functions     0x24       (0x3bdeac)     0x0        (0x442828)                                                     
-      timer1Ovrflw              Meta Object            0x3c       (0x3bde70)     0x0        (0x442828)                                               
-        IWC of timer1Ovrflw     IWC Object             0x24       (0x3bde4c)     0x0        (0x442828)                                                       
-      MultiHref67               Multiple Functions     0x2c       (0x3bde20)     0x0        (0x442828)                                                     
-      oneshot1                  Meta Object            0x3c       (0x3bdde4)     0x0        (0x442828)                                           
-      MultiHref69               Multiple Functions     0x2c       (0x3bddb8)     0x0        (0x442828)                                                     
-      timer2                    Meta Object            0x3c       (0x3bdd7c)     0x0        (0x442828)                                         
-      MultiHref71               Multiple Functions     0x24       (0x3bdd58)     0x0        (0x442828)                                                     
-      timer2Ovrflw              Meta Object            0x3c       (0x3bdd1c)     0x0        (0x442828)                                               
-        IWC of timer2Ovrflw     IWC Object             0x24       (0x3bdcf8)     0x0        (0x442828)                                                       
-      MultiHref74               Multiple Functions     0x2c       (0x3bdccc)     0x0        (0x442828)                                                     
-      oneshot4                  Meta Object            0x3c       (0x3bdc90)     0x0        (0x442828)                                           
-      MultiHref76               Multiple Functions     0x2c       (0x3bdc64)     0x0        (0x442828)                                                     
-      timer3                    Meta Object            0x3c       (0x3bdc28)     0x0        (0x442828)                                         
-      MultiHref78               Multiple Functions     0x24       (0x3bdc04)     0x0        (0x442828)                                                     
-      timer3Ovrflw              Meta Object            0x3c       (0x3bdbc8)     0x0        (0x442828)                                               
-        IWC of timer3Ovrflw     IWC Object             0x24       (0x3bdba4)     0x0        (0x442828)                                                       
-      MultiHref81               Multiple Functions     0x3c       (0x3bdb68)     0x0        (0x442828)                                                     
-      oneshot7                  Meta Object            0x3c       (0x3bdb2c)     0x0        (0x442828)                                           
-      MultiHref83               Multiple Functions     0x2c       (0x3bdb00)     0x0        (0x442828)                                                     
-      reappearButton            Meta Object            0x3c       (0x3bdac4)     0x0        (0x442828)                                                 
-      checkWinner1              Meta Object            0x3c       (0x3bda88)     0x0        (0x442828)                                               
-        IWC of checkWinner1     IWC Object             0x24       (0x3bda64)     0x0        (0x442828)                                                       
-      checkWinner2              Meta Object            0x3c       (0x3bda28)     0x0        (0x442828)                                               
-        IWC of checkWinner2     IWC Object             0x24       (0x3bda04)     0x0        (0x442828)                                                       
-      checkWinner3              Meta Object            0x3c       (0x3bd9c8)     0x0        (0x442828)                                               
-        IWC of checkWinner3     IWC Object             0x2c       (0x3bd99c)     0x0        (0x442828)                                                       
-      checkWinner3              Meta Object            0x3c       (0x3bd960)     0x0        (0x442828)                                               
-      checkWinner3              Meta Object            0x3c       (0x3bd924)     0x0        (0x442828)                                               
-      checkWinner3              Meta Object            0x3c       (0x3bd8e8)     0x0        (0x442828)                                               
-      checkWinner3              Meta Object            0x3c       (0x3bd8ac)     0x0        (0x442828)                                               
-      checkWinner3              Meta Object            0x3c       (0x3bd870)     0x0        (0x442828)                                               
-      MultiHref96               Multiple Functions     0x84       (0x3bd7ec)     0x0        (0x442828)                                                     
-      Winner1                   Meta Object            0x3c       (0x3bd7b0)     0x0        (0x442828)                                          
-      MultiHref98               Sequenced Functions    0x1c       (0x3bd794)     0x0        (0x442828)                                                      
-      WinnerFlash               Meta Object            0x3c       (0x3bd758)     0x0        (0x442828)                                              
-      MultiHref100              Multiple Functions     0x34       (0x3bd724)     0x0        (0x442828)                                                      
-      WinnerFlashOFF            Meta Object            0x3c       (0x3bd6e8)     0x0        (0x442828)                                                 
-      MultiHref102              Sequenced Functions    0x44       (0x3bd6a4)     0x0        (0x442828)                                                       
-      ServoDispense             Meta Object            0x3c       (0x3bd668)     0x0        (0x442828)                                                
-      ForceWin                  Meta Object            0x3c       (0x3bd62c)     0x0        (0x442828)                                           
-      panelFinal                Image                  0x20       (0x3bd60c)     0x0        (0x442828)                                       
-      slot1                     Image Sequence         0xd8       (0x3bd534)     0x0        (0x442828)                                           
-        IWC of slot1            IWC Object             0x24       (0x3bd510)     0x0        (0x442828)                                                
-      slot2                     Image Sequence         0xd8       (0x3bd438)     0x0        (0x442828)                                           
-        IWC of slot2            IWC Object             0x24       (0x3bd414)     0x0        (0x442828)                                                
-      slot3                     Image Sequence         0xd8       (0x3bd33c)     0x0        (0x442828)                                           
-        IWC of slot3            IWC Object             0x24       (0x3bd318)     0x0        (0x442828)                                                
-      Menu                      Custom Button          0x64       (0x3bd2b4)     0x0        (0x442828)                                         
-      MultiHref113              Multiple Functions     0x3c       (0x3bd278)     0x0        (0x442828)                                                      
-      Bet                       Custom Button          0x64       (0x3bd214)     0x0        (0x442828)                                        
-      WINNER                    Image                  0x20       (0x3bd1f4)     0x6498     (0x43c390)                                      
-      pwm1                      PWM Object             0xc        (0x3bd1e8)     0x0        (0x43c390)                                     
-      BetOneOff                 Image                  0x20       (0x3bd1c8)     0x3fc0     (0x4383d0)                                         
-      PAGE FOOTER                                      0x2        (0x3bd1c6)                                                              
+      PAGE HEADER                                      0x1f8      (0x3b6a04)                                                                
+      Setup1                    Anchor                 0x4c       (0x3b69b8)     0x0        (0x43ad44)                                    
+      random1                   No Type                0x4        (0x3b69b4)     0x0        (0x43ad44)                                     
+        IWC of Setup1           IWC Object             0x24       (0x3b6990)     0x0        (0x43ad44)                                                 
+      Setup2                    Anchor                 0x4c       (0x3b6944)     0x0        (0x43ad44)                                    
+        IWC of Setup2           IWC Object             0x24       (0x3b6920)     0x0        (0x43ad44)                                                 
+      Setup3                    Anchor                 0x4c       (0x3b68d4)     0x0        (0x43ad44)                                    
+        IWC of Setup3           IWC Object             0x24       (0x3b68b0)     0x0        (0x43ad44)                                                 
+      MultiHref7                Multiple Functions     0x34       (0x3b687c)     0x0        (0x43ad44)                                                    
+      Setup4                    Meta Object            0x4c       (0x3b6830)     0x0        (0x43ad44)                                         
+      MultiHref9                Multiple Functions     0x3c       (0x3b67f4)     0x0        (0x43ad44)                                                    
+      Setup11                   Meta Object            0x4c       (0x3b67a8)     0x0        (0x43ad44)                                          
+      MultiHref11               Multiple Functions     0x3c       (0x3b676c)     0x0        (0x43ad44)                                                     
+      Setup12                   Meta Object            0x4c       (0x3b6720)     0x0        (0x43ad44)                                          
+      MultiHref13               Multiple Functions     0x44       (0x3b66dc)     0x0        (0x43ad44)                                                     
+      Setup13                   Meta Object            0x4c       (0x3b6690)     0x0        (0x43ad44)                                          
+      MultiHref15               Multiple Functions     0x2c       (0x3b6664)     0x0        (0x43ad44)                                                     
+      Setup5                    Meta Object            0x4c       (0x3b6618)     0x0        (0x43ad44)                                         
+      CheckUnderflow1           Meta Object            0x4c       (0x3b65cc)     0x0        (0x43ad44)                                                  
+        IWC of CheckUnderflow1  IWC Object             0x24       (0x3b65a8)     0x0        (0x43ad44)                                                          
+      CheckUnderflow2           Meta Object            0x4c       (0x3b655c)     0x0        (0x43ad44)                                                  
+        IWC of CheckUnderflow2  IWC Object             0x24       (0x3b6538)     0x0        (0x43ad44)                                                          
+      CheckUnderflow3           Meta Object            0x4c       (0x3b64ec)     0x0        (0x43ad44)                                                  
+        IWC of CheckUnderflow3  IWC Object             0x24       (0x3b64c8)     0x0        (0x43ad44)                                                          
+      MultiHref23               Multiple Functions     0x2c       (0x3b649c)     0x0        (0x43ad44)                                                     
+      CheckUnderflow4           Meta Object            0x4c       (0x3b6450)     0x0        (0x43ad44)                                                  
+      Subract1                  Meta Object            0x4c       (0x3b6404)     0x0        (0x43ad44)                                           
+      Subract2                  Meta Object            0x4c       (0x3b63b8)     0x0        (0x43ad44)                                           
+      Subract3                  Meta Object            0x4c       (0x3b636c)     0x0        (0x43ad44)                                           
+      Subract4                  Meta Object            0x4c       (0x3b6320)     0x0        (0x43ad44)                                           
+      MultiHref29               Multiple Functions     0x2c       (0x3b62f4)     0x0        (0x43ad44)                                                     
+      StartLoop1                Meta Object            0x4c       (0x3b62a8)     0x0        (0x43ad44)                                             
+        IWC of StartLoop1       IWC Object             0x28       (0x3b6280)     0x0        (0x43ad44)                                                     
+      MultiHref32               Multiple Functions     0x24       (0x3b625c)     0x0        (0x43ad44)                                                     
+      StartLoopOverflow1        Meta Object            0x4c       (0x3b6210)     0x0        (0x43ad44)                                                     
+        IWC of StartLoop...ow1  IWC Object             0x24       (0x3b61ec)     0x0        (0x43ad44)                                                          
+      StartLoop1                Meta Object            0x4c       (0x3b61a0)     0x0        (0x43ad44)                                             
+      StartLoop1                Meta Object            0x4c       (0x3b6154)     0x0        (0x43ad44)                                             
+      MultiHref37               Multiple Functions     0x2c       (0x3b6128)     0x0        (0x43ad44)                                                     
+      StartLoop2                Meta Object            0x4c       (0x3b60dc)     0x0        (0x43ad44)                                             
+        IWC of StartLoop2       IWC Object             0x28       (0x3b60b4)     0x0        (0x43ad44)                                                     
+      MultiHref40               Multiple Functions     0x24       (0x3b6090)     0x0        (0x43ad44)                                                     
+      StartLoopOverflow2        Meta Object            0x4c       (0x3b6044)     0x0        (0x43ad44)                                                     
+        IWC of StartLoop...ow2  IWC Object             0x24       (0x3b6020)     0x0        (0x43ad44)                                                          
+      StartLoop2                Meta Object            0x4c       (0x3b5fd4)     0x0        (0x43ad44)                                             
+      StartLoop2                Meta Object            0x4c       (0x3b5f88)     0x0        (0x43ad44)                                             
+      MultiHref45               Multiple Functions     0x2c       (0x3b5f5c)     0x0        (0x43ad44)                                                     
+      StartLoop3                Meta Object            0x4c       (0x3b5f10)     0x0        (0x43ad44)                                             
+        IWC of StartLoop3       IWC Object             0x28       (0x3b5ee8)     0x0        (0x43ad44)                                                     
+      MultiHref48               Multiple Functions     0x24       (0x3b5ec4)     0x0        (0x43ad44)                                                     
+      StartLoopOverflow3        Meta Object            0x4c       (0x3b5e78)     0x0        (0x43ad44)                                                     
+        IWC of StartLoop...ow3  IWC Object             0x24       (0x3b5e54)     0x0        (0x43ad44)                                                          
+      StartLoop3                Meta Object            0x4c       (0x3b5e08)     0x0        (0x43ad44)                                             
+      StartLoop3                Meta Object            0x4c       (0x3b5dbc)     0x0        (0x43ad44)                                             
+      MultiHref53               Multiple Functions     0x1c       (0x3b5da0)     0x0        (0x43ad44)                                                     
+      DecIndex                  Meta Object            0x4c       (0x3b5d54)     0x0        (0x43ad44)                                           
+      MultiHref55               Multiple Functions     0x24       (0x3b5d30)     0x0        (0x43ad44)                                                     
+      LoopEnd                   Meta Object            0x4c       (0x3b5ce4)     0x0        (0x43ad44)                                          
+        IWC of LoopEnd          IWC Object             0x24       (0x3b5cc0)     0x0        (0x43ad44)                                                  
+      MultiHref58               Multiple Functions     0x44       (0x3b5c7c)     0x0        (0x43ad44)                                                     
+      StartMusic                Meta Object            0x4c       (0x3b5c30)     0x0        (0x43ad44)                                             
+      MultiHref60               Multiple Functions     0xac       (0x3b5b84)     0x0        (0x43ad44)                                                     
+      SpinReels                 Meta Object            0x4c       (0x3b5b38)     0x0        (0x43ad44)                                            
+      MultiHref62               Multiple Functions     0x2c       (0x3b5b0c)     0x0        (0x43ad44)                                                     
+      timer1                    Meta Object            0x4c       (0x3b5ac0)     0x0        (0x43ad44)                                         
+      MultiHref64               Multiple Functions     0x24       (0x3b5a9c)     0x0        (0x43ad44)                                                     
+      timer1Ovrflw              Meta Object            0x4c       (0x3b5a50)     0x0        (0x43ad44)                                               
+        IWC of timer1Ovrflw     IWC Object             0x24       (0x3b5a2c)     0x0        (0x43ad44)                                                       
+      MultiHref67               Multiple Functions     0x2c       (0x3b5a00)     0x0        (0x43ad44)                                                     
+      oneshot1                  Meta Object            0x4c       (0x3b59b4)     0x0        (0x43ad44)                                           
+      MultiHref69               Multiple Functions     0x2c       (0x3b5988)     0x0        (0x43ad44)                                                     
+      timer2                    Meta Object            0x4c       (0x3b593c)     0x0        (0x43ad44)                                         
+      MultiHref71               Multiple Functions     0x24       (0x3b5918)     0x0        (0x43ad44)                                                     
+      timer2Ovrflw              Meta Object            0x4c       (0x3b58cc)     0x0        (0x43ad44)                                               
+        IWC of timer2Ovrflw     IWC Object             0x24       (0x3b58a8)     0x0        (0x43ad44)                                                       
+      MultiHref74               Multiple Functions     0x2c       (0x3b587c)     0x0        (0x43ad44)                                                     
+      oneshot4                  Meta Object            0x4c       (0x3b5830)     0x0        (0x43ad44)                                           
+      MultiHref76               Multiple Functions     0x2c       (0x3b5804)     0x0        (0x43ad44)                                                     
+      timer3                    Meta Object            0x4c       (0x3b57b8)     0x0        (0x43ad44)                                         
+      MultiHref78               Multiple Functions     0x24       (0x3b5794)     0x0        (0x43ad44)                                                     
+      timer3Ovrflw              Meta Object            0x4c       (0x3b5748)     0x0        (0x43ad44)                                               
+        IWC of timer3Ovrflw     IWC Object             0x24       (0x3b5724)     0x0        (0x43ad44)                                                       
+      MultiHref81               Multiple Functions     0x3c       (0x3b56e8)     0x0        (0x43ad44)                                                     
+      oneshot7                  Meta Object            0x4c       (0x3b569c)     0x0        (0x43ad44)                                           
+      MultiHref83               Multiple Functions     0x2c       (0x3b5670)     0x0        (0x43ad44)                                                     
+      reappearButton            Meta Object            0x4c       (0x3b5624)     0x0        (0x43ad44)                                                 
+      checkWinner1              Meta Object            0x4c       (0x3b55d8)     0x0        (0x43ad44)                                               
+        IWC of checkWinner1     IWC Object             0x24       (0x3b55b4)     0x0        (0x43ad44)                                                       
+      checkWinner2              Meta Object            0x4c       (0x3b5568)     0x0        (0x43ad44)                                               
+        IWC of checkWinner2     IWC Object             0x24       (0x3b5544)     0x0        (0x43ad44)                                                       
+      checkWinner3              Meta Object            0x4c       (0x3b54f8)     0x0        (0x43ad44)                                               
+        IWC of checkWinner3     IWC Object             0x2c       (0x3b54cc)     0x0        (0x43ad44)                                                       
+      checkWinner3              Meta Object            0x4c       (0x3b5480)     0x0        (0x43ad44)                                               
+      checkWinner3              Meta Object            0x4c       (0x3b5434)     0x0        (0x43ad44)                                               
+      checkWinner3              Meta Object            0x4c       (0x3b53e8)     0x0        (0x43ad44)                                               
+      checkWinner3              Meta Object            0x4c       (0x3b539c)     0x0        (0x43ad44)                                               
+      checkWinner3              Meta Object            0x4c       (0x3b5350)     0x0        (0x43ad44)                                               
+      MultiHref96               Multiple Functions     0x84       (0x3b52cc)     0x0        (0x43ad44)                                                     
+      Winner1                   Meta Object            0x4c       (0x3b5280)     0x0        (0x43ad44)                                          
+      MultiHref98               Sequenced Functions    0x1c       (0x3b5264)     0x0        (0x43ad44)                                                      
+      WinnerFlash               Meta Object            0x4c       (0x3b5218)     0x0        (0x43ad44)                                              
+      MultiHref100              Multiple Functions     0x34       (0x3b51e4)     0x0        (0x43ad44)                                                      
+      WinnerFlashOFF            Meta Object            0x4c       (0x3b5198)     0x0        (0x43ad44)                                                 
+      MultiHref102              Sequenced Functions    0x44       (0x3b5154)     0x0        (0x43ad44)                                                       
+      ServoDispense             Meta Object            0x4c       (0x3b5108)     0x0        (0x43ad44)                                                
+      ForceWin                  Meta Object            0x4c       (0x3b50bc)     0x0        (0x43ad44)                                           
+      panelFinal                Image                  0xd0       (0x3b4fec)     0x0        (0x43ad44)                                       
+      slot1                     Image Sequence         0xe4       (0x3b4f08)     0x0        (0x43ad44)                                           
+        IWC of slot1            IWC Object             0x24       (0x3b4ee4)     0x0        (0x43ad44)                                                
+      slot2                     Image Sequence         0xe4       (0x3b4e00)     0x0        (0x43ad44)                                           
+        IWC of slot2            IWC Object             0x24       (0x3b4ddc)     0x0        (0x43ad44)                                                
+      slot3                     Image Sequence         0xe4       (0x3b4cf8)     0x0        (0x43ad44)                                           
+        IWC of slot3            IWC Object             0x24       (0x3b4cd4)     0x0        (0x43ad44)                                                
+      Menu                      Custom Button          0x74       (0x3b4c60)     0x0        (0x43ad44)                                         
+      MultiHref113              Multiple Functions     0x3c       (0x3b4c24)     0x0        (0x43ad44)                                                      
+      Bet                       Custom Button          0x74       (0x3b4bb0)     0x0        (0x43ad44)                                        
+      WINNER                    Image                  0xd0       (0x3b4ae0)     0x6498     (0x4348ac)                                      
+      pwm1                      PWM Object             0xc        (0x3b4ad4)     0x0        (0x4348ac)                                     
+      BetOneOff                 Image                  0xd0       (0x3b4a04)     0x3fc0     (0x4308ec)                                         
+      PAGE FOOTER                                      0x2        (0x3b4a02)                                                              
                                                        ----------------------    ----------------------
-                                               Totals  0x1c36     (0x3bd1c6)     0xa458     (0x4383d0)                                 
+                                               Totals  0x21fa     (0x3b4a02)     0xa458     (0x4308ec)                                 
 
 
 Refrigerator (GEM page)    Flash Index = 0x25
 ============
       Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
       -----------               -----------            ----------------------    ----------------------
-      PAGE HEADER                                      0x40       (0x3bd13c)                                                               
-      Background                Image                  0x20       (0x3bd11c)     0x0        (0x442828)                                       
-      Cube                      Radio Button           0x70       (0x3bd0ac)     0x0        (0x442828)                                        
-      Group1                    Radio Button Master    0x20       (0x3bd08c)     0x0        (0x442828)                                                 
-        IWC of Group1           IWC Object             0x24       (0x3bd068)     0x0        (0x442828)                                                 
-      Crushed                   Radio Button           0x70       (0x3bcff8)     0x0        (0x442828)                                           
-      Water                     Radio Button           0x70       (0x3bcf88)     0x0        (0x442828)                                         
-      NotepadButton             Touch Area             0x3c       (0x3bcf4c)     0x0        (0x442828)                                               
-      BackMenuButton            Touch Area             0x3c       (0x3bcf10)     0x0        (0x442828)                                                
-      PAGE FOOTER                                      0x2        (0x3bcf0e)                                                              
+      PAGE HEADER                                      0x40       (0x3b49bc)                                                               
+      Background                Image                  0xd0       (0x3b48ec)     0x0        (0x43ad44)                                       
+      Cube                      Radio Button           0x7c       (0x3b4870)     0x0        (0x43ad44)                                        
+      Group1                    Radio Button Master    0x30       (0x3b4840)     0x0        (0x43ad44)                                                 
+        IWC of Group1           IWC Object             0x24       (0x3b481c)     0x0        (0x43ad44)                                                 
+      Crushed                   Radio Button           0x7c       (0x3b47a0)     0x0        (0x43ad44)                                           
+      Water                     Radio Button           0x7c       (0x3b4724)     0x0        (0x43ad44)                                         
+      NotepadButton             Touch Area             0x48       (0x3b46dc)     0x0        (0x43ad44)                                               
+      BackMenuButton            Touch Area             0x48       (0x3b4694)     0x0        (0x43ad44)                                                
+      PAGE FOOTER                                      0x2        (0x3b4692)                                                              
                                                        ----------------------    ----------------------
-                                               Totals  0x26e      (0x3bcf0e)     0x0        (0x442828)                             
+                                               Totals  0x36a      (0x3b4692)     0x0        (0x43ad44)                             
 
 
 Notepad (GEM page)    Flash Index = 0x26
 =======
       Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
       -----------               -----------            ----------------------    ----------------------
-      PAGE HEADER                                      0x34       (0x3bcec8)                                                               
-      Notepad_1                 Image                  0x20       (0x3bcea8)     0x0        (0x442828)                                      
-      Scrib1                    Scribble               0x4c       (0x3bce5c)     0x4626c    (0x3fc5bc)                                          
-      SaveImg                   Image                  0x20       (0x3bce3c)     0x0        (0x3fc5bc)                                    
-      Exit                      Touch Area             0x3c       (0x3bce00)     0x0        (0x3fc5bc)                                      
-      Clear                     Touch Area             0x3c       (0x3bcdc4)     0x0        (0x3fc5bc)                                       
-      PAGE FOOTER                                      0x2        (0x3bcdc2)                                                              
+      PAGE HEADER                                      0x34       (0x3b4648)                                                               
+      Notepad_1                 Image                  0xd0       (0x3b4578)     0x0        (0x43ad44)                                      
+      Scrib1                    Scribble               0x5c       (0x3b451c)     0x4626c    (0x3f4ad8)                                          
+      SaveImg                   Image                  0xd0       (0x3b444c)     0x0        (0x3f4ad8)                                    
+      Exit                      Touch Area             0x48       (0x3b4404)     0x0        (0x3f4ad8)                                      
+      Clear                     Touch Area             0x48       (0x3b43bc)     0x0        (0x3f4ad8)                                       
+      PAGE FOOTER                                      0x2        (0x3b43ba)                                                              
                                                        ----------------------    ----------------------
-                                               Totals  0x13a      (0x3bcdc2)     0x4626c    (0x3fc5bc)                                 
+                                               Totals  0x2c2      (0x3b43ba)     0x4626c    (0x3f4ad8)                                 
 
 
 1 (GEM page)    Flash Index = 0x27
 =
       Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
       -----------               -----------            ----------------------    ----------------------
-      PAGE HEADER                                      0x2c       (0x3bcd50)                                                               
-      No Name                   Meta Object            0x3c       (0x3bcd14)     0x0        (0x442828)                                          
-      Picture 013_1             Image                  0x20       (0x3bccf4)     0x0        (0x442828)                                          
-      MenuButton                Touch Area             0x3c       (0x3bccb8)     0x0        (0x442828)                                            
-      PAGE FOOTER                                      0x2        (0x3bccb6)                                                              
+      PAGE HEADER                                      0x2c       (0x3b4350)                                                               
+      No Name                   Meta Object            0x4c       (0x3b4304)     0x0        (0x43ad44)                                          
+      Picture 013_1             Image                  0xd0       (0x3b4234)     0x0        (0x43ad44)                                          
+      MenuButton                Touch Area             0x48       (0x3b41ec)     0x0        (0x43ad44)                                            
+      PAGE FOOTER                                      0x2        (0x3b41ea)                                                              
                                                        ----------------------    ----------------------
-                                               Totals  0xc6       (0x3bccb6)     0x0        (0x442828)                            
+                                               Totals  0x192      (0x3b41ea)     0x0        (0x43ad44)                             
 
 
 2 (GEM page)    Flash Index = 0x28
 =
       Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
       -----------               -----------            ----------------------    ----------------------
-      PAGE HEADER                                      0x2c       (0x3bcc50)                                                               
-      No Name                   Meta Object            0x3c       (0x3bcc14)     0x0        (0x442828)                                          
-      Picture 007_1             Image                  0x20       (0x3bcbf4)     0x4b000    (0x3f7828)                                              
-      MenuButton                Touch Area             0x3c       (0x3bcbb8)     0x0        (0x3f7828)                                            
-      PAGE FOOTER                                      0x2        (0x3bcbb6)                                                              
+      PAGE HEADER                                      0x2c       (0x3b4150)                                                               
+      No Name                   Meta Object            0x4c       (0x3b4104)     0x0        (0x43ad44)                                          
+      Picture 007_1             Image                  0xd0       (0x3b4034)     0x4b000    (0x3efd44)                                              
+      MenuButton                Touch Area             0x48       (0x3b3fec)     0x0        (0x3efd44)                                            
+      PAGE FOOTER                                      0x2        (0x3b3fea)                                                              
                                                        ----------------------    ----------------------
-                                               Totals  0xc6       (0x3bcbb6)     0x4b000    (0x3f7828)                                
+                                               Totals  0x192      (0x3b3fea)     0x4b000    (0x3efd44)                                 
 
 
 3 (GEM page)    Flash Index = 0x29
 =
       Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
       -----------               -----------            ----------------------    ----------------------
-      PAGE HEADER                                      0x2c       (0x3bcb50)                                                               
-      No Name                   Meta Object            0x3c       (0x3bcb14)     0x0        (0x442828)                                          
-      Picture 026_1             Image                  0x20       (0x3bcaf4)     0x4b000    (0x3f7828)                                              
-      MenuButton                Touch Area             0x3c       (0x3bcab8)     0x0        (0x3f7828)                                            
-      PAGE FOOTER                                      0x2        (0x3bcab6)                                                              
+      PAGE HEADER                                      0x2c       (0x3b3f50)                                                               
+      No Name                   Meta Object            0x4c       (0x3b3f04)     0x0        (0x43ad44)                                          
+      Picture 026_1             Image                  0xd0       (0x3b3e34)     0x4b000    (0x3efd44)                                              
+      MenuButton                Touch Area             0x48       (0x3b3dec)     0x0        (0x3efd44)                                            
+      PAGE FOOTER                                      0x2        (0x3b3dea)                                                              
                                                        ----------------------    ----------------------
-                                               Totals  0xc6       (0x3bcab6)     0x4b000    (0x3f7828)                                
+                                               Totals  0x192      (0x3b3dea)     0x4b000    (0x3efd44)                                 
 
 
 4 (GEM page)    Flash Index = 0x2a
 =
       Object Name               Object Type            Flash Used (Remaining)    SDRAM Used (Remaining)
       -----------               -----------            ----------------------    ----------------------
-      PAGE HEADER                                      0x2c       (0x3bca50)                                                               
-      No Name                   Meta Object            0x3c       (0x3bca14)     0x0        (0x442828)                                          
-      Picture 021_1             Image                  0x20       (0x3bc9f4)     0x4b000    (0x3f7828)                                              
-      MenuButton                Touch Area             0x3c       (0x3bc9b8)     0x0        (0x3f7828)                                            
-      PAGE FOOTER                                      0x2        (0x3bc9b6)                                                              
+      PAGE HEADER                                      0x2c       (0x3b3d50)                                                               
+      No Name                   Meta Object            0x4c       (0x3b3d04)     0x0        (0x43ad44)                                          
+      Picture 021_1             Image                  0xd0       (0x3b3c34)     0x4b000    (0x3efd44)                                              
+      MenuButton                Touch Area             0x48       (0x3b3bec)     0x0        (0x3efd44)                                            
+      PAGE FOOTER                                      0x2        (0x3b3bea)                                                              
                                                        ----------------------    ----------------------
-                                               Totals  0xc6       (0x3bc9b6)     0x4b000    (0x3f7828)                                
+                                               Totals  0x192      (0x3b3bea)     0x4b000    (0x3efd44)                                 
 
 
 Picture 013_320x240_320x240_jpegtran.jpg (Image File)    Flash Index = 0x2b
 ========================================
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0xda22     (0x3aef5e)                                                
+                                                       0xda22     (0x3a615e)                                                
 
 
 NoteSave.png (Image File)    Flash Index = 0x2c
 ============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x1fa2     (0x3acf5e)                                                
+                                                       0x1fa2     (0x3a415e)                                                
 
 
 Notepad.png (Image File)    Flash Index = 0x2d
 ===========
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x2bca     (0x3aa336)                                                
+                                                       0x2bca     (0x3a1536)                                                
 
 
 WaterOn.png (Image File)    Flash Index = 0x2e
 ===========
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x7902     (0x3a29fe)                                                
+                                                       0x7902     (0x399bfe)                                                
 
 
 WaterTrack.png (Image File)    Flash Index = 0x2f
 ==============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x79fe     (0x39af82)                                                
+                                                       0x79fe     (0x392182)                                                
 
 
 WaterOff.png (Image File)    Flash Index = 0x30
 ============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x796e     (0x393612)                                                
+                                                       0x796e     (0x38a812)                                                
 
 
 CrushedOn.png (Image File)    Flash Index = 0x31
 =============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x78e2     (0x38bd1e)                                                
+                                                       0x78e2     (0x382f1e)                                                
 
 
 CrushedTrack.png (Image File)    Flash Index = 0x32
 ================
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x7ab6     (0x38424a)                                                
+                                                       0x7ab6     (0x37b44a)                                                
 
 
 CrushedOff.png (Image File)    Flash Index = 0x33
 ==============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x7df2     (0x37c40e)                                                
+                                                       0x7df2     (0x37360e)                                                
 
 
 CubedOn.png (Image File)    Flash Index = 0x34
 ===========
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x79f6     (0x374a0a)                                                
+                                                       0x79f6     (0x36bc0a)                                                
 
 
 CubedTrack.png (Image File)    Flash Index = 0x35
 ==============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x7b2e     (0x36ced2)                                                
+                                                       0x7b2e     (0x3640d2)                                                
 
 
 CubedOff.png (Image File)    Flash Index = 0x36
 ============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x7b6e     (0x365312)                                                
+                                                       0x7b6e     (0x35c512)                                                
 
 
 Background_320x240_jpegtran.jpg (Image File)    Flash Index = 0x37
 ===============================
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x4c96     (0x36066a)                                                
+                                                       0x4c96     (0x35786a)                                                
 
 
 betone_down.png (Image File)    Flash Index = 0x38
 ===============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x3216     (0x35d3ea)                                                
+                                                       0x3216     (0x3545ea)                                                
 
 
 betone_up.png (Image File)    Flash Index = 0x39
 =============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x3406     (0x359f7a)                                                
+                                                       0x3406     (0x35117a)                                                
 
 
 CashOut_Down.png (Image File)    Flash Index = 0x3a
 ================
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x3726     (0x3567da)                                                
+                                                       0x3726     (0x34d9da)                                                
 
 
 CashOut_Up.png (Image File)    Flash Index = 0x3b
 ==============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x3726     (0x35305a)                                                
+                                                       0x3726     (0x34a25a)                                                
 
 
 r22.gif (Image File)    Flash Index = 0x3c
 =======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x13de     (0x351c22)                                                
+                                                       0x13de     (0x348e22)                                                
 
 
 r21.gif (Image File)    Flash Index = 0x3d
 =======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x12ea     (0x350916)                                                
+                                                       0x12ea     (0x347b16)                                                
 
 
 r20.gif (Image File)    Flash Index = 0x3e
 =======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x13a6     (0x34f55a)                                                
+                                                       0x13a6     (0x34675a)                                                
 
 
 r19.gif (Image File)    Flash Index = 0x3f
 =======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x11fa     (0x34e306)                                                
+                                                       0x11fa     (0x345506)                                                
 
 
 r18.gif (Image File)    Flash Index = 0x40
 =======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x11c2     (0x34d13e)                                                
+                                                       0x11c2     (0x34433e)                                                
 
 
 r17.gif (Image File)    Flash Index = 0x41
 =======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x1016     (0x34c0ea)                                                
+                                                       0x1016     (0x3432ea)                                                
 
 
 r16.gif (Image File)    Flash Index = 0x42
 =======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x1106     (0x34af7a)                                                
+                                                       0x1106     (0x34217a)                                                
 
 
 r15.gif (Image File)    Flash Index = 0x43
 =======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x12c2     (0x349c3e)                                                
+                                                       0x12c2     (0x340e3e)                                                
 
 
 r14.gif (Image File)    Flash Index = 0x44
 =======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x1222     (0x3489de)                                                
+                                                       0x1222     (0x33fbde)                                                
 
 
 r13.gif (Image File)    Flash Index = 0x45
 =======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x11ba     (0x3477c6)                                                
+                                                       0x11ba     (0x33e9c6)                                                
 
 
 r12.gif (Image File)    Flash Index = 0x46
 =======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x11f2     (0x34658e)                                                
+                                                       0x11f2     (0x33d78e)                                                
 
 
 r11.gif (Image File)    Flash Index = 0x47
 =======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x10ae     (0x3454d2)                                                
+                                                       0x10ae     (0x33c6d2)                                                
 
 
 r10.gif (Image File)    Flash Index = 0x48
 =======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x11d2     (0x3442ae)                                                
+                                                       0x11d2     (0x33b4ae)                                                
 
 
 r9.gif (Image File)    Flash Index = 0x49
 ======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x126e     (0x343012)                                                
+                                                       0x126e     (0x33a212)                                                
 
 
 r8.gif (Image File)    Flash Index = 0x4a
 ======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x11be     (0x341e42)                                                
+                                                       0x11be     (0x339042)                                                
 
 
 r7.gif (Image File)    Flash Index = 0x4b
 ======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x133e     (0x340ac2)                                                
+                                                       0x133e     (0x337cc2)                                                
 
 
 r6.gif (Image File)    Flash Index = 0x4c
 ======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x13a6     (0x33f6da)                                                
+                                                       0x13a6     (0x3368da)                                                
 
 
 r5.gif (Image File)    Flash Index = 0x4d
 ======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x13d6     (0x33e2aa)                                                
+                                                       0x13d6     (0x3354aa)                                                
 
 
 r4.gif (Image File)    Flash Index = 0x4e
 ======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x13fe     (0x33ce82)                                                
+                                                       0x13fe     (0x334082)                                                
 
 
 r3.gif (Image File)    Flash Index = 0x4f
 ======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x1406     (0x33ba7a)                                                
+                                                       0x1406     (0x332c7a)                                                
 
 
 r2.gif (Image File)    Flash Index = 0x50
 ======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x141a     (0x33a5e6)                                                
+                                                       0x141a     (0x3317e6)                                                
 
 
 r1.gif (Image File)    Flash Index = 0x51
 ======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x13be     (0x3391c2)                                                
+                                                       0x13be     (0x3303c2)                                                
 
 
 r0.gif (Image File)    Flash Index = 0x52
 ======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x1596     (0x337bea)                                                
+                                                       0x1596     (0x32edea)                                                
 
 
 r23.gif (Image File)    Flash Index = 0x53
 =======
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x1412     (0x33676e)                                                
+                                                       0x1412     (0x32d96e)                                                
 
 
 panelFinal.png (Image File)    Flash Index = 0x54
 ==============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x23dce    (0x312932)                                                 
+                                                       0x23dce    (0x309b32)                                                 
 
 
 ledOff.png (Image File)    Flash Index = 0x55
 ==========
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x2d2      (0x31262e)                                               
+                                                       0x2d2      (0x30982e)                                               
 
 
 ledOn.png (Image File)    Flash Index = 0x56
 =========
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x2b2      (0x31234e)                                               
+                                                       0x2b2      (0x30954e)                                               
 
 
 ledOff2.png (Image File)    Flash Index = 0x57
 ===========
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x242      (0x3120be)                                               
+                                                       0x242      (0x3092be)                                               
 
 
 KnobLineSE.png (Image File)    Flash Index = 0x58
 ==============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x106      (0x311f7a)                                               
+                                                       0x106      (0x30917a)                                               
 
 
 KnobLineESE.png (Image File)    Flash Index = 0x59
 ===============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0xd2       (0x311e2e)                                              
+                                                       0xd2       (0x30902e)                                              
 
 
 KnobLineEast.png (Image File)    Flash Index = 0x5a
 ================
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x36       (0x311dca)                                              
+                                                       0x36       (0x308fca)                                              
 
 
 KnobLineENE.png (Image File)    Flash Index = 0x5b
 ===============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0xd6       (0x311caa)                                              
+                                                       0xd6       (0x308eaa)                                              
 
 
 KnobLineNE.png (Image File)    Flash Index = 0x5c
 ==============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x10a      (0x311b76)                                               
+                                                       0x10a      (0x308d76)                                               
 
 
 KnobLineNNE.png (Image File)    Flash Index = 0x5d
 ===============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0xf2       (0x311a0e)                                              
+                                                       0xf2       (0x308c0e)                                              
 
 
 KnobLineNorth.png (Image File)    Flash Index = 0x5e
 =================
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x32       (0x3119ce)                                              
+                                                       0x32       (0x308bce)                                              
 
 
 KnobLineNNW.png (Image File)    Flash Index = 0x5f
 ===============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0xd2       (0x3118ae)                                              
+                                                       0xd2       (0x308aae)                                              
 
 
 KnobLineNW.png (Image File)    Flash Index = 0x60
 ==============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0xda       (0x3117a6)                                              
+                                                       0xda       (0x3089a6)                                              
 
 
 KnobLineWNW.png (Image File)    Flash Index = 0x61
 ===============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0xae       (0x3116d2)                                              
+                                                       0xae       (0x3088d2)                                              
 
 
 KnobLineWest.png (Image File)    Flash Index = 0x62
 ================
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x36       (0x31164a)                                              
+                                                       0x36       (0x30884a)                                              
 
 
 KnobLineWSW.png (Image File)    Flash Index = 0x63
 ===============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0xb2       (0x31154e)                                              
+                                                       0xb2       (0x30874e)                                              
 
 
 KnobLineSW.png (Image File)    Flash Index = 0x64
 ==============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0xde       (0x311422)                                              
+                                                       0xde       (0x308622)                                              
 
 
 BackBtn_Down.png (Image File)    Flash Index = 0x65
 ================
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x30b6     (0x30e34a)                                                
+                                                       0x30b6     (0x30554a)                                                
 
 
 BackBtn.png (Image File)    Flash Index = 0x66
 ===========
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x30e2     (0x30b21e)                                                
+                                                       0x30e2     (0x30241e)                                                
 
 
 buzzer.png (Image File)    Flash Index = 0x67
 ==========
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x35ae     (0x307c52)                                                
+                                                       0x35ae     (0x2fee52)                                                
 
 
 transparentBuzzer.png (Image File)    Flash Index = 0x68
 =====================
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x1e       (0x307be2)                                              
+                                                       0x1e       (0x2fede2)                                              
 
 
 backLarge2_320x196_jpegtran.jpg (Image File)    Flash Index = 0x69
 ===============================
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0xfe42     (0x2f7d3e)                                                
+                                                       0xfe42     (0x2eef3e)                                                
 
 
 PhotoDown.png (Image File)    Flash Index = 0x6a
 =============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0xfee      (0x2f6d12)                                               
+                                                       0xfee      (0x2edf12)                                               
 
 
 PhotoUp.png (Image File)    Flash Index = 0x6b
 ===========
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x1372     (0x2f598e)                                                
+                                                       0x1372     (0x2ecb8e)                                                
 
 
 FrigeDown.png (Image File)    Flash Index = 0x6c
 =============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x113e     (0x2f4842)                                                
+                                                       0x113e     (0x2eba42)                                                
 
 
 FrigeUp.png (Image File)    Flash Index = 0x6d
 ===========
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x1466     (0x2f339a)                                                
+                                                       0x1466     (0x2ea59a)                                                
 
 
 SlotsDown.png (Image File)    Flash Index = 0x6e
 =============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0xe36      (0x2f254a)                                               
+                                                       0xe36      (0x2e974a)                                               
 
 
 SlotsUp.png (Image File)    Flash Index = 0x6f
 ===========
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x122a     (0x2f12d6)                                                
+                                                       0x122a     (0x2e84d6)                                                
 
 
 SerialDown.png (Image File)    Flash Index = 0x70
 ==============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0xe3a      (0x2f0446)                                               
+                                                       0xe3a      (0x2e7646)                                               
 
 
 SerialUp.png (Image File)    Flash Index = 0x71
 ============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x1146     (0x2ef2ba)                                                
+                                                       0x1146     (0x2e64ba)                                                
 
 
 AboutDown.png (Image File)    Flash Index = 0x72
 =============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0xc0e      (0x2ee672)                                               
+                                                       0xc0e      (0x2e5872)                                               
 
 
 AboutUp.png (Image File)    Flash Index = 0x73
 ===========
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0xfbe      (0x2ed642)                                               
+                                                       0xfbe      (0x2e4842)                                               
 
 
 RightArrow2Down.png (Image File)    Flash Index = 0x74
 ===================
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x127e     (0x2ec382)                                                
+                                                       0x127e     (0x2e3582)                                                
 
 
 RightArrow2.png (Image File)    Flash Index = 0x75
 ===============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x1272     (0x2eb10e)                                                
+                                                       0x1272     (0x2e230e)                                                
 
 
 color_GUI2.png (Image File)    Flash Index = 0x76
 ==============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x1d17e    (0x2cdf82)                                                 
+                                                       0x1d17e    (0x2c5182)                                                 
 
 
 Bitstream Vera Sans_10.aauf (Font File)    Flash Index = 0x77
 ===========================
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x23e2     (0x2cbb9e)                                                
+                                                       0x23e2     (0x2c2d9e)                                                
 
 
 MenuWithHoles.png (Image File)    Flash Index = 0x78
 =================
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x42ae     (0x2c78d2)                                                
+                                                       0x42ae     (0x2bead2)                                                
 
 
 backButton_2_BackBtn.png (Image File)    Flash Index = 0x79
 ========================
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x30e2     (0x2c479e)                                                
+                                                       0x30e2     (0x2bb99e)                                                
 
 
 backButton_1_BackBtn_Down.png (Image File)    Flash Index = 0x7a
 =============================
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x30b6     (0x2c16ca)                                                
+                                                       0x30b6     (0x2b88ca)                                                
 
 
 WINNER.png (Image File)    Flash Index = 0x7b
 ==========
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x2a5e     (0x2bec22)                                                
+                                                       0x2a5e     (0x2b5e22)                                                
 
 
 betone_off.png (Image File)    Flash Index = 0x7c
 ==============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x330e     (0x2bb8f2)                                                
+                                                       0x330e     (0x2b2af2)                                                
 
 
 Scrib1_1_Notepad.png (Image File)    Flash Index = 0x7d
 ====================
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x2bca     (0x2b8cb6)                                                
+                                                       0x2bca     (0x2afeb6)                                                
 
 
 Picture 007_320x240_320x240_jpegtran.jpg (Image File)    Flash Index = 0x7e
 ========================================
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0xd832     (0x2ab44e)                                                
+                                                       0xd832     (0x2a264e)                                                
 
 
 Picture 026_320x240_320x240_jpegtran.jpg (Image File)    Flash Index = 0x7f
 ========================================
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0xe282     (0x29d17e)                                                
+                                                       0xe282     (0x29437e)                                                
 
 
 Picture 021_320x240_320x240_jpegtran.jpg (Image File)    Flash Index = 0x80
 ========================================
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0xea6a     (0x28e696)                                                
+                                                       0xea6a     (0x285896)                                                
 
 
 fontHdr.auf (Font Header File)    Flash Index = 0xf
 ===========
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x42       (0x28e63e)                                              
+                                                       0x42       (0x28583e)                                              
 
 
 internalRAM.bin (InternalRAM File)    Flash Index = 0x6
 ===============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0x213c     (0x28c4c4)                                                
+                                                       0x213c     (0x2836c4)                                                
 
 
 lcdConfig.bin (LCD Configuration File)    Flash Index = 0x3
 =============
                                                        Flash Used (Remaining)
                                                        ----------------------
-                                                       0xba       (0x28c3c6)                                              
+                                                       0xba       (0x2835c6)                                              
 
 

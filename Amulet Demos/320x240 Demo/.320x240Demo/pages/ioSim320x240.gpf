@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAGE NAME="ioSim320x240">
+  <PROPERTIES>
+    <HEAD>
+      <TRANSITIONS>Clear Screen With Background Color</TRANSITIONS>
+      <FUNCTIONS charPos="0" foldedLines=""/>
+      <BGCOLOR>#000000</BGCOLOR>
+      <GS_DRAW>True</GS_DRAW>
+    </HEAD>
+  </PROPERTIES>
+  <BKGND/>
+  <BODY>
+    <Image>
+      <Name>backLarge2</Name>
+      <FILE Type="16" Editable="True">.ioSim\backLarge2.jpg</FILE>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <MidX Type="13">160</MidX>
+      <MidY Type="13">120</MidY>
+      <Width Type="13">326</Width>
+      <Height Type="13">202</Height>
+    </Image>
+    <CustomButton>
+      <Name Type="12">Buzzer</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <href Type="15" Editable="True">Amulet:UART.invokeRPC(11)</href>
+      <onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress>
+      <repeatRate Type="20" Editable="True">0</repeatRate>
+      <repeatDelay Type="20" Editable="True">0.01</repeatDelay>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <downImage Type="16" Editable="True">.ioSim\buzzer.png</downImage>
+      <upImage Type="16" Editable="True">.ioSim\transparentBuzzer.png</upImage>
+      <MidX Type="13">124</MidX>
+      <MidY Type="13">130</MidY>
+      <Width Type="13">78</Width>
+      <Height Type="13">78</Height>
+    </CustomButton>
+    <CustomButton template=".ioSim\backButton.png">
+      <Name Type="12">backButton</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonType Type="10" Editable="True">Spring-Loaded	Toggle	Spring-Loaded</buttonType>
+      <href Type="15" Editable="True">Menu.open()</href>
+      <onButtonPress Type="10" Editable="True">Custom	Alpha	Custom	Depress</onButtonPress>
+      <downImage Type="16" Editable="True">.ioSim\BackBtn_Down.png</downImage>
+      <upImage Type="16" Editable="True">.ioSim\BackBtn.png</upImage>
+      <alphaColor Type="11" Editable="True">#80808080</alphaColor>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <MidX Type="13">39</MidX>
+      <MidY Type="13">126</MidY>
+      <Width Type="13">62</Width>
+      <Height Type="13">79</Height>
+    </CustomButton>
+    <ImageSeq>
+      <Name Type="12">ImageSequence</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <href Type="24" Editable="True">Amulet:UART.byte(8).value()</href>
+      <max Type="13" Editable="True">255</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.ioSim\KnobLineSW.png;.ioSim\KnobLineWSW.png;.ioSim\KnobLineWest.png;.ioSim\KnobLineWNW.png;.ioSim\KnobLineNW.png;.ioSim\KnobLineNNW.png;.ioSim\KnobLineNorth.png;.ioSim\KnobLineNNE.png;.ioSim\KnobLineNE.png;.ioSim\KnobLineENE.png;.ioSim\KnobLineEast.png;.ioSim\KnobLineESE.png;.ioSim\KnobLineSE.png</sequence>
+      <updateFreq Type="20" Editable="True">0.1</updateFreq>
+      <updateDelay Type="20" Editable="True">0.1</updateDelay>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <MidX Type="13">189</MidX>
+      <MidY Type="13">195</MidY>
+      <Width Type="13">42</Width>
+      <Height Type="13">42</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">ImageSequence</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <href Type="24" Editable="True">Amulet:UART.byte(7).value()</href>
+      <max Type="13" Editable="True">255</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.ioSim\KnobLineSW.png;.ioSim\KnobLineWSW.png;.ioSim\KnobLineWest.png;.ioSim\KnobLineWNW.png;.ioSim\KnobLineNW.png;.ioSim\KnobLineNNW.png;.ioSim\KnobLineNorth.png;.ioSim\KnobLineNNE.png;.ioSim\KnobLineNE.png;.ioSim\KnobLineENE.png;.ioSim\KnobLineEast.png;.ioSim\KnobLineESE.png;.ioSim\KnobLineSE.png</sequence>
+      <updateFreq Type="20" Editable="True">0.1</updateFreq>
+      <updateDelay Type="20" Editable="True">0.1</updateDelay>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <MidX Type="13">133</MidX>
+      <MidY Type="13">195</MidY>
+      <Width Type="13">42</Width>
+      <Height Type="13">42</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">ImageSequence_1</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <href Type="24" Editable="True">Amulet:UART.byte(6).value()</href>
+      <max Type="13" Editable="True">255</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.ioSim\KnobLineSW.png;.ioSim\KnobLineWSW.png;.ioSim\KnobLineWest.png;.ioSim\KnobLineWNW.png;.ioSim\KnobLineNW.png;.ioSim\KnobLineNNW.png;.ioSim\KnobLineNorth.png;.ioSim\KnobLineNNE.png;.ioSim\KnobLineNE.png;.ioSim\KnobLineENE.png;.ioSim\KnobLineEast.png;.ioSim\KnobLineESE.png;.ioSim\KnobLineSE.png</sequence>
+      <updateFreq Type="20" Editable="True">0.1</updateFreq>
+      <updateDelay Type="20" Editable="True">0.1</updateDelay>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <MidX Type="13">79</MidX>
+      <MidY Type="13">195</MidY>
+      <Width Type="13">42</Width>
+      <Height Type="13">42</Height>
+    </ImageSeq>
+    <ImageSeq>
+      <Name Type="12">ImageSequence_2</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <href Type="24" Editable="True">Amulet:UART.byte(5).value()</href>
+      <max Type="13" Editable="True">255</max>
+      <min Type="13" Editable="True">0</min>
+      <sequence Type="21" Editable="True">.ioSim\KnobLineSW.png;.ioSim\KnobLineWSW.png;.ioSim\KnobLineWest.png;.ioSim\KnobLineWNW.png;.ioSim\KnobLineNW.png;.ioSim\KnobLineNNW.png;.ioSim\KnobLineNorth.png;.ioSim\KnobLineNNE.png;.ioSim\KnobLineNE.png;.ioSim\KnobLineENE.png;.ioSim\KnobLineEast.png;.ioSim\KnobLineESE.png;.ioSim\KnobLineSE.png</sequence>
+      <updateFreq Type="20" Editable="True">0.1</updateFreq>
+      <updateDelay Type="20" Editable="True">0.1</updateDelay>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <MidX Type="13">22</MidX>
+      <MidY Type="13">195</MidY>
+      <Width Type="13">42</Width>
+      <Height Type="13">42</Height>
+    </ImageSeq>
+    <CheckBox>
+      <Name Type="12">Led2</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <boxAlign Type="10" Editable="True">Left	LEFT	RIGHT</boxAlign>
+      <checkedValue Type="13" Editable="True">8</checkedValue>
+      <groupname Type="12" Editable="True">LedGroup</groupname>
+      <href Type="15" Editable="True">Amulet:UART.byte(9).setValue()</href>
+      <initialCondition Type="10" Editable="True">FromInitHref	On	Off	FromInitHref</initialCondition>
+      <initHref Type="24" Editable="True">Amulet:UART.byte(9).value()</initHref>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <emptyImage Type="16" Editable="True">.ioSim\ledOff2.png</emptyImage>
+      <fullImage Type="16" Editable="True">.ioSim\ledOn.png</fullImage>
+      <trackingImage Type="16" Editable="True">.ioSim\ledOn.png</trackingImage>
+      <MidX Type="13">237</MidX>
+      <MidY Type="13">72</MidY>
+      <Width Type="13">38</Width>
+      <Height Type="13">54</Height>
+    </CheckBox>
+    <CheckBox>
+      <Name Type="12">Led</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <boxAlign Type="10" Editable="True">Left	LEFT	RIGHT</boxAlign>
+      <checkedValue Type="13" Editable="True">4</checkedValue>
+      <groupname Type="12" Editable="True">LedGroup</groupname>
+      <href Type="15" Editable="True">Amulet:UART.byte(9).setValue()</href>
+      <initialCondition Type="10" Editable="True">FromInitHref	On	Off	FromInitHref</initialCondition>
+      <initHref Type="24" Editable="True">Amulet:UART.byte(9).value()</initHref>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <emptyImage Type="16" Editable="True">.ioSim\ledOff.png</emptyImage>
+      <fullImage Type="16" Editable="True">.ioSim\ledOn.png</fullImage>
+      <trackingImage Type="16" Editable="True">.ioSim\ledOn.png</trackingImage>
+      <MidX Type="13">261</MidX>
+      <MidY Type="13">72</MidY>
+      <Width Type="13">38</Width>
+      <Height Type="13">54</Height>
+    </CheckBox>
+  </BODY>
+</PAGE>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PAGE NAME="Refrigerator">
+  <PROPERTIES>
+    <HEAD>
+      <FUNCTIONS charPos="0" foldedLines=""/>
+      <TRANSITIONS>Don't Clear Previous Screen</TRANSITIONS>
+    </HEAD>
+  </PROPERTIES>
+  <BKGND>
+    <Image>
+      <Name Type="12">Background</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <file Type="16" Editable="True">.Refrigerator\Background.jpg</file>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <noSDRAM Type="2" Editable="True">False</noSDRAM>
+      <MidX Type="13">160</MidX>
+      <MidY Type="13">120</MidY>
+      <Width Type="13">326</Width>
+      <Height Type="13">246</Height>
+    </Image>
+  </BKGND>
+  <BODY>
+    <RadioButton>
+      <Name Type="12">Cube</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <buttonAlign Type="10" Editable="True">Left	LEFT	RIGHT</buttonAlign>
+      <groupname Type="12" Editable="True">Group1</groupname>
+      <href Type="15" Editable="True">Amulet:InternalRAM.byte(0).setValue()</href>
+      <initialCondition Type="10" Editable="True">FromInitHref	On	Off	FromInitHref</initialCondition>
+      <initHref Type="24" Editable="True">Amulet:InternalRAM.byte(0).value()</initHref>
+      <internalNumber Type="13" Editable="True">0</internalNumber>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <emptyImage Type="16" Editable="True">.Refrigerator\CubedOff.png</emptyImage>
+      <fullImage Type="16" Editable="True">.Refrigerator\CubedOn.png</fullImage>
+      <trackingImage Type="16" Editable="True">.Refrigerator\CubedTrack.png</trackingImage>
+      <MidX Type="13">66</MidX>
+      <MidY Type="13">129</MidY>
+      <Width Type="13">94</Width>
+      <Height Type="13">115</Height>
+    </RadioButton>
+    <RadioButton>
+      <Name>Crushed</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <groupname Type="12" Editable="True">Group1</groupname>
+      <href Type="15" Editable="True">Amulet:NOP</href>
+      <initialCondition Type="10" Editable="True">FromInitHref	On	Off	FromInitHref</initialCondition>
+      <initHref Type="24" Editable="True">Amulet:InternalRAM.byte(0).value()</initHref>
+      <emptyImage Type="16" Editable="True">.Refrigerator\CrushedOff.png</emptyImage>
+      <fullImage Type="16" Editable="True">.Refrigerator\CrushedOn.png</fullImage>
+      <trackingImage Type="16" Editable="True">.Refrigerator\CrushedTrack.png</trackingImage>
+      <internalNumber Type="13" Editable="True">1</internalNumber>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <MidX Type="13">162</MidX>
+      <MidY Type="13">129</MidY>
+      <Width Type="13">94</Width>
+      <Height Type="13">115</Height>
+    </RadioButton>
+    <RadioButton>
+      <Name Type="12">Water</Name>
+      <invisible Type="2" Editable="True">False	True	False</invisible>
+      <groupname Type="12" Editable="True">Group1</groupname>
+      <href Type="15" Editable="True">Amulet:InternalRAM.byte(0).setValue()</href>
+      <initialCondition Type="10" Editable="True">FromInitHref	On	Off	FromInitHref</initialCondition>
+      <internalNumber Type="13" Editable="True">2</internalNumber>
+      <initHref Type="24" Editable="True">Amulet:InternalRAM.byte(0).value()</initHref>
+      <cacheImage Type="2" Editable="True">True	True	False</cacheImage>
+      <emptyImage Type="16" Editable="True">.Refrigerator\WaterOff.png</emptyImage>
+      <fullImage Type="16" Editable="True">.Refrigerator\WaterOn.png</fullImage>
+      <trackingImage Type="16" Editable="True">.Refrigerator\WaterTrack.png</trackingImage>
+      <MidX Type="13">258</MidX>
+      <MidY Type="13">129</MidY>
+      <Width Type="13">94</Width>
+      <Height Type="13">115</Height>
+    </RadioButton>
+    <TouchArea>
+      <Name Type="12">NotepadButton</Name>
+      <onRelease Type="31" Editable="True">Notepad.open()</onRelease>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <MidX Type="13">262</MidX>
+      <MidY Type="13">209</MidY>
+      <Width Type="13">112</Width>
+      <Height Type="13">41</Height>
+    </TouchArea>
+    <TouchArea>
+      <Name Type="12">BackMenuButton</Name>
+      <onRelease Type="31" Editable="True">Menu.open()</onRelease>
+      <visualFeedback Type="10" Editable="True">None	Alpha	Invert	None</visualFeedback>
+      <MidX Type="13">70</MidX>
+      <MidY Type="13">208</MidY>
+      <Width Type="13">112</Width>
+      <Height Type="13">41</Height>
+    </TouchArea>
+  </BODY>
+</PAGE>
